@@ -1,0 +1,41 @@
+Source: krecipes
+Section: kde
+Priority: optional
+Maintainer: Julien Louis <ptitlouis@sysif.net>
+Build-Depends: cdbs, debhelper (>= 5), kdelibs4-dev, libsqlite3-dev, libmysqlclient15-dev, libpq-dev
+Standards-Version: 3.6.2
+
+Package: krecipes
+Architecture: any
+Depends: krecipes-data (= ${Source-Version}), ${shlibs:Depends}
+Suggests: libqt3-mt-mysql | libqt3-mt-psql
+Description: KDE recipes manager
+ Krecipes is a KDE application designed to managed recipes. It can help you to
+ do your shopping list, search through your recipes to find what you can do
+ with available ingredients and a diet helper. It can also import or export
+ recipes from files in various format (eg RecipeML or Meal-Master) or from
+ databases.
+
+Package: krecipes-doc
+Architecture: all
+Recommends: krecipes (= ${Source-Version})
+Description: KDE recipes manager documentation
+ Krecipes is a KDE application designed to managed recipes. It can help you to
+ do your shopping list, search through your recipes to find what you can do
+ with available ingredients and a diet helper. It can also import or export
+ recipes from files in various format (eg. RecipeML or Meal-Master) or from
+ databases.
+ .
+ This package contains the krecipes documentation
+
+Package: krecipes-data
+Architecture: all
+Description: KDE recipes manager - data files
+ Krecipes is a KDE application designed to managed recipes. It can help you to
+ do your shopping list, search through your recipes to find what you can do
+ with available ingredients and a diet helper. It can also import or export
+ recipes from files in various format (eg RecipeML or Meal-Master) or from
+ databases.
+ .
+ This package provides independent architecture files for the KDE recipes
+ manager.
