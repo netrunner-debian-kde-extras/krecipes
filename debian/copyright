@@ -23,7 +23,84 @@ License:
    You should have received a copy of the GNU General Public License
    along with this package; if not, write to the Free Software
    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+	
 
 On Debian systems, the complete text of the GNU General
 Public License can be found in `/usr/share/common-licenses/GPL'.
 
+other licenses:
+ - LGPL v2 or higher
+    This library is free software; you can redistribute it and/or
+    modify it under the terms of the GNU Library General Public
+    License as published by the Free Software Foundation; either
+    version 2 of the License, or (at your option) any later version.
+ 
+    This library is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+    Library General Public License for more details.
+
+    You should have received a copy of the GNU Library General Public License
+    along with this library; see the file COPYING.LIB.  If not, write to
+    the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston,
+	 MA 02110-1301, USA.
+
+  On Debian GNU/Linux systems, the complete text of the GNU Library General
+  Public License can be found in `/usr/share/common-licenses/LGPL'.
+
+
+The following files are licensed under LGPL:
+ - krecipes/src/krelayout.{h,cpp}
+ - krecipes/src/kreunit.{h,cpp}
+ - krecipes/src/dialogs/krepagelayoutdia.{h,cpp}
+ - kreruler.{h,cpp}
+
+
+Copyright notices:
+ - krecipes/src/kreunit.h:
+    Copyright (C) 1998, 1999 Reginald Stadlbauer <reggie@kde.org>,
+    Torben Weis <weis@kde.org>
+ - krecipes/src/importers/mx2importer.{h,cpp}
+   krecipes/src/importers/recipemlimporter.{h,cpp}:
+    Copyright (C) 2003 Richard Lärkäng
+    Copyright (C) 2003 Jason Kivlighn
+ - krecipes/src/widgets/dragarea.cpp sizehandle.{h,cpp}:
+	 Copyright (C) 2000 Trolltech AS.  All rights reserved.
+    2003 by Jason Kivlighn <mizunoami44@users.sourceforge.net>
+ - krecipes/src/widgets/ratingwidget.{h,cpp}:
+    (C) 2003-2005 by Robby Stephenson <robby@periapsis.org>
+ - krecipes/src/widgets/kreruler.{h,cpp}:
+    Copyright (C) 1998, 1999 Reginald Stadlbauer <reggie@kde.org>
+    Copyright (C) 2005 Jason Kivlighn <jkivlighn@gmail.com>
+ - krecipes/src/widgets/kdateedit.cpp:
+    Copyright (c) 2002 Cornelius Schumacher <schumacher@kde.org>
+    Copyright (c) 2003-2004 Reinhold Kainhofer <reinhold@kainhofer.com>
+    Copyright (c) 2004 Tobias Koenig <tokoe@kde.org>
+ - krecipes/src/widgets/kdateedit.h:
+    Copyright (c) 2002 Cornelius Schumacher <schumacher@kde.org>
+    Copyright (c) 2004 Tobias Koenig <tokoe@kde.org>
+ - krecipes/src/widgets/kdatepickerpopup.cpp
+   krecipes/src/widgets/kdatepickerpopup.h:
+    Copyright (c) 2004 Bram Schoenmakers <bramschoenmakers@kde.nl>
+ - krecipes:src/widgets/kwidgetlistbox.{h,cpp}:
+    Copyright (C) 2005 Petri Damstén <petri.damsten@iki.fi>
+ - krecipes/src/backends/SQLite/libqsqlite/
+    Copyright (C) 2003 by Unai Garro (ugarro@users.sourceforge.net)
+    Martin Imobersteg <imm@gmx.ch> and opie project
+ - krecipes/src/widgets/kwidgetlistbox.{h,cpp}:
+    Copyright (C) 2005 Petri Damstén <petri.damsten@iki.fi>
+
+
+Derived works:
+ - krecipes/src/kstartuplogo.h:
+    based from kstartuplogo from Umbrello http://uml.sourceforge.net
+ - krecipes/src/widgets/kdateedit.cpp krecipes/src/widgets/kdateedit.h
+   krecipes/src/widgets/kdatepickerpopup.cpp krecipes/src/widgets/kdatepickerpopup.h:
+    Those files are part of the libkdepim project and are licensed under the GNU
+    Library General Public License
+ - krecipes/src/widgets/kwidgetlistbox.{h,cpp}:
+    This file is a modified version from the original taken from the superkaramba
+    project
+ - krecipes/src/backends/SQLite/libqsqlite/
+   Copyright (C) 2003 by Unai Garro (ugarro@users.sourceforge.net)
+   Martin Imobersteg <imm@gmx.ch> and opie project
