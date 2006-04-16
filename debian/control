@@ -1,7 +1,8 @@
 Source: krecipes
 Section: kde
 Priority: optional
-Maintainer: Julien Louis <ptitlouis@sysif.net>
+Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
+Uploaders: Julien Louis <ptitlouis@sysif.net>
 Build-Depends: cdbs, debhelper (>= 5), kdelibs4-dev, libsqlite3-dev, libmysqlclient15-dev, libpq-dev
 Standards-Version: 3.6.2
 

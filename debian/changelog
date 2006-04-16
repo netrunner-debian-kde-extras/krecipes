@@ -1,3 +1,11 @@
+krecipes (0.9.1-2) unstable; urgency=low
+
+  * Add a note about documentation in debian/copyright
+  * set Maintainer to KDE Extra Team
+  * Add myself to uploaders
+
+ -- Julien Louis <ptitlouis@sysif.net>  Thu, 13 Apr 2006 19:44:02 +0200
+
 krecipes (0.9.1-1) unstable; urgency=low
 
   * Initial release (closes: #309280).
