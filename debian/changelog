@@ -1,3 +1,10 @@
+krecipes (0.9.1-5) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+  * Add debian/rules get-orig-source target for http://buildserver.net
+
+ -- Mark Purcell <msp@debian.org>  Thu, 16 Nov 2006 18:39:15 +0000
+
 krecipes (0.9.1-4) unstable; urgency=low
 
   * Add menu entry (Closes: #366784).
