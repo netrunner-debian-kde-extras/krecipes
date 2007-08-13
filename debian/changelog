@@ -1,9 +1,9 @@
-krecipes (0.9.1-5) UNRELEASED; urgency=low
+krecipes (1.0~beta1-1) unstable; urgency=low
 
-  * NOT RELEASED YET
-  * Add debian/rules get-orig-source target for http://buildserver.net
+  * New upstream release
+  * Added watch file
 
- -- Mark Purcell <msp@debian.org>  Thu, 16 Nov 2006 18:39:15 +0000
+ -- Julien Louis <ptitlouis@sysif.net>  Sun,  3 Sep 2006 05:17:28 +0200
 
 krecipes (0.9.1-4) unstable; urgency=low
 

@@ -8,8 +8,8 @@ Standards-Version: 3.7.2
 
 Package: krecipes
 Architecture: any
-Depends: krecipes-data (= ${Source-Version}), ${shlibs:Depends}
-Suggests: libqt3-mt-mysql | libqt3-mt-psql, krecipes-doc (= ${Source-Version})
+Depends: krecipes-data (= ${source:Version}), ${shlibs:Depends}
+Suggests: libqt3-mt-mysql | libqt3-mt-psql, krecipes-doc (= ${source:Version})
 Description: recipes manager for KDE
  Krecipes is a KDE application designed to manage recipes. It can help you to
  do your shopping list, search through your recipes to find what you can do
@@ -20,7 +20,7 @@ Description: recipes manager for KDE
 Package: krecipes-doc
 Section: doc
 Architecture: all
-Recommends: krecipes (= ${Source-Version})
+Recommends: krecipes (>= ${binary:Version})
 Description: recipes manager for KDE - documentation
  Krecipes is a KDE application designed to manage recipes. It can help you to
  do your shopping list, search through your recipes to find what you can do

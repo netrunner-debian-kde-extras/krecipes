@@ -15,7 +15,6 @@ install/krecipes-data::
 	install -D -m 644 -g root -o root debian/krecipes.xpm debian/tmp/usr/share/pixmaps/krecipes.xpm
 
 get-orig-source:
-	 @@dh_testdir
-	 @@[ -d ../tarballs/. ]
-	 @@dpatch-get-origtargz ../tarballs
-
+	@@dh_testdir
+	@@[ -d ../tarballs/. ]
+	@@dpatch-get-origtargz ../tarballs
