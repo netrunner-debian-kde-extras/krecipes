@@ -1,3 +1,41 @@
+krecipes (1.0~beta2-1) unstable; urgency=low
+
+  * New upstream release (Closes: #531675)
+    - Fix crash at startup when using sqlite (Closes: #478030)
+    - Added categories to .desktop file (Closes: #473367)
+  * Moved the .desktop file to /usr/share/applications in krecipes binary
+    package
+  * debian/control:
+    - Set myself as Uploader (Closes: #513860)
+    - Build-Depend on debhelper >=7
+    - Standards-Version 3.8.1
+    - Added ${misc:Depends} to all binary packages
+    - Added Build-Depends on autotools-dev
+    - Added chrpath to Build-Depends 
+    - Added Homepage to source package
+    - Added Vcs-Browser and Vcs-Svn
+    - Moved packages from section kde to misc
+  * Set compat level to 7
+  * Rewrote debian/copyright
+  * Added debian/watch
+  * Added man page for krecipes
+  * Added lintian override for missing menu icon in krecipes, the icon is in
+    krecipes-data
+  * Added lintian override for missing man page because man page is in
+    krecipes-data
+  * krecipes' menu entry to Applications/Data Management 
+  * Strip rpath from krecipes binary 
+  * Added debian/README.source
+
+ -- Matthias Julius <mdeb@julius-net.net>  Sat, 06 Jun 2009 00:18:25 -0400
+
+krecipes (1.0~beta1-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix gcc-4.3 FTBFS, patch by KiBi (Closes: #455318)
+
+ -- Marc 'HE' Brockschmidt <he@debian.org>  Sun, 16 Mar 2008 18:14:00 +0100
+
 krecipes (1.0~beta1-1) unstable; urgency=low
 
   * New upstream release

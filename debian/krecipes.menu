@@ -1,6 +1,6 @@
 ?package(krecipes): \
 	needs="x11" \
-	section="Apps/Tools" \
+	section="Applications/Data Management" \
 	hints="KDE" \
 	title="Krecipes" \
 	icon="/usr/share/pixmaps/krecipes.xpm" \

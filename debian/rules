@@ -1,6 +1,4 @@
 #!/usr/bin/make -f
-# Sample debian/rules that uses cdbs.  Originaly written by Robert Millan.
-# This file is public domain.
   
 DEB_AUTO_CLEANUP_RCS            := yes
 
@@ -13,6 +11,10 @@ include /usr/share/cdbs/1/rules/debhelper.mk
 
 install/krecipes-data::
 	install -D -m 644 -g root -o root debian/krecipes.xpm debian/tmp/usr/share/pixmaps/krecipes.xpm
+
+install/krecipes::
+	install -D -m 644 -g root -o root debian/tmp/usr/share/applnk/Utilities/krecipes.desktop debian/tmp/usr/share/applications/krecipes.desktop
+	chrpath -d debian/tmp/usr/bin/krecipes
 
 get-orig-source:
 	@@dh_testdir
