@@ -11,8 +11,10 @@ krecipes (2.0~alpha1-1) UNRELEASED; urgency=low
   * Bump to standards 3.8.2, no changes needed
   * Install KRAZY file by krecipes package
   * Patch to add main category to the desktop file
+  * Added sqlite3, mysql-client, postgresql-client as suggests, note that
+    krecipes uses these clients to backup databases
 
- -- José Manuel Santamaría Lema <panfaust@gmail.com>  Fri, 03 Jul 2009 18:06:43 +0200
+ -- José Manuel Santamaría Lema <panfaust@gmail.com>  Fri, 03 Jul 2009 22:15:04 +0200
 
 krecipes (1.0~beta2-1) unstable; urgency=low
 
