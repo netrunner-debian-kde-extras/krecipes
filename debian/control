@@ -2,7 +2,8 @@ Source: krecipes
 Section: misc
 Priority: optional
 Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
-Uploaders: Matthias Julius <mdeb@julius-net.net>
+Uploaders: Matthias Julius <mdeb@julius-net.net>,
+ José Manuel Santamaría Lema <panfaust@gmail.com>
 Build-Depends: cdbs, debhelper (>= 7), cmake, pkg-kde-tools, kdelibs5-dev,
  libsqlite3-dev, libmysqlclient15-dev, libpq-dev, libqimageblitz-dev,
  libxml2-dev, libxslt1-dev
