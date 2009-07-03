@@ -1,2 +1,0 @@
-# Don't warn about missing command in -data package as this is in the krecipes package
-krecipes-data: desktop-command-not-in-package /usr/share/applications/kde4/krecipes.desktop krecipes
