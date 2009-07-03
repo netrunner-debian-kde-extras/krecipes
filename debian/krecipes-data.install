@@ -1,5 +1,5 @@
-debian/tmp/usr/share/apps
+debian/tmp/usr/share/applications
 debian/tmp/usr/share/icons
 debian/tmp/usr/share/locale
-debian/tmp/usr/share/mimelnk
+debian/tmp/usr/share/mime
 debian/tmp/usr/share/pixmaps

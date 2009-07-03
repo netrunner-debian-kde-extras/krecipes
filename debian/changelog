@@ -1,3 +1,14 @@
+krecipes (2.0~alpha1-1) UNRELEASED; urgency=low
+
+  [José Manuel Santamaría Lema]
+  * New upstream release, bump to KDE 4
+    - Added build depends: pkg-kde-tools, kdelibs5-dev, libqimageblits-dev,
+      libxml2-dev, libxslt1-dev
+    - Dropped build depends: autotools-dev, kdelibs4-dev, chrpath
+    - Dropped suggests: libqt3-mt-mysql | libqt3-mt-psql
+
+ -- José Manuel Santamaría Lema <panfaust@gmail.com>  Fri, 03 Jul 2009 04:24:53 +0200
+
 krecipes (1.0~beta2-1) unstable; urgency=low
 
   * New upstream release (Closes: #531675)

@@ -1,20 +1,14 @@
 #!/usr/bin/make -f
   
-DEB_AUTO_CLEANUP_RCS            := yes
-
 # Add here any variable or target overrides you need
 
 DEB_INSTALL_DOCS_krecipes = README TODO
 
-include /usr/share/cdbs/1/class/kde.mk
+include /usr/share/pkg-kde-tools/makefiles/1/cdbs/kde.mk
 include /usr/share/cdbs/1/rules/debhelper.mk
 
 install/krecipes-data::
 	install -D -m 644 -g root -o root debian/krecipes.xpm debian/tmp/usr/share/pixmaps/krecipes.xpm
-
-install/krecipes::
-	install -D -m 644 -g root -o root debian/tmp/usr/share/applnk/Utilities/krecipes.desktop debian/tmp/usr/share/applications/krecipes.desktop
-	chrpath -d debian/tmp/usr/bin/krecipes
 
 get-orig-source:
 	@@dh_testdir
