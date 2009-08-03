@@ -1,5 +1,5 @@
 Source: krecipes
-Section: misc
+Section: kde
 Priority: optional
 Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
 Uploaders: Matthias Julius <mdeb@julius-net.net>,
