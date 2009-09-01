@@ -8,7 +8,7 @@ krecipes (2.0~alpha1-1) UNRELEASED; urgency=low
     - Added suggests: libqt4-sql-sqlite, libqt4-sql-mysql, libqt4-sql-psql
     - Dropped suggests: libqt3-mt-mysql | libqt3-mt-psql
   * Added myself as uploader
-  * Bump to standards 3.8.2, no changes needed
+  * Bump to standards 3.8.3, no changes needed
   * Install KRAZY file by krecipes package
   * Patch to add main category to the desktop file
   * Added sqlite3, mysql-client, postgresql-client as suggests, note that
@@ -17,7 +17,7 @@ krecipes (2.0~alpha1-1) UNRELEASED; urgency=low
   * Section changed from 'misc' to 'kde'
   * Refreshed man page, created with kdemangen.pl and edited by hand.
 
- -- José Manuel Santamaría Lema <panfaust@gmail.com>  Tue, 25 Aug 2009 20:08:32 +0200
+ -- José Manuel Santamaría Lema <panfaust@gmail.com>  Tue, 01 Sep 2009 14:14:32 +0200
 
 krecipes (1.0~beta2-1) unstable; urgency=low
 
