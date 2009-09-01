@@ -18,7 +18,7 @@ Depends: krecipes-data (= ${source:Version}), ${shlibs:Depends}, ${misc:Depends}
 Recommends: libqt4-sql-sqlite, sqlite3
 Suggests: libqt4-sql-mysql, libqt4-sql-psql, mysql-client, postgresql-client,
  krecipes-doc (= ${source:Version})
-Description: recipes manager for KDE
+Description: Recipes manager for KDE
  Krecipes is a KDE application designed to manage recipes. It can help you to
  do your shopping list, search through your recipes to find what you can do
  with available ingredients and a diet helper. It can also import or export
@@ -30,7 +30,7 @@ Section: doc
 Architecture: all
 Depends: ${misc:Depends}
 Recommends: krecipes (>= ${binary:Version})
-Description: recipes manager for KDE - documentation
+Description: Recipes manager for KDE - documentation
  Krecipes is a KDE application designed to manage recipes. It can help you to
  do your shopping list, search through your recipes to find what you can do
  with available ingredients and a diet helper. It can also import or export
@@ -42,7 +42,7 @@ Description: recipes manager for KDE - documentation
 Package: krecipes-data
 Architecture: all
 Depends: ${misc:Depends}
-Description: recipes manager for KDE - data files
+Description: Recipes manager for KDE - data files
  Krecipes is a KDE application designed to manage recipes. It can help you to
  do your shopping list, search through your recipes to find what you can do
  with available ingredients and a diet helper. It can also import or export
