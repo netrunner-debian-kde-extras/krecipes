@@ -5,7 +5,7 @@ Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
 Uploaders: Matthias Julius <mdeb@julius-net.net>,
  José Manuel Santamaría Lema <panfaust@gmail.com>
 Build-Depends: cdbs, quilt, debhelper (>= 7), cmake, pkg-kde-tools,
- kdelibs5-dev, libsqlite3-dev, libmysqlclient15-dev, libpq-dev,
+ kdelibs5-dev, libsqlite3-dev, libmysqlclient-dev, libpq-dev,
  libqimageblitz-dev, libxml2-dev, libxslt1-dev
 Standards-Version: 3.8.3
 Homepage: http://krecipes.sourceforge.net/
