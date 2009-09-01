@@ -15,8 +15,9 @@ Vcs-Svn: svn://svn.debian.org/svn/pkg-kde/kde-extras/krecipes/trunk
 Package: krecipes
 Architecture: any
 Depends: krecipes-data (= ${source:Version}), ${shlibs:Depends}, ${misc:Depends}
-Suggests: libqt4-sql-sqlite, libqt4-sql-mysql, libqt4-sql-psql, sqlite3,
- mysql-client, postgresql-client, krecipes-doc (= ${source:Version})
+Recommends: libqt4-sql-sqlite, sqlite3
+Suggests: libqt4-sql-mysql, libqt4-sql-psql, mysql-client, postgresql-client,
+ krecipes-doc (= ${source:Version})
 Description: recipes manager for KDE
  Krecipes is a KDE application designed to manage recipes. It can help you to
  do your shopping list, search through your recipes to find what you can do
