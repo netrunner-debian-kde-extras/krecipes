@@ -55,7 +55,7 @@ Package: krecipes-dbg
 Section: debug
 Priority: extra
 Architecture: any
-Depends: krecipes (= ${binary:Version})
+Depends: krecipes (= ${binary:Version}), ${misc:Depends}
 Description: recipes manager for KDE - debugging symbols
  Krecipes is a KDE application designed to manage recipes. It can help you to
  do your shopping list, search through your recipes to find what you can do
