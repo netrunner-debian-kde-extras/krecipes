@@ -6,9 +6,10 @@ Upstream-Source: http://krecipes.sourceforge.net/
 Files: *
 Copyright: © 2003-2005 Unai Garro <ugarro@users.sourceforge.net> 
            © 2003-2005 Cyril Bosselut <bosselut@b1project.com>
-           © 2003-2006 Jason Kivlighn <jkivlighn@gmail.com>
+           © 2003-2007 Jason Kivlighn <jkivlighn@gmail.com>
+           © 2003 krecipes.sourceforge.net authors
            © 2003 Martin Imobersteg <imm@gmx.ch>
-           © 2003 opie project
+           © 2003 Opie Project <opie-devel@handhelds.org>
            © 2003 Richard Lärkäng
            © 2004-2005 Renchi Raju <renchi@pooh.tam.uiuc.edu>
            © 2004-2006 Guilles Caulier <caulier dot gilles at kdemail dot net>
@@ -24,7 +25,7 @@ Copyright: © 2004-2006 Jason Kivlighn
 License: GFDL-1.2+-NIV
 
 Files: src/widgets/ratingwidget.*
-Copyright: © 2003-2005 by Robby Stephenson <robby@periapsis.org>
+Copyright: © 2003-2009 by Robby Stephenson <robby@periapsis.org>
 License:
  This program is free software; you can redistribute it and/or modify it under
  the terms of the GNU General Public License as published by the Free Software
@@ -47,7 +48,7 @@ License:
  Public License version 3 can be found in `/usr/share/common-licenses/GPL-3'.
 
 Files: src/widgets/kdateedit.*
-Copyright: © 2003 Cornelius Schumacher <schumacher@kde.org>
+Copyright: © 2002 Cornelius Schumacher <schumacher@kde.org>
            © 2002 David Jarvie <software@astrojar.org.uk>
            © 2003-2004 Reinhold Kainhofer <reinhold@kainhofer.com>
            © 2004 Tobias Koenig <tokoe@kde.org>
