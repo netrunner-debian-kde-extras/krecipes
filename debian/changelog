@@ -1,4 +1,4 @@
-krecipes (2.0~alpha2-1) UNRELEASED; urgency=low
+krecipes (2.0~alpha2-1) experimental; urgency=low
 
   [ José Manuel Santamaría Lema ]
   * New upstream release
@@ -7,7 +7,7 @@ krecipes (2.0~alpha2-1) UNRELEASED; urgency=low
   * Minor fixes in debian/copyright: corrected the years for 3 copyright
     holders and added e-mail for Opie Project.
 
- -- José Manuel Santamaría Lema <panfaust@gmail.com>  Sun, 20 Sep 2009 13:23:12 +0200
+ -- José Manuel Santamaría Lema <panfaust@gmail.com>  Sun, 20 Sep 2009 14:16:15 +0200
 
 krecipes (2.0~alpha1-1) experimental; urgency=low
 
