@@ -1,8 +1,10 @@
 krecipes (2.0~alpha3-1) UNRELEASED; urgency=low
 
+  [ José Manuel Santamaría Lema ]
   * New upstream release
+  * Updated debian/copyright
 
- -- José Manuel Santamaría Lema <panfaust@gmail.com>  Fri, 09 Oct 2009 19:13:12 +0200
+ -- José Manuel Santamaría Lema <panfaust@gmail.com>  Fri, 09 Oct 2009 19:16:21 +0200
 
 krecipes (2.0~alpha2-1) experimental; urgency=low
 
