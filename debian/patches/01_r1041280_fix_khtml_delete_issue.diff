@@ -1,0 +1,16 @@
+# Patch from upstream: http://websvn.kde.org/?view=rev&revision=1041280
+--- krecipes-2.0~alpha4.orig/src/dialogs/pagesetupdialog.cpp
++++ krecipes-2.0~alpha4/src/dialogs/pagesetupdialog.cpp
+@@ -78,9 +78,9 @@
+ 	for ( uint i = 0; i < included_templates.count(); i++ ) {
+ 		new ThumbBarItem(thumbBar,included_templates.path() + "/" +included_templates[ i ]);
+ 	}
+-	m_htmlPart = new SetupDisplay(sample, this);
+-	m_htmlPart->view()->setParent( viewBox, windowFlags() & ~Qt::WindowType_Mask);
+-	m_htmlPart->view()->setGeometry( 0, 0 ,m_htmlPart->view()->width(),m_htmlPart->view()->height());
++	m_htmlPart = new SetupDisplay(sample, viewBox);
++	//m_htmlPart->view()->setParent( viewBox, windowFlags() & ~Qt::WindowType_Mask);
++	//m_htmlPart->view()->setGeometry( 0, 0 ,m_htmlPart->view()->width(),m_htmlPart->view()->height());
+ 
+ 
+ 	layout->addWidget( viewBox );

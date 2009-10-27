@@ -6,7 +6,7 @@ Uploaders: Matthias Julius <mdeb@julius-net.net>,
  José Manuel Santamaría Lema <panfaust@gmail.com>
 Build-Depends: cdbs, debhelper (>= 7), cmake, pkg-kde-tools,
  kdelibs5-dev, libsqlite3-dev, libmysqlclient-dev, libpq-dev,
- libqimageblitz-dev, libxml2-dev, libxslt1-dev
+ libqimageblitz-dev, libxml2-dev, libxslt1-dev, quilt
 Standards-Version: 3.8.3
 Homepage: http://krecipes.sourceforge.net/
 Vcs-Browser: http://svn.debian.org/viewsvn/pkg-kde/kde-extras/krecipes/trunk/
