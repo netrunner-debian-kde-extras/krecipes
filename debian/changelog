@@ -1,3 +1,10 @@
+krecipes (2.0~alpha4-1) UNRELEASED; urgency=low
+
+  [ José Manuel Santamaría Lema ]
+  * New upstream release
+
+ -- José Manuel Santamaría Lema <panfaust@gmail.com>  Tue, 27 Oct 2009 14:21:48 +0100
+
 krecipes (2.0~alpha3-1) experimental; urgency=low
 
   [ José Manuel Santamaría Lema ]
