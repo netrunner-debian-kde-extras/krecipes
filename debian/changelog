@@ -1,12 +1,14 @@
-krecipes (2.0~alpha4-2) UNRELEASED; urgency=low
+krecipes (2.0~alpha5-1) UNRELEASED; urgency=low
+
+  [ José Manuel Santamaría Lema ]
+  * New upstream release
+  * Switch to dpkg-source 3.0 (quilt) format
+  * Drop 01_r1041280_fix_khtml_delete_issue.diff, merged upstream
 
   [ Scott Kitterman ]
   * Change doc path in krecipes-doc.install to work in both Debian and Ubuntu
 
-  [ José Manuel Santamaría Lema ]
-  * Switch to dpkg-source 3.0 (quilt) format
-
- -- José Manuel Santamaría Lema <panfaust@gmail.com>  Fri, 08 Jan 2010 13:33:51 +0100
+ -- José Manuel Santamaría Lema <panfaust@gmail.com>  Sun, 10 Jan 2010 08:23:05 +0100
 
 krecipes (2.0~alpha4-1) unstable; urgency=low
 
