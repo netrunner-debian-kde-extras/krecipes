@@ -4,10 +4,9 @@ Upstream-Maintainer: José Manuel Santamaría Lema <panfaust@gmail.com>
 Upstream-Source: http://krecipes.sourceforge.net/
 
 Files: *
-Copyright: © 2003-2005 Unai Garro <ugarro@users.sourceforge.net> 
+Copyright: © 2003-2005 Unai Garro <ugarro@gmail.com> 
            © 2003-2005 Cyril Bosselut <bosselut@b1project.com>
            © 2003-2007 Jason Kivlighn <jkivlighn@gmail.com>
-           © 2003 krecipes.sourceforge.net authors
            © 2003 Martin Imobersteg <imm@gmx.ch>
            © 2003 Opie Project <opie-devel@handhelds.org>
            © 2003 Richard Lärkäng
@@ -16,12 +15,13 @@ Copyright: © 2003-2005 Unai Garro <ugarro@users.sourceforge.net>
            © 2005 Petri Damstén <petri.damsten@iki.fi>
            © 2005-2006 Tom Albers <tomalbers@kde.nl>
            © 2008 Montel Laurent <montel@kde.org>
-           © 2009 José Manuel Santamaría Lema <panfaust@gmail.com>
+           © 2009-2010 José Manuel Santamaría Lema <panfaust@gmail.com>
 License: GPL-2+
 
 Files: doc/*
 Copyright: © 2004-2006 Colleen Beamer
-Copyright: © 2004-2006 Jason Kivlighn
+           © 2004-2006 Jason Kivlighn
+           © 2010 José Manuel Santamaría Lema <panfaust@gmail.com>
 License: GFDL-1.2+-NIV
 
 Files: src/widgets/kdateedit.*

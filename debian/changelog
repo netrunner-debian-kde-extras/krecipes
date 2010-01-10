@@ -4,6 +4,7 @@ krecipes (2.0~alpha5-1) UNRELEASED; urgency=low
   * New upstream release
   * Switch to dpkg-source 3.0 (quilt) format
   * Drop 01_r1041280_fix_khtml_delete_issue.diff, merged upstream
+  * Updated debian/copyright
 
   [ Scott Kitterman ]
   * Change doc path in krecipes-doc.install to work in both Debian and Ubuntu
