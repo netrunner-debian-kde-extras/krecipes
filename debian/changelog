@@ -5,6 +5,7 @@ krecipes (2.0~alpha6-1) UNRELEASED; urgency=low
   * Fix FTBFS with gcc 4.5, thanks to Pino Toscano for fixing this
     upstream (Closes: #565020)
   * Removed unneccesary build depends libmysqlclient-dev and libpq-dev
+  * Added "DEB_KDE_LINK_WITH_AS_NEEDED := yes" to debian/rules
 
  -- José Manuel Santamaría Lema <panfaust@gmail.com>  Mon, 25 Jan 2010 01:38:03 +0100
 
