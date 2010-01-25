@@ -1,4 +1,4 @@
-krecipes (2.0~alpha6-1) UNRELEASED; urgency=low
+krecipes (2.0~alpha6-1) unstable; urgency=low
 
   [ José Manuel Santamaría Lema ]
   * New upstream release
@@ -7,7 +7,7 @@ krecipes (2.0~alpha6-1) UNRELEASED; urgency=low
   * Removed unneccesary build depends libmysqlclient-dev and libpq-dev
   * Added "DEB_KDE_LINK_WITH_AS_NEEDED := yes" to debian/rules
 
- -- José Manuel Santamaría Lema <panfaust@gmail.com>  Mon, 25 Jan 2010 01:38:03 +0100
+ -- José Manuel Santamaría Lema <panfaust@gmail.com>  Mon, 25 Jan 2010 16:40:39 +0100
 
 krecipes (2.0~alpha5-1) unstable; urgency=low
 
