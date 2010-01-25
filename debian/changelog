@@ -1,3 +1,12 @@
+krecipes (2.0~alpha6-1) UNRELEASED; urgency=low
+
+  [ José Manuel Santamaría Lema ]
+  * New upstream release
+  * Fix FTBFS with gcc 4.5, thanks to Pino Toscano for fixing this
+    upstream (Closes: #565020)
+
+ -- José Manuel Santamaría Lema <panfaust@gmail.com>  Mon, 25 Jan 2010 01:38:03 +0100
+
 krecipes (2.0~alpha5-1) unstable; urgency=low
 
   [ José Manuel Santamaría Lema ]
