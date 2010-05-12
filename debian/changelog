@@ -1,3 +1,10 @@
+krecipes (2.0~alpha6-2) UNRELEASED; urgency=low
+
+  * Build depend on shared-desktop-ontologies and shared-mime-info
+    (Closes: #581319)
+
+ -- José Manuel Santamaría Lema <panfaust@gmail.com>  Wed, 12 May 2010 14:27:13 +0200
+
 krecipes (2.0~alpha6-1) unstable; urgency=low
 
   [ José Manuel Santamaría Lema ]
