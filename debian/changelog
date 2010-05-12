@@ -1,10 +1,10 @@
-krecipes (2.0~alpha6-2) UNRELEASED; urgency=low
+krecipes (2.0~alpha6-2) unstable; urgency=low
 
   * Build depend on shared-desktop-ontologies and shared-mime-info
     (Closes: #581319)
   * Bump Standards-Version to 3.8.4, no changes required.
 
- -- José Manuel Santamaría Lema <panfaust@gmail.com>  Wed, 12 May 2010 14:27:13 +0200
+ -- José Manuel Santamaría Lema <panfaust@gmail.com>  Wed, 12 May 2010 15:38:36 +0200
 
 krecipes (2.0~alpha6-1) unstable; urgency=low
 
