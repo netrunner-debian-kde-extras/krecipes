@@ -1,3 +1,9 @@
+krecipes (2.0~beta1-1) UNRELEASED; urgency=low
+
+  * New upstream release
+
+ -- José Manuel Santamaría Lema <panfaust@gmail.com>  Tue, 06 Jul 2010 18:45:25 +0200
+
 krecipes (2.0~alpha6-2) unstable; urgency=low
 
   * Build depend on shared-desktop-ontologies and shared-mime-info
