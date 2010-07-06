@@ -16,6 +16,7 @@ Copyright: © 2003-2005 Unai Garro <ugarro@gmail.com>
            © 2005-2006 Tom Albers <tomalbers@kde.nl>
            © 2008 Montel Laurent <montel@kde.org>
            © 2009-2010 José Manuel Santamaría Lema <panfaust@gmail.com>
+           © 2010 Martin Engelmann <murphi.oss@googlemail.com>
 License: GPL-2+
 
 Files: doc/*
@@ -33,6 +34,14 @@ License: LGPL-2+
 
 Files: src/widgets/kdatepickerpopup.*
 Copyright: © 2004 Bram Schoenmakers <bramschoenmakers@kde.nl>
+License: LGPL-2+
+
+Files: src/widgets/kratingpainter.*
+Copyright: © 2007-2008 Sebastian Trueg <trueg@kde.org>
+License: LGPL-2+
+
+Files: src/widgets/kratingwidget.*
+Copyright: © 2006-2007 Sebastian Trueg <trueg@kde.org>
 License: LGPL-2+
 
 Files: src/widgets/kreruler.*
