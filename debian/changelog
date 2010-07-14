@@ -1,10 +1,10 @@
-krecipes (2.0~beta1-1) UNRELEASED; urgency=low
+krecipes (2.0~beta1-1) unstable; urgency=low
 
   * New upstream release
   * Updated debian/copyright
   * Bump Standards-Version to 3.9.0, no changes required
 
- -- José Manuel Santamaría Lema <panfaust@gmail.com>  Tue, 06 Jul 2010 18:45:25 +0200
+ -- José Manuel Santamaría Lema <panfaust@gmail.com>  Tue, 06 Jul 2010 19:26:25 +0200
 
 krecipes (2.0~alpha6-2) unstable; urgency=low
 
