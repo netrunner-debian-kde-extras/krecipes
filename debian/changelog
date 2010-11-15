@@ -1,4 +1,4 @@
-krecipes (2.0~beta2-1) UNRELEASED; urgency=low
+krecipes (2.0~beta2-1) experimental; urgency=low
 
   * New upstream release
   * Bump Standards-Version to 3.9.1, no changes required
