@@ -1,0 +1,4335 @@
+# translation of krecipes.po to Estonian
+# Marek Laane <bald@starman.ee>, 2004-2007.
+# Peeter Russak <pezz@tkwcy.ee>, 2005.
+# Marek Laane <bald@smail.ee>, 2008, 2009, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: krecipes\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2010-11-01 06:23+0100\n"
+"PO-Revision-Date: 2010-09-14 05:55+0300\n"
+"Last-Translator: Marek Laane <bald@smail.ee>\n"
+"Language-Team: Estonian <kde-et@linux.ee>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: actionshandlers/unitactionshandler.cpp:69
+msgid "Rename Unit"
+msgstr "Muuda nime"
+
+#: actionshandlers/unitactionshandler.cpp:133
+#: actionshandlers/ingredientactionshandler.cpp:65
+#: actionshandlers/headeractionshandler.cpp:66
+#: actionshandlers/authoractionshandler.cpp:74
+#: actionshandlers/recipeactionshandler.cpp:247
+#: actionshandlers/recipeactionshandler.cpp:258
+#: actionshandlers/prepmethodactionshandler.cpp:65
+#: actionshandlers/categoryactionshandler.cpp:158 krecipesview.cpp:694
+msgid "Recipes"
+msgstr "Retseptid"
+
+#: actionshandlers/unitactionshandler.cpp:139 exporters/xsltexporter.cpp:57
+#: exporters/htmlexporter.cpp:391 dialogs/setupdisplay.cpp:128
+#: krecipesview.cpp:374 krecipesview.cpp:477
+msgid "Properties"
+msgstr "Omadused"
+
+#: actionshandlers/unitactionshandler.cpp:145
+msgid "Ingredient Weights"
+msgstr "Koostisosade kaal"
+
+#: actionshandlers/unitactionshandler.cpp:154
+#: actionshandlers/ingredientactionshandler.cpp:68
+#: actionshandlers/prepmethodactionshandler.cpp:67
+msgid "You are about to permanantly delete recipes from your database."
+msgstr "Kavatsed retseptid oma andmebaasist jäädavalt kustutada."
+
+#: actionshandlers/unitactionshandler.cpp:167
+#: widgets/ingredientinputwidget.cpp:256
+#, kde-format
+msgid "Unit name cannot be longer than 1 character."
+msgid_plural "Unit name cannot be longer than %1 characters."
+msgstr[0] "Ühiku nimi ei saa olla pikem kui 1 märk."
+msgstr[1] "Ühiku nimi ei saa olla pikem kui %1 märki."
+
+#: actionshandlers/unitactionshandler.cpp:205
+msgid ""
+"This unit already exists.  Continuing will merge these two units into one.  "
+"Are you sure?"
+msgstr ""
+"See ühik on juba olemas. Jätkamisel liidetakse need üheks. Kas ikka "
+"kindlasti jätkata?"
+
+#: actionshandlers/propertyactionshandler.cpp:60
+msgid "Are you sure you want to delete this property?"
+msgstr "Kas tõesti see omadus kustutada?"
+
+#: actionshandlers/propertyactionshandler.cpp:74
+#, kde-format
+msgid "Property name cannot be longer than 1 character."
+msgid_plural "Property name cannot be longer than %1 characters."
+msgstr[0] "Omaduse nimi ei saa olla pikem kui 1 märk."
+msgstr[1] "Omaduse nimi ei saa olla pikem kui %1 märki."
+
+#: actionshandlers/propertyactionshandler.cpp:93
+msgid ""
+"This property already exists.  Continuing will merge these two properties "
+"into one.  Are you sure?"
+msgstr ""
+"See omadus on juba olemas. Jätkamisel liidetakse need üheks. Kas ikka "
+"kindlasti jätkata?"
+
+#: actionshandlers/ingredientactionshandler.cpp:38
+msgid "New Ingredient"
+msgstr "Uus koostisosa"
+
+#: actionshandlers/ingredientactionshandler.cpp:80
+#: widgets/ingredientinputwidget.cpp:249
+#, kde-format
+msgid "Ingredient name cannot be longer than 1 character."
+msgid_plural "Ingredient name cannot be longer than %1 characters."
+msgstr[0] "Koostisosa nimi ei saa olla pikem kui 1 märk."
+msgstr[1] "Koostisosa nimi ei saa olla pikem kui %1 märki."
+
+#: actionshandlers/ingredientactionshandler.cpp:102
+msgid ""
+"This ingredient already exists. Continuing will merge these two ingredients "
+"into one. Are you sure?"
+msgstr ""
+"See koostisosa on juba olemas. Jätkamisel liidetakse need üheks. Kas ikka "
+"kindlasti jätkata?"
+
+#: actionshandlers/headeractionshandler.cpp:39
+msgid "New Header"
+msgstr "Uus tüüp"
+
+#: actionshandlers/headeractionshandler.cpp:80
+#, kde-format
+msgid "Header cannot be longer than 1 character."
+msgid_plural "Header cannot be longer than %1 characters."
+msgstr[0] "Tüübi nimi ei saa olla pikem kui 1 märk."
+msgstr[1] "Tüübi nimi ei saa olla pikem kui %1 märki."
+
+#: actionshandlers/headeractionshandler.cpp:103
+#: actionshandlers/prepmethodactionshandler.cpp:101
+msgid ""
+"This header already exists.  Continuing will merge these two headers into "
+"one.  Are you sure?"
+msgstr ""
+"See tüüp on juba olemas. Jätkamisel liidetakse need üheks. Kas ikka "
+"kindlasti jätkata?"
+
+#: actionshandlers/authoractionshandler.cpp:38
+msgid "New Author"
+msgstr "Uus autor"
+
+#: actionshandlers/authoractionshandler.cpp:63
+msgid "Are you sure you want to delete this author?"
+msgstr "Kas tõesti see autor kustutada?"
+
+#: actionshandlers/authoractionshandler.cpp:91
+#, kde-format
+msgid "Author name cannot be longer than 1 character."
+msgid_plural "Author name cannot be longer than %1 characters."
+msgstr[0] "Autori nimi ei saa olla pikem kui 1 märk."
+msgstr[1] "Autori nimi ei saa olla pikem kui %1 märki."
+
+#: actionshandlers/authoractionshandler.cpp:112
+msgid ""
+"This author already exists. Continuing will merge these two authors into "
+"one. Are you sure?"
+msgstr ""
+"See autor on juba olemas. Jätkamisel liidetakse need üheks. Kas ikka "
+"kindlasti jätkata?"
+
+#: actionshandlers/recipeactionshandler.cpp:226
+msgid "Please select only one recipe."
+msgstr "Palun vali ainult üks retsept."
+
+#: actionshandlers/recipeactionshandler.cpp:226
+#: actionshandlers/recipeactionshandler.cpp:232 krecipesview.cpp:515
+msgid "Edit Recipe"
+msgstr "Muuda retsepti"
+
+#: actionshandlers/recipeactionshandler.cpp:232
+#: actionshandlers/recipeactionshandler.cpp:264
+#: actionshandlers/recipeactionshandler.cpp:290
+msgid "No recipes selected."
+msgstr "Ühtegi retsepti pole valitud."
+
+#: actionshandlers/recipeactionshandler.cpp:249 krecipesview.cpp:692
+#: krecipesview.cpp:694
+msgid "Export Recipe"
+msgstr "Ekspordi retsept"
+
+#: actionshandlers/recipeactionshandler.cpp:255
+msgid ""
+"No recipes are currently selected.\n"
+"Would you like to export all recipes in the current view?"
+msgstr ""
+"Ühtegi retsepti pole valitud.\n"
+"Kas soovid eksportida aktiivsesse vaatesse kõik retseptid?"
+
+#: actionshandlers/recipeactionshandler.cpp:258
+msgid "Export Recipes"
+msgstr "Ekspordi retseptid"
+
+#: actionshandlers/recipeactionshandler.cpp:264 pref.cpp:495
+msgid "Export"
+msgstr "Ekspordi"
+
+#: actionshandlers/recipeactionshandler.cpp:280
+msgid ""
+"No recipes are currently selected.\n"
+"Would you like to print all recipes in the current view?"
+msgstr ""
+"Ühtegi retsepti pole valitud.\n"
+"Kas trükkida kõik aktiivse vaate retseptid?"
+
+#: actionshandlers/recipeactionshandler.cpp:290
+msgid "Print"
+msgstr "Trüki"
+
+#: actionshandlers/recipeactionshandler.cpp:388
+msgid "Compressed Krecipes format"
+msgstr "Tihendatud Krecipese vorming"
+
+#: actionshandlers/recipeactionshandler.cpp:389
+msgid "Web page"
+msgstr "Veebilehekülg"
+
+#: actionshandlers/recipeactionshandler.cpp:390 pref.cpp:500
+msgid "Plain Text"
+msgstr "Klaartekst"
+
+#: actionshandlers/recipeactionshandler.cpp:391
+msgid "Web Book"
+msgstr "Web Book"
+
+#: actionshandlers/recipeactionshandler.cpp:432 krecipes.cpp:693
+#, kde-format
+msgid "File \"%1\" exists.  Are you sure you want to overwrite it?"
+msgstr "Fail \"%1\" on olemas. Kas tõesti see üle kirjutada?"
+
+#: actionshandlers/recipeactionshandler.cpp:432
+msgid "Saving recipe"
+msgstr "Retsepti salvestamine"
+
+#: actionshandlers/recipeactionshandler.cpp:436
+msgid "Saving recipes..."
+msgstr "Retsepti salvestamine"
+
+#: actionshandlers/prepmethodactionshandler.cpp:38
+msgid "New Preparation Method"
+msgstr "Uus valmistusviis"
+
+#: actionshandlers/prepmethodactionshandler.cpp:79
+#: widgets/ingredientinputwidget.cpp:271
+#, kde-format
+msgid "Preparation method cannot be longer than 1 character."
+msgid_plural "Preparation method cannot be longer than %1 characters."
+msgstr[0] "Valmistusviis ei saa olla pikem kui 1 märk."
+msgstr[1] "Valmistusviis ei saa olla pikem kui %1 märki."
+
+#: actionshandlers/categoryactionshandler.cpp:148
+msgid ""
+"Are you sure you want to delete this category and all its subcategories?"
+msgstr "Kas tõesti see kategooria ja kõik selle alamkategooriad kustutada?"
+
+#: actionshandlers/categoryactionshandler.cpp:173
+#, kde-format
+msgid "Category name cannot be longer than 1 character."
+msgid_plural "Category name cannot be longer than %1 characters."
+msgstr[0] "Kategooria nimi ei saa olla pikem kui 1 märk."
+msgstr[1] "Kategooria nimi ei saa olla pikem kui %1 märki."
+
+#: actionshandlers/categoryactionshandler.cpp:203
+msgid ""
+"This category already exists. Continuing will merge these two categories "
+"into one. Are you sure?"
+msgstr ""
+"See kategooria on juba olemas. Jätkamisel liidetakse need üheks. Kas ikka "
+"kindlasti jätkata?"
+
+#: exporters/plaintextexporter.cpp:76 exporters/xsltexporter.cpp:52
+#: exporters/htmlexporter.cpp:235 dialogs/setupdisplay.cpp:125
+#: krecipesview.cpp:378 krecipesview.cpp:509
+msgid "Authors"
+msgstr "Autorid"
+
+#: exporters/plaintextexporter.cpp:82 exporters/xsltexporter.cpp:49
+#: exporters/htmlexporter.cpp:249 dialogs/setupdisplay.cpp:126
+#: krecipesview.cpp:377 krecipesview.cpp:501
+msgid "Categories"
+msgstr "Kategooriad"
+
+#: exporters/plaintextexporter.cpp:88
+msgid "Yields"
+msgstr "Portsjonid"
+
+#: exporters/plaintextexporter.cpp:94 exporters/htmlexporter.cpp:210
+#: dialogs/setupdisplay.cpp:123
+msgid "Preparation Time"
+msgstr "Valmistamisaeg"
+
+#: exporters/plaintextexporter.cpp:114 exporters/plaintextexporter.cpp:124
+msgid "or"
+msgstr "või"
+
+#: exporters/plaintextexporter.cpp:139 exporters/xsltexporter.cpp:58
+#: exporters/htmlexporter.cpp:398 dialogs/setupdisplay.cpp:129
+msgid "Ratings"
+msgstr "Hinnangud"
+
+#: exporters/plaintextexporter.cpp:152
+#, kde-format
+msgid "1 star"
+msgid_plural "%1 stars"
+msgstr[0] "1 tärn"
+msgstr[1] "%1 tärni"
+
+#: exporters/xsltexporter.cpp:47 exporters/htmlexporter.cpp:199
+#: dialogs/setupdisplay.cpp:75 dialogs/setupdisplay.cpp:122
+msgid "Instructions"
+msgstr "Valmistamisjuhised"
+
+#: exporters/xsltexporter.cpp:48 exporters/htmlexporter.cpp:433
+msgid "Overall Rating"
+msgstr "Üldhinnang"
+
+#: exporters/xsltexporter.cpp:50 exporters/htmlexporter.cpp:204
+#: dialogs/setupdisplay.cpp:130
+msgid "Yield"
+msgstr "Portsjonid"
+
+#: exporters/xsltexporter.cpp:51
+msgid "Prep"
+msgstr "Valm"
+
+#: exporters/xsltexporter.cpp:53
+msgid "Amount"
+msgstr "Kogus"
+
+#: exporters/xsltexporter.cpp:54 widgets/ingredientlistview.cpp:107
+#: widgets/ingredientlistview.cpp:132
+msgid "Ingredient"
+msgstr "Koostisosa"
+
+#: exporters/xsltexporter.cpp:55 exporters/htmlexporter.cpp:344
+#: dialogs/setupdisplay.cpp:127 krecipesview.cpp:373 krecipesview.cpp:469
+msgid "Ingredients"
+msgstr "Koostisosad"
+
+#: exporters/xsltexporter.cpp:56
+msgid "Preparation"
+msgstr "Valmistamine"
+
+#: exporters/xsltexporter.cpp:59 exporters/htmlexporter.cpp:310
+#: exporters/htmlexporter.cpp:333 dialogs/ingredientmatcherdialog.h:57
+#: widgets/ingredientinputwidget.cpp:98 widgets/inglistviewitem.cpp:28
+#: widgets/inglistviewitem.cpp:40
+msgid "OR"
+msgstr "Üld"
+
+#: exporters/xsltexporter.cpp:60
+msgid "reviews"
+msgstr "ülevaated"
+
+#: exporters/xsltexporter.cpp:229
+msgid ""
+"<html><b>Error:</b> Problem with KreML exporter.  Please export the recipe "
+"you are trying to view as KreML and attach it to a bug report to a Krecipes "
+"developer.</html>"
+msgstr ""
+"<html><b>Viga:</b> probleem KreML eksportijaga. Palun ekspordi retsept, mida "
+"üritad vaadata KreML-ina, ning lisa see Krecipese arendajale saadetavale "
+"veateatele.</html>"
+
+#: exporters/xsltexporter.cpp:236
+#, kde-format
+msgid ""
+"<html><b>Error:</b> Bad template: %1.  Use \"Edit->Page Setup...\" to select "
+"a new template.</html>"
+msgstr ""
+"<html><b>Viga:</b> halb mall: %1.  Kasuta uue malli valimiseks "
+"\"Redigeerimine->Lehekülje seadistamine...\"</html>"
+
+#: exporters/recipemlexporter.cpp:139
+msgctxt "Total preparation time"
+msgid "Total"
+msgstr "Kokku"
+
+#: exporters/htmlexporter.cpp:134
+msgid "Krecipes Recipes"
+msgstr "Krecipese retseptid"
+
+#: tests/rezkonvtest.cpp:28
+msgid "Rezkonvtest"
+msgstr "Rezkonvtest"
+
+#: tests/recipemltest.cpp:28
+msgid "Recipemltest"
+msgstr "Recipemltest"
+
+#: tests/mxptest.cpp:26
+msgid "Mxptest"
+msgstr "Mxptest"
+
+#: tests/mx2test.cpp:29
+msgid "Mx2test"
+msgstr "Mx2test"
+
+#: tests/mmftest.cpp:28
+msgid "Mmftest"
+msgstr "Mmftest"
+
+#: tests/kretest.cpp:26
+msgid "Kretest"
+msgstr "Kretest"
+
+#: tests/nyctest.cpp:26
+msgid "Nyctest"
+msgstr "Nyctest"
+
+#: dialogs/recipeinputdialog.cpp:172
+msgctxt "@info:tooltip"
+msgid "Select photo"
+msgstr "Vali foto"
+
+#: dialogs/recipeinputdialog.cpp:176
+msgctxt "action:button"
+msgid "Save photo as..."
+msgstr "Salvesta foto..."
+
+#: dialogs/recipeinputdialog.cpp:180
+msgctxt "@info:tooltip"
+msgid "Clear photo"
+msgstr "Eemalda foto"
+
+#: dialogs/recipeinputdialog.cpp:193
+msgctxt "@label"
+msgid "Recipe Name"
+msgstr "Retsepti nimi"
+
+#: dialogs/recipeinputdialog.cpp:209
+msgctxt "@label"
+msgid "Authors"
+msgstr "Autorid"
+
+#: dialogs/recipeinputdialog.cpp:226
+msgctxt "@label"
+msgid "Categories"
+msgstr "Kategooriad"
+
+#: dialogs/recipeinputdialog.cpp:247
+msgctxt ""
+"@label How much food you will produce with a given cooking recipe (e.g. 2 "
+"servings or 3 bottles)"
+msgid "Yield"
+msgstr "Portsjonid"
+
+#: dialogs/recipeinputdialog.cpp:251
+msgctxt "@label The amount for yield"
+msgid "Amount"
+msgstr "Kogus"
+
+#: dialogs/recipeinputdialog.cpp:254
+msgctxt "@label The type of yield (e.g. servings, bottles..."
+msgid "Type"
+msgstr "Tüüp"
+
+#: dialogs/recipeinputdialog.cpp:266
+msgctxt "@label"
+msgid "Preparation Time"
+msgstr "Valmistamisaeg"
+
+#: dialogs/recipeinputdialog.cpp:338
+msgctxt "@info:tooltip"
+msgid "Add ingredient"
+msgstr "Lisa koostisosa"
+
+#: dialogs/recipeinputdialog.cpp:339
+msgctxt "@info:tooltip"
+msgid "Move ingredient up"
+msgstr "Liiguta koostisosa üles"
+
+#: dialogs/recipeinputdialog.cpp:340
+msgctxt "@info:tooltip"
+msgid "Move ingredient down"
+msgstr "Liiguta koostisosa alla"
+
+#: dialogs/recipeinputdialog.cpp:341
+msgctxt "@info:tooltip"
+msgid "Remove ingredient"
+msgstr "Eemalda koostisosa"
+
+#: dialogs/recipeinputdialog.cpp:342
+msgctxt "@info:tooltip"
+msgid "Paste Ingredients"
+msgstr "Aseta koostisosad"
+
+#: dialogs/recipeinputdialog.cpp:346 dialogs/ingredientparserdialog.cpp:66
+#: dialogs/ingredientparserdialog.cpp:115
+msgctxt "@title:column"
+msgid "Ingredient"
+msgstr "Koostisosa"
+
+#: dialogs/recipeinputdialog.cpp:347 dialogs/refineshoppinglistdialog.cpp:91
+#: dialogs/refineshoppinglistdialog.cpp:124
+#: dialogs/editpropertiesdialog.cpp:169 dialogs/editpropertiesdialog.cpp:260
+#: dialogs/ingredientparserdialog.cpp:67
+#: dialogs/ingredientparserdialog.cpp:116
+msgctxt "@title:column"
+msgid "Amount"
+msgstr "Kogus"
+
+#: dialogs/recipeinputdialog.cpp:349
+msgctxt "@title:column"
+msgid "Units"
+msgstr "Ühikud"
+
+#: dialogs/recipeinputdialog.cpp:350 dialogs/ingredientparserdialog.cpp:69
+#: dialogs/ingredientparserdialog.cpp:118
+msgctxt "@title:column"
+msgid "Preparation Method"
+msgstr "Valmistusviis"
+
+#: dialogs/recipeinputdialog.cpp:365
+msgctxt "@label"
+msgid "Property Status:"
+msgstr "Omaduse olek:"
+
+#: dialogs/recipeinputdialog.cpp:369
+msgctxt "@action:button"
+msgid "Details..."
+msgstr "Üksikasjad..."
+
+#: dialogs/recipeinputdialog.cpp:380
+msgctxt "@action:inmenu Updates the loaded information"
+msgid "Update"
+msgstr "Uuenda"
+
+#: dialogs/recipeinputdialog.cpp:387
+msgctxt "@title:window "
+msgid "Property details"
+msgstr "Omaduse üksikasjad"
+
+#: dialogs/recipeinputdialog.cpp:421
+msgctxt "@action:button"
+msgid "Add Rating..."
+msgstr "Lisa hinnang..."
+
+#: dialogs/recipeinputdialog.cpp:429
+msgctxt "@title:tab"
+msgid "Recipe"
+msgstr "Retsept"
+
+#: dialogs/recipeinputdialog.cpp:430 dialogs/ingredientsdialog.cpp:82
+msgctxt "@title:tab"
+msgid "Ingredients"
+msgstr "Koostisosad"
+
+#: dialogs/recipeinputdialog.cpp:431
+msgctxt "@title:tab"
+msgid "Instructions"
+msgstr "Valmistamisjuhised"
+
+#: dialogs/recipeinputdialog.cpp:432
+msgctxt "@title:tab"
+msgid "Ratings"
+msgstr "Hinnangud"
+
+#: dialogs/recipeinputdialog.cpp:452
+msgctxt "@action:button"
+msgid "Save recipe"
+msgstr "Salvesta retsept"
+
+#: dialogs/recipeinputdialog.cpp:453
+msgctxt "@info:tooltip"
+msgid "Save recipe"
+msgstr "Salvesta retsept"
+
+#: dialogs/recipeinputdialog.cpp:455
+msgctxt "@action:button"
+msgid "Show recipe"
+msgstr "Näita retsepti"
+
+#: dialogs/recipeinputdialog.cpp:456
+msgctxt "@info:tooltip"
+msgid "Show recipe"
+msgstr "Näita retsepti"
+
+#: dialogs/recipeinputdialog.cpp:458 dialogs/recipeviewdialog.cpp:62
+msgctxt "@action:button"
+msgid "Close"
+msgstr "Sulge"
+
+#: dialogs/recipeinputdialog.cpp:459 dialogs/recipeviewdialog.cpp:63
+msgctxt "@info:tooltip"
+msgid "Close"
+msgstr "Sulge"
+
+#: dialogs/recipeinputdialog.cpp:461
+msgctxt "@action:button"
+msgid "Resize recipe"
+msgstr "Muuda retsepti suurust"
+
+#: dialogs/recipeinputdialog.cpp:462
+msgctxt "@info:tooltip"
+msgid "Resize recipe"
+msgstr "Muuda retsepti suurust"
+
+#: dialogs/recipeinputdialog.cpp:685 dialogs/recipeinputdialog.cpp:727
+msgid "Images"
+msgstr "Pildid"
+
+#: dialogs/recipeinputdialog.cpp:729
+msgctxt "@title:window"
+msgid "Save photo as..."
+msgstr "Salvesta foto..."
+
+#: dialogs/recipeinputdialog.cpp:737
+msgctxt "@info"
+msgid "The file already exists, do you want to overwrite it?"
+msgstr "Fail on juba olemas. Kas tõesti see üle kirjutada?"
+
+#: dialogs/recipeinputdialog.cpp:744
+#, kde-format
+msgctxt "@info"
+msgid "The photo cannot be saved in %1"
+msgstr "Foto salvestamine faili %1 nurjus"
+
+#: dialogs/recipeinputdialog.cpp:1028
+#, kde-format
+msgctxt "@info"
+msgid "Unit name cannot be longer than 1 character."
+msgid_plural "Unit name cannot be longer than %1 characters."
+msgstr[0] "Ühiku nimi ei saa olla pikem kui 1 märk."
+msgstr[1] "Ühiku nimi ei saa olla pikem kui %1 märki."
+
+#: dialogs/recipeinputdialog.cpp:1067
+#, kde-format
+msgctxt "@info"
+msgid "Preparation method cannot be longer than 1 character."
+msgid_plural "Preparation method cannot be longer than %1 characters."
+msgstr[0] "Valmistusviis ei saa olla pikem kui 1 märk."
+msgstr[1] "Valmistusviis ei saa olla pikem kui %1 märki."
+
+#: dialogs/recipeinputdialog.cpp:1117
+#, kde-format
+msgctxt "@info"
+msgid "Recipe title cannot be longer than 1 character."
+msgid_plural "Recipe title cannot be longer than %1 characters."
+msgstr[0] "Retsepti nimi ei saa olla pikem kui 1 märk."
+msgstr[1] "Retsepti nimi ei saa olla pikem kui %1 märki."
+
+#: dialogs/recipeinputdialog.cpp:1117
+msgid "Unable to save recipe"
+msgstr "Retsepti salvestamine nurjus"
+
+#: dialogs/recipeinputdialog.cpp:1157
+msgctxt "@label:textbox"
+msgid "Write the recipe instructions here"
+msgstr "Kirjuta siia retsepti valmistamisjuhised"
+
+#: dialogs/recipeinputdialog.cpp:1159
+msgctxt "@label:textbox"
+msgid "Write the recipe title here"
+msgstr "Kirjuta siia retsepti nimi"
+
+#: dialogs/recipeinputdialog.cpp:1265
+msgctxt "@info"
+msgid ""
+"This recipe contains unsaved changes.\n"
+"Would you like to save it before closing?"
+msgstr ""
+"Retseptis on salvestamata muudatusi.\n"
+"Kas salvestada need enne sulgemist?"
+
+#: dialogs/recipeinputdialog.cpp:1265 dialogs/recipeinputdialog.cpp:1290
+#: dialogs/recipeinputdialog.cpp:1300
+msgctxt "@title:window"
+msgid "Unsaved changes"
+msgstr "Salvestamata muudatused"
+
+#: dialogs/recipeinputdialog.cpp:1290
+msgctxt "@info"
+msgid ""
+"You need to save the recipe before displaying it. Would you like to save it "
+"now?"
+msgstr "Enne näitamist tuleb retsept salvestada. Kas teha seda nüüd?"
+
+#: dialogs/recipeinputdialog.cpp:1300
+msgctxt "@info"
+msgid ""
+"This recipe has changes that will not be displayed unless the recipe is "
+"saved. Would you like to save it now?"
+msgstr ""
+"Retseptis on muudatusi, mida ei näidata, kui retsepti ei salvestata. Kas "
+"salvestada retsept nüüd?"
+
+#: dialogs/recipeinputdialog.cpp:1562
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<b>%1:</b> No nutrient information available. <a href=\"ingredient#%2"
+"\">Provide nutrient information.</a>"
+msgstr ""
+"<b>%1:</b> toitaineteave puudub. <a href=\"ingredient#%2\">Toitaineteabe "
+"esitamine.</a>"
+
+#: dialogs/recipeinputdialog.cpp:1584
+msgid "-No unit-"
+msgstr "--Ühik puudub--"
+
+#: dialogs/recipeinputdialog.cpp:1583
+#, kde-format
+msgctxt "@info"
+msgid "<b>%3:</b> Unit conversion missing for conversion from '%1' to '%2'"
+msgstr "<b>%3:</b> ühiku teisendus puudub teisenduseks '%1' -> '%2'"
+
+#: dialogs/recipeinputdialog.cpp:1598 dialogs/recipeinputdialog.cpp:1601
+#: dialogs/recipeinputdialog.cpp:1604 dialogs/recipeinputdialog.cpp:1607
+msgctxt "@info"
+msgid "-No unit-"
+msgstr "--Ühik puudub--"
+
+#: dialogs/recipeinputdialog.cpp:1612
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<b>%1:</b> Either <a href=\"ingredient#%3\">enter an appropriate ingredient "
+"weight entry</a>, or provide conversion information to perform one of the "
+"following conversions: %2"
+msgstr ""
+"<b>%1:</b> vaja on <a href=\"ingredient#%3\">sobivat koostisosa kaalu "
+"kirjet</a> või vajab Krecipes teisendamise infot ühe järgnevatest teisenduse "
+"sooritamiseks: %2"
+
+#: dialogs/recipeinputdialog.cpp:1624
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<b>%1:</b> No ingredient weight entries. <a href=\"ingredient#%2\">Provide "
+"ingredient weight.</a>"
+msgstr ""
+"<b>%1:</b> koostisosa kaalukirjed puuduvad.  <a href=\"ingredient#%2"
+"\">Koostisosa kaalu esitamine.</a>"
+
+#: dialogs/recipeinputdialog.cpp:1631
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<b>%1:</b> There is no ingredient weight entry for when no preparation "
+"method is specified. <a href=\"ingredient#%2\">Provide ingredient weight.</a>"
+msgstr ""
+"<b>%1:</b> koostisosa kaalu kirje puudub, kui valmistamisviisi pole "
+"määratud. <a href=\"ingredient#%2\">Koostisosa kaalu esitamine.</a>"
+
+#: dialogs/recipeinputdialog.cpp:1637
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<b>%1:</b> There is no ingredient weight entry for when prepared in any of "
+"the following manners: %2<a href=\"ingredient#%3\">Provide ingredient weight."
+"</a>"
+msgstr ""
+"<b>%1:</b> koostiosa kaalu kirje puudub, kui valmistatakse ühel järgnevatest "
+"viisidest: %2<a href=\"ingredient#%3\">Koostisosa kaalu esitamine.</a>"
+
+#: dialogs/recipeinputdialog.cpp:1646
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<b>%1:</b> There is no ingredient weight entry for when prepared in any of "
+"the following manners (defaulting to a weight entry without a preparation "
+"method specified): %2<a href=\"ingredient#%3\">Provide ingredient weight.</a>"
+msgstr ""
+"<b>%1:</b> koostisosa kaalu kirje puudub, kui valmistatakse ühel "
+"järgnevatest viisidest (vaikimisi kasutatakse kaalu kirjet ilma "
+"valmistamisviisi määramata): %2<a href=\"ingredient#%3\">Koostisosa kaalu "
+"esitamine.</a>"
+
+#: dialogs/recipeinputdialog.cpp:1670
+msgctxt "@info Property information for a recipe is complete"
+msgid "Complete"
+msgstr "Valmis"
+
+#: dialogs/recipeinputdialog.cpp:1677
+msgctxt "@info Property information for a recipe is complete, but..."
+msgid "Complete, but approximations made"
+msgstr "Valmis mugandustega"
+
+#: dialogs/recipeinputdialog.cpp:1685
+msgctxt "@info Property information for a recipe is incomplete"
+msgid "Incomplete"
+msgstr "Puudulik"
+
+#: dialogs/recipeinputdialog.cpp:1700
+msgctxt "@info"
+msgid ""
+"The nutrient information for this recipe is incomplete because the following "
+"information is missing:"
+msgstr "Selle retsepti toitaineinfo on puudulik, sest puudub järgnev info:"
+
+#: dialogs/recipeinputdialog.cpp:1711
+msgctxt "@info"
+msgid ""
+"The following approximations will be made when determining nutrient "
+"information:"
+msgstr "Toitaineinfo määramisel tehakse järgmised mugandused:"
+
+#: dialogs/shoppinglistviewdialog.cpp:30
+msgctxt "@title:window"
+msgid "Shopping List"
+msgstr "Ostunimekiri"
+
+#: dialogs/shoppinglistviewdialog.cpp:67 dialogs/shoppinglistviewdialog.cpp:69
+#: krecipesview.cpp:372 krecipesview.cpp:444
+msgid "Shopping List"
+msgstr "Ostunimekiri"
+
+#: dialogs/recipeviewdialog.cpp:113
+msgctxt "@title:window"
+msgid "Loading recipes, please wait..."
+msgstr "Retseptide laadimine, palun oota..."
+
+#: dialogs/dependanciesdialog.cpp:48
+msgctxt "@title:window"
+msgid "Element with Dependencies"
+msgstr "Sõltuvustega elemendid"
+
+#: dialogs/dependanciesdialog.cpp:60
+msgctxt "@info"
+msgid ""
+"<warning>The following will have to be removed also, since currently they "
+"use the element you have chosen to be removed.</warning>"
+msgstr ""
+"<warning>Eemaldada tuleb ka järgmised elemendid, sest sa valisid "
+"eemaldamiseks elemendi, mida need praegu kasutavad.</warning>"
+
+#: dialogs/dependanciesdialog.cpp:63
+msgctxt "@info"
+msgid ""
+"<warning>The following currently use the element you have chosen to be "
+"removed.</warning>"
+msgstr ""
+"<warning>Eemaldada tuleb ka järgmine element, sest sa valisid eemaldamiseks "
+"elemendi, mida see praegu kasutab.</warning>"
+
+#: dialogs/dependanciesdialog.cpp:95
+msgctxt "@info"
+msgid "Are you sure you wish to proceed?"
+msgstr "Kas tõesti jätkata?"
+
+#: dialogs/createingredientweightdialog.cpp:33
+msgctxt "@title:window"
+msgid "Add Ingredient Weight"
+msgstr "Koostisosa kaalu lisamine"
+
+#: dialogs/createingredientweightdialog.cpp:75
+msgctxt "@item"
+msgid "-No Preparation-"
+msgstr "-Valmistamiseta-"
+
+#: dialogs/createingredientweightdialog.cpp:95
+msgctxt "@title:group"
+msgid "New Ingredient Weight"
+msgstr "Uus koostisosa kaal"
+
+#: dialogs/createingredientweightdialog.cpp:96
+msgctxt "@label:textbox"
+msgid "Per Amount:"
+msgstr "Koguse kohta:"
+
+#: dialogs/createingredientweightdialog.cpp:97
+msgctxt "@label:textbox"
+msgid "Weight:"
+msgstr "Kaal:"
+
+#: dialogs/createingredientweightdialog.cpp:103
+#: dialogs/createingredientweightdialog.cpp:110
+msgctxt "@info"
+msgid "Amount field contains invalid input."
+msgstr "Koguseväljal on vigane suurus."
+
+#: dialogs/createingredientweightdialog.cpp:104
+#: dialogs/createingredientweightdialog.cpp:111
+msgctxt "@title:window"
+msgid "Invalid input"
+msgstr "Vigane sisend"
+
+#: dialogs/dbimportdialog.cpp:42
+msgctxt "@title:window"
+msgid "Database Import"
+msgstr "Andmebaasi import"
+
+#: dialogs/dbimportdialog.cpp:80
+msgctxt "@label:textbox"
+msgid "Database file:"
+msgstr "Andmebaasi fail:"
+
+#: dialogs/dbimportdialog.cpp:160
+msgctxt "@title:group"
+msgid "Database"
+msgstr "Andmebaas"
+
+#: dialogs/dbimportdialog.cpp:164
+msgctxt "@label:textbox"
+msgid "Server:"
+msgstr "Server:"
+
+#: dialogs/dbimportdialog.cpp:165
+msgctxt "@label:textbox Database username"
+msgid "Username:"
+msgstr "Kasutajanimi:"
+
+#: dialogs/dbimportdialog.cpp:166
+msgctxt "@label:textbox"
+msgid "Password:"
+msgstr "Parool:"
+
+#: dialogs/dbimportdialog.cpp:167
+msgctxt "@label:textbox"
+msgid "Database name:"
+msgstr "Andmebaasi nimi:"
+
+#: dialogs/dbimportdialog.cpp:168
+msgctxt "@label:textbox"
+msgid "Port:"
+msgstr "Port:"
+
+#: dialogs/dbimportdialog.cpp:169
+msgctxt "@label:textbox Default port"
+msgid "Default"
+msgstr "Vaikimisi"
+
+#: dialogs/selectauthorsdialog.cpp:32
+msgctxt "@title:window"
+msgid "Authors"
+msgstr "Autorid"
+
+#: dialogs/selectauthorsdialog.cpp:68
+msgctxt "@title:column"
+msgid "Author"
+msgstr "Autor"
+
+#: dialogs/selectauthorsdialog.cpp:118
+#, kde-format
+msgctxt "@info"
+msgid "Author name cannot be longer than 1 character."
+msgid_plural "Author name cannot be longer than %1 characters."
+msgstr[0] "Autori nimi ei saa olla pikem kui 1 märk."
+msgstr[1] "Autori nimi ei saa olla pikem kui %1 märki."
+
+#: dialogs/authorsdialog.cpp:45 dialogs/categorieseditordialog.cpp:44
+#: dialogs/prepmethodsdialog.cpp:44 dialogs/unitsdialog.cpp:54
+#: dialogs/ingredientgroupsdialog.cpp:40 dialogs/ingredientsdialog.cpp:64
+#: dialogs/propertiesdialog.cpp:54
+msgctxt "@action:button"
+msgid "Create..."
+msgstr "Loo..."
+
+#: dialogs/authorsdialog.cpp:50 dialogs/categorieseditordialog.cpp:49
+#: dialogs/prepmethodsdialog.cpp:49 dialogs/unitsdialog.cpp:59
+#: dialogs/ingredientgroupsdialog.cpp:45 dialogs/ingredientsdialog.cpp:69
+#: dialogs/propertiesdialog.cpp:58 dialogs/selectrecipedialog.cpp:108
+msgctxt "@action:button"
+msgid "Delete"
+msgstr "Kustuta"
+
+#: dialogs/shoppinglistdialog.cpp:71
+msgctxt "@title"
+msgid "Full recipe list"
+msgstr "Täielik retseptide nimekiri"
+
+#: dialogs/shoppinglistdialog.cpp:106
+msgctxt "@title"
+msgid "Shopping List"
+msgstr "Ostunimekiri"
+
+#: dialogs/shoppinglistdialog.cpp:116
+msgctxt "@title:column"
+msgid "Recipe Title"
+msgstr "Retsepti nimi"
+
+#: dialogs/shoppinglistdialog.cpp:135
+msgctxt "@action:button"
+msgid "&OK"
+msgstr "&OK"
+
+#: dialogs/shoppinglistdialog.cpp:142
+msgctxt "@action:button Clear list"
+msgid "Clear"
+msgstr "Puhasta"
+
+#: dialogs/selectcategoriesdialog.cpp:32
+msgctxt "@title:window"
+msgid "Categories"
+msgstr "Kategooriad"
+
+#: dialogs/selectcategoriesdialog.cpp:46
+msgctxt "@action:button"
+msgid "&New Category..."
+msgstr "&Uus kategooria..."
+
+#: dialogs/selectcategoriesdialog.cpp:89
+#, kde-format
+msgctxt "@info"
+msgid "Category name cannot be longer than 1 character."
+msgid_plural "Category name cannot be longer than %1 characters."
+msgstr[0] "Kategooria nimi ei saa olla pikem kui 1 märk."
+msgstr[1] "Kategooria nimi ei saa olla pikem kui %1 märki."
+
+#: dialogs/conversiondialog.cpp:34
+msgctxt "@title:window"
+msgid "Measurement Converter"
+msgstr "Mõõtühikute teisendaja"
+
+#: dialogs/conversiondialog.cpp:38
+msgctxt "@action:button"
+msgid "Convert"
+msgstr "Teisenda"
+
+#: dialogs/conversiondialog.cpp:59
+msgctxt "@item:inlistbox"
+msgid "--Ingredient (optional)--"
+msgstr "--Koostisosa (pole kohustuslik)--"
+
+#: dialogs/conversiondialog.cpp:62
+msgctxt "@item:inlistbox"
+msgid "-No Preparation-"
+msgstr "-Valmistamiseta-"
+
+#: dialogs/conversiondialog.cpp:97
+msgctxt "@label"
+msgid "Convert"
+msgstr "Teisenda"
+
+#: dialogs/conversiondialog.cpp:98
+msgctxt "@label Convert to"
+msgid "To"
+msgstr "->"
+
+#: dialogs/conversiondialog.cpp:100
+msgctxt "@label Result of an unit conversion"
+msgid "<b>Result:</b>"
+msgstr "<b>Tulemus:</b>"
+
+#: dialogs/conversiondialog.cpp:135
+msgctxt "@label:textbox"
+msgid "<b>Result:</b>"
+msgstr "<b>Tulemus:</b>"
+
+#: dialogs/conversiondialog.cpp:139
+msgctxt "@label:textbox"
+msgid "<b>Approximated result:</b>"
+msgstr "<b>Ligikaudne tulemus:</b>"
+
+#: dialogs/conversiondialog.cpp:143 dialogs/conversiondialog.cpp:147
+#: dialogs/conversiondialog.cpp:151 dialogs/conversiondialog.cpp:155
+#: dialogs/conversiondialog.cpp:159
+msgctxt "@label:textbox"
+msgid "<b>Error:</b>"
+msgstr "<b>Viga:</b>"
+
+#: dialogs/conversiondialog.cpp:144
+msgctxt "@info"
+msgid "Missing unit conversion"
+msgstr "Puuduv ühikuteisendus"
+
+#: dialogs/conversiondialog.cpp:148
+msgctxt "@info"
+msgid "No ingredient weight available"
+msgstr "Koostisosa kaalu pole saadaval"
+
+#: dialogs/conversiondialog.cpp:152
+msgctxt "@info"
+msgid "No ingredient weight available for this method of preparation"
+msgstr "Sellele valmistamisviisile pole koostisosa kaalu"
+
+#: dialogs/conversiondialog.cpp:156
+msgctxt "@info"
+msgid "Ingredient required for conversion"
+msgstr "Teisendamiseks nõutav koostisosa"
+
+#: dialogs/conversiondialog.cpp:160
+msgctxt "@info"
+msgid "Impossible unit conversion based on unit types"
+msgstr "Võimatu ühiku teisendamine ühikutüüpide järgi"
+
+#: dialogs/unitsdialog.cpp:65
+msgctxt "@title:tab"
+msgid "Units"
+msgstr "Ühikud"
+
+#: dialogs/unitsdialog.cpp:68
+msgctxt "@title:tab"
+msgid "Mass Conversions"
+msgstr "Kaaluteisendused"
+
+#: dialogs/unitsdialog.cpp:71
+msgctxt "@title:tab"
+msgid "Volume Conversions"
+msgstr "Mahuteisendused"
+
+#: dialogs/unitsdialog.cpp:187
+msgctxt "@title:window"
+msgid "Finding Unit Ratios"
+msgstr "Ühikute suhete leidmine"
+
+#: dialogs/dietwizarddialog.cpp:59
+msgctxt "@label:slider"
+msgid "Number of Days"
+msgstr "Päevade arv"
+
+#: dialogs/dietwizarddialog.cpp:78
+msgctxt "@label:slider"
+msgid "Meals per Day"
+msgstr "Toidukordi päevas"
+
+#: dialogs/dietwizarddialog.cpp:106
+msgctxt "@action:button"
+msgid "Create the diet"
+msgstr "Loo dieet"
+
+#: dialogs/dietwizarddialog.cpp:110
+msgctxt "@action:button Clear Diet"
+msgid "Clear"
+msgstr "Puhasta"
+
+#: dialogs/dietwizarddialog.cpp:116 dialogs/dietwizarddialog.cpp:170
+#, kde-format
+msgctxt "@title:tab"
+msgid "Meal 1"
+msgid_plural "Meal %1"
+msgstr[0] "1. toidukord"
+msgstr[1] "%1. toidukord"
+
+#: dialogs/dietwizarddialog.cpp:165 dialogs/dietwizarddialog.cpp:187
+#, kde-format
+msgid "- %1 -"
+msgstr "- %1 -"
+
+#: dialogs/dietwizarddialog.cpp:191
+#, kde-format
+msgid "- 1 week -"
+msgid_plural "- %1 weeks -"
+msgstr[0] "- 1 nädal -"
+msgstr[1] "- %1 nädalat -"
+
+#: dialogs/dietwizarddialog.cpp:246
+msgctxt "@info"
+msgid ""
+"Given the constraints, a full diet list could not be constructed. Either the "
+"recipe list is too short or the constraints are too demanding. "
+msgstr ""
+"Antud piirangutega ei ole täieliku dieedi loomine võimalik: retseptide "
+"nimekiri on liiga kesine või piirangud liiga karmid. "
+
+#: dialogs/dietwizarddialog.cpp:340
+msgctxt "@label:spinbox"
+msgid "No. of dishes: "
+msgstr "Käikude arv: "
+
+#: dialogs/dietwizarddialog.cpp:348
+msgctxt "@action:button"
+msgid "Previous Dish"
+msgstr "Eelmine käik"
+
+#: dialogs/dietwizarddialog.cpp:351
+msgctxt "@action:button"
+msgid "Next Dish"
+msgstr "Järgmine käik"
+
+#: dialogs/dietwizarddialog.cpp:359
+msgid "1st Course"
+msgstr "1. käik"
+
+#: dialogs/dietwizarddialog.cpp:362
+msgid "2nd Course"
+msgstr "2. käik"
+
+#: dialogs/dietwizarddialog.cpp:365
+msgid "Dessert"
+msgstr "Magustoit"
+
+#: dialogs/dietwizarddialog.cpp:400
+#, kde-format
+msgctxt "Dish number %1"
+msgid "Dish %1"
+msgstr "%1. käik"
+
+#: dialogs/dietwizarddialog.cpp:473
+msgctxt "@label:listbox"
+msgid "Dish Characteristics"
+msgstr "Käigu iseloomustus"
+
+#: dialogs/dietwizarddialog.cpp:485
+msgctxt "@option:check"
+msgid "Enable Category Filtering"
+msgstr "Kategooriafiltri lubamine"
+
+#: dialogs/createpropertydialog.cpp:22
+msgctxt "@title:window"
+msgid "New Property"
+msgstr "Uus omadus"
+
+#: dialogs/createpropertydialog.cpp:34
+msgctxt "@title:group"
+msgid "New Property"
+msgstr "Uus omadus"
+
+#: dialogs/createpropertydialog.cpp:38
+msgctxt "@label:textbox"
+msgid "Property name:"
+msgstr "Omaduse nimi:"
+
+#: dialogs/createpropertydialog.cpp:42
+msgctxt "@label:textbox"
+msgid "Units:"
+msgstr "Ühikud:"
+
+#: dialogs/editratingdialog.cpp:56 dialogs/editratingdialog.cpp:69
+msgctxt "@title:window"
+msgid "Rating"
+msgstr "Hinnang"
+
+#: dialogs/editratingdialog.cpp:117 dialogs/editratingdialog.cpp:168
+#: dialogs/advancedsearchdialog.cpp:497
+msgctxt "@title:column"
+msgid "Criteria"
+msgstr "Kriteerium"
+
+#: dialogs/editratingdialog.cpp:118 dialogs/editratingdialog.cpp:169
+#: dialogs/advancedsearchdialog.cpp:496 dialogs/advancedsearchdialog.cpp:498
+msgctxt "@title:column"
+msgid "Stars"
+msgstr "Tärnid"
+
+#: dialogs/editratingdialog.cpp:140 dialogs/editratingdialog.cpp:167
+msgctxt "@action:button"
+msgid "&Delete"
+msgstr "&Kustuta"
+
+#: dialogs/editratingdialog.cpp:164
+msgctxt "@label:textbox"
+msgid "Criteria:"
+msgstr "Kriteerium:"
+
+#: dialogs/editratingdialog.cpp:165
+msgctxt "@label:textbox"
+msgid "Stars:"
+msgstr "Tärnid:"
+
+#: dialogs/editratingdialog.cpp:166 dialogs/editpropertiesdialog.cpp:257
+#: dialogs/editpropertiesdialog.cpp:263
+msgctxt "@action:button"
+msgid "Add"
+msgstr "Lisa"
+
+#: dialogs/editratingdialog.cpp:170
+msgctxt "@label:textbox"
+msgid "Comments:"
+msgstr "Kommentaarid:"
+
+#: dialogs/editratingdialog.cpp:171
+msgctxt "@label:textbox"
+msgid "Rater:"
+msgstr "Hindaja:"
+
+#: dialogs/createunitconversiondialog.cpp:75
+msgctxt "@title:window"
+msgid "Unit Conversion"
+msgstr "Ühikuteisendus"
+
+#: dialogs/createunitconversiondialog.cpp:76
+msgctxt "@title:group"
+msgid "New Unit Conversion"
+msgstr "Uus ühikuteisendus"
+
+#: dialogs/ingredientsdialog.cpp:75
+msgctxt "@action:button"
+msgid "Property Information"
+msgstr "Omaduste info"
+
+#: dialogs/ingredientsdialog.cpp:85
+msgctxt "@title:tab"
+msgid "Headers"
+msgstr "Tüübid"
+
+#: dialogs/ingredientsdialog.cpp:136
+msgctxt "@info"
+msgid "No ingredient selected."
+msgstr "Koostisosa pole valitud."
+
+#: dialogs/refineshoppinglistdialog.cpp:37
+msgctxt "@title:window"
+msgid "Refine Shopping List"
+msgstr "Ostunimekirja täpsustamine"
+
+#: dialogs/refineshoppinglistdialog.cpp:45
+msgctxt "@action:button Finished refining shopping list"
+msgid "&Done"
+msgstr "Tehtu&d"
+
+#: dialogs/refineshoppinglistdialog.cpp:90
+#: dialogs/refineshoppinglistdialog.cpp:123
+msgctxt "@title:column"
+msgid "Ingredients in Shopping List"
+msgstr "Koostisosad ostunimekirjas"
+
+#: dialogs/refineshoppinglistdialog.cpp:92
+#: dialogs/refineshoppinglistdialog.cpp:125
+#: dialogs/editpropertiesdialog.cpp:170 dialogs/editpropertiesdialog.cpp:261
+#: dialogs/ingredientparserdialog.cpp:68
+#: dialogs/ingredientparserdialog.cpp:117 dialogs/selectunitdialog.cpp:41
+msgctxt "@title:column"
+msgid "Unit"
+msgstr "Ühik"
+
+#: dialogs/refineshoppinglistdialog.cpp:121
+msgctxt "@info"
+msgid ""
+"On the right are the ingredients needed for the recipes you selected.  You "
+"may now add additional ingredients, remove ingredients you do not need, or "
+"modify the amounts of existing ingredients."
+msgstr ""
+"Paremal on koostisosad, mida on vaja sinu valitud retseptile. Võid nüüd "
+"sinna koostisosasid lisada, eemaldada mittevajalikud koostisosad või muuta "
+"nende kogust."
+
+#: dialogs/refineshoppinglistdialog.cpp:122
+msgctxt "@title:column"
+msgid "Ingredients"
+msgstr "Koostisosad"
+
+#: dialogs/createcategorydialog.cpp:25
+msgctxt "@title:window"
+msgid "New Category"
+msgstr "Uus kategooria"
+
+#: dialogs/createcategorydialog.cpp:36
+msgctxt "@title:group"
+msgid "New Category"
+msgstr "Uus kategooria"
+
+#: dialogs/createcategorydialog.cpp:39
+msgctxt "@label:textbox Category name"
+msgid "Name:"
+msgstr "Nimi:"
+
+#: dialogs/createcategorydialog.cpp:42
+msgctxt "@label:textbox"
+msgid "Subcategory of:"
+msgstr "Kuulub kategooriasse:"
+
+#: dialogs/createcategorydialog.cpp:59
+msgctxt "@item:inlistbox No category"
+msgid "**NONE**"
+msgstr "**PUUDUB**"
+
+#: dialogs/editpropertiesdialog.cpp:128 dialogs/editpropertiesdialog.cpp:253
+msgctxt "@title:column"
+msgid "USDA Ingredient"
+msgstr "USDA koostisosa"
+
+#: dialogs/editpropertiesdialog.cpp:168 dialogs/editpropertiesdialog.cpp:259
+#: dialogs/selectpropertydialog.cpp:56
+msgctxt "@title:column"
+msgid "Property"
+msgstr "Omadus"
+
+#: dialogs/editpropertiesdialog.cpp:203 dialogs/editpropertiesdialog.cpp:265
+msgctxt "@title:column"
+msgid "Weight"
+msgstr "Kaal"
+
+#: dialogs/editpropertiesdialog.cpp:204 dialogs/editpropertiesdialog.cpp:266
+msgctxt "@title:column"
+msgid "Per Amount"
+msgstr "Koguse kohta"
+
+#: dialogs/editpropertiesdialog.cpp:251
+msgctxt "@title:window"
+msgid "Property Information"
+msgstr "Omaduste info"
+
+#: dialogs/editpropertiesdialog.cpp:252
+#, kde-format
+msgctxt "@label"
+msgid "Property Information for <b>%1</b>"
+msgstr "<b>%1</b> omaduste info"
+
+#: dialogs/editpropertiesdialog.cpp:255
+msgctxt "@action:button Load USDA data"
+msgid "Load"
+msgstr "Laadi"
+
+#: dialogs/editpropertiesdialog.cpp:256
+msgctxt "@title:group"
+msgid "Properties"
+msgstr "Omadused"
+
+#: dialogs/editpropertiesdialog.cpp:258 dialogs/editpropertiesdialog.cpp:264
+msgctxt "@action:button"
+msgid "Remove"
+msgstr "Eemalda"
+
+#: dialogs/editpropertiesdialog.cpp:262
+msgctxt "@title:group"
+msgid "Weights"
+msgstr "Kaalud"
+
+#: dialogs/editpropertiesdialog.cpp:292
+msgctxt "@info"
+msgid ""
+"Recipes may require this information for nutrient analysis. Are you sure you "
+"want to delete this entry?"
+msgstr ""
+"Retseptid võivad vajada seda infot toitainete analüüsiks. Kas tõesti see "
+"kirje kustutada?"
+
+#: dialogs/editpropertiesdialog.cpp:311 dialogs/editpropertiesdialog.cpp:343
+#: dialogs/ingredientmatcherdialog.cpp:159
+msgctxt "@title:window"
+msgid "Enter amount"
+msgstr "Koguse määramine"
+
+#: dialogs/editpropertiesdialog.cpp:315 dialogs/editpropertiesdialog.cpp:347
+#: dialogs/ingredientmatcherdialog.cpp:163
+msgctxt "@title:group"
+msgid "Amount"
+msgstr "Kogus"
+
+#: dialogs/editpropertiesdialog.cpp:437
+msgctxt "@title:window"
+msgid "Property Exists"
+msgstr "Omadus on olemas"
+
+#: dialogs/editpropertiesdialog.cpp:437
+msgctxt "@info"
+msgid ""
+"The property you tried to add already exists in the ingredient with the same "
+"per units."
+msgstr ""
+"Omadus, mida soovisid lisada, on juba koostisosal sama suhtega ühiku kohta "
+"olemas."
+
+#: dialogs/editpropertiesdialog.cpp:662
+msgctxt "@info"
+msgid "Please select an ingredient in the USDA ingredient list"
+msgstr "Palun vali USDA koostisosade loendist koostisosa"
+
+#: dialogs/selectpropertydialog.cpp:34
+msgctxt "@title:window"
+msgid "Choose Property"
+msgstr "Omaduse valik"
+
+#: dialogs/selectpropertydialog.cpp:43
+msgctxt "@title:group"
+msgid "Choose Property"
+msgstr "Omaduse valik"
+
+#: dialogs/selectpropertydialog.cpp:65
+msgctxt "@label:textbox"
+msgid "Per units:"
+msgstr "Ühiku kohta:"
+
+#: dialogs/selectpropertydialog.cpp:145 dialogs/selectunitdialog.cpp:73
+msgctxt "@item"
+msgid "-No unit-"
+msgstr "--Ühik puudub--"
+
+#: dialogs/ingredientparserdialog.cpp:42
+msgctxt "@title:window"
+msgid "Ingredient Parser"
+msgstr "Koostisosade parser"
+
+#: dialogs/ingredientparserdialog.cpp:88
+msgctxt "@action:button"
+msgid "Set &Header"
+msgstr "Määra &tüübiks"
+
+#: dialogs/ingredientparserdialog.cpp:89
+msgctxt "@info:whatsthis"
+msgid ""
+"If an ingredient header is detected as an ingredient, select it and click "
+"this button so that Krecipes will recognize it as a header.  All the "
+"ingredients below the header will be included within that group.\n"
+"\n"
+"Alternatively, if you select multiple ingredients and click this button, "
+"those ingredients will be grouped together."
+msgstr ""
+"Kui koostisosade tüüp on tuvastatud koostisosana, vali see ja klõpsa nupule, "
+"et Krecipes peaks seda ikka tüübiks. Kõik tüüpi kuuluvad koostisosad "
+"lisatakse seejärel antud rühma.\n"
+"\n"
+"Teine võimalus on valida mitu koostisosa ja klõpsata nupule, mispuhul need "
+"koostisosad samuti rühmitatakse ühte gruppi."
+
+#: dialogs/ingredientparserdialog.cpp:94
+msgctxt "@item:inmenu"
+msgid "&Delete"
+msgstr "&Kustuta"
+
+#: dialogs/ingredientparserdialog.cpp:95
+msgctxt "@item:inmenu"
+msgid "Set &Header"
+msgstr "Määra &tüübiks"
+
+#: dialogs/ingredientparserdialog.cpp:108
+msgctxt "@info"
+msgid ""
+"<para>To use: Paste a list of ingredient below, click <interface>Parse Text</"
+"interface>, and then you may correct any incorrectly parsed ingredients.</"
+"para><para><warning>Fields will be truncated if longer than the database "
+"allows</warning></para>"
+msgstr ""
+"<para>Kasutamine: aseta koostisosade nimekiri allpool, klõpsa "
+"<interface>Parsi teksti</interface> ning seejärel võid parandada kõik "
+"vigaselt parsitud koostisosad.</para><para><warning>Väljad kärbitakse, kui "
+"need on pikemad andmebaasis lubatust.</warning></para>"
+
+#: dialogs/ingredientparserdialog.cpp:112
+msgctxt "@title"
+msgid "Ingredients as understood by Krecipes:"
+msgstr "Koostisosad Krecipesi arvates:"
+
+#: dialogs/ingredientparserdialog.cpp:114
+msgctxt "@action:button"
+msgid "Parse Text"
+msgstr "Parsi teksti"
+
+#: dialogs/resizerecipedialog.cpp:41
+msgctxt "@title:window"
+msgid "Resize Recipe"
+msgstr "Retsepti suuruse muutmine"
+
+#: dialogs/resizerecipedialog.cpp:68
+msgctxt "@label:textbox"
+msgid "Current yield:"
+msgstr "Praegused portsjonid:"
+
+#: dialogs/resizerecipedialog.cpp:72
+msgctxt "@label:textbox"
+msgid "New yield:"
+msgstr "Uued portsjonid:"
+
+#: dialogs/resizerecipedialog.cpp:86
+msgctxt "@label:textbox"
+msgid "Factor (e.g. 1/2 to half, 3 to triple):"
+msgstr "Tegur (nt. 1/2 on pool, 3 kolmekordne):"
+
+#: dialogs/resizerecipedialog.cpp:115
+msgctxt "@option:radio"
+msgid "Scale by yield"
+msgstr "Skaleerimine portsjonite järgi"
+
+#: dialogs/resizerecipedialog.cpp:116
+msgctxt "@option:radio"
+msgid "Scale by factor"
+msgstr "Skaleerimine teguri järgi"
+
+#: dialogs/resizerecipedialog.cpp:138
+msgctxt "@info"
+msgid "Unable to scale a recipe with zero yield"
+msgstr "Null portsjoniga retsepti ei saa kuidagi skaleerida"
+
+#: dialogs/resizerecipedialog.cpp:147 dialogs/resizerecipedialog.cpp:156
+msgctxt "@info"
+msgid "Invalid input"
+msgstr "Vigane sisend"
+
+#: dialogs/advancedsearchdialog.cpp:72
+msgctxt "@label"
+msgid "Search using the following criteria:"
+msgstr "Otsimine järgmiste kriteeriumide alusel:"
+
+#: dialogs/advancedsearchdialog.cpp:99
+msgctxt "@action:button Recipe title"
+msgid "Title"
+msgstr "Nimi"
+
+#: dialogs/advancedsearchdialog.cpp:111 dialogs/advancedsearchdialog.cpp:344
+msgctxt "@option:check"
+msgid "Require All Words"
+msgstr "Kõik sõnad on nõutud"
+
+#: dialogs/advancedsearchdialog.cpp:115 dialogs/advancedsearchdialog.cpp:348
+msgctxt "@label:textbox"
+msgid "Keywords:"
+msgstr "Võtmesõnad:"
+
+#: dialogs/advancedsearchdialog.cpp:128
+msgctxt "@action:button"
+msgid "Ingredients"
+msgstr "Koostisosad"
+
+#: dialogs/advancedsearchdialog.cpp:139
+msgctxt "@info"
+msgid "Enter ingredients: (e.g. chicken pasta \"white wine\")"
+msgstr "Koostisosad (nt. kana pasta \"valge vein\"):"
+
+#: dialogs/advancedsearchdialog.cpp:146
+msgctxt "@label:textbox"
+msgid "Uses all:"
+msgstr "Sisaldab kõiki järgnevaid:"
+
+#: dialogs/advancedsearchdialog.cpp:150
+msgctxt "@label:textbox"
+msgid "Uses any of:"
+msgstr "Sisaldab mõnda järgnevatest:"
+
+#: dialogs/advancedsearchdialog.cpp:154
+msgctxt "@label:textbox"
+msgid "Without:"
+msgstr "Ei sisalda:"
+
+#: dialogs/advancedsearchdialog.cpp:165
+msgctxt "@action:button"
+msgid "Categories >>"
+msgstr "Kategooriad >>"
+
+#: dialogs/advancedsearchdialog.cpp:176
+msgctxt "@info"
+msgid "Enter categories: (e.g. Desserts Pastas \"Main Dishes\")"
+msgstr "Kategooriad (nt. Magustoidud Pastad \"Külmad supid\"):"
+
+#: dialogs/advancedsearchdialog.cpp:183
+msgctxt "@label:textbox"
+msgid "In all:"
+msgstr "Kõigis:"
+
+#: dialogs/advancedsearchdialog.cpp:187
+msgctxt "@label:textbox"
+msgid "In any of:"
+msgstr "Mõnes:"
+
+#: dialogs/advancedsearchdialog.cpp:191
+msgctxt "@label:textbox"
+msgid "Not in:"
+msgstr "Ei sisaldu:"
+
+#: dialogs/advancedsearchdialog.cpp:202
+msgctxt "@action:button"
+msgid "Authors"
+msgstr "Autorid"
+
+#: dialogs/advancedsearchdialog.cpp:213
+msgctxt "@info"
+msgid "Enter author name (e.g. Smith or \"Jane Doe\")"
+msgstr "Autori nimi (nt. Juurikas või \"Maali Juurikas\"):"
+
+#: dialogs/advancedsearchdialog.cpp:220
+msgctxt "@label:textbox"
+msgid "By any of:"
+msgstr "Mõni:"
+
+#: dialogs/advancedsearchdialog.cpp:224
+msgctxt "@label:textbox"
+msgid "By all:"
+msgstr "Kõik:"
+
+#: dialogs/advancedsearchdialog.cpp:228
+msgctxt "@label:textbox"
+msgid "Not by:"
+msgstr "Pole autor:"
+
+#: dialogs/advancedsearchdialog.cpp:239
+msgctxt "@action:button"
+msgid "Yield"
+msgstr "Portsjonid"
+
+#: dialogs/advancedsearchdialog.cpp:253 dialogs/advancedsearchdialog.cpp:301
+msgctxt "@option:check"
+msgid "Enabled"
+msgstr "Lubatud"
+
+#: dialogs/advancedsearchdialog.cpp:266
+msgctxt "@item:inlistbox"
+msgid "Yields at least:"
+msgstr "Portsjoneid vähemalt:"
+
+#: dialogs/advancedsearchdialog.cpp:267
+msgctxt "@item:inlistbox"
+msgid "Yields at most:"
+msgstr "Portsjoneid kõige enam:"
+
+#: dialogs/advancedsearchdialog.cpp:268
+msgctxt "@item:inlistbox"
+msgid "Yields about:"
+msgstr "Portsjoneid umbes:"
+
+#: dialogs/advancedsearchdialog.cpp:287
+msgctxt "@action:button"
+msgid "Preparation Time"
+msgstr "Valmistamisaeg"
+
+#: dialogs/advancedsearchdialog.cpp:313
+msgctxt "@item:inlistbox"
+msgid "Ready in at most:"
+msgstr "Valmis hiljemalt:"
+
+#: dialogs/advancedsearchdialog.cpp:314
+msgctxt "@item:inlistbox"
+msgid "Ready in about:"
+msgstr "Valmis umbes:"
+
+#: dialogs/advancedsearchdialog.cpp:332
+msgctxt "@action:button"
+msgid "Instructions"
+msgstr "Valmistamisjuhised"
+
+#: dialogs/advancedsearchdialog.cpp:362
+msgctxt "@label"
+msgid "Meta Data"
+msgstr "Metaandmed"
+
+#: dialogs/advancedsearchdialog.cpp:374
+msgctxt "@label Recipe created date"
+msgid "Created:"
+msgstr "Loodud:"
+
+#: dialogs/advancedsearchdialog.cpp:385
+msgctxt "@label Recipe modified date"
+msgid "Modified:"
+msgstr "Muudetud:"
+
+#: dialogs/advancedsearchdialog.cpp:396
+msgctxt "@label Recipe last accessed date"
+msgid "Last Accessed:"
+msgstr "Viimati kasutatud:"
+
+#: dialogs/advancedsearchdialog.cpp:415
+msgctxt "@action:button"
+msgid "Ratings"
+msgstr "Hinnangud"
+
+#: dialogs/advancedsearchdialog.cpp:426
+msgctxt "@option:radio"
+msgid "By average:"
+msgstr "Keskmiselt:"
+
+#: dialogs/advancedsearchdialog.cpp:443
+msgctxt "@label"
+msgid "stars"
+msgstr "tärni"
+
+#: dialogs/advancedsearchdialog.cpp:449
+msgctxt "@option:radio"
+msgid "By criteria:"
+msgstr "Kriteerium:"
+
+#: dialogs/advancedsearchdialog.cpp:495
+msgctxt "@title:column"
+msgid "Criterion"
+msgstr "Kriteerium"
+
+#: dialogs/advancedsearchdialog.cpp:519
+msgctxt "@action:button Clear search criteria"
+msgid "C&lear"
+msgstr "&Puhasta"
+
+#: dialogs/advancedsearchdialog.cpp:527
+msgctxt "@action:button Search recipes"
+msgid "&Search"
+msgstr "Ot&si"
+
+#: dialogs/advancedsearchdialog.cpp:550
+msgctxt "@title:column Recipe title"
+msgid "Title"
+msgstr "Nimi"
+
+#: dialogs/advancedsearchdialog.cpp:931
+msgctxt "@item:inlistbox"
+msgid "No matching recipes found"
+msgstr "Ühtegi sobivat retsepti ei leitud"
+
+#: dialogs/ingredientmatcherdialog.cpp:88
+msgctxt "@title:column"
+msgid "Ingredient (required?)"
+msgstr "Koostisosa (nõutav?)"
+
+#: dialogs/ingredientmatcherdialog.cpp:89
+msgctxt "@title:column"
+msgid "Amount Available"
+msgstr "Saadaolev kogus"
+
+#: dialogs/ingredientmatcherdialog.cpp:102
+msgctxt ""
+"@label:spinbox Number of missing ingredients allowed when doing a search by "
+"ingredients"
+msgid "Missing ingredients allowed:"
+msgstr "Lubatud puuduvaid koostisosasid:"
+
+#: dialogs/ingredientmatcherdialog.cpp:106
+msgctxt ""
+"@item Any amount of ingredients missing when doing a search by ingredients"
+msgid "Any"
+msgstr "Suvaline"
+
+#: dialogs/ingredientmatcherdialog.cpp:109
+msgctxt "@title"
+msgid "Matching Recipes"
+msgstr "Sobivad retseptid"
+
+#: dialogs/ingredientmatcherdialog.cpp:112
+msgctxt "@title:column Recipe Title"
+msgid "Title"
+msgstr "Nimi"
+
+#: dialogs/ingredientmatcherdialog.cpp:119
+msgctxt "@title:column Missing ingredients in a search result"
+msgid "Missing Ingredients"
+msgstr "Puuduvad koostisosad"
+
+#: dialogs/ingredientmatcherdialog.cpp:130
+msgctxt "@action:button"
+msgid "Find matching recipes"
+msgstr "Leia sobivad retseptid"
+
+#: dialogs/ingredientmatcherdialog.cpp:136
+msgctxt "@action:button Clear search criteria"
+msgid "Clear"
+msgstr "Puhasta"
+
+#: dialogs/ingredientmatcherdialog.cpp:343
+#, kde-format
+msgctxt "@label:textbox"
+msgid "You are missing 1 ingredient for:"
+msgid_plural "You are missing %1 ingredients for:"
+msgstr[0] "Puudub 1 koostisosa:"
+msgstr[1] "Puudub %1 koostisosa:"
+
+#: dialogs/pagesetupdialog.cpp:54
+msgid "Page Setup"
+msgstr "Lehekülje seadistus"
+
+#: dialogs/pagesetupdialog.cpp:63
+msgid "Items Shown"
+msgstr "Näidatavad elemendid"
+
+#: dialogs/pagesetupdialog.cpp:66
+msgid "Show Items"
+msgstr "Näita elemente"
+
+#: dialogs/pagesetupdialog.cpp:71
+msgid ""
+"<i>Usage: Select a template along the left, and right-click any element to "
+"edit the look of that element.</i>"
+msgstr ""
+"<i>Kasutamine: klõpsa vasakul mallil ja seejärel hiire parema nupuga "
+"elemendil selle välimuse muutmiseks.</i>"
+
+#: dialogs/pagesetupdialog.cpp:90
+msgid "Save and Close"
+msgstr "Salvesta ja sulge"
+
+#: dialogs/pagesetupdialog.cpp:92
+msgid "&Cancel"
+msgstr "&Loobu"
+
+#: dialogs/pagesetupdialog.cpp:141
+msgid ""
+"The recipe view layout has been modified.\n"
+"Do you want to save it?"
+msgstr ""
+"Retseptivaate paigutust on muudetud.\n"
+"Kas salvestada see?"
+
+#: dialogs/pagesetupdialog.cpp:141 dialogs/pagesetupdialog.cpp:219
+msgid "Save Layout?"
+msgstr "Kas salvestada paigutus?"
+
+#: dialogs/pagesetupdialog.cpp:195
+msgid "Krecipes style or template file"
+msgstr "KRecipesi stiili- või mallifail"
+
+#: dialogs/pagesetupdialog.cpp:195
+msgid "Select Layout"
+msgstr "Paigutuse valik"
+
+#: dialogs/pagesetupdialog.cpp:219
+msgid ""
+"This layout has been modified.\n"
+"Do you want to save it?"
+msgstr ""
+"Seda paigutust on muudetud.\n"
+"Kas salvestada see?"
+
+#: dialogs/pagesetupdialog.cpp:245
+msgid ""
+"Unable to save the layout because you do not have sufficient permissions to "
+"modify this file.\n"
+"Would you like to instead save the current layout to a new file?"
+msgstr ""
+"Paigutuse salvestamine nurjus, sest sul pole õigusi seda faili muuta.\n"
+"Kas salvestada käesolev paigutus hoopis uue failina?"
+
+#: dialogs/pagesetupdialog.cpp:266
+msgid ""
+"You have selected a file that you do not have the permissions to write to.\n"
+"Would you like to select another file?"
+msgstr ""
+"Valisid faili, millele sul pole kirjutamisõigusi.\n"
+"Kas valida mõni muu fail?"
+
+#: dialogs/recipeimportdialog.cpp:34
+msgctxt "@title:window"
+msgid "Import Recipes"
+msgstr "Retseptide import"
+
+#: dialogs/recipeimportdialog.cpp:44
+msgctxt "@title:column"
+msgid "Recipes"
+msgstr "Retseptid"
+
+#: dialogs/recipeimportdialog.cpp:67
+#, kde-format
+msgctxt "@item:inlistbox All items"
+msgid "All (%1)"
+msgstr "Kõik (%1)"
+
+#: dialogs/recipeimportdialog.cpp:102 dialogs/recipeimportdialog.cpp:103
+msgctxt "@item"
+msgid "Uncategorized"
+msgstr "Kategooriata"
+
+#: dialogs/setupdisplay.cpp:71
+msgid "Recipe Title"
+msgstr "Retsepti nimi"
+
+#: dialogs/setupdisplay.cpp:73
+msgid "serving"
+msgstr "portsjonit"
+
+#: dialogs/setupdisplay.cpp:74
+msgid "Category 1, Category 2, ..."
+msgstr "Kategooria 1, kategooria 2..."
+
+#: dialogs/setupdisplay.cpp:78
+msgid "Author 1, Author 2, ..."
+msgstr "Autor 1, autor 2..."
+
+#: dialogs/setupdisplay.cpp:81
+msgid "Ingredient 1"
+msgstr "Koostisosa 1"
+
+#: dialogs/setupdisplay.cpp:84
+msgid "Ingredient 2"
+msgstr "Koostisosa 2"
+
+#. i18n: file: widgets/ratingdisplaywidget.ui:92
+#. i18n: ectx: property (text), widget (QLabel, raterName)
+#: dialogs/setupdisplay.cpp:92 rc.cpp:5
+msgid "Rater"
+msgstr "Hindaja"
+
+#: dialogs/setupdisplay.cpp:93
+msgid "Comment"
+msgstr "Kommentaar"
+
+#: dialogs/setupdisplay.cpp:95
+msgid "Criteria 1"
+msgstr "Kriteerium 1"
+
+#: dialogs/setupdisplay.cpp:99
+msgid "Criteria 2"
+msgstr "Kriteerium 2"
+
+#: dialogs/setupdisplay.cpp:104
+msgid "Property 1"
+msgstr "Omadus 1"
+
+#: dialogs/setupdisplay.cpp:106
+msgid "Property 2"
+msgstr "Omadus 2"
+
+#: dialogs/setupdisplay.cpp:120
+msgctxt "Background color"
+msgid "Background"
+msgstr "Taust"
+
+#: dialogs/setupdisplay.cpp:121
+msgctxt "Recipe title"
+msgid "Title"
+msgstr "Nimi"
+
+#: dialogs/setupdisplay.cpp:124
+msgid "Photo"
+msgstr "Foto"
+
+#: dialogs/setupdisplay.cpp:227
+#, kde-format
+msgid "\"%1\" at line %2, column %3.  This may not be a Krecipes layout file."
+msgstr "\"%1\" real %2, veerus %3. See ei ole ilmselt Krecipesi paigutusfail."
+
+#: dialogs/setupdisplay.cpp:439
+msgid "Background Color..."
+msgstr "Tausta värv..."
+
+#: dialogs/setupdisplay.cpp:442
+msgid "Text Color..."
+msgstr "Teksti värv..."
+
+#: dialogs/setupdisplay.cpp:445
+msgid "Font..."
+msgstr "Font..."
+
+#: dialogs/setupdisplay.cpp:448
+msgid "Show"
+msgstr "Näita"
+
+#: dialogs/setupdisplay.cpp:457 dialogs/setupdisplay.cpp:590
+msgctxt "Align center"
+msgid "Center"
+msgstr "Keskel"
+
+#: dialogs/setupdisplay.cpp:459 dialogs/setupdisplay.cpp:592
+msgctxt "Align left"
+msgid "Left"
+msgstr "Vasakul"
+
+#: dialogs/setupdisplay.cpp:461 dialogs/setupdisplay.cpp:594
+msgctxt "Align right"
+msgid "Right"
+msgstr "Paremal"
+
+#: dialogs/setupdisplay.cpp:474
+msgid "Alignment"
+msgstr "Joondus"
+
+#: dialogs/setupdisplay.cpp:480
+msgid "Border..."
+msgstr "Piire..."
+
+#: dialogs/setupdisplay.cpp:483
+msgid "Columns..."
+msgstr "Veerud..."
+
+#: dialogs/setupdisplay.cpp:524
+msgid "Select the number of columns to use:"
+msgstr "Kasutatavate veergude arv:"
+
+#: dialogs/similarcategoriesdialog.cpp:181
+msgctxt "@title:window"
+msgid "Similar Categories"
+msgstr "Sarnased kategooriad"
+
+#: dialogs/similarcategoriesdialog.cpp:182
+msgctxt "@label:textbox"
+msgid "Threshold:"
+msgstr "Lävi:"
+
+#: dialogs/similarcategoriesdialog.cpp:183
+msgctxt "@label:textbox"
+msgid "Category:"
+msgstr "Kategooria:"
+
+#: dialogs/similarcategoriesdialog.cpp:186
+msgctxt "@action:button Search a recipe category in database"
+msgid "Search"
+msgstr "Otsi"
+
+#: dialogs/similarcategoriesdialog.cpp:187
+msgctxt "@label:textbox"
+msgid "Similar Categories:"
+msgstr "Sarnased kategooriad:"
+
+#: dialogs/similarcategoriesdialog.cpp:190
+msgctxt "@label:textbox"
+msgid "Categories to Merge:"
+msgstr "Ühendatavad kategooriad:"
+
+#: dialogs/similarcategoriesdialog.cpp:191
+msgctxt "@action:button"
+msgid "Merge"
+msgstr "Ühenda"
+
+#: dialogs/similarcategoriesdialog.cpp:192
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "Loobu"
+
+#: dialogs/similarcategoriesdialog.cpp:194
+#: dialogs/similarcategoriesdialog.cpp:196
+msgctxt "@title:column"
+msgid "Category"
+msgstr "Kategooria"
+
+#: dialogs/similarcategoriesdialog.cpp:322
+msgctxt "@info"
+msgid "Please select only one category."
+msgstr "Palun vali ainult üks kategooria."
+
+#: dialogs/similarcategoriesdialog.cpp:351
+msgctxt "@info"
+msgid "No recipes selected."
+msgstr "Ühtegi retsepti pole valitud."
+
+#: dialogs/similarcategoriesdialog.cpp:351
+msgctxt "@title"
+msgid "Edit Recipe"
+msgstr "Retsepti muutmine"
+
+#: dialogs/similarcategoriesdialog.cpp:382
+msgctxt "@info"
+msgid "No categories selected to merge."
+msgstr "Ühtegi kategooriat pole ühendamiseks valitud."
+
+#: dialogs/selectrecipedialog.cpp:81 widgets/krelistview.cpp:55
+msgctxt "@label:textbox Search recipes"
+msgid "Search:"
+msgstr "Otsing:"
+
+#: dialogs/selectrecipedialog.cpp:100
+msgctxt "@action:button"
+msgid "Show Recipe(s)"
+msgstr "Näita retsepti"
+
+#: dialogs/selectrecipedialog.cpp:104
+msgctxt "@action:button"
+msgid "Edit Recipe"
+msgstr "Muuda retsepti"
+
+#: dialogs/selectrecipedialog.cpp:113
+msgctxt "@title:tab Basic search"
+msgid "Basic"
+msgstr "Põhiline"
+
+#: dialogs/selectrecipedialog.cpp:116
+msgctxt "@title:tab Advanced search"
+msgid "Advanced"
+msgstr "Täiendav"
+
+#: dialogs/borderdialog.cpp:35
+msgctxt "@title:window"
+msgid "Choose Border"
+msgstr "Piirde valik"
+
+#: dialogs/borderdialog.cpp:131
+msgctxt "@title:group"
+msgid "Requested Border"
+msgstr "Soovitud piire"
+
+#: dialogs/borderdialog.cpp:132
+msgctxt "@label:textbox Border style"
+msgid "Style:"
+msgstr "Stiil:"
+
+#: dialogs/borderdialog.cpp:133
+msgctxt "@label:textbox Border color"
+msgid "Color:"
+msgstr "Värv:"
+
+#: dialogs/borderdialog.cpp:134
+msgctxt "@label:textbox Border width"
+msgid "Width:"
+msgstr "Laius:"
+
+#: dialogs/borderdialog.cpp:206
+msgctxt "@item:inlistbox Border type none"
+msgid "None"
+msgstr "Puudub"
+
+#: dialogs/borderdialog.cpp:207
+msgctxt ""
+"@item:inlistbox See http://krecipes.sourceforge.net/bordertypes.png for an "
+"example"
+msgid "Dotted"
+msgstr "Punktiir"
+
+#: dialogs/borderdialog.cpp:208
+msgctxt ""
+"@item:inlistbox See http://krecipes.sourceforge.net/bordertypes.png for an "
+"example"
+msgid "Dashed"
+msgstr "Punkt-punktiir"
+
+#: dialogs/borderdialog.cpp:209
+msgctxt ""
+"@item:inlistbox See http://krecipes.sourceforge.net/bordertypes.png for an "
+"example"
+msgid "Solid"
+msgstr "Ühtlane"
+
+#: dialogs/borderdialog.cpp:210
+msgctxt ""
+"@item:inlistbox See http://krecipes.sourceforge.net/bordertypes.png for an "
+"example"
+msgid "Double"
+msgstr "Topelt"
+
+#: dialogs/borderdialog.cpp:211
+msgctxt ""
+"@item:inlistbox See http://krecipes.sourceforge.net/bordertypes.png for an "
+"example"
+msgid "Groove"
+msgstr "Õnar"
+
+#: dialogs/borderdialog.cpp:212
+msgctxt ""
+"@item:inlistbox See http://krecipes.sourceforge.net/bordertypes.png for an "
+"example"
+msgid "Ridge"
+msgstr "Teravik"
+
+#: dialogs/borderdialog.cpp:213
+msgctxt ""
+"@item:inlistbox See http://krecipes.sourceforge.net/bordertypes.png for an "
+"example"
+msgid "Inset"
+msgstr "Sissenihutatud"
+
+#: dialogs/borderdialog.cpp:214
+msgctxt ""
+"@item:inlistbox See http://krecipes.sourceforge.net/bordertypes.png for an "
+"example"
+msgid "Outset"
+msgstr "Väljanihutatud"
+
+#: dialogs/borderdialog.cpp:229
+msgid "Border Preview"
+msgstr "Piirde eelvaatlus"
+
+#: dialogs/dietviewdialog.cpp:24
+msgctxt "@title:window"
+msgid "View Diet"
+msgstr "Dieedi ülevaade"
+
+#: dialogs/dietviewdialog.cpp:33
+msgctxt "@action:button"
+msgid "Create &Shopping List"
+msgstr "Loo &ostunimekiri"
+
+#: dialogs/dietviewdialog.cpp:59 dialogs/dietviewdialog.cpp:78
+msgid "Diet"
+msgstr "Dieet"
+
+#: dialogs/dietviewdialog.cpp:98
+#, kde-format
+msgid "Day %1"
+msgstr "%1. päev"
+
+#: dialogs/createunitdialog.cpp:27
+msgctxt "@title:window"
+msgid "New Unit"
+msgstr "Uus ühik"
+
+#: dialogs/createunitdialog.cpp:27
+msgctxt "@title:window"
+msgid "Unit"
+msgstr "Ühik"
+
+#: dialogs/createunitdialog.cpp:37
+msgctxt "@title:group"
+msgid "New Unit"
+msgstr "Uus ühik"
+
+#: dialogs/createunitdialog.cpp:37
+msgctxt "@title:group"
+msgid "Unit"
+msgstr "Ühik"
+
+#: dialogs/createunitdialog.cpp:41
+msgctxt "@label:textbox Single unit name"
+msgid "Singular:"
+msgstr "Ainsus:"
+
+#: dialogs/createunitdialog.cpp:45
+msgctxt "@label:textbox Single unit abbreviation"
+msgid "Singular Abbreviation:"
+msgstr "Ainsuse lühend:"
+
+#: dialogs/createunitdialog.cpp:49
+msgctxt "@label:textbox Plural unit name"
+msgid "Plural:"
+msgstr "Mitmus:"
+
+#: dialogs/createunitdialog.cpp:53
+msgctxt "@label:textbox Plural unit abbreviation"
+msgid "Plural Abbreviation:"
+msgstr "Mitmuse lühend:"
+
+#: dialogs/createunitdialog.cpp:56 widgets/unitlistview.cpp:80
+msgctxt "@item:inlistbox Unit type other"
+msgid "Other"
+msgstr "Muu"
+
+#: dialogs/createunitdialog.cpp:57 widgets/unitlistview.cpp:81
+msgctxt "@item:inlistbox Unit type mass"
+msgid "Mass"
+msgstr "Kaal"
+
+#: dialogs/createunitdialog.cpp:58 widgets/unitlistview.cpp:82
+msgctxt "@item:inlistbox Unit type volume"
+msgid "Volume"
+msgstr "Maht"
+
+#: dialogs/createunitdialog.cpp:62
+msgctxt "@label:textbox Unit Type"
+msgid "Type:"
+msgstr "Tüüp:"
+
+#: dialogs/selectunitdialog.cpp:25
+msgctxt "@title:window"
+msgid "Choose Unit"
+msgstr "Ühiku valik"
+
+#: dialogs/selectunitdialog.cpp:31
+msgctxt "@title:group"
+msgid "Choose Unit"
+msgstr "Ühiku valik"
+
+#: importers/mmfimporter.cpp:70 importers/rezkonvimporter.cpp:51
+#: importers/mxpimporter.cpp:55
+msgid "No recipes found in this file."
+msgstr "Selles failis retsepte ei leitud."
+
+#: importers/mmfimporter.cpp:73 importers/nycgenericimporter.cpp:46
+#: importers/rezkonvimporter.cpp:54 importers/recipemlimporter.cpp:61
+#: importers/mxpimporter.cpp:58 importers/mx2importer.cpp:85
+msgid "Unable to open file."
+msgstr "Faili avamine nurjus."
+
+#: importers/mmfimporter.cpp:142
+#, kde-format
+msgid ""
+"While loading recipe <b>%1</b> an ingredient line was found after the "
+"directions. While this is valid, it most commonly indicates an incorrectly "
+"formatted recipe."
+msgstr ""
+"Retsepti <b>%1</b> laadimisel leiti koostisosade rida pärast "
+"valmistamisjuhiseid. See võib küll ka nii olla, aga enamasti tähendab see "
+"valesti vormindatud retsepti."
+
+#: importers/mmfimporter.cpp:310 importers/mxpimporter.cpp:103
+#: importers/mxpimporter.cpp:252 importers/mx2importer.cpp:100
+msgid "servings"
+msgstr "portsjonit"
+
+#: importers/kreimporter.cpp:48
+msgid "Archive does not contain a valid Krecipes file"
+msgstr "Arhiiv ei sisalda korrektset Krecipese faili"
+
+#: importers/kreimporter.cpp:69
+#, kde-format
+msgid "\"%1\" at line %2, column %3"
+msgstr "\"%1\" real %2, veerus %3"
+
+#: importers/kreimporter.cpp:76
+msgid "This file does not appear to be a *.kreml file"
+msgstr "See fail ei paista olevat *.kreml-fail"
+
+#: importers/kreimporter.cpp:82
+#, kde-format
+msgid "KreML version %1"
+msgstr "KreML versioon %1"
+
+#: importers/nycgenericimporter.cpp:41
+msgid "File does not appear to be a valid NYC export."
+msgstr "Fail ei paista olevat korrektne NYC eksport."
+
+#: importers/recipemlimporter.cpp:33
+#, kde-format
+msgid "\"%1\" at line %2, column %3.  This may not be a RecipeML file."
+msgstr "\"%1\" real %2, veerus %3. See ei ole ilmselt RecipeML-fail."
+
+#: importers/recipemlimporter.cpp:40
+msgid "This file does not appear to be a valid RecipeML archive."
+msgstr "See fail ei paista olevat korrektne RecipeML-arhiiv."
+
+#: importers/mxpimporter.cpp:87
+#, kde-format
+msgid ""
+"While loading recipe \"%1\" the field \"Recipe By:\" is either missing or "
+"could not be detected."
+msgstr ""
+"Retsepti \"%1\" avamisel oli väli \"Retsepti autor:\" puudu või ei "
+"õnnestunud seda tuvastada."
+
+#: importers/mxpimporter.cpp:107
+#, kde-format
+msgid ""
+"While loading recipe \"%1\" the field \"Serving Size:\" is either missing or "
+"could not be detected."
+msgstr ""
+"Retsepti \"%1\" avamisel oli väli \"Portsjoni suurus:\" puudu või ei "
+"õnnestunud seda tuvastada."
+
+#: importers/mxpimporter.cpp:118
+#, kde-format
+msgid ""
+"While loading recipe \"%1\" the field \"Preparation Time:\" is either "
+"missing or could not be detected."
+msgstr ""
+"Retsepti \"%1\" avamisel oli väli \"Valmistamisaeg:\" puudu või ei "
+"õnnestunud seda tuvastada."
+
+#: importers/mxpimporter.cpp:162
+#, kde-format
+msgid ""
+"While loading recipe \"%1\" the field \"Categories:\" is either missing or "
+"could not be detected."
+msgstr ""
+"Retsepti \"%1\" avamisel oli väli \"Kategooriad:\" puudu või ei õnnestunud "
+"seda tuvastada."
+
+#: importers/mxpimporter.cpp:189
+#, kde-format
+msgid "While loading recipe \"%1\" Invalid amount \"%2\" in the line \"%3\""
+msgstr "Retsepti \"%1\" avamisel oli vigane kogus \"%2\" real \"%3\""
+
+#: importers/mxpimporter.cpp:353
+msgid ""
+"MasterCook's Generic Export format is currently not supported.  Please write "
+"to jkivlighn@gmail.com to request support for this format."
+msgstr ""
+"MasterCooki üldine ekspordivorming ei ole veel toetatud. Kui soovid selle "
+"tuge, kirjuta aadressile jkivlighn@gmail.com."
+
+#: importers/mxpimporter.cpp:359
+msgid ""
+"MasterCook Mac's Export format is currently not supported.  Please write to "
+"jkivlighn@gmail.com to request support for this format."
+msgstr ""
+"MasterCooki Maci ekspordivorming ei ole veel toetatud. Kui soovid selle "
+"tuge, kirjuta aadressile jkivlighn@gmail.com."
+
+#: importers/mx2importer.cpp:54
+#, kde-format
+msgid "\"%1\" at line %2, column %3.  This may not be a *.mx2 file."
+msgstr "\"%1\" real %2, veerus %3. See ei ole tõenäoliselt *.mx2-fail."
+
+#: importers/mx2importer.cpp:62
+msgid "This file does not appear to be a *.mx2 file"
+msgstr "Fail ei paista olevat *.mx2-fail"
+
+#: importers/baseimporter.cpp:99 importers/baseimporter.cpp:122
+msgid "Importing selected recipes"
+msgstr "Valitud retseptide import"
+
+#: importers/baseimporter.cpp:125
+msgid "%v/%m Recipes"
+msgstr "%v/%m retsepti"
+
+#: importers/baseimporter.cpp:218
+msgid "All recipes up unto this point have been successfully imported."
+msgstr "Seni on kõik retseptid edukalt imporditud."
+
+#: importers/baseimporter.cpp:227
+#, kde-format
+msgid "Importing recipe: %1"
+msgstr "Retsepti import: %1"
+
+#: importers/baseimporter.cpp:382
+#, kde-format
+msgid ""
+"<!doc>Import of recipes from the file <b>\"%1\"</b> <b>failed</b> due to the "
+"following error(s):"
+msgstr ""
+"<!doc>Retseptide import failist <b>\"%1\"</b> <b>nurjus</b> järgmiste vigade "
+"tõttu:"
+
+#: importers/baseimporter.cpp:389
+#, kde-format
+msgid "The file <b>%1</b> generated the following warning(s):"
+msgstr "Fail <b>%1</b> tekitas järgmised hoiatused:"
+
+#: widgets/prepmethodlistview.cpp:52
+msgid "Preparation Method"
+msgstr "Valmistusviis"
+
+#: widgets/recipelistview.cpp:32
+msgid "Uncategorized"
+msgstr "Kategooriata"
+
+#: widgets/recipelistview.cpp:101
+msgid "Recipe"
+msgstr "Retsept"
+
+#: widgets/recipelistview.cpp:149 krecipesview.cpp:813
+msgctxt "Recipe created"
+msgid "Created:"
+msgstr "Loodud:"
+
+#: widgets/recipelistview.cpp:150 krecipesview.cpp:814
+msgctxt "Recipe modified"
+msgid "Modified:"
+msgstr "Muudetud:"
+
+#: widgets/recipelistview.cpp:151 krecipesview.cpp:815
+msgctxt "Recipe last accessed"
+msgid "Last Accessed:"
+msgstr "Viimati kasutatud:"
+
+#: widgets/recipelistview.cpp:236
+msgid "Loading recipes"
+msgstr "Retseptide laadimine"
+
+#: widgets/categorylistview.cpp:312 widgets/categorylistview.cpp:379
+msgid "Category"
+msgstr "Kategooria"
+
+#: widgets/kremenu.cpp:130
+msgctxt "@action:button Up to top menu"
+msgid "Up..."
+msgstr "Üles..."
+
+#: widgets/weightinput.cpp:23
+msgid "-No Preparation-"
+msgstr "-Valmistamiseta-"
+
+#: widgets/kdatepickerpopup.cpp:96
+msgctxt "@option today"
+msgid "&Today"
+msgstr "&Täna"
+
+#: widgets/kdatepickerpopup.cpp:97
+msgctxt "@option tomorrow"
+msgid "To&morrow"
+msgstr "&Homme"
+
+#: widgets/kdatepickerpopup.cpp:98
+msgctxt "@option next week"
+msgid "Next &Week"
+msgstr "&Järgmine nädal"
+
+#: widgets/kdatepickerpopup.cpp:99
+msgctxt "@option next month"
+msgid "Next M&onth"
+msgstr "Järg&mine kuu"
+
+#: widgets/kdatepickerpopup.cpp:107
+msgctxt "@option do not specify a date"
+msgid "No Date"
+msgstr "Kuupäev puudub"
+
+#: widgets/unitlistview.h:104
+msgctxt "Unit type other"
+msgid "Other"
+msgstr "Muu"
+
+#: widgets/unitlistview.h:105
+msgctxt "Unit type mass"
+msgid "Mass"
+msgstr "Kaal"
+
+#: widgets/unitlistview.h:106
+msgctxt "Unit type volume"
+msgid "Volume"
+msgstr "Maht"
+
+#: widgets/ingredientinputwidget.cpp:48 widgets/ingredientinputwidget.cpp:59
+msgid "Ingredient:"
+msgstr "Koostisosa:"
+
+#: widgets/ingredientinputwidget.cpp:52
+msgctxt "Ingredient grouping name"
+msgid "Header:"
+msgstr "Tüüp"
+
+#: widgets/ingredientinputwidget.cpp:76
+msgid "Amount:"
+msgstr "Kogus:"
+
+#: widgets/ingredientinputwidget.cpp:83
+msgid "Unit:"
+msgstr "Ühik:"
+
+#: widgets/ingredientinputwidget.cpp:91
+msgid "Preparation Method:"
+msgstr "Valmistusviis:"
+
+#: widgets/ingredientinputwidget.cpp:239
+msgid "Please enter an ingredient"
+msgstr "Palun sisesta koostisosa"
+
+#: widgets/ingredientinputwidget.cpp:286
+msgid "Amount field contains invalid input."
+msgstr "Koguseväljal on vigane suurus."
+
+#: widgets/ingredientinputwidget.cpp:287
+msgid "Invalid input"
+msgstr "Vigane sisend"
+
+#: widgets/headerlistview.cpp:55
+msgid "Header"
+msgstr "Tüüp"
+
+#: widgets/kreruler.cpp:755
+msgid "Top margin"
+msgstr "Ülemine veeris"
+
+#: widgets/kreruler.cpp:759
+msgid "Bottom margin"
+msgstr "Alumine veeris"
+
+#: widgets/kreruler.cpp:873
+msgid "Page Layout..."
+msgstr "Lehekülje paigutus..."
+
+#: widgets/kreruler.cpp:876
+msgid "Remove Tabulator"
+msgstr "Eemalda tabulaator"
+
+#: widgets/kdateedit.cpp:368
+msgctxt "the day after today"
+msgid "tomorrow"
+msgstr "homme"
+
+#: widgets/kdateedit.cpp:369
+msgctxt "this day"
+msgid "today"
+msgstr "täna"
+
+#: widgets/kdateedit.cpp:370
+msgctxt "the day before today"
+msgid "yesterday"
+msgstr "eile"
+
+#: widgets/categorycombobox.cpp:36 widgets/categorycombobox.cpp:63
+msgid "All Categories"
+msgstr "Kõik kategooriad"
+
+#: widgets/unitlistview.cpp:62
+msgctxt "@title:column Unit name"
+msgid "Unit"
+msgstr "Ühik"
+
+#: widgets/unitlistview.cpp:63
+msgctxt "@title:column Unit abbreviation"
+msgid "Abbreviation"
+msgstr "Lühend"
+
+#: widgets/unitlistview.cpp:64
+msgctxt "@title:column Unit plural"
+msgid "Plural"
+msgstr "Mitmus"
+
+#: widgets/unitlistview.cpp:65
+msgctxt "@title:column unit plural abbreviation"
+msgid "Abbreviation"
+msgstr "Lühend"
+
+#: widgets/unitlistview.cpp:66
+msgctxt "@title:column Unit type"
+msgid "Type"
+msgstr "Tüüp"
+
+#: widgets/dblistviewbase.cpp:33
+msgctxt "Previous item"
+msgid "Previous"
+msgstr "Eelmine"
+
+#: widgets/dblistviewbase.cpp:49
+msgctxt "Next item"
+msgid "Next"
+msgstr "Järgmine"
+
+#: widgets/propertylistview.cpp:130 widgets/propertylistview.cpp:164
+msgid "Property"
+msgstr "Omadus"
+
+#: widgets/propertylistview.cpp:131 krecipesview.cpp:375 krecipesview.cpp:485
+#: pref.cpp:419
+msgid "Units"
+msgstr "Ühikud"
+
+#: widgets/propertylistview.cpp:163
+msgid "Enabled"
+msgstr "Lubatud"
+
+#: widgets/propertylistview.cpp:165
+msgid "Min. Value"
+msgstr "Min. väärtus"
+
+#: widgets/propertylistview.cpp:166
+msgid "Max. Value"
+msgstr "Maks. väärtus"
+
+#: widgets/authorlistview.cpp:53 widgets/authorlistview.cpp:113
+msgid "Author"
+msgstr "Autor"
+
+#: backends/SQLite/literecipedb.cpp:750 backends/MySQL/mysqlrecipedb.cpp:471
+msgctxt "Overall rating"
+msgid "Overall"
+msgstr "Üldine"
+
+#: backends/SQLite/literecipedb.cpp:751
+#: backends/PostgreSQL/psqlrecipedb.cpp:390
+#: backends/MySQL/mysqlrecipedb.cpp:472
+msgid "Taste"
+msgstr "Maitse"
+
+#: backends/SQLite/literecipedb.cpp:752
+#: backends/PostgreSQL/psqlrecipedb.cpp:391
+#: backends/MySQL/mysqlrecipedb.cpp:473
+msgid "Appearance"
+msgstr "Välimus"
+
+#: backends/SQLite/literecipedb.cpp:753
+#: backends/PostgreSQL/psqlrecipedb.cpp:392
+#: backends/MySQL/mysqlrecipedb.cpp:474
+msgid "Originality"
+msgstr "Originaalsus"
+
+#: backends/SQLite/literecipedb.cpp:754
+#: backends/PostgreSQL/psqlrecipedb.cpp:393
+#: backends/MySQL/mysqlrecipedb.cpp:475
+msgid "Ease of Preparation"
+msgstr "Lihtne valmistamine"
+
+#: backends/PostgreSQL/psqlrecipedb.cpp:389
+msgctxt "Overall Rating"
+msgid "Overall"
+msgstr "Üldine"
+
+#: backends/recipedb.cpp:311
+msgid "Creating complete backup"
+msgstr "Täieliku varukoopia loomine"
+
+#: backends/recipedb.cpp:312 backends/recipedb.cpp:484
+msgid ""
+"Depending on the number of recipes and amount of data, this could take some "
+"time."
+msgstr ""
+"Sõltuvalt retseptide ja andmete hulgast võib sellele kuluda üsna tükk aega."
+
+#: backends/recipedb.cpp:333 backends/recipedb.cpp:491
+#, kde-format
+msgid ""
+"Unable to find or run the program '%1'.  Either it is not installed on your "
+"system or it is not in $PATH."
+msgstr ""
+"Programmi '%1' leidmine või käivitamine nurjus. See ei ole kas süsteemi "
+"paigaldatud või ei asu otsinguteel ($PATH)."
+
+#: backends/recipedb.cpp:358
+msgid "Backup failed."
+msgstr "Varundamine nurjus."
+
+#: backends/recipedb.cpp:447
+msgid ""
+"This backup was created with a newer version of Krecipes and cannot be "
+"restored."
+msgstr ""
+"See varukoopia on loodud Krecipesi uuema versiooniga, mistõttu seda ei saa "
+"taastada."
+
+#: backends/recipedb.cpp:456
+msgid "This file is not a Krecipes backup file or has become corrupt."
+msgstr "See ei ole Krecipese varukoopiafail või on see viga saanud."
+
+#: backends/recipedb.cpp:461
+#, kde-format
+msgid ""
+"This backup was created using the \"%1\" backend.  It can only be restored "
+"into a database using this backend."
+msgstr ""
+"See varukoopia on loodud taustaprogrammiga \"%1\". Seda saab taastada ainult "
+"sama programmi kasutava andmebaasi jaoks."
+
+#: backends/recipedb.cpp:483
+msgid "Restoring backup"
+msgstr "Varukoopia taastamine"
+
+#: backends/recipedb.cpp:538 krecipes.cpp:722
+msgid "Restore Failed"
+msgstr "Taastamine nurjus"
+
+#: backends/recipedb.cpp:921
+msgid "Nutrient Import"
+msgstr "Toitainete import"
+
+#: backends/recipedb.cpp:921
+msgid "Importing USDA nutrient data"
+msgstr "USDA toitainete andmete import"
+
+#: backends/qsqlrecipedb.cpp:68
+msgid "QSqlRecipeDB: Opening Database..."
+msgstr "QSqlRecipeDB: andmebaasi avamine..."
+
+#: backends/qsqlrecipedb.cpp:86
+#, kde-format
+msgid ""
+"The Qt database plug-in (%1) is not installed.  This plug-in is required for "
+"using this database backend."
+msgstr ""
+"Qt andmebaasi plugin (%1) ei ole paigaldatud. Selle andmebaasi "
+"taustaprogrammi kasutamiseks on see plugin hädavajalik."
+
+#: backends/qsqlrecipedb.cpp:116
+msgid "Parameters set. Calling db->open()"
+msgstr "Parameetrid seatud. Väljakutse db->open()"
+
+#: backends/qsqlrecipedb.cpp:122
+msgid "Failing to open database. Trying to create it"
+msgstr "Andmebaasi avamine nurjus. Püütakse seda luua"
+
+#: backends/qsqlrecipedb.cpp:128 backends/qsqlrecipedb.cpp:143
+#, kde-format
+msgid "Krecipes could not open the \"%1\" database."
+msgstr "Krecipes ei suuda avada \"%1\" andmebaasi."
+
+#: backends/qsqlrecipedb.cpp:131 backends/qsqlrecipedb.cpp:146
+#, kde-format
+msgid ""
+"Krecipes could not open the database using the driver '%2' (with username: "
+"\"%1\"). You may not have the necessary permissions, or the server may be "
+"down."
+msgstr ""
+"Krecipes ei suuda draiverit '%2' kasutades andmebaasi avada (kasutajanimega: "
+"\"%1\"). Võib-olla ei ole sul vajalikke õigusi või on server maas."
+
+#: backends/qsqlrecipedb.cpp:139
+#, kde-format
+msgid "Database message: %1"
+msgstr "Andmebaasi teade: %1"
+
+#: backends/qsqlrecipedb.cpp:140
+msgid "Failing to open database. Exiting\n"
+msgstr "Andmebaasi avamine nurjus. Lõpetatakse\n"
+
+#: backends/qsqlrecipedb.cpp:155
+msgid ""
+"This database was created with a newer version of Krecipes and cannot be "
+"opened."
+msgstr ""
+"See andmebaas on loodud Krecipesi uuema versiooniga, mistõttu seda ei saa "
+"avada."
+
+#: backends/qsqlrecipedb.cpp:164
+msgid "Failed to fix database structure."
+msgstr "Andmebaasi struktuuri parandamine nurjus."
+
+#: backends/qsqlrecipedb.cpp:1799
+#, kde-format
+msgid "In ingredient '%1': weight [%2/%3%4]"
+msgstr "Koostisosas '%1': kaal [%2/%3%4]"
+
+#: backends/qsqlrecipedb.cpp:1849
+#, kde-format
+msgid "In ingredient '%1': property \"%2\" [%3/%4]"
+msgstr "Koostisosas '%1': omadus \"%2\" [%3/%4]"
+
+#: backends/qsqlrecipedb.cpp:2015
+msgctxt "@info"
+msgid ""
+"<p>The database was created with a previous version of Krecipes. Would you "
+"like Krecipes to update this database to work with this version of "
+"Krecipes?  Depending on the number of recipes and amount of data, this could "
+"take some time.</p><warning><p>After updating, this database will no longer "
+"be compatible with previous versions of Krecipes.</p><p>Cancelling this "
+"operation may result in corrupting the database.</p></warning>"
+msgstr ""
+"<p>Andmebaas on loodud Krecipesi varasema versiooniga. Kas soovid, et "
+"Krecipes uuendaks andmebaasi, nii et see töötaks ka praeguse versiooniga? "
+"Sõltuvalt retseptide ja andmete hulgast võib sellele kuluda üsna tükk aega.</"
+"p><warning><p>Pärast uuendamist ei ühildu andmebaas enam Krecipese "
+"varasemate versioonidega.</p><p>Toimingu katkestamine võib tuua kaasa "
+"andmebaasi riknemise.</p></warning>"
+
+#: backends/qsqlrecipedb.cpp:2025
+msgid "Porting database structure..."
+msgstr "Andmebaasi struktuuri portimine..."
+
+#: backends/qsqlrecipedb.cpp:2100
+msgid "Loading category list"
+msgstr "Kategooriate nimekirja laadimine"
+
+#: krecipes.cpp:122
+msgid ""
+"Gathering recipe data from file.\n"
+"Please wait..."
+msgstr ""
+"Retseptiandmete hankimine failist.\n"
+"Palun oota..."
+
+#: krecipes.cpp:195
+msgctxt "@action:inmenu Reload Recipe"
+msgid "Reloa&d"
+msgstr "Laa&di uuesti"
+
+#: krecipes.cpp:202
+msgid "&Edit Recipe"
+msgstr "&Muuda retsepti"
+
+#: krecipes.cpp:209
+msgid "&Measurement Converter"
+msgstr "&Mõõtühikute teisendaja"
+
+#: krecipes.cpp:220
+msgid "&Merge Similar Categories..."
+msgstr "Ü&henda sarnased kategooriad..."
+
+#: krecipes.cpp:227
+msgid "&Merge Similar Ingredients..."
+msgstr "Ü&henda sarnased koostisosad..."
+
+#: krecipes.cpp:235
+msgid "&New Recipe"
+msgstr "&Uus retsept"
+
+#: krecipes.cpp:248
+msgid "Import from File..."
+msgstr "Impordi failist..."
+
+#: krecipes.cpp:255
+msgid "Import from Database..."
+msgstr "Impordi andmebaasist..."
+
+#: krecipes.cpp:261
+msgid "Export..."
+msgstr "Ekspordi..."
+
+#: krecipes.cpp:268
+msgid "&Copy to Clipboard"
+msgstr "&Kopeeri lõikepuhvrisse"
+
+#: krecipes.cpp:276
+msgid "Page Setup..."
+msgstr "Lehekülje seadistus..."
+
+#: krecipes.cpp:282
+msgid "Print Setup..."
+msgstr "Trükkimise seadistamine..."
+
+#: krecipes.cpp:288
+msgid "Backup..."
+msgstr "Varukoopia..."
+
+#: krecipes.cpp:294
+msgid "Restore..."
+msgstr "Taasta..."
+
+#: krecipes.cpp:300
+msgid "Add to Shopping List"
+msgstr "Lisa ostunimekirja"
+
+#: krecipes.cpp:307
+msgid "Remove From Category"
+msgstr "Eemalda kategooriast"
+
+#: krecipes.cpp:314
+msgid "Delete"
+msgstr "Kustuta"
+
+#: krecipes.cpp:321
+msgid "Show Recipe(s)"
+msgstr "Näita retsepti"
+
+#: krecipes.cpp:328
+msgid "Categorize"
+msgstr "Määra kategooria"
+
+#: krecipes.cpp:335
+msgid "Expand All"
+msgstr "Laienda kõik"
+
+#: krecipes.cpp:341
+msgid "Collapse All"
+msgstr "Ahenda kõik"
+
+#: krecipes.cpp:348
+msgctxt "@action:button Create new data item"
+msgid "Create New"
+msgstr "Loo uus"
+
+#: krecipes.cpp:355
+msgid "Rename"
+msgstr "Nimeta ümber"
+
+#: krecipes.cpp:363
+msgid "Cut"
+msgstr "Lõika"
+
+#: krecipes.cpp:371
+msgid "Paste"
+msgstr "Aseta"
+
+#: krecipes.cpp:378
+msgid "Paste as Subcategory"
+msgstr "Aseta alamkategooriana"
+
+#: krecipes.cpp:508
+msgid "MasterCook Export format"
+msgstr "MasterCooki ekspordivorming"
+
+#: krecipes.cpp:509
+msgid "\"Now You're Cooking\" Generic Export format"
+msgstr "\"Now You're Cooking\" üldine ekspordivorming"
+
+#: krecipes.cpp:514
+msgid "Import from file"
+msgstr "Impordi failist"
+
+#: krecipes.cpp:539
+#, kde-format
+msgid ""
+"Filter \"%1\" not recognized.\n"
+"Please select one of the provided filters."
+msgstr ""
+"Filter \"%1\" ei ole tuntud.\n"
+"Palun vali mõni pakutavatest filtritest."
+
+#: krecipes.cpp:541
+msgid "Unrecognized Filter"
+msgstr "Tundmatu filter"
+
+#: krecipes.cpp:573
+msgid ""
+"<p>NOTE: We recommend that all recipes generating warnings be checked to "
+"ensure that they were properly imported, and no loss of recipe data has "
+"occurred.</p>"
+msgstr ""
+"<p>MÄRKUS: me soovitame hoolikalt üle kontrollida kõik retseptid, mis "
+"annavad veateateid, et need ikka korralikult, ilma andmeid kaotamata "
+"imporditud saaks.</p>"
+
+#: krecipes.cpp:578
+msgid "Import Warnings"
+msgstr "Impordihoiatused"
+
+#: krecipes.cpp:651 krecipes.cpp:670
+msgid ""
+"The recipe print and view layouts use the same file for their style, meaning "
+"changing one view's look changes them both.  If this is not the behavior you "
+"desire, load one style and save it under a different name."
+msgstr ""
+"Retsepti trüki- ja vaatepaigutus kasutavad üht ja sama stiilifaili, mistõttu "
+"ühe muutmine muudab ka teist. Kui sa seda ei soovi, laadi ühe vaate stiil ja "
+"salvesta see teise nimega."
+
+#: krecipes.cpp:675
+msgid "Print Setup"
+msgstr "Trükkimise seadistamine"
+
+#: krecipes.cpp:689
+msgid "Save Backup As..."
+msgstr "Salvesta varukoopia kui..."
+
+#: krecipes.cpp:702
+msgid "Backup Failed"
+msgstr "Varukoopia loomine nurjus"
+
+#: krecipes.cpp:709
+msgid "Krecipes Backup File"
+msgstr "Krecipese varukoopiafail"
+
+#: krecipes.cpp:710
+msgid "Restore Backup"
+msgstr "Taasta varukoopia"
+
+#: krecipes.cpp:713
+msgid ""
+"<b>Restoring this file will erase ALL data currently in the database.</"
+"b><br /><br />If you want to keep the recipes in your database, click "
+"\"Cancel\" and first export your recipes.  These can then be imported once "
+"the restore is complete.<br /><br />Are you sure you want to proceed?"
+msgstr ""
+"<b>Selle faili taastamine kustutab KÕIK andmebaasi praegused andmed.</b><br /"
+"><br />Kui soovid säilitada andmebaasi retseptid, klõpsa \"Loobu\" ja "
+"ekspordi kõigepealt oma retseptid. Seejärel saab neid importida, kui "
+"taastamine on lõpetatud.<br /><br />Kas soovid kindlasti jätkata?"
+
+#: krecipes.cpp:720
+msgid "Restore successful."
+msgstr "Taastamine õnnestus."
+
+#: krecipes.cpp:786
+msgid ""
+"A recipe contains unsaved changes.\n"
+"Do you want to save the changes before exiting?"
+msgstr ""
+"Retsept sisaldab salvestamata muudatusi.\n"
+"Kas salvestada muudatused enne väljumist?"
+
+#: krecipes.cpp:788
+msgid "Unsaved Changes"
+msgstr "Salvestama muudatused"
+
+#: krepagelayout.cpp:114
+msgid "ISO A3"
+msgstr "ISO A3"
+
+#: krepagelayout.cpp:115
+msgid "ISO A4"
+msgstr "ISO A4"
+
+#: krepagelayout.cpp:116
+msgid "ISO A5"
+msgstr "ISO A5"
+
+#: krepagelayout.cpp:117
+msgid "US Letter"
+msgstr "US Letter"
+
+#: krepagelayout.cpp:118
+msgid "US Legal"
+msgstr "US Legal"
+
+#: krepagelayout.cpp:119
+msgid "Screen"
+msgstr "Ekraan"
+
+#: krepagelayout.cpp:120
+msgctxt "Custom paper size for printing"
+msgid "Custom"
+msgstr "Kohandatud"
+
+#: krepagelayout.cpp:122
+msgid "ISO B5"
+msgstr "ISO B5"
+
+#: krepagelayout.cpp:124
+msgid "US Executive"
+msgstr "US Executive"
+
+#: krepagelayout.cpp:125
+msgid "ISO A0"
+msgstr "ISO A0"
+
+#: krepagelayout.cpp:126
+msgid "ISO A1"
+msgstr "ISO A1"
+
+#: krepagelayout.cpp:127
+msgid "ISO A2"
+msgstr "ISO A2"
+
+#: krepagelayout.cpp:128
+msgid "ISO A6"
+msgstr "ISO A6"
+
+#: krepagelayout.cpp:129
+msgid "ISO A7"
+msgstr "ISO A7"
+
+#: krepagelayout.cpp:130
+msgid "ISO A8"
+msgstr "ISO A8"
+
+#: krepagelayout.cpp:131
+msgid "ISO A9"
+msgstr "ISO A9"
+
+#: krepagelayout.cpp:132
+msgid "ISO B0"
+msgstr "ISO B0"
+
+#: krepagelayout.cpp:133
+msgid "ISO B1"
+msgstr "ISO B1"
+
+#: krepagelayout.cpp:134
+msgid "ISO B10"
+msgstr "ISO B10"
+
+#: krepagelayout.cpp:135
+msgid "ISO B2"
+msgstr "ISO B2"
+
+#: krepagelayout.cpp:136
+msgid "ISO B3"
+msgstr "ISO B3"
+
+#: krepagelayout.cpp:137
+msgid "ISO B4"
+msgstr "ISO B4"
+
+#: krepagelayout.cpp:138
+msgid "ISO B6"
+msgstr "ISO B6"
+
+#: krepagelayout.cpp:139
+msgid "ISO C5"
+msgstr "ISO C5"
+
+#: krepagelayout.cpp:140
+msgid "US Common 10"
+msgstr "US Common 10"
+
+#: krepagelayout.cpp:141
+msgid "ISO DL"
+msgstr "ISO DL"
+
+#: krepagelayout.cpp:142
+msgid "US Folio"
+msgstr "US Folio"
+
+#: krepagelayout.cpp:143
+msgid "US Ledger"
+msgstr "US Ledger"
+
+#: krepagelayout.cpp:144
+msgid "US Tabloid"
+msgstr "US Tabloid"
+
+#: main.cpp:28
+msgid "Convert the current SQLite 2.x database to SQLite 3 and exit"
+msgstr ""
+"Teisendab aktiivse SQLite 2.x andmebaasi SQLite 2 andmebaasiks ja lõpetab"
+
+#: main.cpp:32
+msgid "Krecipes"
+msgstr "Krecipes"
+
+#: main.cpp:32
+msgid "The KDE Cookbook"
+msgstr "KDE kokaraamat"
+
+#: main.cpp:32
+msgid ""
+"(C) 2003 Unai Garro\n"
+"(C) 2004-2006 Jason Kivlighn"
+msgstr ""
+"(C) 2003: Unai Garro\n"
+"(C) 2004-2006: Jason Kivlighn"
+
+#: main.cpp:32
+msgid ""
+"This product is RecipeML compatible.\n"
+"You can get more information about this file format in:\n"
+"http://www.formatdata.com/recipeml"
+msgstr ""
+"Käesolev rakendus ühildub RecipeML-iga.\n"
+" Selle failivormingu kohta leiab rohkem infot aadressilt:\n"
+" http://www.formatdata.com/recipeml"
+
+#: main.cpp:33
+msgid "Unai Garro"
+msgstr "Unai Garro"
+
+#: main.cpp:34
+msgid "Jason Kivlighn"
+msgstr "Jason Kivlighn"
+
+#: main.cpp:35
+msgid "Cyril Bosselut"
+msgstr "Cyril Bosselut"
+
+#: main.cpp:37
+msgid "Colleen Beamer"
+msgstr "Colleen Beamer"
+
+#: main.cpp:37
+msgid "Testing, bug reports, suggestions"
+msgstr "Testimine, veateated, ettepanekud"
+
+#: main.cpp:38
+msgid "Robert Wadley"
+msgstr "Robert Wadley"
+
+#: main.cpp:38
+msgid "Icons and artwork"
+msgstr "Ikoonid ja välimus"
+
+#: main.cpp:39
+msgid "Daniel Sauvé"
+msgstr "Daniel Sauvé"
+
+#: main.cpp:39 main.cpp:41
+msgid "Porting to KDE4"
+msgstr "KDE4 port"
+
+#: main.cpp:41
+msgid "Laurent Montel"
+msgstr "Laurent Montel"
+
+#: main.cpp:42
+msgid "José Manuel Santamaría Lema"
+msgstr "José Manuel Santamaría Lema"
+
+#: main.cpp:42
+msgid "Porting to KDE4, current maintainer"
+msgstr "KDE4 port, praegune hooldaja"
+
+#: main.cpp:43
+msgid "Martin Engelmann"
+msgstr "Martin Engelmann"
+
+#: main.cpp:43
+msgid "Porting to KDE4, developer"
+msgstr "KDE4 port, arendaja"
+
+#: main.cpp:45
+msgid "Patrick Spendrin"
+msgstr "Patrick Spendrin"
+
+#: main.cpp:45
+msgid "Patches to make Krecipes work under Windows"
+msgstr "Paigad Krecipese töötamiseks Windowsi keskkonnas"
+
+#: main.cpp:46
+msgid "Mike Ferguson"
+msgstr "Mike Ferguson"
+
+#: main.cpp:46
+msgid "Help with bugs, patches"
+msgstr "Abi vigade parandamisel, paigad"
+
+#: main.cpp:47
+msgid "Warren Severin"
+msgstr "Warren Severin"
+
+#: main.cpp:47
+msgid "Code to export recipes to *.mx2 files"
+msgstr "Kood retseptide eksportimiseks *.mx2-failidena"
+
+#: main.cpp:49
+msgid "Eduardo Robles Elvira"
+msgstr "Eduardo Robles Elvira"
+
+#: main.cpp:50 main.cpp:53
+msgid "He advised using WebKit to fix printing support during Akademy-es 2010."
+msgstr "Soovitas Akademy-es 2010 ajal kasutada trükkimise toetuseks WebKitti."
+
+#: main.cpp:52
+msgid "José Millán Soto"
+msgstr "José Millán Soto"
+
+#: main.cpp:56
+msgid "INSERT YOUR NAME HERE"
+msgstr "KIRJUTA SIIA OMA NIMI"
+
+#: main.cpp:56
+msgid "INSERT YOUR EMAIL ADDRESS"
+msgstr "KIRJUTA SIIA OMA E-POSTI AADRESS"
+
+#: setupassistant.cpp:45
+msgid "Welcome to Krecipes"
+msgstr "Tere tulemast kasutama Krecipest"
+
+#: setupassistant.cpp:49
+msgid "Database Type"
+msgstr "Anmebaasi tüüp"
+
+#: setupassistant.cpp:53
+msgid "Database Management System Settings"
+msgstr "Andmebaasi haldamise süsteemi seadistused"
+
+#: setupassistant.cpp:57 setupassistant.cpp:61
+msgid "Database Permissions"
+msgstr "Andmebaasi õigused"
+
+#: setupassistant.cpp:65
+msgid "Server Settings"
+msgstr "Serveri seadistused"
+
+#: setupassistant.cpp:69
+msgid "Initialize Database"
+msgstr "Andmebaasi initsialiseerimine"
+
+#: setupassistant.cpp:73
+msgid "Finish & Save Settings"
+msgstr "Lõpetamine ja seadistuste salvestamine"
+
+#: setupassistant.cpp:96
+msgid ""
+"There is currently no localized ingredient data for this locale.\n"
+"Would you like to load the English ingredients instead?"
+msgstr ""
+"Sinu keele jaoks ei ole praegu emakeelseid koostisosade andmeid.\n"
+"Kas soovid laadida selle asemel ingliskeelsed koostisosad?"
+
+#: setupassistant.cpp:152
+msgid ""
+"<p><b><font size=\"+1\">Thank you very much for choosing Krecipes.</font></"
+"b></p><p>It looks like this is the first time you are using it. This wizard "
+"will help you with the initial setup so that you can start using it quickly."
+"</p><p>Welcome, and enjoy cooking!</p>"
+msgstr ""
+"<p><b><font size=\"+1\">Täname sind Krecipese valimise eest.</font></b></"
+"p><p>Paistab, et see on sul esimene kord rakendust kasutada. Käesolev "
+"nõustaja aitab sul sooritada esmase seadistuse, et saaksid rakendust kohe "
+"seejärel kasutama hakata.</p><p>Tere tulemast ja head kokakunsti nautimist!</"
+"p>"
+
+#: setupassistant.cpp:185
+msgid ""
+"<p>This dialog will allow you to specify a MySQL account that has the "
+"necessary permissions to access the Krecipes MySQL database.</p><p><b><font "
+"size=\"+1\">Most users that use Krecipes and MySQL for the first time can "
+"just leave the default parameters and press 'Next'.</font></b></p> <p>If you "
+"set a MySQL root password before, or you have already permissions as normal "
+"user, click on the appropriate option. Otherwise the account 'root' will be "
+"used, with no password.</p><p>[For security reasons, we strongly encourage "
+"you to setup a MySQL root password if you have not done so yet. Just type as "
+"root: mysqladmin password <i>your_password</i>]</p>"
+msgstr ""
+"<p>Selles dialoogis saab määrata vajalike õigustega MySQL konto, mis lubaks "
+"kasutada Krecipese MySQL andmebaasi.</p><p><b><font size=\"+1\">Kui kasutad "
+"Krecipest ja MySQL-i esimest korda, võid jätta kehtima vaikeväärtused ja "
+"klõpsata nupule 'Järgmine'.</font></b></p><p>Kui oled juba varem määranud "
+"MySQL administraatori parooli või on sul tavalise kasutajana õigused olemas, "
+"vali vastav võimalus. Vastasel juhul luuakse ilma paroolita administraatori "
+"('root') konto.</p><p>[Turvakaalutlustel soovitama väga tungivalt anda MySQL "
+"administraatorile parool, kui sa seda veel teinud ei ole. Selleks anna "
+"administraatorina käsk: mysqladmin password <i>sinu_parool</i>]</p>"
+
+#: setupassistant.cpp:204 setupassistant.cpp:331
+msgid "I have already set the necessary permissions"
+msgstr "Vajalikud õigused on juba seatud"
+
+#: setupassistant.cpp:221
+msgid "I have already set a MySQL root/admin account"
+msgstr "MySQL administraatori konto on juba seatud"
+
+#: setupassistant.cpp:233
+msgid "MySQL Administrator Account"
+msgstr "MySQL administraatori konto"
+
+#: setupassistant.cpp:238 setupassistant.cpp:366 setupassistant.cpp:471
+#: pref.cpp:143 pref.cpp:213
+msgctxt "@label:textbox Database Username"
+msgid "Username:"
+msgstr "Kasutajanimi:"
+
+#: setupassistant.cpp:242 setupassistant.cpp:370 setupassistant.cpp:478
+#: pref.cpp:147 pref.cpp:217
+msgid "Password:"
+msgstr "Parool:"
+
+#: setupassistant.cpp:312
+msgid ""
+"<p>This dialog will allow you to specify a PostgreSQL account that has the "
+"necessary permissions to access the Krecipes PostgreSQL database.  This "
+"account may either be a <b>PostgreSQL superuser</b> or have the ability to "
+"both <b>create new PostgreSQL users and databases</b>.</p><p>If no superuser "
+"or privileged account is given, the account 'postgres' will be attempted, "
+"with no password.  If this is insufficient for your PostgreSQL setup, you "
+"<b>must</b> select the appropriate option below to enter the information of "
+"a privileged PostgreSQL account.</p>"
+msgstr ""
+"<p>Selles dialoogis saab määrata vajalike õigustega PostgreSQL konto, mis "
+"lubaks kasutada Krecipese PostgreSQL andmebaasi. See konto võib olla kas "
+"<b>PostgreSQL administraator</b> või siis mingi muu, millel on õigused luua "
+"<b>nii uusi PostgreSQL kasutajaid kui ka andmebaase</b>.</p><p>Kui sa "
+"administraatori kontot ei määra, proovitakse hakkama saada kontoga "
+"'postgres' (ilma paroolita). Kui sellest sinu PostgreSQL seadistusele ei "
+"piisa, <b>pead</b> valima allpool sobiva võimaluse ja sisestama PostgreSQL "
+"vajalike õigustega kasutaja info.</p>"
+
+#: setupassistant.cpp:348
+msgid "I have already set a superuser or privileged account"
+msgstr "Administraatori konto on juba seatud"
+
+#: setupassistant.cpp:361
+msgid "PostgreSQL Superuser or Privileged Account"
+msgstr "PostgreSQL administraatori konto"
+
+#: setupassistant.cpp:441
+msgid ""
+"<p>In this dialog you can adjust the database server settings.</"
+"p><p><b>Warning: Passwords are stored in plain text and could potentially be "
+"compromised.  We recommend that you create a username and password "
+"combination solely for use by Krecipes.</b></p>"
+msgstr ""
+"<p>Selles dialoogis saab täpsustada andmebaasiserveri seadistusi.</"
+"p><p><b>Hoiatus: paroolid salvestatakse klaartekstina, mis ei taga nende "
+"absoluutset ohutust. Me soovitame, et lood kas või ainult Krecipesi jaoks "
+"spetsiaalse kasutajanime ja parooli.</b></p>"
+
+#: setupassistant.cpp:485 pref.cpp:155 pref.cpp:225
+msgid "Database name:"
+msgstr "Andmebaasi nimi:"
+
+#: setupassistant.cpp:495
+msgid "The server is remote"
+msgstr "Võrguserver"
+
+#: setupassistant.cpp:507
+msgid "Server / Client Settings"
+msgstr "Serveri / kliendi seadistused"
+
+#: setupassistant.cpp:515 pref.cpp:140 pref.cpp:210
+msgid "Server:"
+msgstr "Server:"
+
+#: setupassistant.cpp:520
+msgid "Client:"
+msgstr "Klient:"
+
+#: setupassistant.cpp:525
+msgctxt "@label:textbox Default Port"
+msgid "Default"
+msgstr "Vaikimisi"
+
+#: setupassistant.cpp:526 pref.cpp:152 pref.cpp:222
+msgid "Port:"
+msgstr "Port:"
+
+#: setupassistant.cpp:603
+msgid "In this dialog you can adjust SQLite settings."
+msgstr "Selles dialoogis saab kohendada SQLite seadistusi."
+
+#: setupassistant.cpp:617 pref.cpp:278
+msgid "Database file:"
+msgstr "Andmebaasi fail:"
+
+#: setupassistant.cpp:625
+msgid "Open file dialog"
+msgstr "Ava failidialoog"
+
+#: setupassistant.cpp:647 pref.cpp:326
+msgid "Select SQLite database file"
+msgstr "SQLite andmebaasifaili valimine"
+
+#: setupassistant.cpp:677
+msgid ""
+"Congratulations; all the necessary configuration setup is done. Press "
+"'Finish' to continue, and enjoy cooking!"
+msgstr ""
+"Õnnitlused! Kõik vajalik on seadistatud. Vajuta nupule'Lõpeta' ja naudi "
+"kokakunsti!"
+
+#: setupassistant.cpp:774
+msgid ""
+"<p>Krecipes comes with some delicious default recipes and useful data.</"
+"p><p>Would you like to initialize your database with those? Note that this "
+"will erase all your previous recipes if you have any.</p>"
+msgstr ""
+"<p>Krecipes pakub omalt poolt mitmeid vahvaid retsepte ja tulusaid andmeid. "
+"</p><p>Kas soovid andmebaasi initsialiseerida koos näidistega? Pane tähele, "
+"et sellega kustutatakse kõik sinu varasemad retseptid, kui sul peaks juhtuma "
+"neid olema.</p>"
+
+#: setupassistant.cpp:799
+msgid "Yes please, initialize the database with the examples"
+msgstr "Jah, soovin andmebaasi initsialiseerimist koos näidistega"
+
+#: setupassistant.cpp:808
+msgid ""
+"<p>Krecipes can import nutrient data from the USDA's nutrient database for "
+"over 400 foods.  A total of 43 food properties are included for each food, "
+"such as energy, fat, vitamin C, etc.</p><p>Would you like to import this "
+"data now?  Note that this operation is safe to use on an existing database, "
+"and no data loss will occur.  This operation may take several minutes.</p>"
+msgstr ""
+"<p>Krecipes võib importida USDA toitainete andmebaasist enam kui 400 toidu "
+"toitainete andmed. Iga toidu puhul on ära toodud 43 omadust, näiteks "
+"energia, rasvasus, C-vitamiini kogus jne.</p><p>Kas soovid need andmed nüüd "
+"importida? Pane tähele, et see ei mõjuta kuidagi juba olemasolevat "
+"andmebaasi ja mingeid andmeid kaotsi ei lähe. Kokku võtab asi aega mitu "
+"minutit.</p>"
+
+#: setupassistant.cpp:822
+msgid "Yes please, load the database with nutrient data for 400+ foods."
+msgstr "Jah, soovin enam kui 400 roa toitainete andmebaasi laadimist"
+
+#: setupassistant.cpp:870
+msgid ""
+"Choose the type of database that you want to use. Most users will want to "
+"choose a simple local database here. However, you can also use remote "
+"servers by means of a MySQL or PostgreSQL database."
+msgstr ""
+"Vali siin kasutatava andmebaasi tüüp. Enamasti peaks sobima lihtsa kohaliku "
+"andmebaasi valimine. Kui aga soovid, võid MySQL või PostgreSQL andmebaasi "
+"vahendusel kasutada ka võrguservereid."
+
+#: setupassistant.cpp:887
+msgid "Simple Local File (SQLite)"
+msgstr "Lihtne kohalik fail (SQLite)"
+
+#: setupassistant.cpp:890
+msgid "Local or Remote MySQL Database"
+msgstr "Kohalik või võrgus asuv MySQL andmebaas"
+
+#: setupassistant.cpp:893
+msgid "Local or Remote PostgreSQL Database"
+msgstr "Kohalik või võrgus asuv PostgreSQL andmebaas"
+
+#: krecipesview.cpp:99 krecipesview.cpp:371 krecipesview.cpp:438
+msgid "Find/Edit Recipes"
+msgstr "Retseptide otsimine/muutmine"
+
+#: krecipesview.cpp:124
+msgid "Data..."
+msgstr "Andmed..."
+
+#: krecipesview.cpp:330
+msgid ""
+"\n"
+"You are using SQLite; this error is often caused by using an SQLite 2 "
+"database with Krecipes supporting SQLite 3, if this is the case you could "
+"run the SQLite converter.\n"
+"What do you want to do?"
+msgstr ""
+"\n"
+"Kasutad SQLite'i ning seda viga põhjustab sageli SQLite 2 andmebaasi "
+"kasutamine Krecipesiga, mis toetab SQLite 3. Sel juhul tasuks käivitada "
+"SQLite'i teisendaja.\n"
+"Mida soovid ette võtta?"
+
+#: krecipesview.cpp:335
+msgid "Run the setup assistant"
+msgstr "Seadistamisabilise käivitamine"
+
+#: krecipesview.cpp:336
+msgid "Run the SQLite converter"
+msgstr "SQLite'i teisendaja käivitamine"
+
+#: krecipesview.cpp:345 krecipesview.cpp:360
+msgctxt "Exiting Krecipes"
+msgid "Exiting"
+msgstr "Väljumine"
+
+#: krecipesview.cpp:352
+msgid ""
+"\n"
+"Would you like to run the setup wizard again? Otherwise, the application "
+"will be closed."
+msgstr ""
+"\n"
+"Kas soovid seadistamisnõustaja uuesti käivitada? Vastasel juhul rakendus "
+"suletakse."
+
+#: krecipesview.cpp:376 krecipesview.cpp:493
+msgid "Preparation Methods"
+msgstr "Valmistusviisid"
+
+#: krecipesview.cpp:379 krecipesview.cpp:452
+msgid "Diet Helper"
+msgstr "Dieediabiline"
+
+#: krecipesview.cpp:380 krecipesview.cpp:460
+msgid "Ingredient Matcher"
+msgstr "Koostisosade sobitaja"
+
+#: krecipesview.cpp:520
+msgid "View Recipe"
+msgstr "Vaata retsepti"
+
+#: krecipesview.cpp:766
+msgid ""
+"A recipe contains unsaved changes.\n"
+"Do you want to save changes made to this recipe before editing another "
+"recipe?"
+msgstr ""
+"Retsept sisaldab salvestamata muudatusi.\n"
+"Kas soovid selle retsepti muudatused salvestada, enne kui asuda uue retsepti "
+"muutmise kallale?"
+
+#: krecipesview.cpp:768 krecipesview.cpp:855
+msgid "Unsaved changes"
+msgstr "Salvestamata muudatused"
+
+#: krecipesview.cpp:786
+#, kde-format
+msgid "Are you sure you want to permanently remove the recipe, %1?"
+msgstr "Kas tõesti valitud retsept (%1) jäädavalt eemaldada?"
+
+#: krecipesview.cpp:787 krecipesview.cpp:835
+msgid "Confirm remove"
+msgstr "Eemaldamise kinnitus"
+
+#: krecipesview.cpp:834
+msgid "Are you sure you want to permanently remove the selected recipes?"
+msgstr "Kas tõesti valitud retseptid jäädavalt eemaldada?"
+
+#: krecipesview.cpp:853
+msgid ""
+"A recipe contains unsaved changes.\n"
+"Do you want to save changes made to this recipe before creating a new recipe?"
+msgstr ""
+"Retsept sisaldab salvestamata muudatusi.\n"
+"Kas soovid selle retsepti muudatused salvestada, enne kui asuda uut retsepti "
+"looma?"
+
+#: krecipesview.cpp:999
+msgid "Unable to setup database"
+msgstr "Andmebaasi häälestamine nurjus"
+
+#: krecipesview.cpp:1011
+msgid "Code error. No DB support has been included. Exiting"
+msgstr "Koodiviga. Andmebaasi tuge ei leitud. Lõpetatakse"
+
+#: krecipesview.cpp:1173 krecipesview.cpp:1199
+msgid "Code error. No DB support was built in. Exiting"
+msgstr "Koodiviga. Andmebaasi toetus puudub. Lõpetatakse"
+
+#: krecipesview.cpp:1182
+msgid "Unable to open database"
+msgstr "Andmebaasi avamine nurjus"
+
+#: krecipesview.cpp:1204
+msgid "DB started correctly\n"
+msgstr "Andmebaas korrektselt käivitatud\n"
+
+#: krecipesview.cpp:1212
+#, kde-format
+msgid "The configured database type (%1) is unsupported."
+msgstr "Seadistatud andmebaasi tüüp (%1) on toetuseta."
+
+#: krecipesview.cpp:1212
+msgid ""
+"Unsupported database type. Database must be either MySQL, SQLite, or "
+"PostgreSQL."
+msgstr ""
+"Toetuseta andmebaasi tüüp. Andmebaas peab olemas MySQL, SQLite või "
+"PostgreSQL."
+
+#: mmdata.h:25
+msgid "bunch"
+msgstr "kimp"
+
+#: mmdata.h:25
+msgid "bunches"
+msgstr "kimpu"
+
+#: mmdata.h:26
+msgid "cup"
+msgstr "klaas"
+
+#: mmdata.h:26
+msgid "cups"
+msgstr "klaasi"
+
+#: mmdata.h:27
+msgid "cubic cm"
+msgstr "kuupsentimeetrit"
+
+#: mmdata.h:28
+msgid "centigram"
+msgstr "sentigramm"
+
+#: mmdata.h:28
+msgid "centigrams"
+msgstr "sentigrammi"
+
+#: mmdata.h:29
+msgid "centiliter"
+msgstr "sentiliiter"
+
+#: mmdata.h:29
+msgid "centiliters"
+msgstr "sentiliitrit"
+
+#: mmdata.h:30
+msgid "can"
+msgstr "purk"
+
+#: mmdata.h:30
+msgid "cans"
+msgstr "purki"
+
+#: mmdata.h:31
+msgid "carton"
+msgstr "pakk"
+
+#: mmdata.h:31
+msgid "cartons"
+msgstr "pakki"
+
+#: mmdata.h:32
+msgid "decigram"
+msgstr "detsigramm"
+
+#: mmdata.h:32
+msgid "decigrams"
+msgstr "detsigrammi"
+
+#: mmdata.h:33
+msgid "deciliter"
+msgstr "detsiliiter"
+
+#: mmdata.h:33
+msgid "deciliters"
+msgstr "detsiliitrit"
+
+#: mmdata.h:34
+msgid "drop"
+msgstr "tilk"
+
+#: mmdata.h:34
+msgid "drops"
+msgstr "tilka"
+
+#: mmdata.h:35
+msgid "dash"
+msgstr "veidi"
+
+#: mmdata.h:35
+msgid "dashes"
+msgstr "veidi"
+
+#: mmdata.h:36
+msgid "each"
+msgstr "iga"
+
+#: mmdata.h:37
+msgid "kilogram"
+msgstr "kilogramm"
+
+#: mmdata.h:37
+msgid "kilograms"
+msgstr "kilogrammi"
+
+#: mmdata.h:38
+msgid "fluid ounce"
+msgstr "vedelikuunts"
+
+#: mmdata.h:38
+msgid "fluid ounces"
+msgstr "vedelikuuntsi"
+
+#: mmdata.h:39
+msgid "gram"
+msgstr "gramm"
+
+#: mmdata.h:39
+msgid "grams"
+msgstr "grammi"
+
+#: mmdata.h:40
+msgid "gallon"
+msgstr "gallon"
+
+#: mmdata.h:40
+msgid "gallons"
+msgstr "gallonit"
+
+#: mmdata.h:41
+msgid "liter"
+msgstr "liiter"
+
+#: mmdata.h:41
+msgid "liters"
+msgstr "liitrit"
+
+#: mmdata.h:42
+msgid "pound"
+msgstr "nael"
+
+#: mmdata.h:42
+msgid "pounds"
+msgstr "naela"
+
+#: mmdata.h:43
+msgid "large"
+msgstr "suur"
+
+#: mmdata.h:44
+msgid "medium"
+msgstr "keskmine"
+
+#: mmdata.h:45
+msgid "milligram"
+msgstr "milligramm"
+
+#: mmdata.h:45
+msgid "milligrams"
+msgstr "milligrammi"
+
+#: mmdata.h:46
+msgid "milliliter"
+msgstr "milliliiter"
+
+#: mmdata.h:46
+msgid "milliliters"
+msgstr "milliliitrit"
+
+#: mmdata.h:47 mmdata.h:48
+msgid "package"
+msgstr "pakk"
+
+#: mmdata.h:47 mmdata.h:48
+msgid "packages"
+msgstr "pakki"
+
+#: mmdata.h:49
+msgid "pinch"
+msgstr "näpuotsatäis"
+
+#: mmdata.h:49
+msgid "pinches"
+msgstr "näpuotsatäit"
+
+#: mmdata.h:50
+msgid "pint"
+msgstr "pint"
+
+#: mmdata.h:50
+msgid "pints"
+msgstr "pinti"
+
+#: mmdata.h:51
+msgid "ounce"
+msgstr "unts"
+
+#: mmdata.h:51
+msgid "ounces"
+msgstr "untsi"
+
+#: mmdata.h:52
+msgid "quart"
+msgstr "kvart"
+
+#: mmdata.h:52
+msgid "quarts"
+msgstr "kvarti"
+
+#: mmdata.h:53
+msgid "slice"
+msgstr "viil"
+
+#: mmdata.h:53
+msgid "slices"
+msgstr "viilu"
+
+#: mmdata.h:54
+msgid "small"
+msgstr "väike"
+
+#: mmdata.h:55 mmdata.h:57
+msgid "teaspoon"
+msgstr "teelusikas"
+
+#: mmdata.h:55 mmdata.h:57
+msgid "teaspoons"
+msgstr "teelusikat"
+
+#: mmdata.h:56 mmdata.h:58
+msgid "tablespoon"
+msgstr "supilusikas"
+
+#: mmdata.h:56 mmdata.h:58
+msgid "tablespoons"
+msgstr "supilusikat"
+
+#: mmdata.h:59
+msgid "per serving"
+msgstr "portsjoni kohta"
+
+#: convert_sqlite3.cpp:83 convert_sqlite3.cpp:91
+#, kde-format
+msgid ""
+"Unable to find or run the program '%1'.  Either it is not installed on your "
+"system or it is not in $PATH. Do you want to configure other path for this "
+"command?"
+msgstr ""
+"Programmi '%1' leidmine või käivitamine nurjus. See ei ole kas süsteemi "
+"paigaldatud või ei asu otsinguteel ($PATH). Kas määrata käsule mõni teine "
+"asukoht?"
+
+#: convert_sqlite3.cpp:100
+#, kde-format
+msgid ""
+"Conversion process failed. Probably the file %1 is not an SQLite 2 database."
+msgstr "Teisendamine nurjus. Fail %1 ei ole arvatavasti SQLite 2 andmebaas."
+
+#: convert_sqlite3.cpp:131
+#, c-format, kde-format
+msgid ""
+"Unable to backup SQLite 2 database, aborting. A successfully converted "
+"SQLite 3 file is available at %1.new."
+msgstr ""
+"SQLite 2 andmebaasi varundamine nurjus, loobutakse. Edukalt teisendatud "
+"SQLite3 fail on salvestatud kui %1.new."
+
+#: convert_sqlite3.cpp:137
+#, kde-format
+msgid ""
+"Unable to copy the new SQLite 3 database to %1.You may manually move %1.new "
+"to %1"
+msgstr ""
+"Uue SQLite 3 andmebaasi kopeerimine asukohta %1 nurjus. Soovi korral võid %1."
+"new käsitsi liigutada asukohta %1"
+
+#: convert_sqlite3.cpp:141
+#, kde-format
+msgid "Conversion successful! SQLite 2 database backed up to %1"
+msgstr "Teisendamine õnnestus! SQLite2 andmebaas varundati asukohta %1"
+
+#: pref.cpp:56
+msgid "Configure"
+msgstr "Seadistused"
+
+#: pref.cpp:65
+msgid "Database System"
+msgstr "Andmebaasi süsteem"
+
+#: pref.cpp:67
+#, kde-format
+msgid "Database Management System Options (%1)"
+msgstr "Andmebaasi haldamise süsteemi valikud (%1)"
+
+#: pref.cpp:74
+msgid "Formatting"
+msgstr "Vormindus"
+
+#: pref.cpp:76
+msgid "Customize Formatting"
+msgstr "Vorminduse kohandamine"
+
+#: pref.cpp:83
+msgid "Import/Export"
+msgstr "Import/Eksport"
+
+#: pref.cpp:85
+msgid "Recipe Import and Export Options"
+msgstr "Retsepti importimise ja eksportimise valikud"
+
+#: pref.cpp:93
+msgid "Performance"
+msgstr "Jõudlus"
+
+#: pref.cpp:94
+msgid "Performance Options"
+msgstr "Jõudluse valikud"
+
+#: pref.cpp:103
+msgid "Spell checking"
+msgstr "õigekirja kontroll"
+
+#: pref.cpp:104
+msgid "Spell checking Options"
+msgstr "Õigekirja kontrolli valikud"
+
+#: pref.cpp:151 pref.cpp:221
+msgctxt "Default Port"
+msgid "Default"
+msgstr "Vaikimisi"
+
+#: pref.cpp:161 pref.cpp:232 pref.cpp:294
+msgid "Backup"
+msgstr "Varundamine"
+
+#: pref.cpp:165
+msgid "Select MySQL dump command"
+msgstr "MySQL-i salvestamiskäsu valimine"
+
+#: pref.cpp:166 pref.cpp:170 pref.cpp:236 pref.cpp:240 pref.cpp:301
+#, kde-format
+msgid "Path to '%1':"
+msgstr "'%1' asukoht:"
+
+#: pref.cpp:169
+msgid "Select MySQL command"
+msgstr "MySQL-i käsu valimine"
+
+#: pref.cpp:184 pref.cpp:186 pref.cpp:254 pref.cpp:256 pref.cpp:329
+#: pref.cpp:331 pref.cpp:333
+msgid "All files"
+msgstr "Kõik failid"
+
+#: pref.cpp:235
+msgid "Select PostgreSQL dump command"
+msgstr "PostgreSQL-i salvestamiskäsu valimine"
+
+#: pref.cpp:239
+msgid "Select PostgreSQL command"
+msgstr "PostgreSQL-i käsu valimine"
+
+#: pref.cpp:300
+msgid "Select SQLite command"
+msgstr "SQLite'i käsu valimine"
+
+#: pref.cpp:307
+msgid "SQLite converter"
+msgstr "SQLite'i teisendaja"
+
+#: pref.cpp:313
+msgid "Select old SQLite version command"
+msgstr "Vana SQLite'i versiooni käsu valimine"
+
+#: pref.cpp:314
+msgid "Path to SQLite old version command:"
+msgstr "SQLite'i vana versiooni käsu asukoht:"
+
+#: pref.cpp:317
+msgid "Select new SQLite version command"
+msgstr "Uue SQLite'i versiooni käsu valimine"
+
+#: pref.cpp:318
+msgid "Path to SQLite new version command:"
+msgstr "SQLite'i uue versiooni käsu asukoht:"
+
+#: pref.cpp:369
+msgid "Re-run wizard on next startup"
+msgstr "Nõustaja käivitatakse uuesti ka järgmisel korral"
+
+#: pref.cpp:375
+msgid ""
+"Note: Krecipes must be restarted for most server preferences to take effect."
+msgstr "Märkus: enamik serveri seadistusi nõuab Krecipese taaskäivitamist."
+
+#: pref.cpp:420
+msgid "Use abbreviations"
+msgstr "Lühendite kasutamine"
+
+#: pref.cpp:456
+msgid "Number Format"
+msgstr "Arvuvorming"
+
+#: pref.cpp:457
+msgctxt "@option:radio Display fraction"
+msgid "Fraction"
+msgstr "Murd"
+
+#: pref.cpp:458
+msgctxt "@option:radio Display decimal"
+msgid "Decimal"
+msgstr "Kümnendmurd"
+
+#: pref.cpp:478
+msgid "Import"
+msgstr "Import"
+
+#: pref.cpp:480
+msgid "Overwrite recipes with same title"
+msgstr "Sama nimega retseptid kirjutatakse üle"
+
+#: pref.cpp:485
+msgid "Ask which recipes to import"
+msgstr "Küsitakse, millised retseptid importida"
+
+#: pref.cpp:497
+msgid "'Copy to Clipboard' format:"
+msgstr "'Kopeeri lõikepuhvrisse' vorming:"
+
+#: pref.cpp:527
+msgid ""
+"When this is enabled, the importer will show every recipe in the file(s) and "
+"allow you to select which recipes you want imported.\n"
+" \t\t\t\t\t\t\t\t\tDisable this to always import every recipe, which allows "
+"for faster and less memory-intensive imports."
+msgstr ""
+"Selle sisselülitamisel näitab importimistööriist kõiki failis olevaid "
+"retsepte ja võimaldab valida, millised neist importida.\n"
+" \t\t\t\t\t\t\t\t\tKui see pole sisse lülitatud, imporditakse alati kõik "
+"retseptid, mis üldiselt tähendab kiiremat ja mälu vähem koormavat importi."
+
+#: pref.cpp:562
+msgid "Search as you type"
+msgstr "Otsimine kirjutamise ajal"
+
+#: pref.cpp:565
+msgid ""
+"In most instances these options do not need to be changed.  However, "
+"limiting the amount of items displayed at once will <b>allow Krecipes to "
+"better perform when the database is loaded with many thousands of recipes</"
+"b>."
+msgstr ""
+"Enamasti pole vajadust siinseid valikuid muuta. Samas võimaldab korraga "
+"näidatavate elementide koguse piiramine <b>Krecipesel palju paremini toime "
+"tulla, kui tegemist on tuhandeid retsepte sisaldava andmebaasi laadimisega</"
+"b>."
+
+#: pref.cpp:571
+msgid "Number of categories to display at once:"
+msgstr "Korraga näidatavate kategooriate arv:"
+
+#: pref.cpp:574
+msgctxt "Unlimited categories"
+msgid "Unlimited"
+msgstr "Piiramatu"
+
+#: pref.cpp:581
+msgid "Number of elements to display at once:"
+msgstr "Korraga näidatavate elementide arv:"
+
+#: pref.cpp:584
+msgctxt "Unlimited elements"
+msgid "Unlimited"
+msgstr "Piiramatu"
+
+#: rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Marek Laane"
+
+#: rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "bald@smail.ee"
+
+#. i18n: file: widgets/ratingdisplaywidget.ui:115
+#. i18n: ectx: property (text), widget (K3ListView, criteriaListView)
+#: rc.cpp:8
+msgid "Criteria"
+msgstr "Kriteerium"
+
+#. i18n: file: widgets/ratingdisplaywidget.ui:126
+#. i18n: ectx: property (text), widget (K3ListView, criteriaListView)
+#: rc.cpp:11
+msgid "Stars"
+msgstr "Tärnid"
+
+#. i18n: file: widgets/ratingdisplaywidget.ui:146
+#. i18n: ectx: property (text), widget (QLabel, comment)
+#: rc.cpp:14
+msgid "Comments"
+msgstr "Kommentaarid"
+
+#. i18n: file: widgets/ratingdisplaywidget.ui:177
+#. i18n: ectx: property (text), widget (KPushButton, buttonRemove)
+#: rc.cpp:17
+msgid "Remove"
+msgstr "Eemalda"
+
+#. i18n: file: widgets/ratingdisplaywidget.ui:187
+#. i18n: ectx: property (text), widget (KPushButton, buttonEdit)
+#: rc.cpp:20
+msgid "Edit..."
+msgstr "Muuda..."
+
+#. i18n: file: krecipesui.rc:4
+#. i18n: ectx: Menu (file)
+#: rc.cpp:23
+msgid "&File"
+msgstr "&Fail"
+
+#. i18n: file: krecipesui.rc:12
+#. i18n: ectx: Menu (edit)
+#: rc.cpp:26
+msgid "&Edit"
+msgstr "&Muuda"
+
+#. i18n: file: krecipesui.rc:22
+#. i18n: ectx: Menu (tools)
+#: rc.cpp:29
+msgid "&Tools"
+msgstr "&Tööriistad"
+
+#~ msgctxt "@title:window"
+#~ msgid "Print Preview"
+#~ msgstr "Trükkimise eelvaatlus"
+
+#~ msgctxt "@action:button"
+#~ msgid "Print Setup"
+#~ msgstr "Seadista trükkimist"
+
+#~ msgctxt "@title:window"
+#~ msgid "Print Setup"
+#~ msgstr "Trükkimise seadistamine"
+
+#~ msgid "Alt+L"
+#~ msgstr "Alt+L"
+
+#~ msgctxt "@label"
+#~ msgid "Yield"
+#~ msgstr "Portsjonid"
+
+#~ msgctxt "@label"
+#~ msgid "Amount"
+#~ msgstr "Kogus"
+
+#~ msgctxt "@title"
+#~ msgid "Ingredient list"
+#~ msgstr "Koostisosade nimekiri"
+
+#~ msgctxt "@title"
+#~ msgid "Header list"
+#~ msgstr "Tüüpide nimekiri"
+
+#~ msgctxt "@title:tab"
+#~ msgid "Meal %1"
+#~ msgstr "%1. toidukord"
+
+#~ msgctxt "@label"
+#~ msgid "Properties"
+#~ msgstr "Omadused"
+
+#, fuzzy
+#~| msgid "Close"
+#~ msgctxt "@action:buton"
+#~ msgid "Close"
+#~ msgstr "Sulge"
+
+#, fuzzy
+#~| msgid "Username:"
+#~ msgctxt "Database username"
+#~ msgid "Username:"
+#~ msgstr "Kasutajanimi:"
+
+#, fuzzy
+#~| msgid "Default"
+#~ msgctxt "Default port"
+#~ msgid "Default"
+#~ msgstr "Vaikimisi"
+
+#, fuzzy
+#~| msgid "Search:"
+#~ msgctxt "Search recipes"
+#~ msgid "Search:"
+#~ msgstr "Otsing:"
+
+#~ msgid "Id"
+#~ msgstr "ID"
+
+#~ msgid "<<"
+#~ msgstr "<<"
+
+#~ msgid ">>"
+#~ msgstr ">>"
+
+#~ msgid "Modification Date:"
+#~ msgstr "Muutmise kuupäev:"
+
+#~ msgid "Size:"
+#~ msgstr "Suurus:"
+
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgid ""
+#~ "Failed to fix database structure.\n"
+#~ "If you are using SQLite, this is often caused by using an SQLite 2 "
+#~ "database with SQLite 3 installed.  If this is the case, make sure both "
+#~ "SQLite 2 and 3 are installed, and then run 'krecipes --convert-sqlite3' "
+#~ "to update your database to the new structure."
+#~ msgstr ""
+#~ "Andmebaasi struktuuri parandamine nurjus.\n"
+#~ "Kui kasutad SQLite'i, põhjustab seda sageli SQLite 2 andmebaasi "
+#~ "kasutamine SQLite 3 puhul. Kui see on nii, kontrolli, et paigaldatud "
+#~ "oleks nii SQLite 2 kui ka SQLite 3 ning anna siis käsk 'krecipes --"
+#~ "convert-sqlite3' oma andmebaasi struktuuri uuendamiseks."
+
+#, fuzzy
+#~| msgid "Show recipe"
+#~ msgid "Sh&ow recipe(s)"
+#~ msgstr "Näita retsepti"
+
+#~ msgid "E&xport"
+#~ msgstr "E&kspordi"
+
+#~ msgid "&Remove From Category"
+#~ msgstr "Eemalda ka&tegooriast"
+
+#~ msgid "&Add to Shopping List"
+#~ msgstr "Lis&a ostunimekirja"
+
+#~ msgid "Ca&tegorize..."
+#~ msgstr "Määra ka&tegooria..."
+
+#~ msgid "&Expand All"
+#~ msgstr "La&ienda kõik"
+
+#~ msgid "&Collapse All"
+#~ msgstr "A&henda kõik"
+
+#~ msgid "&Create"
+#~ msgstr "&Loo"
+
+#~ msgid "&Rename"
+#~ msgstr "&Nimeta ümber"
+
+#~ msgid ""
+#~ "This preparation method already exists.  Continuing will merge these two "
+#~ "into one.  Are you sure?"
+#~ msgstr ""
+#~ "See valmistusviis on juba olemas. Jätkamisel liidetakse need üheks. Kas "
+#~ "ikka kindlasti jätkata?"
+
+#~ msgid "Open Recipe(s)"
+#~ msgstr "Ava retsept"
+
+#~ msgid "&Open"
+#~ msgstr "&Ava"
