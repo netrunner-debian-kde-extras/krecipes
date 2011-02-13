@@ -1,0 +1,120 @@
+Note that this is only a draft, to get a rough idea about what will be done.
+
+Planned for the next release in 2.0 branch:
+
+ [Mandatory]
+ * Fix bugs.
+ * Update user manual.
+ 
+ [Brainstorming]
+ * When you print recipes, they are printed in no particular order, I guess they
+   should be in alphabetical order.
+ * D-BUS interface and service menus to import recipes and restore databases.
+
+Planned for the 2.1 branch:
+
+ [Mandatory]
+ * The database version number should be a string instead of a float.
+ * Remove the internal SQLite backend, Qt 4 supports SQLite.
+ * Replace left panel with something better, check what Kontact is using, its
+   left panel is superior (it can use small icons without text, which would be
+   very appropiate for netbooks) and seems easier to maintain.
+ * Solve the issues reported by krazy.
+ * Recheck TODOs and FIXMEs in source code.
+ * Remove compiler warnings.
+ * Check files taken from other projects and explain in a comment where those
+   files came from.
+ * Update the USDA database.
+ * Create a typedef for id type instead of just using 'int'.
+
+ [Brainstorming]
+ * Make configurable the length of VARCHAR(%n) fields, for instance, the
+   preparation method name.
+ * Probably most of SQL queries are not using the word "join", so slow.
+ * Replace PanelDeco with KTitleWidget?, see what KPageView can do for you.
+ * The strings stored in database are being escaped in
+   QSqlRecipeDB::escapeAndEncode() and they are in UTF-8 encoded as latin1:
+   should I use QSqlQuery::bindValue()? doing it probably will result in having
+   to bump the database schema version number and reencoding the strings.
+ * One of the problems to solve if I want to support concurrent access is how to
+   update data in the GUI while other client is doing changes in the database.
+   It seems this can be solved with LISTEN, NOTIFY and triggers in PostgreSQL.
+   See QSqlDriver::subscribeToNotification() which uses LISTEN if I recall
+   correctly.
+
+Planned for the 2.2 branch:
+
+ [Mandatory]
+ * Remove Q3 support stuff (a huge work).
+
+ [Brainstorming]
+ * Allow the user to select the encoding for mmf importer/exporter, note that
+   usually mmf export files use iso8859-1, but may use another encoding.
+ * Test with large databases.
+ * Concurrent database access.
+ * Support for unit names in languages with various plural forms.
+ * When you re-run the setup assistant, it does not remember your previous
+   configuration.
+ * Seek and remove the anti-pattern "if ( myList.count() > 0 ) ...".
+ * Fix the hidden features: merge similar (categories|ingredients).
+ * Some set-up to make the sample recipes translatable by kde i18n teams,
+   something like krecipesdata2pot and po2krecipesdata... (ask Pino or someone
+   from i18n team before coding these programs)
+ * Try apidox.
+
+Planned for 2.3 branch:
+
+ [Brainstorming]
+ * Akonadi backend?
+ * Secure database access passwords?
+ * Calendar for meal planning, also you could export the data to iCalendar
+   using the KDE PIM libs, making it work with KOrganizer.
+ * Use qt designer?
+ * Add comments to preparation methods and ingredients in a recipe? (see the
+   Bill's usecase).
+ * Nepomuk support?
+ * GHNS for recipes layout?
+ * Tags for recipes?
+ * Trash folder to store removed recipes?
+ * Something to manage money cost in shopping list.
+ * Step-by-Step recipe instructions with photos?
+ * There is something called eurofir out there.
+_______________________________________________________________________________
+Old stuff from previous maintainers:
+
+jkivlighn:
+
+MAJOR FEATURES:
+	*Command-line interface
+	*Improved printing support: I'd like to allow, for example, printing on recipe cards.
+	*Handle "Cookbooks".  In MySQL/PostgreSQL a cookbook would be a table, and in SQLite it would be a file.
+	*Recipe revisions (planned for 1.1)
+
+CONVENIENCES/MINOR FEATURES:
+	*Improved navigation - add a forward and back button
+	*E-mail recipe(s) option (using kapp->invokeMailer())
+	*Give option to import recipe formats by pasting the recipe text into a widget
+	*Allow saving and loading diet info from a file (or just store it in the database?)
+	*Database maintenance options (Empty database, Remove unused elements, etc.)
+	*Configurable shopping list (Maybe allow the user to select a style sheet or add a section to settings dialog... or both)
+
+BUGS/OTHER:
+	*Let user know when no layout file was found
+	*The icons on the left menu at times will disappear... I can't seem to reproduce this, however
+	*Make use of transactions in database backends where appropriate
+	*Give a warning when deleting categories (such as when a recipe was a part of that category)
+	*Delete the database table when deleting Krecipes
+	*Give a message box when exporting recipes, letting the user know what they are exporting (Is it the whole database, just what is visible, or a specific recipe)... Make it a "Don't ask me again" dialog.
+
+THOUGHTS (feel free to comment):
+	*Recipe copy
+	*Reference a recipe to a cookbook (title, page number, category, etc.)
+
+uga:
+(I don't claim ownership of these. If you do it, I'll be happy too :) )
+
+planned for 0.8:
+	*Check ingredients from existing kitchen resource table?
+	*Add an option to popup for newly created ingredients, and include the USDA nutritional info at the same time
+	
+

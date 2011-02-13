@@ -1,0 +1,4941 @@
+# translation of krecipes.po to Hindi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Ravishankar Shrivastava <raviratlami@yahoo.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: krecipes\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2010-11-01 06:23+0100\n"
+"PO-Revision-Date: 2008-04-01 15:50+0530\n"
+"Last-Translator: Ravishankar Shrivastava <raviratlami@yahoo.com>\n"
+"Language-Team: Hindi <indlinux-hindi@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: actionshandlers/unitactionshandler.cpp:69
+#, fuzzy
+#| msgid "&Rename"
+msgid "Rename Unit"
+msgstr "नाम बदलें (&R)"
+
+#: actionshandlers/unitactionshandler.cpp:133
+#: actionshandlers/ingredientactionshandler.cpp:65
+#: actionshandlers/headeractionshandler.cpp:66
+#: actionshandlers/authoractionshandler.cpp:74
+#: actionshandlers/recipeactionshandler.cpp:247
+#: actionshandlers/recipeactionshandler.cpp:258
+#: actionshandlers/prepmethodactionshandler.cpp:65
+#: actionshandlers/categoryactionshandler.cpp:158 krecipesview.cpp:694
+msgid "Recipes"
+msgstr "रेसिपीज़"
+
+#: actionshandlers/unitactionshandler.cpp:139 exporters/xsltexporter.cpp:57
+#: exporters/htmlexporter.cpp:391 dialogs/setupdisplay.cpp:128
+#: krecipesview.cpp:374 krecipesview.cpp:477
+msgid "Properties"
+msgstr "गुण"
+
+#: actionshandlers/unitactionshandler.cpp:145
+msgid "Ingredient Weights"
+msgstr "सामग्री भार"
+
+#: actionshandlers/unitactionshandler.cpp:154
+#: actionshandlers/ingredientactionshandler.cpp:68
+#: actionshandlers/prepmethodactionshandler.cpp:67
+msgid "You are about to permanantly delete recipes from your database."
+msgstr "आप अपने डाटाबेस से रेसिपि हमेशा के लिए मिटाने जा रहे हैं."
+
+#: actionshandlers/unitactionshandler.cpp:167
+#: widgets/ingredientinputwidget.cpp:256
+#, fuzzy, kde-format
+#| msgid "Unit name cannot be longer than %1 characters."
+msgid "Unit name cannot be longer than 1 character."
+msgid_plural "Unit name cannot be longer than %1 characters."
+msgstr[0] "इकाई नाम %1 अक्षरों से अधिक नहीं हो सकते."
+msgstr[1] "इकाई नाम %1 अक्षरों से अधिक नहीं हो सकते."
+
+#: actionshandlers/unitactionshandler.cpp:205
+msgid ""
+"This unit already exists.  Continuing will merge these two units into one.  "
+"Are you sure?"
+msgstr ""
+
+#: actionshandlers/propertyactionshandler.cpp:60
+msgid "Are you sure you want to delete this property?"
+msgstr "क्या आप सचमुच इस गुण को मिटाना चाहते हैं?"
+
+#: actionshandlers/propertyactionshandler.cpp:74
+#, fuzzy, kde-format
+#| msgid "Property name cannot be longer than %1 characters."
+msgid "Property name cannot be longer than 1 character."
+msgid_plural "Property name cannot be longer than %1 characters."
+msgstr[0] "गुण नाम %1 अक्षरों से अधिक नहीं हो सकते."
+msgstr[1] "गुण नाम %1 अक्षरों से अधिक नहीं हो सकते."
+
+#: actionshandlers/propertyactionshandler.cpp:93
+msgid ""
+"This property already exists.  Continuing will merge these two properties "
+"into one.  Are you sure?"
+msgstr ""
+
+#: actionshandlers/ingredientactionshandler.cpp:38
+msgid "New Ingredient"
+msgstr "नए संघटक"
+
+#: actionshandlers/ingredientactionshandler.cpp:80
+#: widgets/ingredientinputwidget.cpp:249
+#, fuzzy, kde-format
+#| msgid "Ingredient name cannot be longer than %1 characters."
+msgid "Ingredient name cannot be longer than 1 character."
+msgid_plural "Ingredient name cannot be longer than %1 characters."
+msgstr[0] "संघटक नाम %1 अक्षरों से अधिक नहीं हो सकते."
+msgstr[1] "संघटक नाम %1 अक्षरों से अधिक नहीं हो सकते."
+
+#: actionshandlers/ingredientactionshandler.cpp:102
+msgid ""
+"This ingredient already exists. Continuing will merge these two ingredients "
+"into one. Are you sure?"
+msgstr ""
+
+#: actionshandlers/headeractionshandler.cpp:39
+#, fuzzy
+#| msgid "Set &Header"
+msgid "New Header"
+msgstr "शीर्षक सेट करें (&H)"
+
+#: actionshandlers/headeractionshandler.cpp:80
+#, fuzzy, kde-format
+#| msgid "Header cannot be longer than %1 characters."
+msgid "Header cannot be longer than 1 character."
+msgid_plural "Header cannot be longer than %1 characters."
+msgstr[0] "शीर्षक %1 अक्षरों से अधिक नहीं हो सकते."
+msgstr[1] "शीर्षक %1 अक्षरों से अधिक नहीं हो सकते."
+
+#: actionshandlers/headeractionshandler.cpp:103
+#: actionshandlers/prepmethodactionshandler.cpp:101
+msgid ""
+"This header already exists.  Continuing will merge these two headers into "
+"one.  Are you sure?"
+msgstr ""
+
+#: actionshandlers/authoractionshandler.cpp:38
+msgid "New Author"
+msgstr "नया लेखक"
+
+#: actionshandlers/authoractionshandler.cpp:63
+msgid "Are you sure you want to delete this author?"
+msgstr "क्या आप सचमुच इस लेखक को मिटाना चाहते हैं?"
+
+#: actionshandlers/authoractionshandler.cpp:91
+#, fuzzy, kde-format
+#| msgid "Author name cannot be longer than %1 characters."
+msgid "Author name cannot be longer than 1 character."
+msgid_plural "Author name cannot be longer than %1 characters."
+msgstr[0] "लेखक नाम %1 अक्षरों से अधिक नहीं हो सकते."
+msgstr[1] "लेखक नाम %1 अक्षरों से अधिक नहीं हो सकते."
+
+#: actionshandlers/authoractionshandler.cpp:112
+msgid ""
+"This author already exists. Continuing will merge these two authors into "
+"one. Are you sure?"
+msgstr ""
+
+#: actionshandlers/recipeactionshandler.cpp:226
+msgid "Please select only one recipe."
+msgstr "कृपया सिर्फ एक रेसिपि चुनें."
+
+#: actionshandlers/recipeactionshandler.cpp:226
+#: actionshandlers/recipeactionshandler.cpp:232 krecipesview.cpp:515
+msgid "Edit Recipe"
+msgstr "रेसिपि संपादित करें"
+
+#: actionshandlers/recipeactionshandler.cpp:232
+#: actionshandlers/recipeactionshandler.cpp:264
+#: actionshandlers/recipeactionshandler.cpp:290
+msgid "No recipes selected."
+msgstr "कोई रेसिपि चयनित नहीं"
+
+#: actionshandlers/recipeactionshandler.cpp:249 krecipesview.cpp:692
+#: krecipesview.cpp:694
+msgid "Export Recipe"
+msgstr "रेसिपि निर्यात करें"
+
+#: actionshandlers/recipeactionshandler.cpp:255
+msgid ""
+"No recipes are currently selected.\n"
+"Would you like to export all recipes in the current view?"
+msgstr ""
+
+#: actionshandlers/recipeactionshandler.cpp:258
+msgid "Export Recipes"
+msgstr "रेसिपीज निर्यात करें"
+
+#: actionshandlers/recipeactionshandler.cpp:264 pref.cpp:495
+msgid "Export"
+msgstr "निर्यात"
+
+#: actionshandlers/recipeactionshandler.cpp:280
+msgid ""
+"No recipes are currently selected.\n"
+"Would you like to print all recipes in the current view?"
+msgstr ""
+
+#: actionshandlers/recipeactionshandler.cpp:290
+#, fuzzy
+#| msgid "&Print"
+msgid "Print"
+msgstr " छापें (&P)"
+
+#: actionshandlers/recipeactionshandler.cpp:388
+msgid "Compressed Krecipes format"
+msgstr "संपीडित के-रेसिपि फार्मेट"
+
+#: actionshandlers/recipeactionshandler.cpp:389
+msgid "Web page"
+msgstr "वेब पृष्ठ"
+
+#: actionshandlers/recipeactionshandler.cpp:390 pref.cpp:500
+msgid "Plain Text"
+msgstr "सादा पाठ"
+
+#: actionshandlers/recipeactionshandler.cpp:391
+msgid "Web Book"
+msgstr ""
+
+#: actionshandlers/recipeactionshandler.cpp:432 krecipes.cpp:693
+#, kde-format
+msgid "File \"%1\" exists.  Are you sure you want to overwrite it?"
+msgstr "फ़ाइल \"%1\" मौजूद है. क्या आप इसके ऊपर ही मिटाकर लिखना चाहेंगे?"
+
+#: actionshandlers/recipeactionshandler.cpp:432
+msgid "Saving recipe"
+msgstr "रेसिपि सहेजी जा रही है"
+
+#: actionshandlers/recipeactionshandler.cpp:436
+msgid "Saving recipes..."
+msgstr "रेसिपि सहेजी जा रही है..."
+
+#: actionshandlers/prepmethodactionshandler.cpp:38
+msgid "New Preparation Method"
+msgstr "बनाने की नई विधि"
+
+#: actionshandlers/prepmethodactionshandler.cpp:79
+#: widgets/ingredientinputwidget.cpp:271
+#, fuzzy, kde-format
+#| msgid "Preparation method cannot be longer than %1 characters."
+msgid "Preparation method cannot be longer than 1 character."
+msgid_plural "Preparation method cannot be longer than %1 characters."
+msgstr[0] "बनाने की विधि %1 अक्षरों से अधिक नहीं हो सकते."
+msgstr[1] "बनाने की विधि %1 अक्षरों से अधिक नहीं हो सकते."
+
+#: actionshandlers/categoryactionshandler.cpp:148
+msgid ""
+"Are you sure you want to delete this category and all its subcategories?"
+msgstr "क्या आप सचमुच इस वर्ग तथा इसके सभी उपवर्गों को मिटाना चाहते हैं?"
+
+#: actionshandlers/categoryactionshandler.cpp:173
+#, fuzzy, kde-format
+#| msgid "Category name cannot be longer than %1 characters."
+msgid "Category name cannot be longer than 1 character."
+msgid_plural "Category name cannot be longer than %1 characters."
+msgstr[0] "वर्ग नाम %1 अक्षरों से अधिक नहीं हो सकते."
+msgstr[1] "वर्ग नाम %1 अक्षरों से अधिक नहीं हो सकते."
+
+#: actionshandlers/categoryactionshandler.cpp:203
+msgid ""
+"This category already exists. Continuing will merge these two categories "
+"into one. Are you sure?"
+msgstr ""
+
+#: exporters/plaintextexporter.cpp:76 exporters/xsltexporter.cpp:52
+#: exporters/htmlexporter.cpp:235 dialogs/setupdisplay.cpp:125
+#: krecipesview.cpp:378 krecipesview.cpp:509
+msgid "Authors"
+msgstr "लेखक"
+
+#: exporters/plaintextexporter.cpp:82 exporters/xsltexporter.cpp:49
+#: exporters/htmlexporter.cpp:249 dialogs/setupdisplay.cpp:126
+#: krecipesview.cpp:377 krecipesview.cpp:501
+msgid "Categories"
+msgstr "श्रेणियाँ"
+
+#: exporters/plaintextexporter.cpp:88
+msgid "Yields"
+msgstr "यील्ड्स"
+
+#: exporters/plaintextexporter.cpp:94 exporters/htmlexporter.cpp:210
+#: dialogs/setupdisplay.cpp:123
+msgid "Preparation Time"
+msgstr "बनाने के लिए समय"
+
+#: exporters/plaintextexporter.cpp:114 exporters/plaintextexporter.cpp:124
+msgid "or"
+msgstr "या"
+
+#: exporters/plaintextexporter.cpp:139 exporters/xsltexporter.cpp:58
+#: exporters/htmlexporter.cpp:398 dialogs/setupdisplay.cpp:129
+msgid "Ratings"
+msgstr "दरजा"
+
+#: exporters/plaintextexporter.cpp:152
+#, kde-format
+msgid "1 star"
+msgid_plural "%1 stars"
+msgstr[0] ""
+msgstr[1] ""
+
+#: exporters/xsltexporter.cpp:47 exporters/htmlexporter.cpp:199
+#: dialogs/setupdisplay.cpp:75 dialogs/setupdisplay.cpp:122
+msgid "Instructions"
+msgstr "निर्देश"
+
+#: exporters/xsltexporter.cpp:48 exporters/htmlexporter.cpp:433
+msgid "Overall Rating"
+msgstr "कुल मिलाकर दरजा"
+
+#: exporters/xsltexporter.cpp:50 exporters/htmlexporter.cpp:204
+#: dialogs/setupdisplay.cpp:130
+msgid "Yield"
+msgstr "यील्ड"
+
+#: exporters/xsltexporter.cpp:51
+msgid "Prep"
+msgstr "तैयारी"
+
+#: exporters/xsltexporter.cpp:53
+msgid "Amount"
+msgstr "मात्रा"
+
+#: exporters/xsltexporter.cpp:54 widgets/ingredientlistview.cpp:107
+#: widgets/ingredientlistview.cpp:132
+msgid "Ingredient"
+msgstr "संघटक"
+
+#: exporters/xsltexporter.cpp:55 exporters/htmlexporter.cpp:344
+#: dialogs/setupdisplay.cpp:127 krecipesview.cpp:373 krecipesview.cpp:469
+msgid "Ingredients"
+msgstr "संघटक"
+
+#: exporters/xsltexporter.cpp:56
+msgid "Preparation"
+msgstr "तैयारी"
+
+#: exporters/xsltexporter.cpp:59 exporters/htmlexporter.cpp:310
+#: exporters/htmlexporter.cpp:333 dialogs/ingredientmatcherdialog.h:57
+#: widgets/ingredientinputwidget.cpp:98 widgets/inglistviewitem.cpp:28
+#: widgets/inglistviewitem.cpp:40
+msgid "OR"
+msgstr "या"
+
+#: exporters/xsltexporter.cpp:60
+msgid "reviews"
+msgstr "समीक्षा"
+
+#: exporters/xsltexporter.cpp:229
+msgid ""
+"<html><b>Error:</b> Problem with KreML exporter.  Please export the recipe "
+"you are trying to view as KreML and attach it to a bug report to a Krecipes "
+"developer.</html>"
+msgstr ""
+
+#: exporters/xsltexporter.cpp:236
+#, kde-format
+msgid ""
+"<html><b>Error:</b> Bad template: %1.  Use \"Edit->Page Setup...\" to select "
+"a new template.</html>"
+msgstr ""
+
+#: exporters/recipemlexporter.cpp:139
+#, fuzzy
+#| msgid "Total"
+msgctxt "Total preparation time"
+msgid "Total"
+msgstr "कुल"
+
+#: exporters/htmlexporter.cpp:134
+msgid "Krecipes Recipes"
+msgstr "के-रेसिपि रेसिपि"
+
+#: tests/rezkonvtest.cpp:28
+msgid "Rezkonvtest"
+msgstr ""
+
+#: tests/recipemltest.cpp:28
+#, fuzzy
+#| msgid "Recipes"
+msgid "Recipemltest"
+msgstr "रेसिपीज़"
+
+#: tests/mxptest.cpp:26
+msgid "Mxptest"
+msgstr ""
+
+#: tests/mx2test.cpp:29
+msgid "Mx2test"
+msgstr ""
+
+#: tests/mmftest.cpp:28
+msgid "Mmftest"
+msgstr ""
+
+#: tests/kretest.cpp:26
+msgid "Kretest"
+msgstr "केरेटेस्ट"
+
+#: tests/nyctest.cpp:26
+msgid "Nyctest"
+msgstr ""
+
+#: dialogs/recipeinputdialog.cpp:172
+#, fuzzy
+#| msgid "Select photo"
+msgctxt "@info:tooltip"
+msgid "Select photo"
+msgstr "फोटो चुनें"
+
+#: dialogs/recipeinputdialog.cpp:176
+#, fuzzy
+#| msgid "Save Backup As..."
+msgctxt "action:button"
+msgid "Save photo as..."
+msgstr "बैकअप ऐसे सहेजें..."
+
+#: dialogs/recipeinputdialog.cpp:180
+#, fuzzy
+#| msgid "Clear photo"
+msgctxt "@info:tooltip"
+msgid "Clear photo"
+msgstr "फोटो साफ करें"
+
+#: dialogs/recipeinputdialog.cpp:193
+#, fuzzy
+#| msgid "Recipe Name"
+msgctxt "@label"
+msgid "Recipe Name"
+msgstr "रेसिपि नाम"
+
+#: dialogs/recipeinputdialog.cpp:209
+#, fuzzy
+#| msgid "Authors"
+msgctxt "@label"
+msgid "Authors"
+msgstr "लेखक"
+
+#: dialogs/recipeinputdialog.cpp:226
+#, fuzzy
+#| msgid "Categories"
+msgctxt "@label"
+msgid "Categories"
+msgstr "श्रेणियाँ"
+
+#: dialogs/recipeinputdialog.cpp:247
+#, fuzzy
+#| msgid "Yield"
+msgctxt ""
+"@label How much food you will produce with a given cooking recipe (e.g. 2 "
+"servings or 3 bottles)"
+msgid "Yield"
+msgstr "यील्ड"
+
+#: dialogs/recipeinputdialog.cpp:251
+#, fuzzy
+#| msgid "Amount"
+msgctxt "@label The amount for yield"
+msgid "Amount"
+msgstr "मात्रा"
+
+#: dialogs/recipeinputdialog.cpp:254
+#, fuzzy
+#| msgid "Type"
+msgctxt "@label The type of yield (e.g. servings, bottles..."
+msgid "Type"
+msgstr "क़िस्म"
+
+#: dialogs/recipeinputdialog.cpp:266
+#, fuzzy
+#| msgid "Preparation Time"
+msgctxt "@label"
+msgid "Preparation Time"
+msgstr "बनाने के लिए समय"
+
+#: dialogs/recipeinputdialog.cpp:338
+#, fuzzy
+#| msgid "Add ingredient"
+msgctxt "@info:tooltip"
+msgid "Add ingredient"
+msgstr "संघटक जोड़ें"
+
+#: dialogs/recipeinputdialog.cpp:339
+#, fuzzy
+#| msgid "Move ingredient up"
+msgctxt "@info:tooltip"
+msgid "Move ingredient up"
+msgstr "संघटक ऊपर ले जाएँ"
+
+#: dialogs/recipeinputdialog.cpp:340
+#, fuzzy
+#| msgid "Move ingredient down"
+msgctxt "@info:tooltip"
+msgid "Move ingredient down"
+msgstr "संघटक नीचे ले जाएँ"
+
+#: dialogs/recipeinputdialog.cpp:341
+#, fuzzy
+#| msgid "Remove ingredient"
+msgctxt "@info:tooltip"
+msgid "Remove ingredient"
+msgstr "संघटक हटाएँ"
+
+#: dialogs/recipeinputdialog.cpp:342
+#, fuzzy
+#| msgid "Paste Ingredients"
+msgctxt "@info:tooltip"
+msgid "Paste Ingredients"
+msgstr "संघटक चिपकाएं"
+
+#: dialogs/recipeinputdialog.cpp:346 dialogs/ingredientparserdialog.cpp:66
+#: dialogs/ingredientparserdialog.cpp:115
+#, fuzzy
+#| msgid "Ingredient"
+msgctxt "@title:column"
+msgid "Ingredient"
+msgstr "संघटक"
+
+#: dialogs/recipeinputdialog.cpp:347 dialogs/refineshoppinglistdialog.cpp:91
+#: dialogs/refineshoppinglistdialog.cpp:124
+#: dialogs/editpropertiesdialog.cpp:169 dialogs/editpropertiesdialog.cpp:260
+#: dialogs/ingredientparserdialog.cpp:67
+#: dialogs/ingredientparserdialog.cpp:116
+#, fuzzy
+#| msgid "Amount"
+msgctxt "@title:column"
+msgid "Amount"
+msgstr "मात्रा"
+
+#: dialogs/recipeinputdialog.cpp:349
+#, fuzzy
+#| msgid "Units"
+msgctxt "@title:column"
+msgid "Units"
+msgstr "इकाईयाँ"
+
+#: dialogs/recipeinputdialog.cpp:350 dialogs/ingredientparserdialog.cpp:69
+#: dialogs/ingredientparserdialog.cpp:118
+#, fuzzy
+#| msgid "Preparation Method"
+msgctxt "@title:column"
+msgid "Preparation Method"
+msgstr "बनाने की विधि"
+
+#: dialogs/recipeinputdialog.cpp:365
+#, fuzzy
+#| msgid "Property Status:"
+msgctxt "@label"
+msgid "Property Status:"
+msgstr "गुण स्थिति:"
+
+#: dialogs/recipeinputdialog.cpp:369
+#, fuzzy
+#| msgid "Details..."
+msgctxt "@action:button"
+msgid "Details..."
+msgstr "विवरण..."
+
+#: dialogs/recipeinputdialog.cpp:380
+#, fuzzy
+#| msgid "Update"
+msgctxt "@action:inmenu Updates the loaded information"
+msgid "Update"
+msgstr "अद्यतन"
+
+#: dialogs/recipeinputdialog.cpp:387
+#, fuzzy
+#| msgid "Property details"
+msgctxt "@title:window "
+msgid "Property details"
+msgstr "गुण विवरण"
+
+#: dialogs/recipeinputdialog.cpp:421
+#, fuzzy
+#| msgid "Add Rating..."
+msgctxt "@action:button"
+msgid "Add Rating..."
+msgstr "दरजा जोड़ें..."
+
+#: dialogs/recipeinputdialog.cpp:429
+#, fuzzy
+#| msgid "Recipe"
+msgctxt "@title:tab"
+msgid "Recipe"
+msgstr "रेसिपि"
+
+#: dialogs/recipeinputdialog.cpp:430 dialogs/ingredientsdialog.cpp:82
+#, fuzzy
+#| msgid "Ingredients"
+msgctxt "@title:tab"
+msgid "Ingredients"
+msgstr "संघटक"
+
+#: dialogs/recipeinputdialog.cpp:431
+#, fuzzy
+#| msgid "Instructions"
+msgctxt "@title:tab"
+msgid "Instructions"
+msgstr "निर्देश"
+
+#: dialogs/recipeinputdialog.cpp:432
+#, fuzzy
+#| msgid "Ratings"
+msgctxt "@title:tab"
+msgid "Ratings"
+msgstr "दरजा"
+
+#: dialogs/recipeinputdialog.cpp:452
+#, fuzzy
+#| msgid "Save recipe"
+msgctxt "@action:button"
+msgid "Save recipe"
+msgstr "रेसिपि सहेजें"
+
+#: dialogs/recipeinputdialog.cpp:453
+#, fuzzy
+#| msgid "Save recipe"
+msgctxt "@info:tooltip"
+msgid "Save recipe"
+msgstr "रेसिपि सहेजें"
+
+#: dialogs/recipeinputdialog.cpp:455
+#, fuzzy
+#| msgid "Show recipe"
+msgctxt "@action:button"
+msgid "Show recipe"
+msgstr "रेसिपि दिखाएँ"
+
+#: dialogs/recipeinputdialog.cpp:456
+#, fuzzy
+#| msgid "Show recipe"
+msgctxt "@info:tooltip"
+msgid "Show recipe"
+msgstr "रेसिपि दिखाएँ"
+
+#: dialogs/recipeinputdialog.cpp:458 dialogs/recipeviewdialog.cpp:62
+#, fuzzy
+#| msgid "Close"
+msgctxt "@action:button"
+msgid "Close"
+msgstr "बंद करें"
+
+#: dialogs/recipeinputdialog.cpp:459 dialogs/recipeviewdialog.cpp:63
+#, fuzzy
+#| msgid "Close"
+msgctxt "@info:tooltip"
+msgid "Close"
+msgstr "बंद करें"
+
+#: dialogs/recipeinputdialog.cpp:461
+#, fuzzy
+#| msgid "Resize recipe"
+msgctxt "@action:button"
+msgid "Resize recipe"
+msgstr "रेसिपि को नया आकार दें"
+
+#: dialogs/recipeinputdialog.cpp:462
+#, fuzzy
+#| msgid "Resize recipe"
+msgctxt "@info:tooltip"
+msgid "Resize recipe"
+msgstr "रेसिपि को नया आकार दें"
+
+#: dialogs/recipeinputdialog.cpp:685 dialogs/recipeinputdialog.cpp:727
+msgid "Images"
+msgstr "छवियाँ"
+
+#: dialogs/recipeinputdialog.cpp:729
+#, fuzzy
+#| msgid "Save Backup As..."
+msgctxt "@title:window"
+msgid "Save photo as..."
+msgstr "बैकअप ऐसे सहेजें..."
+
+#: dialogs/recipeinputdialog.cpp:737
+#, fuzzy
+#| msgid "File \"%1\" exists.  Are you sure you want to overwrite it?"
+msgctxt "@info"
+msgid "The file already exists, do you want to overwrite it?"
+msgstr "फ़ाइल \"%1\" मौजूद है. क्या आप इसके ऊपर ही मिटाकर लिखना चाहेंगे?"
+
+#: dialogs/recipeinputdialog.cpp:744
+#, kde-format
+msgctxt "@info"
+msgid "The photo cannot be saved in %1"
+msgstr ""
+
+#: dialogs/recipeinputdialog.cpp:1028
+#, fuzzy, kde-format
+#| msgid "Unit name cannot be longer than %1 characters."
+msgctxt "@info"
+msgid "Unit name cannot be longer than 1 character."
+msgid_plural "Unit name cannot be longer than %1 characters."
+msgstr[0] "इकाई नाम %1 अक्षरों से अधिक नहीं हो सकते."
+msgstr[1] "इकाई नाम %1 अक्षरों से अधिक नहीं हो सकते."
+
+#: dialogs/recipeinputdialog.cpp:1067
+#, fuzzy, kde-format
+#| msgid "Preparation method cannot be longer than %1 characters."
+msgctxt "@info"
+msgid "Preparation method cannot be longer than 1 character."
+msgid_plural "Preparation method cannot be longer than %1 characters."
+msgstr[0] "बनाने की विधि %1 अक्षरों से अधिक नहीं हो सकते."
+msgstr[1] "बनाने की विधि %1 अक्षरों से अधिक नहीं हो सकते."
+
+#: dialogs/recipeinputdialog.cpp:1117
+#, fuzzy, kde-format
+#| msgid "Recipe title cannot be longer than %1 characters."
+msgctxt "@info"
+msgid "Recipe title cannot be longer than 1 character."
+msgid_plural "Recipe title cannot be longer than %1 characters."
+msgstr[0] "रेसिपि शीर्षक %1 अक्षरों से अधिक नहीं हो सकते."
+msgstr[1] "रेसिपि शीर्षक %1 अक्षरों से अधिक नहीं हो सकते."
+
+#: dialogs/recipeinputdialog.cpp:1117
+msgid "Unable to save recipe"
+msgstr "रेसिपि सहेजेने में अक्षम"
+
+#: dialogs/recipeinputdialog.cpp:1157
+#, fuzzy
+#| msgid "Write the recipe instructions here"
+msgctxt "@label:textbox"
+msgid "Write the recipe instructions here"
+msgstr "रेसिपि हिदायत यहाँ लिखें"
+
+#: dialogs/recipeinputdialog.cpp:1159
+#, fuzzy
+#| msgid "Write the recipe title here"
+msgctxt "@label:textbox"
+msgid "Write the recipe title here"
+msgstr "रेसिपि का शीर्षक यहाँ भरें"
+
+#: dialogs/recipeinputdialog.cpp:1265
+#, fuzzy
+#| msgid ""
+#| "A recipe contains unsaved changes.\n"
+#| "Do you want to save the changes before exiting?"
+msgctxt "@info"
+msgid ""
+"This recipe contains unsaved changes.\n"
+"Would you like to save it before closing?"
+msgstr ""
+"रेसिपि में परिवर्तन हैं जो सहेजे नहीं गए हैं.\n"
+"क्या आप बाहर होने से पहले परिवर्तनों को सहेजना चाहते हैं?"
+
+#: dialogs/recipeinputdialog.cpp:1265 dialogs/recipeinputdialog.cpp:1290
+#: dialogs/recipeinputdialog.cpp:1300
+#, fuzzy
+#| msgid "Unsaved changes"
+msgctxt "@title:window"
+msgid "Unsaved changes"
+msgstr "सहेजा नहीं गया परिवर्तन"
+
+#: dialogs/recipeinputdialog.cpp:1290
+#, fuzzy
+#| msgid ""
+#| "You need to save the recipe before displaying it. Would you like to save "
+#| "it now?"
+msgctxt "@info"
+msgid ""
+"You need to save the recipe before displaying it. Would you like to save it "
+"now?"
+msgstr ""
+"रेसिपी को प्रदर्शित करने से पहले इसे सहेजना होगा.\n"
+"क्या आप इसे अभी सहेजना चाहेंगे?"
+
+#: dialogs/recipeinputdialog.cpp:1300
+#, fuzzy
+#| msgid ""
+#| "You need to save the recipe before displaying it. Would you like to save "
+#| "it now?"
+msgctxt "@info"
+msgid ""
+"This recipe has changes that will not be displayed unless the recipe is "
+"saved. Would you like to save it now?"
+msgstr ""
+"रेसिपी को प्रदर्शित करने से पहले इसे सहेजना होगा.\n"
+"क्या आप इसे अभी सहेजना चाहेंगे?"
+
+#: dialogs/recipeinputdialog.cpp:1562
+#, fuzzy, kde-format
+#| msgid ""
+#| "<b>%1:</b> No nutrient information available.  <a href=\"ingredient#%3"
+#| "\">Provide nutrient information.</a>"
+msgctxt "@info"
+msgid ""
+"<b>%1:</b> No nutrient information available. <a href=\"ingredient#%2"
+"\">Provide nutrient information.</a>"
+msgstr ""
+"<b>%1:</b> कोई न्यूट्रीशन जानकारी उपलब्ध नहीं.  <a href=\"ingredient#%3\">न्यूट्रीएंट "
+"जानकारी दें.</a>"
+
+#: dialogs/recipeinputdialog.cpp:1584
+msgid "-No unit-"
+msgstr "-कोई इकाई नहीं-"
+
+#: dialogs/recipeinputdialog.cpp:1583
+#, kde-format
+msgctxt "@info"
+msgid "<b>%3:</b> Unit conversion missing for conversion from '%1' to '%2'"
+msgstr ""
+
+#: dialogs/recipeinputdialog.cpp:1598 dialogs/recipeinputdialog.cpp:1601
+#: dialogs/recipeinputdialog.cpp:1604 dialogs/recipeinputdialog.cpp:1607
+#, fuzzy
+#| msgid "-No unit-"
+msgctxt "@info"
+msgid "-No unit-"
+msgstr "-कोई इकाई नहीं-"
+
+#: dialogs/recipeinputdialog.cpp:1612
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<b>%1:</b> Either <a href=\"ingredient#%3\">enter an appropriate ingredient "
+"weight entry</a>, or provide conversion information to perform one of the "
+"following conversions: %2"
+msgstr ""
+
+#: dialogs/recipeinputdialog.cpp:1624
+#, fuzzy, kde-format
+#| msgid ""
+#| "<b>%1:</b> No nutrient information available.  <a href=\"ingredient#%3"
+#| "\">Provide nutrient information.</a>"
+msgctxt "@info"
+msgid ""
+"<b>%1:</b> No ingredient weight entries. <a href=\"ingredient#%2\">Provide "
+"ingredient weight.</a>"
+msgstr ""
+"<b>%1:</b> कोई न्यूट्रीशन जानकारी उपलब्ध नहीं.  <a href=\"ingredient#%3\">न्यूट्रीएंट "
+"जानकारी दें.</a>"
+
+#: dialogs/recipeinputdialog.cpp:1631
+#, fuzzy, kde-format
+#| msgid ""
+#| "<b>%1:</b> No nutrient information available.  <a href=\"ingredient#%3"
+#| "\">Provide nutrient information.</a>"
+msgctxt "@info"
+msgid ""
+"<b>%1:</b> There is no ingredient weight entry for when no preparation "
+"method is specified. <a href=\"ingredient#%2\">Provide ingredient weight.</a>"
+msgstr ""
+"<b>%1:</b> कोई न्यूट्रीशन जानकारी उपलब्ध नहीं.  <a href=\"ingredient#%3\">न्यूट्रीएंट "
+"जानकारी दें.</a>"
+
+#: dialogs/recipeinputdialog.cpp:1637
+#, fuzzy, kde-format
+#| msgid ""
+#| "<b>%1:</b> No nutrient information available.  <a href=\"ingredient#%3"
+#| "\">Provide nutrient information.</a>"
+msgctxt "@info"
+msgid ""
+"<b>%1:</b> There is no ingredient weight entry for when prepared in any of "
+"the following manners: %2<a href=\"ingredient#%3\">Provide ingredient weight."
+"</a>"
+msgstr ""
+"<b>%1:</b> कोई न्यूट्रीशन जानकारी उपलब्ध नहीं.  <a href=\"ingredient#%3\">न्यूट्रीएंट "
+"जानकारी दें.</a>"
+
+#: dialogs/recipeinputdialog.cpp:1646
+#, fuzzy, kde-format
+#| msgid ""
+#| "<b>%1:</b> No nutrient information available.  <a href=\"ingredient#%3"
+#| "\">Provide nutrient information.</a>"
+msgctxt "@info"
+msgid ""
+"<b>%1:</b> There is no ingredient weight entry for when prepared in any of "
+"the following manners (defaulting to a weight entry without a preparation "
+"method specified): %2<a href=\"ingredient#%3\">Provide ingredient weight.</a>"
+msgstr ""
+"<b>%1:</b> कोई न्यूट्रीशन जानकारी उपलब्ध नहीं.  <a href=\"ingredient#%3\">न्यूट्रीएंट "
+"जानकारी दें.</a>"
+
+#: dialogs/recipeinputdialog.cpp:1670
+#, fuzzy
+#| msgid "Complete"
+msgctxt "@info Property information for a recipe is complete"
+msgid "Complete"
+msgstr "पूर्ण"
+
+#: dialogs/recipeinputdialog.cpp:1677
+#, fuzzy
+#| msgid "Complete, but approximations made"
+msgctxt "@info Property information for a recipe is complete, but..."
+msgid "Complete, but approximations made"
+msgstr "पूरा हो गया, परंतु अंदाजा लगाया गया"
+
+#: dialogs/recipeinputdialog.cpp:1685
+#, fuzzy
+#| msgid "Incomplete"
+msgctxt "@info Property information for a recipe is incomplete"
+msgid "Incomplete"
+msgstr "अधूरा"
+
+#: dialogs/recipeinputdialog.cpp:1700
+msgctxt "@info"
+msgid ""
+"The nutrient information for this recipe is incomplete because the following "
+"information is missing:"
+msgstr ""
+
+#: dialogs/recipeinputdialog.cpp:1711
+msgctxt "@info"
+msgid ""
+"The following approximations will be made when determining nutrient "
+"information:"
+msgstr ""
+
+#: dialogs/shoppinglistviewdialog.cpp:30
+#, fuzzy
+#| msgid "Shopping List"
+msgctxt "@title:window"
+msgid "Shopping List"
+msgstr "खरीदारी सूची"
+
+#: dialogs/shoppinglistviewdialog.cpp:67 dialogs/shoppinglistviewdialog.cpp:69
+#: krecipesview.cpp:372 krecipesview.cpp:444
+msgid "Shopping List"
+msgstr "खरीदारी सूची"
+
+#: dialogs/recipeviewdialog.cpp:113
+#, fuzzy
+#| msgid "Opening recipes, please wait..."
+msgctxt "@title:window"
+msgid "Loading recipes, please wait..."
+msgstr "रेसिपि खोला जा रहा है, कृपया प्रतीक्षा करें..."
+
+#: dialogs/dependanciesdialog.cpp:48
+msgctxt "@title:window"
+msgid "Element with Dependencies"
+msgstr ""
+
+#: dialogs/dependanciesdialog.cpp:60
+#, fuzzy
+#| msgid ""
+#| "<b>WARNING:</b> The following currently use the element you have chosen "
+#| "to be removed."
+msgctxt "@info"
+msgid ""
+"<warning>The following will have to be removed also, since currently they "
+"use the element you have chosen to be removed.</warning>"
+msgstr ""
+"<b>चेतावनी:</b> निम्न वर्तमान में प्रयोग किया जा रहा तत्व आपने मिटाने के लिए चुना है."
+
+#: dialogs/dependanciesdialog.cpp:63
+#, fuzzy
+#| msgid ""
+#| "<b>WARNING:</b> The following currently use the element you have chosen "
+#| "to be removed."
+msgctxt "@info"
+msgid ""
+"<warning>The following currently use the element you have chosen to be "
+"removed.</warning>"
+msgstr ""
+"<b>चेतावनी:</b> निम्न वर्तमान में प्रयोग किया जा रहा तत्व आपने मिटाने के लिए चुना है."
+
+#: dialogs/dependanciesdialog.cpp:95
+#, fuzzy
+#| msgid "Are you sure you wish to proceed?"
+msgctxt "@info"
+msgid "Are you sure you wish to proceed?"
+msgstr "क्या आप वाक़ई आगे बढ़ना चाहते हैं?"
+
+#: dialogs/createingredientweightdialog.cpp:33
+#, fuzzy
+#| msgid "Ingredient Weights"
+msgctxt "@title:window"
+msgid "Add Ingredient Weight"
+msgstr "सामग्री भार"
+
+#: dialogs/createingredientweightdialog.cpp:75
+#, fuzzy
+#| msgid "-No Preparation-"
+msgctxt "@item"
+msgid "-No Preparation-"
+msgstr "-कोई तैयारी नहीं-"
+
+#: dialogs/createingredientweightdialog.cpp:95
+#, fuzzy
+#| msgid "New Ingredient Weight"
+msgctxt "@title:group"
+msgid "New Ingredient Weight"
+msgstr "नई सामग्री भार"
+
+#: dialogs/createingredientweightdialog.cpp:96
+#, fuzzy
+#| msgid "Per Amount:"
+msgctxt "@label:textbox"
+msgid "Per Amount:"
+msgstr "प्रति मात्राः"
+
+#: dialogs/createingredientweightdialog.cpp:97
+#, fuzzy
+#| msgid "Weight:"
+msgctxt "@label:textbox"
+msgid "Weight:"
+msgstr "भार:"
+
+#: dialogs/createingredientweightdialog.cpp:103
+#: dialogs/createingredientweightdialog.cpp:110
+#, fuzzy
+#| msgid "Amount field contains invalid input."
+msgctxt "@info"
+msgid "Amount field contains invalid input."
+msgstr "मात्रा फ़ील्ड में अवैध इनपुट है."
+
+#: dialogs/createingredientweightdialog.cpp:104
+#: dialogs/createingredientweightdialog.cpp:111
+#, fuzzy
+#| msgid "Invalid input"
+msgctxt "@title:window"
+msgid "Invalid input"
+msgstr "अवैध इनपुट"
+
+#: dialogs/dbimportdialog.cpp:42
+#, fuzzy
+#| msgid "Database Import"
+msgctxt "@title:window"
+msgid "Database Import"
+msgstr "डाटाबेस आयात करें"
+
+#: dialogs/dbimportdialog.cpp:80
+#, fuzzy
+#| msgid "Database file:"
+msgctxt "@label:textbox"
+msgid "Database file:"
+msgstr "डाटाबेस फ़ाइल:"
+
+#: dialogs/dbimportdialog.cpp:160
+#, fuzzy
+#| msgid "Database"
+msgctxt "@title:group"
+msgid "Database"
+msgstr "डाटाबेस"
+
+#: dialogs/dbimportdialog.cpp:164
+#, fuzzy
+#| msgid "Server:"
+msgctxt "@label:textbox"
+msgid "Server:"
+msgstr "सर्वरः"
+
+#: dialogs/dbimportdialog.cpp:165
+#, fuzzy
+#| msgid "Username:"
+msgctxt "@label:textbox Database username"
+msgid "Username:"
+msgstr "उपयोक्ता नाम:"
+
+#: dialogs/dbimportdialog.cpp:166
+#, fuzzy
+#| msgid "Password:"
+msgctxt "@label:textbox"
+msgid "Password:"
+msgstr "पासवर्ड: "
+
+#: dialogs/dbimportdialog.cpp:167
+#, fuzzy
+#| msgid "Database name:"
+msgctxt "@label:textbox"
+msgid "Database name:"
+msgstr "डाटाबेस का नामः"
+
+#: dialogs/dbimportdialog.cpp:168
+#, fuzzy
+#| msgid "Port:"
+msgctxt "@label:textbox"
+msgid "Port:"
+msgstr "पोर्टः"
+
+#: dialogs/dbimportdialog.cpp:169
+#, fuzzy
+#| msgid "Default"
+msgctxt "@label:textbox Default port"
+msgid "Default"
+msgstr "डिफ़ॉल्ट"
+
+#: dialogs/selectauthorsdialog.cpp:32
+#, fuzzy
+#| msgid "Authors"
+msgctxt "@title:window"
+msgid "Authors"
+msgstr "लेखक"
+
+#: dialogs/selectauthorsdialog.cpp:68
+#, fuzzy
+#| msgid "Author"
+msgctxt "@title:column"
+msgid "Author"
+msgstr "लेखक"
+
+#: dialogs/selectauthorsdialog.cpp:118
+#, fuzzy, kde-format
+#| msgid "Author name cannot be longer than %1 characters."
+msgctxt "@info"
+msgid "Author name cannot be longer than 1 character."
+msgid_plural "Author name cannot be longer than %1 characters."
+msgstr[0] "लेखक नाम %1 अक्षरों से अधिक नहीं हो सकते."
+msgstr[1] "लेखक नाम %1 अक्षरों से अधिक नहीं हो सकते."
+
+#: dialogs/authorsdialog.cpp:45 dialogs/categorieseditordialog.cpp:44
+#: dialogs/prepmethodsdialog.cpp:44 dialogs/unitsdialog.cpp:54
+#: dialogs/ingredientgroupsdialog.cpp:40 dialogs/ingredientsdialog.cpp:64
+#: dialogs/propertiesdialog.cpp:54
+#, fuzzy
+#| msgid "Create ..."
+msgctxt "@action:button"
+msgid "Create..."
+msgstr "बनाएँ"
+
+#: dialogs/authorsdialog.cpp:50 dialogs/categorieseditordialog.cpp:49
+#: dialogs/prepmethodsdialog.cpp:49 dialogs/unitsdialog.cpp:59
+#: dialogs/ingredientgroupsdialog.cpp:45 dialogs/ingredientsdialog.cpp:69
+#: dialogs/propertiesdialog.cpp:58 dialogs/selectrecipedialog.cpp:108
+#, fuzzy
+#| msgid "Delete"
+msgctxt "@action:button"
+msgid "Delete"
+msgstr "मिटाएँ"
+
+#: dialogs/shoppinglistdialog.cpp:71
+#, fuzzy
+#| msgid "Full recipe list"
+msgctxt "@title"
+msgid "Full recipe list"
+msgstr "पूरी रेसिपि सूची"
+
+#: dialogs/shoppinglistdialog.cpp:106
+#, fuzzy
+#| msgid "Shopping List"
+msgctxt "@title"
+msgid "Shopping List"
+msgstr "खरीदारी सूची"
+
+#: dialogs/shoppinglistdialog.cpp:116
+#, fuzzy
+#| msgid "Recipe Title"
+msgctxt "@title:column"
+msgid "Recipe Title"
+msgstr "रेसिपि शीर्षक"
+
+#: dialogs/shoppinglistdialog.cpp:135
+#, fuzzy
+#| msgid "&OK"
+msgctxt "@action:button"
+msgid "&OK"
+msgstr "ठीक (&O)"
+
+#: dialogs/shoppinglistdialog.cpp:142
+#, fuzzy
+#| msgid "Clear"
+msgctxt "@action:button Clear list"
+msgid "Clear"
+msgstr "साफ करें"
+
+#: dialogs/selectcategoriesdialog.cpp:32
+#, fuzzy
+#| msgid "Categories"
+msgctxt "@title:window"
+msgid "Categories"
+msgstr "श्रेणियाँ"
+
+#: dialogs/selectcategoriesdialog.cpp:46
+#, fuzzy
+#| msgid "&New Category..."
+msgctxt "@action:button"
+msgid "&New Category..."
+msgstr "नया वर्ग... (&N)"
+
+#: dialogs/selectcategoriesdialog.cpp:89
+#, fuzzy, kde-format
+#| msgid "Category name cannot be longer than %1 characters."
+msgctxt "@info"
+msgid "Category name cannot be longer than 1 character."
+msgid_plural "Category name cannot be longer than %1 characters."
+msgstr[0] "वर्ग नाम %1 अक्षरों से अधिक नहीं हो सकते."
+msgstr[1] "वर्ग नाम %1 अक्षरों से अधिक नहीं हो सकते."
+
+#: dialogs/conversiondialog.cpp:34
+#, fuzzy
+#| msgid "Measurement Converter"
+msgctxt "@title:window"
+msgid "Measurement Converter"
+msgstr "मात्रा परिवर्तक"
+
+#: dialogs/conversiondialog.cpp:38
+#, fuzzy
+#| msgid "Convert"
+msgctxt "@action:button"
+msgid "Convert"
+msgstr "बदलें"
+
+#: dialogs/conversiondialog.cpp:59
+#, fuzzy
+#| msgid "--Ingredient (optional)--"
+msgctxt "@item:inlistbox"
+msgid "--Ingredient (optional)--"
+msgstr "--सामग्री (वैकल्पिक)--"
+
+#: dialogs/conversiondialog.cpp:62
+#, fuzzy
+#| msgid "-No Preparation-"
+msgctxt "@item:inlistbox"
+msgid "-No Preparation-"
+msgstr "-कोई तैयारी नहीं-"
+
+#: dialogs/conversiondialog.cpp:97
+#, fuzzy
+#| msgid "Convert"
+msgctxt "@label"
+msgid "Convert"
+msgstr "बदलें"
+
+#: dialogs/conversiondialog.cpp:98
+#, fuzzy
+#| msgid "To"
+msgctxt "@label Convert to"
+msgid "To"
+msgstr "को"
+
+#: dialogs/conversiondialog.cpp:100
+#, fuzzy
+#| msgid "<b>Result:</b>"
+msgctxt "@label Result of an unit conversion"
+msgid "<b>Result:</b>"
+msgstr "<b>परिणाम:</b>"
+
+#: dialogs/conversiondialog.cpp:135
+#, fuzzy
+#| msgid "<b>Result:</b>"
+msgctxt "@label:textbox"
+msgid "<b>Result:</b>"
+msgstr "<b>परिणाम:</b>"
+
+#: dialogs/conversiondialog.cpp:139
+#, fuzzy
+#| msgid "<b>Approximated result:</b>"
+msgctxt "@label:textbox"
+msgid "<b>Approximated result:</b>"
+msgstr "<b>लगभग परिणाम:</b>"
+
+#: dialogs/conversiondialog.cpp:143 dialogs/conversiondialog.cpp:147
+#: dialogs/conversiondialog.cpp:151 dialogs/conversiondialog.cpp:155
+#: dialogs/conversiondialog.cpp:159
+#, fuzzy
+#| msgid "<b>Error:</b>"
+msgctxt "@label:textbox"
+msgid "<b>Error:</b>"
+msgstr "<b>त्रुटि:</b>"
+
+#: dialogs/conversiondialog.cpp:144
+#, fuzzy
+#| msgid "Missing unit conversion"
+msgctxt "@info"
+msgid "Missing unit conversion"
+msgstr "इकाई परिवर्तन गुम है"
+
+#: dialogs/conversiondialog.cpp:148
+#, fuzzy
+#| msgid "No ingredient weight available"
+msgctxt "@info"
+msgid "No ingredient weight available"
+msgstr "सामग्री भार उपलब्ध नहीं है"
+
+#: dialogs/conversiondialog.cpp:152
+#, fuzzy
+#| msgid "No ingredient weight available for this method of preparation"
+msgctxt "@info"
+msgid "No ingredient weight available for this method of preparation"
+msgstr "इस विधि से बनाने हेतु सामग्री भार उपलब्ध नहीं"
+
+#: dialogs/conversiondialog.cpp:156
+#, fuzzy
+#| msgid "Ingredient required for conversion"
+msgctxt "@info"
+msgid "Ingredient required for conversion"
+msgstr "परिवर्तन के लिए आवश्यक सामग्री"
+
+#: dialogs/conversiondialog.cpp:160
+#, fuzzy
+#| msgid "Impossible unit conversion based on unit types"
+msgctxt "@info"
+msgid "Impossible unit conversion based on unit types"
+msgstr "इकाई क़िस्म आधारित इकाई परिवर्तन असंभव"
+
+#: dialogs/unitsdialog.cpp:65
+#, fuzzy
+#| msgid "Units"
+msgctxt "@title:tab"
+msgid "Units"
+msgstr "इकाईयाँ"
+
+#: dialogs/unitsdialog.cpp:68
+#, fuzzy
+#| msgid "Mass Conversions"
+msgctxt "@title:tab"
+msgid "Mass Conversions"
+msgstr "बड़ी मात्रा में परिवर्तन"
+
+#: dialogs/unitsdialog.cpp:71
+#, fuzzy
+#| msgid "Volume Conversions"
+msgctxt "@title:tab"
+msgid "Volume Conversions"
+msgstr "आयतन परिवर्तन"
+
+#: dialogs/unitsdialog.cpp:187
+#, fuzzy
+#| msgid "Finding Unit Ratios"
+msgctxt "@title:window"
+msgid "Finding Unit Ratios"
+msgstr "इकाई अनुपाद ढूंढा जा रहा है"
+
+#: dialogs/dietwizarddialog.cpp:59
+#, fuzzy
+#| msgid "Number of Days"
+msgctxt "@label:slider"
+msgid "Number of Days"
+msgstr "दिनों की संख्या"
+
+#: dialogs/dietwizarddialog.cpp:78
+#, fuzzy
+#| msgid "Meals per Day"
+msgctxt "@label:slider"
+msgid "Meals per Day"
+msgstr "प्रति दिन के भोजन"
+
+#: dialogs/dietwizarddialog.cpp:106
+#, fuzzy
+#| msgid "Create the diet"
+msgctxt "@action:button"
+msgid "Create the diet"
+msgstr "आहार तैयार करें"
+
+#: dialogs/dietwizarddialog.cpp:110
+#, fuzzy
+#| msgid "Clear"
+msgctxt "@action:button Clear Diet"
+msgid "Clear"
+msgstr "साफ करें"
+
+#: dialogs/dietwizarddialog.cpp:116 dialogs/dietwizarddialog.cpp:170
+#, fuzzy, kde-format
+#| msgid "Meal 1"
+msgctxt "@title:tab"
+msgid "Meal 1"
+msgid_plural "Meal %1"
+msgstr[0] "भोजन 1"
+msgstr[1] "भोजन 1"
+
+#: dialogs/dietwizarddialog.cpp:165 dialogs/dietwizarddialog.cpp:187
+#, kde-format
+msgid "- %1 -"
+msgstr "- %1 -"
+
+#: dialogs/dietwizarddialog.cpp:191
+#, fuzzy, kde-format
+#| msgid "- 1 week -"
+msgid "- 1 week -"
+msgid_plural "- %1 weeks -"
+msgstr[0] "- 1 सप्ताह -"
+msgstr[1] "- 1 सप्ताह -"
+
+#: dialogs/dietwizarddialog.cpp:246
+msgctxt "@info"
+msgid ""
+"Given the constraints, a full diet list could not be constructed. Either the "
+"recipe list is too short or the constraints are too demanding. "
+msgstr ""
+
+#: dialogs/dietwizarddialog.cpp:340
+#, fuzzy
+#| msgid "No. of dishes: "
+msgctxt "@label:spinbox"
+msgid "No. of dishes: "
+msgstr "पकवानों की सूची:"
+
+#: dialogs/dietwizarddialog.cpp:348
+#, fuzzy
+#| msgid "Previous Dish"
+msgctxt "@action:button"
+msgid "Previous Dish"
+msgstr "पिछला डिश"
+
+#: dialogs/dietwizarddialog.cpp:351
+#, fuzzy
+#| msgid "Next Dish"
+msgctxt "@action:button"
+msgid "Next Dish"
+msgstr "अगला डिश"
+
+#: dialogs/dietwizarddialog.cpp:359
+msgid "1st Course"
+msgstr "1ला कोर्स"
+
+#: dialogs/dietwizarddialog.cpp:362
+msgid "2nd Course"
+msgstr "2रा कोर्स"
+
+#: dialogs/dietwizarddialog.cpp:365
+msgid "Dessert"
+msgstr "मिठाई"
+
+#: dialogs/dietwizarddialog.cpp:400
+#, fuzzy, kde-format
+#| msgid "Dish %1"
+msgctxt "Dish number %1"
+msgid "Dish %1"
+msgstr "पकवान %1"
+
+#: dialogs/dietwizarddialog.cpp:473
+#, fuzzy
+#| msgid "Dish Characteristics"
+msgctxt "@label:listbox"
+msgid "Dish Characteristics"
+msgstr "पकवान गुण"
+
+#: dialogs/dietwizarddialog.cpp:485
+#, fuzzy
+#| msgid "Enable Category Filtering"
+msgctxt "@option:check"
+msgid "Enable Category Filtering"
+msgstr "वर्ग फ़िल्टरिंग सक्षम करें"
+
+#: dialogs/createpropertydialog.cpp:22
+#, fuzzy
+#| msgid "New Property"
+msgctxt "@title:window"
+msgid "New Property"
+msgstr "नया गुण"
+
+#: dialogs/createpropertydialog.cpp:34
+#, fuzzy
+#| msgid "New Property"
+msgctxt "@title:group"
+msgid "New Property"
+msgstr "नया गुण"
+
+#: dialogs/createpropertydialog.cpp:38
+#, fuzzy
+#| msgid "Property name:"
+msgctxt "@label:textbox"
+msgid "Property name:"
+msgstr "गुण नाम:"
+
+#: dialogs/createpropertydialog.cpp:42
+#, fuzzy
+#| msgid "Units:"
+msgctxt "@label:textbox"
+msgid "Units:"
+msgstr "इकाईयाँ:"
+
+#: dialogs/editratingdialog.cpp:56 dialogs/editratingdialog.cpp:69
+#, fuzzy
+#| msgid "Rating"
+msgctxt "@title:window"
+msgid "Rating"
+msgstr "रेटिंग"
+
+#: dialogs/editratingdialog.cpp:117 dialogs/editratingdialog.cpp:168
+#: dialogs/advancedsearchdialog.cpp:497
+#, fuzzy
+#| msgid "Criteria"
+msgctxt "@title:column"
+msgid "Criteria"
+msgstr "मापदण्ड"
+
+#: dialogs/editratingdialog.cpp:118 dialogs/editratingdialog.cpp:169
+#: dialogs/advancedsearchdialog.cpp:496 dialogs/advancedsearchdialog.cpp:498
+#, fuzzy
+#| msgid "Stars"
+msgctxt "@title:column"
+msgid "Stars"
+msgstr "तारे"
+
+#: dialogs/editratingdialog.cpp:140 dialogs/editratingdialog.cpp:167
+#, fuzzy
+#| msgid "&Delete"
+msgctxt "@action:button"
+msgid "&Delete"
+msgstr "मिटाएँ (&D)"
+
+#: dialogs/editratingdialog.cpp:164
+#, fuzzy
+#| msgid "Criteria:"
+msgctxt "@label:textbox"
+msgid "Criteria:"
+msgstr "मापदण्ड:"
+
+#: dialogs/editratingdialog.cpp:165
+#, fuzzy
+#| msgid "Stars:"
+msgctxt "@label:textbox"
+msgid "Stars:"
+msgstr "तारे:"
+
+#: dialogs/editratingdialog.cpp:166 dialogs/editpropertiesdialog.cpp:257
+#: dialogs/editpropertiesdialog.cpp:263
+#, fuzzy
+#| msgid "Add"
+msgctxt "@action:button"
+msgid "Add"
+msgstr "जोड़ें"
+
+#: dialogs/editratingdialog.cpp:170
+#, fuzzy
+#| msgid "Comments:"
+msgctxt "@label:textbox"
+msgid "Comments:"
+msgstr "टिप्पणियाँ:"
+
+#: dialogs/editratingdialog.cpp:171
+#, fuzzy
+#| msgid "Rater:"
+msgctxt "@label:textbox"
+msgid "Rater:"
+msgstr "रेटर:"
+
+#: dialogs/createunitconversiondialog.cpp:75
+#, fuzzy
+#| msgid "Unit Conversion"
+msgctxt "@title:window"
+msgid "Unit Conversion"
+msgstr "इकाई परिवर्तन"
+
+#: dialogs/createunitconversiondialog.cpp:76
+#, fuzzy
+#| msgid "New Unit Conversion"
+msgctxt "@title:group"
+msgid "New Unit Conversion"
+msgstr "नया इकाई परिवर्तन"
+
+#: dialogs/ingredientsdialog.cpp:75
+#, fuzzy
+#| msgid "Property Information"
+msgctxt "@action:button"
+msgid "Property Information"
+msgstr "गुण जानकारी"
+
+#: dialogs/ingredientsdialog.cpp:85
+#, fuzzy
+#| msgid "Headers"
+msgctxt "@title:tab"
+msgid "Headers"
+msgstr "हेडर्स"
+
+#: dialogs/ingredientsdialog.cpp:136
+#, fuzzy
+#| msgid "No ingredient selected."
+msgctxt "@info"
+msgid "No ingredient selected."
+msgstr "कोई संघटक चयनित नहीं."
+
+#: dialogs/refineshoppinglistdialog.cpp:37
+#, fuzzy
+#| msgid "Shopping List"
+msgctxt "@title:window"
+msgid "Refine Shopping List"
+msgstr "खरीदारी सूची"
+
+#: dialogs/refineshoppinglistdialog.cpp:45
+#, fuzzy
+#| msgid "&Done"
+msgctxt "@action:button Finished refining shopping list"
+msgid "&Done"
+msgstr "सम्पन्न (&D)"
+
+#: dialogs/refineshoppinglistdialog.cpp:90
+#: dialogs/refineshoppinglistdialog.cpp:123
+#, fuzzy
+#| msgid "Ingredients in Shopping List"
+msgctxt "@title:column"
+msgid "Ingredients in Shopping List"
+msgstr "खरीदारी सूची में संघटक"
+
+#: dialogs/refineshoppinglistdialog.cpp:92
+#: dialogs/refineshoppinglistdialog.cpp:125
+#: dialogs/editpropertiesdialog.cpp:170 dialogs/editpropertiesdialog.cpp:261
+#: dialogs/ingredientparserdialog.cpp:68
+#: dialogs/ingredientparserdialog.cpp:117 dialogs/selectunitdialog.cpp:41
+#, fuzzy
+#| msgid "Unit"
+msgctxt "@title:column"
+msgid "Unit"
+msgstr "इकाई"
+
+#: dialogs/refineshoppinglistdialog.cpp:121
+msgctxt "@info"
+msgid ""
+"On the right are the ingredients needed for the recipes you selected.  You "
+"may now add additional ingredients, remove ingredients you do not need, or "
+"modify the amounts of existing ingredients."
+msgstr ""
+
+#: dialogs/refineshoppinglistdialog.cpp:122
+#, fuzzy
+#| msgid "Ingredients"
+msgctxt "@title:column"
+msgid "Ingredients"
+msgstr "संघटक"
+
+#: dialogs/createcategorydialog.cpp:25
+#, fuzzy
+#| msgid "New Category"
+msgctxt "@title:window"
+msgid "New Category"
+msgstr "नया वर्ग"
+
+#: dialogs/createcategorydialog.cpp:36
+#, fuzzy
+#| msgid "New Category"
+msgctxt "@title:group"
+msgid "New Category"
+msgstr "नया वर्ग"
+
+#: dialogs/createcategorydialog.cpp:39
+#, fuzzy
+#| msgid "Name:"
+msgctxt "@label:textbox Category name"
+msgid "Name:"
+msgstr "नाम:"
+
+#: dialogs/createcategorydialog.cpp:42
+#, fuzzy
+#| msgid "Subcategory of:"
+msgctxt "@label:textbox"
+msgid "Subcategory of:"
+msgstr "का उपवर्ग:"
+
+#: dialogs/createcategorydialog.cpp:59
+#, fuzzy
+#| msgid "**NONE**"
+msgctxt "@item:inlistbox No category"
+msgid "**NONE**"
+msgstr "**कुछ-नहीं**"
+
+#: dialogs/editpropertiesdialog.cpp:128 dialogs/editpropertiesdialog.cpp:253
+#, fuzzy
+#| msgid "USDA Ingredient"
+msgctxt "@title:column"
+msgid "USDA Ingredient"
+msgstr "यूएसडीए संघटक"
+
+#: dialogs/editpropertiesdialog.cpp:168 dialogs/editpropertiesdialog.cpp:259
+#: dialogs/selectpropertydialog.cpp:56
+#, fuzzy
+#| msgid "Property"
+msgctxt "@title:column"
+msgid "Property"
+msgstr "गुण"
+
+#: dialogs/editpropertiesdialog.cpp:203 dialogs/editpropertiesdialog.cpp:265
+#, fuzzy
+#| msgid "Weight"
+msgctxt "@title:column"
+msgid "Weight"
+msgstr "भार"
+
+#: dialogs/editpropertiesdialog.cpp:204 dialogs/editpropertiesdialog.cpp:266
+#, fuzzy
+#| msgid "Per Amount"
+msgctxt "@title:column"
+msgid "Per Amount"
+msgstr "प्रति मात्रा"
+
+#: dialogs/editpropertiesdialog.cpp:251
+#, fuzzy
+#| msgid "Property Information"
+msgctxt "@title:window"
+msgid "Property Information"
+msgstr "गुण जानकारी"
+
+#: dialogs/editpropertiesdialog.cpp:252
+#, fuzzy, kde-format
+#| msgid "Property Information for <b>%1</b>"
+msgctxt "@label"
+msgid "Property Information for <b>%1</b>"
+msgstr "<b>%1</b> के लिए गुण जानकारी"
+
+#: dialogs/editpropertiesdialog.cpp:255
+#, fuzzy
+#| msgid "Load ->"
+msgctxt "@action:button Load USDA data"
+msgid "Load"
+msgstr "लोड करें ->"
+
+#: dialogs/editpropertiesdialog.cpp:256
+#, fuzzy
+#| msgid "Properties"
+msgctxt "@title:group"
+msgid "Properties"
+msgstr "गुण"
+
+#: dialogs/editpropertiesdialog.cpp:258 dialogs/editpropertiesdialog.cpp:264
+#, fuzzy
+#| msgid "Remove"
+msgctxt "@action:button"
+msgid "Remove"
+msgstr "हटाएँ"
+
+#: dialogs/editpropertiesdialog.cpp:262
+#, fuzzy
+#| msgid "Weights"
+msgctxt "@title:group"
+msgid "Weights"
+msgstr "भार"
+
+#: dialogs/editpropertiesdialog.cpp:292
+msgctxt "@info"
+msgid ""
+"Recipes may require this information for nutrient analysis. Are you sure you "
+"want to delete this entry?"
+msgstr ""
+
+#: dialogs/editpropertiesdialog.cpp:311 dialogs/editpropertiesdialog.cpp:343
+#: dialogs/ingredientmatcherdialog.cpp:159
+#, fuzzy
+#| msgid "Enter amount"
+msgctxt "@title:window"
+msgid "Enter amount"
+msgstr "मात्रा भरें"
+
+#: dialogs/editpropertiesdialog.cpp:315 dialogs/editpropertiesdialog.cpp:347
+#: dialogs/ingredientmatcherdialog.cpp:163
+#, fuzzy
+#| msgid "Amount"
+msgctxt "@title:group"
+msgid "Amount"
+msgstr "मात्रा"
+
+#: dialogs/editpropertiesdialog.cpp:437
+#, fuzzy
+#| msgid "Property Exists"
+msgctxt "@title:window"
+msgid "Property Exists"
+msgstr "गुण मौजूद है"
+
+#: dialogs/editpropertiesdialog.cpp:437
+msgctxt "@info"
+msgid ""
+"The property you tried to add already exists in the ingredient with the same "
+"per units."
+msgstr ""
+
+#: dialogs/editpropertiesdialog.cpp:662
+msgctxt "@info"
+msgid "Please select an ingredient in the USDA ingredient list"
+msgstr ""
+
+#: dialogs/selectpropertydialog.cpp:34
+#, fuzzy
+#| msgid "Choose Property"
+msgctxt "@title:window"
+msgid "Choose Property"
+msgstr "गुण चुनें"
+
+#: dialogs/selectpropertydialog.cpp:43
+#, fuzzy
+#| msgid "Choose Property"
+msgctxt "@title:group"
+msgid "Choose Property"
+msgstr "गुण चुनें"
+
+#: dialogs/selectpropertydialog.cpp:65
+#, fuzzy
+#| msgid "Per units:"
+msgctxt "@label:textbox"
+msgid "Per units:"
+msgstr "प्रति इकाईयाँ:"
+
+#: dialogs/selectpropertydialog.cpp:145 dialogs/selectunitdialog.cpp:73
+#, fuzzy
+#| msgid "-No unit-"
+msgctxt "@item"
+msgid "-No unit-"
+msgstr "-कोई इकाई नहीं-"
+
+#: dialogs/ingredientparserdialog.cpp:42
+#, fuzzy
+#| msgid "Ingredient Parser"
+msgctxt "@title:window"
+msgid "Ingredient Parser"
+msgstr "सामग्री पारसर"
+
+#: dialogs/ingredientparserdialog.cpp:88
+#, fuzzy
+#| msgid "Set &Header"
+msgctxt "@action:button"
+msgid "Set &Header"
+msgstr "शीर्षक सेट करें (&H)"
+
+#: dialogs/ingredientparserdialog.cpp:89
+msgctxt "@info:whatsthis"
+msgid ""
+"If an ingredient header is detected as an ingredient, select it and click "
+"this button so that Krecipes will recognize it as a header.  All the "
+"ingredients below the header will be included within that group.\n"
+"\n"
+"Alternatively, if you select multiple ingredients and click this button, "
+"those ingredients will be grouped together."
+msgstr ""
+
+#: dialogs/ingredientparserdialog.cpp:94
+#, fuzzy
+#| msgid "&Delete"
+msgctxt "@item:inmenu"
+msgid "&Delete"
+msgstr "मिटाएँ (&D)"
+
+#: dialogs/ingredientparserdialog.cpp:95
+#, fuzzy
+#| msgid "Set &Header"
+msgctxt "@item:inmenu"
+msgid "Set &Header"
+msgstr "शीर्षक सेट करें (&H)"
+
+#: dialogs/ingredientparserdialog.cpp:108
+msgctxt "@info"
+msgid ""
+"<para>To use: Paste a list of ingredient below, click <interface>Parse Text</"
+"interface>, and then you may correct any incorrectly parsed ingredients.</"
+"para><para><warning>Fields will be truncated if longer than the database "
+"allows</warning></para>"
+msgstr ""
+
+#: dialogs/ingredientparserdialog.cpp:112
+#, fuzzy
+#| msgid "Ingredients as understood by Krecipes:"
+msgctxt "@title"
+msgid "Ingredients as understood by Krecipes:"
+msgstr "केरेसिपी द्वारा समझा जा सकने लायक सामग्री:"
+
+#: dialogs/ingredientparserdialog.cpp:114
+#, fuzzy
+#| msgid "Parse Text"
+msgctxt "@action:button"
+msgid "Parse Text"
+msgstr "पाठ पार्से करें"
+
+#: dialogs/resizerecipedialog.cpp:41
+#, fuzzy
+#| msgid "Resize Recipe"
+msgctxt "@title:window"
+msgid "Resize Recipe"
+msgstr "रेसिपि को नया आकार दें"
+
+#: dialogs/resizerecipedialog.cpp:68
+#, fuzzy
+#| msgid "Current yield:"
+msgctxt "@label:textbox"
+msgid "Current yield:"
+msgstr "वर्तमान यील्ड:"
+
+#: dialogs/resizerecipedialog.cpp:72
+#, fuzzy
+#| msgid "New yield:"
+msgctxt "@label:textbox"
+msgid "New yield:"
+msgstr "नया यील्ड:"
+
+#: dialogs/resizerecipedialog.cpp:86
+#, fuzzy
+#| msgid "Factor (i.e. 1/2 to half, 3 to triple):"
+msgctxt "@label:textbox"
+msgid "Factor (e.g. 1/2 to half, 3 to triple):"
+msgstr "फ़ैक्टर (जैसे कि 1/2 आधा के लिए, 3 तिगुने के लिए):"
+
+#: dialogs/resizerecipedialog.cpp:115
+#, fuzzy
+#| msgid "Scale by yield"
+msgctxt "@option:radio"
+msgid "Scale by yield"
+msgstr "यील्ड के अनुसार स्केल करें"
+
+#: dialogs/resizerecipedialog.cpp:116
+#, fuzzy
+#| msgid "Scale by factor"
+msgctxt "@option:radio"
+msgid "Scale by factor"
+msgstr "फैक्टर के अनुसार स्केल करें"
+
+#: dialogs/resizerecipedialog.cpp:138
+#, fuzzy
+#| msgid "Unable to scale a recipe with zero yield"
+msgctxt "@info"
+msgid "Unable to scale a recipe with zero yield"
+msgstr "शून्य यील्ड के साथ रेसिपि को स्केल नहीं किया जा सकता"
+
+#: dialogs/resizerecipedialog.cpp:147 dialogs/resizerecipedialog.cpp:156
+#, fuzzy
+#| msgid "Invalid input"
+msgctxt "@info"
+msgid "Invalid input"
+msgstr "अवैध इनपुट"
+
+#: dialogs/advancedsearchdialog.cpp:72
+#, fuzzy
+#| msgid "Search using the following criteria:"
+msgctxt "@label"
+msgid "Search using the following criteria:"
+msgstr "निम्न मापदण्ड से खोजें:"
+
+#: dialogs/advancedsearchdialog.cpp:99
+#, fuzzy
+#| msgid "Title"
+msgctxt "@action:button Recipe title"
+msgid "Title"
+msgstr "शीर्षक"
+
+#: dialogs/advancedsearchdialog.cpp:111 dialogs/advancedsearchdialog.cpp:344
+#, fuzzy
+#| msgid "Require All Words"
+msgctxt "@option:check"
+msgid "Require All Words"
+msgstr "सभी शब्द आवश्यक"
+
+#: dialogs/advancedsearchdialog.cpp:115 dialogs/advancedsearchdialog.cpp:348
+#, fuzzy
+#| msgid "Keywords:"
+msgctxt "@label:textbox"
+msgid "Keywords:"
+msgstr "की-वर्डस:"
+
+#: dialogs/advancedsearchdialog.cpp:128
+#, fuzzy
+#| msgid "Ingredients"
+msgctxt "@action:button"
+msgid "Ingredients"
+msgstr "संघटक"
+
+#: dialogs/advancedsearchdialog.cpp:139
+#, fuzzy
+#| msgid "Enter ingredients: (e.g. chicken pasta \"white wine\")"
+msgctxt "@info"
+msgid "Enter ingredients: (e.g. chicken pasta \"white wine\")"
+msgstr "सामग्री भरें: (जैसे कि चिकन पास्ता \"श्वेत सुरा\")"
+
+#: dialogs/advancedsearchdialog.cpp:146
+#, fuzzy
+#| msgid "Uses all:"
+msgctxt "@label:textbox"
+msgid "Uses all:"
+msgstr "सभी उपयोग करता है:"
+
+#: dialogs/advancedsearchdialog.cpp:150
+#, fuzzy
+#| msgid "Uses any of:"
+msgctxt "@label:textbox"
+msgid "Uses any of:"
+msgstr "कोई भी प्रयोग करता है:"
+
+#: dialogs/advancedsearchdialog.cpp:154
+#, fuzzy
+#| msgid "Without:"
+msgctxt "@label:textbox"
+msgid "Without:"
+msgstr "के बगैर:"
+
+#: dialogs/advancedsearchdialog.cpp:165
+#, fuzzy
+#| msgid "Categories >>"
+msgctxt "@action:button"
+msgid "Categories >>"
+msgstr "श्रेणियाँ >>"
+
+#: dialogs/advancedsearchdialog.cpp:176
+#, fuzzy
+#| msgid "Enter categories: (e.g. Desserts Pastas \"Main Dishes\")"
+msgctxt "@info"
+msgid "Enter categories: (e.g. Desserts Pastas \"Main Dishes\")"
+msgstr "श्रेणियाँ भरें: (जैसे कि डेजर्ट पास्ता \"मुख्य डिश\")"
+
+#: dialogs/advancedsearchdialog.cpp:183
+#, fuzzy
+#| msgid "In all:"
+msgctxt "@label:textbox"
+msgid "In all:"
+msgstr "सभी में:"
+
+#: dialogs/advancedsearchdialog.cpp:187
+#, fuzzy
+#| msgid "In any of:"
+msgctxt "@label:textbox"
+msgid "In any of:"
+msgstr "किसी में भी:"
+
+#: dialogs/advancedsearchdialog.cpp:191
+#, fuzzy
+#| msgid "Not in:"
+msgctxt "@label:textbox"
+msgid "Not in:"
+msgstr "में नहीं:"
+
+#: dialogs/advancedsearchdialog.cpp:202
+#, fuzzy
+#| msgid "Authors"
+msgctxt "@action:button"
+msgid "Authors"
+msgstr "लेखक"
+
+#: dialogs/advancedsearchdialog.cpp:213
+#, fuzzy
+#| msgid "Enter author name (e.g. Smith or \"Jane Doe\")"
+msgctxt "@info"
+msgid "Enter author name (e.g. Smith or \"Jane Doe\")"
+msgstr "लेखक नाम भरें (जैसे कि स्मिथ या \"जेन डो\")"
+
+#: dialogs/advancedsearchdialog.cpp:220
+#, fuzzy
+#| msgid "By any of:"
+msgctxt "@label:textbox"
+msgid "By any of:"
+msgstr "कोई भी:"
+
+#: dialogs/advancedsearchdialog.cpp:224
+#, fuzzy
+#| msgid "By all:"
+msgctxt "@label:textbox"
+msgid "By all:"
+msgstr "सभी:"
+
+#: dialogs/advancedsearchdialog.cpp:228
+#, fuzzy
+#| msgid "Not by:"
+msgctxt "@label:textbox"
+msgid "Not by:"
+msgstr "द्वारा नहीं:"
+
+#: dialogs/advancedsearchdialog.cpp:239
+#, fuzzy
+#| msgid "Yield"
+msgctxt "@action:button"
+msgid "Yield"
+msgstr "यील्ड"
+
+#: dialogs/advancedsearchdialog.cpp:253 dialogs/advancedsearchdialog.cpp:301
+#, fuzzy
+#| msgid "Enabled"
+msgctxt "@option:check"
+msgid "Enabled"
+msgstr "सक्षम"
+
+#: dialogs/advancedsearchdialog.cpp:266
+#, fuzzy
+#| msgid "Yields at least:"
+msgctxt "@item:inlistbox"
+msgid "Yields at least:"
+msgstr "कम से कम यील्ड:"
+
+#: dialogs/advancedsearchdialog.cpp:267
+#, fuzzy
+#| msgid "Yields at most:"
+msgctxt "@item:inlistbox"
+msgid "Yields at most:"
+msgstr "अधिक से अधिक यील्ड:"
+
+#: dialogs/advancedsearchdialog.cpp:268
+#, fuzzy
+#| msgid "Yields about:"
+msgctxt "@item:inlistbox"
+msgid "Yields about:"
+msgstr "लगभग यील्ड :"
+
+#: dialogs/advancedsearchdialog.cpp:287
+#, fuzzy
+#| msgid "Preparation Time"
+msgctxt "@action:button"
+msgid "Preparation Time"
+msgstr "बनाने के लिए समय"
+
+#: dialogs/advancedsearchdialog.cpp:313
+#, fuzzy
+#| msgid "Ready in at most:"
+msgctxt "@item:inlistbox"
+msgid "Ready in at most:"
+msgstr "अधिक से अधिक में तैयार:"
+
+#: dialogs/advancedsearchdialog.cpp:314
+#, fuzzy
+#| msgid "Ready in about:"
+msgctxt "@item:inlistbox"
+msgid "Ready in about:"
+msgstr "लगभग इतने में तैयार:"
+
+#: dialogs/advancedsearchdialog.cpp:332
+#, fuzzy
+#| msgid "Instructions"
+msgctxt "@action:button"
+msgid "Instructions"
+msgstr "निर्देश"
+
+#: dialogs/advancedsearchdialog.cpp:362
+#, fuzzy
+#| msgid "Meta Data"
+msgctxt "@label"
+msgid "Meta Data"
+msgstr "मेटा डाटा"
+
+#: dialogs/advancedsearchdialog.cpp:374
+#, fuzzy
+#| msgid "Created:"
+msgctxt "@label Recipe created date"
+msgid "Created:"
+msgstr "सृजितः"
+
+#: dialogs/advancedsearchdialog.cpp:385
+#, fuzzy
+#| msgid "Modified:"
+msgctxt "@label Recipe modified date"
+msgid "Modified:"
+msgstr "परिवर्धितः"
+
+#: dialogs/advancedsearchdialog.cpp:396
+#, fuzzy
+#| msgid "Last Accessed:"
+msgctxt "@label Recipe last accessed date"
+msgid "Last Accessed:"
+msgstr "पिछली मर्तबा एक्सेस्डः"
+
+#: dialogs/advancedsearchdialog.cpp:415
+#, fuzzy
+#| msgid "Ratings"
+msgctxt "@action:button"
+msgid "Ratings"
+msgstr "दरजा"
+
+#: dialogs/advancedsearchdialog.cpp:426
+#, fuzzy
+#| msgid "By average:"
+msgctxt "@option:radio"
+msgid "By average:"
+msgstr "औसतन:"
+
+#: dialogs/advancedsearchdialog.cpp:443
+#, fuzzy
+#| msgid "stars"
+msgctxt "@label"
+msgid "stars"
+msgstr "तारे"
+
+#: dialogs/advancedsearchdialog.cpp:449
+#, fuzzy
+#| msgid "By criteria:"
+msgctxt "@option:radio"
+msgid "By criteria:"
+msgstr "मापदण्ड से:"
+
+#: dialogs/advancedsearchdialog.cpp:495
+#, fuzzy
+#| msgid "Criterion"
+msgctxt "@title:column"
+msgid "Criterion"
+msgstr "मापदण्ड"
+
+#: dialogs/advancedsearchdialog.cpp:519
+#, fuzzy
+#| msgid "C&lear"
+msgctxt "@action:button Clear search criteria"
+msgid "C&lear"
+msgstr "साफ करें (&l)"
+
+#: dialogs/advancedsearchdialog.cpp:527
+#, fuzzy
+#| msgid "&Search"
+msgctxt "@action:button Search recipes"
+msgid "&Search"
+msgstr "ढूंढें (&S)"
+
+#: dialogs/advancedsearchdialog.cpp:550
+#, fuzzy
+#| msgid "Title"
+msgctxt "@title:column Recipe title"
+msgid "Title"
+msgstr "शीर्षक"
+
+#: dialogs/advancedsearchdialog.cpp:931
+#, fuzzy
+#| msgid "No matching recipes found"
+msgctxt "@item:inlistbox"
+msgid "No matching recipes found"
+msgstr "कोई मिलते जुलते रेसिपि नहीं मिले"
+
+#: dialogs/ingredientmatcherdialog.cpp:88
+#, fuzzy
+#| msgid "Ingredient (required?)"
+msgctxt "@title:column"
+msgid "Ingredient (required?)"
+msgstr "सामग्री (आवश्यक?)"
+
+#: dialogs/ingredientmatcherdialog.cpp:89
+#, fuzzy
+#| msgid "Amount Available"
+msgctxt "@title:column"
+msgid "Amount Available"
+msgstr "उपलब्ध मात्रा"
+
+#: dialogs/ingredientmatcherdialog.cpp:102
+#, fuzzy
+#| msgid "Missing ingredients allowed:"
+msgctxt ""
+"@label:spinbox Number of missing ingredients allowed when doing a search by "
+"ingredients"
+msgid "Missing ingredients allowed:"
+msgstr "छूटे हुए संघटकों को स्वीकारें:"
+
+#: dialogs/ingredientmatcherdialog.cpp:106
+#, fuzzy
+#| msgid "Any"
+msgctxt ""
+"@item Any amount of ingredients missing when doing a search by ingredients"
+msgid "Any"
+msgstr "कोई भी"
+
+#: dialogs/ingredientmatcherdialog.cpp:109
+#, fuzzy
+#| msgid "Matching Recipes"
+msgctxt "@title"
+msgid "Matching Recipes"
+msgstr "मिलते जुलते रेसिपि"
+
+#: dialogs/ingredientmatcherdialog.cpp:112
+#, fuzzy
+#| msgid "Title"
+msgctxt "@title:column Recipe Title"
+msgid "Title"
+msgstr "शीर्षक"
+
+#: dialogs/ingredientmatcherdialog.cpp:119
+#, fuzzy
+#| msgid "Missing Ingredients"
+msgctxt "@title:column Missing ingredients in a search result"
+msgid "Missing Ingredients"
+msgstr "छूटे हुए संघटक"
+
+#: dialogs/ingredientmatcherdialog.cpp:130
+#, fuzzy
+#| msgid "Find matching recipes"
+msgctxt "@action:button"
+msgid "Find matching recipes"
+msgstr "मिलते जुलते रेसिपि ढूंढें"
+
+#: dialogs/ingredientmatcherdialog.cpp:136
+#, fuzzy
+#| msgid "Clear"
+msgctxt "@action:button Clear search criteria"
+msgid "Clear"
+msgstr "साफ करें"
+
+#: dialogs/ingredientmatcherdialog.cpp:343
+#, fuzzy, kde-format
+#| msgid "Missing ingredients allowed:"
+msgctxt "@label:textbox"
+msgid "You are missing 1 ingredient for:"
+msgid_plural "You are missing %1 ingredients for:"
+msgstr[0] "छूटे हुए संघटकों को स्वीकारें:"
+msgstr[1] "छूटे हुए संघटकों को स्वीकारें:"
+
+#: dialogs/pagesetupdialog.cpp:54
+#, fuzzy
+#| msgid "Page Setup..."
+msgid "Page Setup"
+msgstr "पृष्ठ सेटअप..."
+
+#: dialogs/pagesetupdialog.cpp:63
+msgid "Items Shown"
+msgstr "प्रदर्शित वस्तुएँ"
+
+#: dialogs/pagesetupdialog.cpp:66
+msgid "Show Items"
+msgstr "वस्तुएँ दिखाएँ"
+
+#: dialogs/pagesetupdialog.cpp:71
+msgid ""
+"<i>Usage: Select a template along the left, and right-click any element to "
+"edit the look of that element.</i>"
+msgstr ""
+
+#: dialogs/pagesetupdialog.cpp:90
+msgid "Save and Close"
+msgstr "सहेजें तथा बन्द करें"
+
+#: dialogs/pagesetupdialog.cpp:92
+msgid "&Cancel"
+msgstr "रद्द करें (&C)"
+
+#: dialogs/pagesetupdialog.cpp:141
+msgid ""
+"The recipe view layout has been modified.\n"
+"Do you want to save it?"
+msgstr ""
+"रेसिपि दृश्य खाका परिवर्धित किया गया है.\n"
+" क्या आप इसे सहेजना चाहते हैं?"
+
+#: dialogs/pagesetupdialog.cpp:141 dialogs/pagesetupdialog.cpp:219
+msgid "Save Layout?"
+msgstr "ख़ाका सहेजें?"
+
+#: dialogs/pagesetupdialog.cpp:195
+msgid "Krecipes style or template file"
+msgstr "केरेसिपि शैली या टैम्प्लेट फ़ाइल"
+
+#: dialogs/pagesetupdialog.cpp:195
+msgid "Select Layout"
+msgstr "खाका चुनें"
+
+#: dialogs/pagesetupdialog.cpp:219
+msgid ""
+"This layout has been modified.\n"
+"Do you want to save it?"
+msgstr ""
+"खाका परिवर्धित किया गया है.\n"
+" क्या आप इसे सहेजना चाहते हैं?"
+
+#: dialogs/pagesetupdialog.cpp:245
+msgid ""
+"Unable to save the layout because you do not have sufficient permissions to "
+"modify this file.\n"
+"Would you like to instead save the current layout to a new file?"
+msgstr ""
+
+#: dialogs/pagesetupdialog.cpp:266
+msgid ""
+"You have selected a file that you do not have the permissions to write to.\n"
+"Would you like to select another file?"
+msgstr ""
+
+#: dialogs/recipeimportdialog.cpp:34
+#, fuzzy
+#| msgid "Import Recipes"
+msgctxt "@title:window"
+msgid "Import Recipes"
+msgstr "रेसिपि आयात करें"
+
+#: dialogs/recipeimportdialog.cpp:44
+#, fuzzy
+#| msgid "Recipes"
+msgctxt "@title:column"
+msgid "Recipes"
+msgstr "रेसिपीज़"
+
+#: dialogs/recipeimportdialog.cpp:67
+#, fuzzy, kde-format
+#| msgid "All (%1)"
+msgctxt "@item:inlistbox All items"
+msgid "All (%1)"
+msgstr "सभी (%1)"
+
+#: dialogs/recipeimportdialog.cpp:102 dialogs/recipeimportdialog.cpp:103
+#, fuzzy
+#| msgid "Uncategorized"
+msgctxt "@item"
+msgid "Uncategorized"
+msgstr "अ-वर्गीकृत"
+
+#: dialogs/setupdisplay.cpp:71
+msgid "Recipe Title"
+msgstr "रेसिपि शीर्षक"
+
+#: dialogs/setupdisplay.cpp:73
+msgid "serving"
+msgstr "सर्विंग"
+
+#: dialogs/setupdisplay.cpp:74
+msgid "Category 1, Category 2, ..."
+msgstr "वर्ग 1, वर्ग 2, ..."
+
+#: dialogs/setupdisplay.cpp:78
+msgid "Author 1, Author 2, ..."
+msgstr "लेखक 1, लेखक 2, ..."
+
+#: dialogs/setupdisplay.cpp:81
+msgid "Ingredient 1"
+msgstr "संघटक १"
+
+#: dialogs/setupdisplay.cpp:84
+msgid "Ingredient 2"
+msgstr "संघटक २"
+
+#. i18n: file: widgets/ratingdisplaywidget.ui:92
+#. i18n: ectx: property (text), widget (QLabel, raterName)
+#: dialogs/setupdisplay.cpp:92 rc.cpp:5
+msgid "Rater"
+msgstr "रेटर"
+
+#: dialogs/setupdisplay.cpp:93
+msgid "Comment"
+msgstr "टिप्पणी"
+
+#: dialogs/setupdisplay.cpp:95
+msgid "Criteria 1"
+msgstr "मापदण्ड १"
+
+#: dialogs/setupdisplay.cpp:99
+msgid "Criteria 2"
+msgstr "मापदण्ड २"
+
+#: dialogs/setupdisplay.cpp:104
+msgid "Property 1"
+msgstr "गुण १"
+
+#: dialogs/setupdisplay.cpp:106
+msgid "Property 2"
+msgstr "गुण २"
+
+#: dialogs/setupdisplay.cpp:120
+#, fuzzy
+#| msgid "Background"
+msgctxt "Background color"
+msgid "Background"
+msgstr "पृष्ठभूमि"
+
+#: dialogs/setupdisplay.cpp:121
+#, fuzzy
+#| msgid "Title"
+msgctxt "Recipe title"
+msgid "Title"
+msgstr "शीर्षक"
+
+#: dialogs/setupdisplay.cpp:124
+msgid "Photo"
+msgstr "फोटो"
+
+#: dialogs/setupdisplay.cpp:227
+#, kde-format
+msgid "\"%1\" at line %2, column %3.  This may not be a Krecipes layout file."
+msgstr "\"%1\" पंक्ति %2 पर, स्तम्भ %3 पर. शायद यह के-रेसिपि खाका फ़ाइल नहीं है."
+
+#: dialogs/setupdisplay.cpp:439
+msgid "Background Color..."
+msgstr "पृष्ठभूमि रंग..."
+
+#: dialogs/setupdisplay.cpp:442
+msgid "Text Color..."
+msgstr "पाठ रंग..."
+
+#: dialogs/setupdisplay.cpp:445
+msgid "Font..."
+msgstr "फ़ॉन्ट..."
+
+#: dialogs/setupdisplay.cpp:448
+msgid "Show"
+msgstr "दिखाएँ"
+
+#: dialogs/setupdisplay.cpp:457 dialogs/setupdisplay.cpp:590
+#, fuzzy
+#| msgid "Center"
+msgctxt "Align center"
+msgid "Center"
+msgstr "बीच में"
+
+#: dialogs/setupdisplay.cpp:459 dialogs/setupdisplay.cpp:592
+#, fuzzy
+#| msgid "Left"
+msgctxt "Align left"
+msgid "Left"
+msgstr "बायाँ"
+
+#: dialogs/setupdisplay.cpp:461 dialogs/setupdisplay.cpp:594
+#, fuzzy
+#| msgid "Right"
+msgctxt "Align right"
+msgid "Right"
+msgstr "दायाँ"
+
+#: dialogs/setupdisplay.cpp:474
+msgid "Alignment"
+msgstr "पंक्तिबद्धता"
+
+#: dialogs/setupdisplay.cpp:480
+msgid "Border..."
+msgstr "किनारा..."
+
+#: dialogs/setupdisplay.cpp:483
+msgid "Columns..."
+msgstr "स्तम्भ..."
+
+#: dialogs/setupdisplay.cpp:524
+msgid "Select the number of columns to use:"
+msgstr "इस्तेमाल हेतु स्तम्भ संख्या चुनें:"
+
+#: dialogs/similarcategoriesdialog.cpp:181
+#, fuzzy
+#| msgid "Similar Categories"
+msgctxt "@title:window"
+msgid "Similar Categories"
+msgstr "एक जैसी श्रेणियाँ"
+
+#: dialogs/similarcategoriesdialog.cpp:182
+#, fuzzy
+#| msgid "Threshold:"
+msgctxt "@label:textbox"
+msgid "Threshold:"
+msgstr "देहलीज:"
+
+#: dialogs/similarcategoriesdialog.cpp:183
+#, fuzzy
+#| msgid "Category:"
+msgctxt "@label:textbox"
+msgid "Category:"
+msgstr "वर्गः"
+
+#: dialogs/similarcategoriesdialog.cpp:186
+#, fuzzy
+#| msgid "Search"
+msgctxt "@action:button Search a recipe category in database"
+msgid "Search"
+msgstr "ढूंढें"
+
+#: dialogs/similarcategoriesdialog.cpp:187
+#, fuzzy
+#| msgid "Similar Categories:"
+msgctxt "@label:textbox"
+msgid "Similar Categories:"
+msgstr "एक जैसे वर्ग"
+
+#: dialogs/similarcategoriesdialog.cpp:190
+#, fuzzy
+#| msgid "Categories to Merge:"
+msgctxt "@label:textbox"
+msgid "Categories to Merge:"
+msgstr "सम्मिलित करने का वर्ग"
+
+#: dialogs/similarcategoriesdialog.cpp:191
+#, fuzzy
+#| msgid "Merge"
+msgctxt "@action:button"
+msgid "Merge"
+msgstr "मिलाएं"
+
+#: dialogs/similarcategoriesdialog.cpp:192
+#, fuzzy
+#| msgid "Cancel"
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "रद्द करें"
+
+#: dialogs/similarcategoriesdialog.cpp:194
+#: dialogs/similarcategoriesdialog.cpp:196
+#, fuzzy
+#| msgid "Category"
+msgctxt "@title:column"
+msgid "Category"
+msgstr "श्रेणी"
+
+#: dialogs/similarcategoriesdialog.cpp:322
+#, fuzzy
+#| msgid "Please select only one category."
+msgctxt "@info"
+msgid "Please select only one category."
+msgstr "कृपया सिर्फ एक वर्ग चुनें."
+
+#: dialogs/similarcategoriesdialog.cpp:351
+#, fuzzy
+#| msgid "No recipes selected."
+msgctxt "@info"
+msgid "No recipes selected."
+msgstr "कोई रेसिपि चयनित नहीं"
+
+#: dialogs/similarcategoriesdialog.cpp:351
+#, fuzzy
+#| msgid "Edit Recipe"
+msgctxt "@title"
+msgid "Edit Recipe"
+msgstr "रेसिपि संपादित करें"
+
+#: dialogs/similarcategoriesdialog.cpp:382
+#, fuzzy
+#| msgid "No categories selected to merge."
+msgctxt "@info"
+msgid "No categories selected to merge."
+msgstr "मिलाने के लिए वर्ग चुना नहीं गया है."
+
+#: dialogs/selectrecipedialog.cpp:81 widgets/krelistview.cpp:55
+#, fuzzy
+#| msgid "Search:"
+msgctxt "@label:textbox Search recipes"
+msgid "Search:"
+msgstr "ढूंढें:"
+
+#: dialogs/selectrecipedialog.cpp:100
+#, fuzzy
+#| msgid "Show recipe"
+msgctxt "@action:button"
+msgid "Show Recipe(s)"
+msgstr "रेसिपि दिखाएँ"
+
+#: dialogs/selectrecipedialog.cpp:104
+#, fuzzy
+#| msgid "Edit Recipe"
+msgctxt "@action:button"
+msgid "Edit Recipe"
+msgstr "रेसिपि संपादित करें"
+
+#: dialogs/selectrecipedialog.cpp:113
+#, fuzzy
+#| msgid "Basic"
+msgctxt "@title:tab Basic search"
+msgid "Basic"
+msgstr "मूल"
+
+#: dialogs/selectrecipedialog.cpp:116
+#, fuzzy
+#| msgid "Advanced"
+msgctxt "@title:tab Advanced search"
+msgid "Advanced"
+msgstr "विस्तृत"
+
+#: dialogs/borderdialog.cpp:35
+#, fuzzy
+#| msgid "Choose Property"
+msgctxt "@title:window"
+msgid "Choose Border"
+msgstr "गुण चुनें"
+
+#: dialogs/borderdialog.cpp:131
+#, fuzzy
+#| msgid "Requested Border"
+msgctxt "@title:group"
+msgid "Requested Border"
+msgstr "निवेदित किनारा"
+
+#: dialogs/borderdialog.cpp:132
+#, fuzzy
+#| msgid "Style:"
+msgctxt "@label:textbox Border style"
+msgid "Style:"
+msgstr "शैली:"
+
+#: dialogs/borderdialog.cpp:133
+#, fuzzy
+#| msgid "Color:"
+msgctxt "@label:textbox Border color"
+msgid "Color:"
+msgstr "रंगः"
+
+#: dialogs/borderdialog.cpp:134
+#, fuzzy
+#| msgid "Width:"
+msgctxt "@label:textbox Border width"
+msgid "Width:"
+msgstr "चौडाईः"
+
+#: dialogs/borderdialog.cpp:206
+#, fuzzy
+#| msgid "None"
+msgctxt "@item:inlistbox Border type none"
+msgid "None"
+msgstr "कुछ नहीं"
+
+#: dialogs/borderdialog.cpp:207
+#, fuzzy
+#| msgctxt "See http://krecipes.sourceforge.net/bordertypes.png for an example"
+#| msgid "Dotted"
+msgctxt ""
+"@item:inlistbox See http://krecipes.sourceforge.net/bordertypes.png for an "
+"example"
+msgid "Dotted"
+msgstr "बिंदुमय"
+
+#: dialogs/borderdialog.cpp:208
+#, fuzzy
+#| msgctxt "See http://krecipes.sourceforge.net/bordertypes.png for an example"
+#| msgid "Dashed"
+msgctxt ""
+"@item:inlistbox See http://krecipes.sourceforge.net/bordertypes.png for an "
+"example"
+msgid "Dashed"
+msgstr "डेश्ड"
+
+#: dialogs/borderdialog.cpp:209
+#, fuzzy
+#| msgctxt "See http://krecipes.sourceforge.net/bordertypes.png for an example"
+#| msgid "Solid"
+msgctxt ""
+"@item:inlistbox See http://krecipes.sourceforge.net/bordertypes.png for an "
+"example"
+msgid "Solid"
+msgstr "ठोस"
+
+#: dialogs/borderdialog.cpp:210
+#, fuzzy
+#| msgctxt "See http://krecipes.sourceforge.net/bordertypes.png for an example"
+#| msgid "Double"
+msgctxt ""
+"@item:inlistbox See http://krecipes.sourceforge.net/bordertypes.png for an "
+"example"
+msgid "Double"
+msgstr "दोगुना"
+
+#: dialogs/borderdialog.cpp:211
+#, fuzzy
+#| msgctxt "See http://krecipes.sourceforge.net/bordertypes.png for an example"
+#| msgid "Groove"
+msgctxt ""
+"@item:inlistbox See http://krecipes.sourceforge.net/bordertypes.png for an "
+"example"
+msgid "Groove"
+msgstr "ग्रूव"
+
+#: dialogs/borderdialog.cpp:212
+#, fuzzy
+#| msgctxt "See http://krecipes.sourceforge.net/bordertypes.png for an example"
+#| msgid "Ridge"
+msgctxt ""
+"@item:inlistbox See http://krecipes.sourceforge.net/bordertypes.png for an "
+"example"
+msgid "Ridge"
+msgstr "रिज़"
+
+#: dialogs/borderdialog.cpp:213
+#, fuzzy
+#| msgctxt "See http://krecipes.sourceforge.net/bordertypes.png for an example"
+#| msgid "Inset"
+msgctxt ""
+"@item:inlistbox See http://krecipes.sourceforge.net/bordertypes.png for an "
+"example"
+msgid "Inset"
+msgstr "इनसेट"
+
+#: dialogs/borderdialog.cpp:214
+#, fuzzy
+#| msgctxt "See http://krecipes.sourceforge.net/bordertypes.png for an example"
+#| msgid "Outset"
+msgctxt ""
+"@item:inlistbox See http://krecipes.sourceforge.net/bordertypes.png for an "
+"example"
+msgid "Outset"
+msgstr "आउटसेट"
+
+#: dialogs/borderdialog.cpp:229
+msgid "Border Preview"
+msgstr "किनारा पूर्वावलोकन"
+
+#: dialogs/dietviewdialog.cpp:24
+#, fuzzy
+#| msgid "View Recipe"
+msgctxt "@title:window"
+msgid "View Diet"
+msgstr "रेसिपि देखें"
+
+#: dialogs/dietviewdialog.cpp:33
+#, fuzzy
+#| msgid "Create &Shopping List"
+msgctxt "@action:button"
+msgid "Create &Shopping List"
+msgstr "खरीदारी सूची बनाएँ (&S)"
+
+#: dialogs/dietviewdialog.cpp:59 dialogs/dietviewdialog.cpp:78
+msgid "Diet"
+msgstr "आहार"
+
+#: dialogs/dietviewdialog.cpp:98
+#, kde-format
+msgid "Day %1"
+msgstr "दिन %1"
+
+#: dialogs/createunitdialog.cpp:27
+#, fuzzy
+#| msgid "New Unit"
+msgctxt "@title:window"
+msgid "New Unit"
+msgstr "नई इकाई"
+
+#: dialogs/createunitdialog.cpp:27
+#, fuzzy
+#| msgid "Unit"
+msgctxt "@title:window"
+msgid "Unit"
+msgstr "इकाई"
+
+#: dialogs/createunitdialog.cpp:37
+#, fuzzy
+#| msgid "New Unit"
+msgctxt "@title:group"
+msgid "New Unit"
+msgstr "नई इकाई"
+
+#: dialogs/createunitdialog.cpp:37
+#, fuzzy
+#| msgid "Unit"
+msgctxt "@title:group"
+msgid "Unit"
+msgstr "इकाई"
+
+#: dialogs/createunitdialog.cpp:41
+#, fuzzy
+#| msgid "Singular:"
+msgctxt "@label:textbox Single unit name"
+msgid "Singular:"
+msgstr "एक वचन:"
+
+#: dialogs/createunitdialog.cpp:45
+#, fuzzy
+#| msgid "Abbreviation:"
+msgctxt "@label:textbox Single unit abbreviation"
+msgid "Singular Abbreviation:"
+msgstr "संक्षिप्त:"
+
+#: dialogs/createunitdialog.cpp:49
+#, fuzzy
+#| msgid "Plural:"
+msgctxt "@label:textbox Plural unit name"
+msgid "Plural:"
+msgstr "बहुवचन:"
+
+#: dialogs/createunitdialog.cpp:53
+#, fuzzy
+#| msgid "Abbreviation:"
+msgctxt "@label:textbox Plural unit abbreviation"
+msgid "Plural Abbreviation:"
+msgstr "संक्षिप्त:"
+
+#: dialogs/createunitdialog.cpp:56 widgets/unitlistview.cpp:80
+#, fuzzy
+#| msgid "Other"
+msgctxt "@item:inlistbox Unit type other"
+msgid "Other"
+msgstr "अन्य"
+
+#: dialogs/createunitdialog.cpp:57 widgets/unitlistview.cpp:81
+#, fuzzy
+#| msgid "Mass"
+msgctxt "@item:inlistbox Unit type mass"
+msgid "Mass"
+msgstr "द्रव्यमान"
+
+#: dialogs/createunitdialog.cpp:58 widgets/unitlistview.cpp:82
+#, fuzzy
+#| msgid "Volume"
+msgctxt "@item:inlistbox Unit type volume"
+msgid "Volume"
+msgstr "आवाज़ निर्धारक"
+
+#: dialogs/createunitdialog.cpp:62
+#, fuzzy
+#| msgid "Type:"
+msgctxt "@label:textbox Unit Type"
+msgid "Type:"
+msgstr "क़िस्मः"
+
+#: dialogs/selectunitdialog.cpp:25
+#, fuzzy
+#| msgid "Choose Unit"
+msgctxt "@title:window"
+msgid "Choose Unit"
+msgstr "इकाई चुनें"
+
+#: dialogs/selectunitdialog.cpp:31
+#, fuzzy
+#| msgid "Choose Unit"
+msgctxt "@title:group"
+msgid "Choose Unit"
+msgstr "इकाई चुनें"
+
+#: importers/mmfimporter.cpp:70 importers/rezkonvimporter.cpp:51
+#: importers/mxpimporter.cpp:55
+msgid "No recipes found in this file."
+msgstr "इस फ़ाइल में कोई रेसिपि नहीं मिली."
+
+#: importers/mmfimporter.cpp:73 importers/nycgenericimporter.cpp:46
+#: importers/rezkonvimporter.cpp:54 importers/recipemlimporter.cpp:61
+#: importers/mxpimporter.cpp:58 importers/mx2importer.cpp:85
+msgid "Unable to open file."
+msgstr "फ़ाइल खोलने में अक्षम."
+
+#: importers/mmfimporter.cpp:142
+#, kde-format
+msgid ""
+"While loading recipe <b>%1</b> an ingredient line was found after the "
+"directions. While this is valid, it most commonly indicates an incorrectly "
+"formatted recipe."
+msgstr ""
+
+#: importers/mmfimporter.cpp:310 importers/mxpimporter.cpp:103
+#: importers/mxpimporter.cpp:252 importers/mx2importer.cpp:100
+msgid "servings"
+msgstr "परोसना"
+
+#: importers/kreimporter.cpp:48
+msgid "Archive does not contain a valid Krecipes file"
+msgstr "अभिलेख में वैध के-रेसिपि फ़ाइल नहीं है"
+
+#: importers/kreimporter.cpp:69
+#, kde-format
+msgid "\"%1\" at line %2, column %3"
+msgstr "\"%1\" पंक्ति %2 पर, स्तम्भ %3"
+
+#: importers/kreimporter.cpp:76
+msgid "This file does not appear to be a *.kreml file"
+msgstr "फ़ाइल *.kreml फ़ाइल जैसा प्रतीत नहीं होता है"
+
+#: importers/kreimporter.cpp:82
+#, kde-format
+msgid "KreML version %1"
+msgstr "के-आरईएमएल संस्करण %1"
+
+#: importers/nycgenericimporter.cpp:41
+msgid "File does not appear to be a valid NYC export."
+msgstr "फ़ाइल वैध एनवायसी निर्यात जैसा प्रतीत नहीं होता है."
+
+#: importers/recipemlimporter.cpp:33
+#, kde-format
+msgid "\"%1\" at line %2, column %3.  This may not be a RecipeML file."
+msgstr "\"%1\" पंक्ति %2 पर, स्तम्भ %3 पर. शायद यह रेसिपि-एमएल फ़ाइल नहीं है."
+
+#: importers/recipemlimporter.cpp:40
+msgid "This file does not appear to be a valid RecipeML archive."
+msgstr "फ़ाइल वैध रेसिपि-एमएल अभिलेख जैसा प्रतीत नहीं होता है."
+
+#: importers/mxpimporter.cpp:87
+#, kde-format
+msgid ""
+"While loading recipe \"%1\" the field \"Recipe By:\" is either missing or "
+"could not be detected."
+msgstr ""
+
+#: importers/mxpimporter.cpp:107
+#, kde-format
+msgid ""
+"While loading recipe \"%1\" the field \"Serving Size:\" is either missing or "
+"could not be detected."
+msgstr ""
+
+#: importers/mxpimporter.cpp:118
+#, kde-format
+msgid ""
+"While loading recipe \"%1\" the field \"Preparation Time:\" is either "
+"missing or could not be detected."
+msgstr ""
+
+#: importers/mxpimporter.cpp:162
+#, kde-format
+msgid ""
+"While loading recipe \"%1\" the field \"Categories:\" is either missing or "
+"could not be detected."
+msgstr ""
+
+#: importers/mxpimporter.cpp:189
+#, kde-format
+msgid "While loading recipe \"%1\" Invalid amount \"%2\" in the line \"%3\""
+msgstr "रेसिपि \"%1\" को लोड करने के दौरान अवैध मात्रा \"%2\" पंक्ति \"%3\" में"
+
+#: importers/mxpimporter.cpp:353
+msgid ""
+"MasterCook's Generic Export format is currently not supported.  Please write "
+"to jkivlighn@gmail.com to request support for this format."
+msgstr ""
+
+#: importers/mxpimporter.cpp:359
+msgid ""
+"MasterCook Mac's Export format is currently not supported.  Please write to "
+"jkivlighn@gmail.com to request support for this format."
+msgstr ""
+
+#: importers/mx2importer.cpp:54
+#, kde-format
+msgid "\"%1\" at line %2, column %3.  This may not be a *.mx2 file."
+msgstr "\"%1\" पंक्ति %2 पर, स्तम्भ %3 पर. शायद यह *.mx2 फ़ाइल नहीं है."
+
+#: importers/mx2importer.cpp:62
+msgid "This file does not appear to be a *.mx2 file"
+msgstr "फ़ाइल *.mx2 फ़ाइल जैसा प्रतीत नहीं होता है"
+
+#: importers/baseimporter.cpp:99 importers/baseimporter.cpp:122
+msgid "Importing selected recipes"
+msgstr "चयनित रेसिपि आयात की जा रही है"
+
+#: importers/baseimporter.cpp:125
+msgid "%v/%m Recipes"
+msgstr "%v/%m रेसिपि"
+
+#: importers/baseimporter.cpp:218
+msgid "All recipes up unto this point have been successfully imported."
+msgstr "इस बिंदु तक की सभी रेसिपि सफलतापूर्वक आयात की गई."
+
+#: importers/baseimporter.cpp:227
+#, kde-format
+msgid "Importing recipe: %1"
+msgstr "रेसिपि: %1 आयात किया जा रहा है"
+
+#: importers/baseimporter.cpp:382
+#, kde-format
+msgid ""
+"<!doc>Import of recipes from the file <b>\"%1\"</b> <b>failed</b> due to the "
+"following error(s):"
+msgstr ""
+"<!doc>फ़ाइल <b>\"%1\"</b> से रेसिपि आयात करने में <b>असफल</b> निम्न कारणों की वज़ह से:"
+
+#: importers/baseimporter.cpp:389
+#, kde-format
+msgid "The file <b>%1</b> generated the following warning(s):"
+msgstr "फ़ाइल <b>%1</b> ने निम्न चेतावनियाँ दीं:"
+
+#: widgets/prepmethodlistview.cpp:52
+msgid "Preparation Method"
+msgstr "बनाने की विधि"
+
+#: widgets/recipelistview.cpp:32
+msgid "Uncategorized"
+msgstr "अ-वर्गीकृत"
+
+#: widgets/recipelistview.cpp:101
+msgid "Recipe"
+msgstr "रेसिपि"
+
+#: widgets/recipelistview.cpp:149 krecipesview.cpp:813
+#, fuzzy
+#| msgid "Created:"
+msgctxt "Recipe created"
+msgid "Created:"
+msgstr "सृजितः"
+
+#: widgets/recipelistview.cpp:150 krecipesview.cpp:814
+#, fuzzy
+#| msgid "Modified:"
+msgctxt "Recipe modified"
+msgid "Modified:"
+msgstr "परिवर्धितः"
+
+#: widgets/recipelistview.cpp:151 krecipesview.cpp:815
+#, fuzzy
+#| msgid "Last Accessed:"
+msgctxt "Recipe last accessed"
+msgid "Last Accessed:"
+msgstr "पिछली मर्तबा एक्सेस्डः"
+
+#: widgets/recipelistview.cpp:236
+msgid "Loading recipes"
+msgstr "रेसिपि लोड किया जा रहा है"
+
+#: widgets/categorylistview.cpp:312 widgets/categorylistview.cpp:379
+msgid "Category"
+msgstr "श्रेणी"
+
+#: widgets/kremenu.cpp:130
+#, fuzzy
+#| msgid "Up..."
+msgctxt "@action:button Up to top menu"
+msgid "Up..."
+msgstr "ऊपर..."
+
+#: widgets/weightinput.cpp:23
+msgid "-No Preparation-"
+msgstr "-कोई तैयारी नहीं-"
+
+#: widgets/kdatepickerpopup.cpp:96
+#, fuzzy
+#| msgid "&Today"
+msgctxt "@option today"
+msgid "&Today"
+msgstr "आज (&T)"
+
+#: widgets/kdatepickerpopup.cpp:97
+#, fuzzy
+#| msgid "tomorrow"
+msgctxt "@option tomorrow"
+msgid "To&morrow"
+msgstr "कल"
+
+#: widgets/kdatepickerpopup.cpp:98
+#, fuzzy
+#| msgid "Last &Week"
+msgctxt "@option next week"
+msgid "Next &Week"
+msgstr "पिछले सप्ताह (&W)"
+
+#: widgets/kdatepickerpopup.cpp:99
+#, fuzzy
+#| msgid "Last M&onth"
+msgctxt "@option next month"
+msgid "Next M&onth"
+msgstr "पिछले माह (&o)"
+
+#: widgets/kdatepickerpopup.cpp:107
+#, fuzzy
+#| msgid "No Date"
+msgctxt "@option do not specify a date"
+msgid "No Date"
+msgstr "कोई तारीख़ नहीं"
+
+#: widgets/unitlistview.h:104
+#, fuzzy
+#| msgid "Other"
+msgctxt "Unit type other"
+msgid "Other"
+msgstr "अन्य"
+
+#: widgets/unitlistview.h:105
+#, fuzzy
+#| msgid "Mass"
+msgctxt "Unit type mass"
+msgid "Mass"
+msgstr "द्रव्यमान"
+
+#: widgets/unitlistview.h:106
+#, fuzzy
+#| msgid "Volume"
+msgctxt "Unit type volume"
+msgid "Volume"
+msgstr "आवाज़ निर्धारक"
+
+#: widgets/ingredientinputwidget.cpp:48 widgets/ingredientinputwidget.cpp:59
+msgid "Ingredient:"
+msgstr "संघटक:"
+
+#: widgets/ingredientinputwidget.cpp:52
+msgctxt "Ingredient grouping name"
+msgid "Header:"
+msgstr "हेडर:"
+
+#: widgets/ingredientinputwidget.cpp:76
+msgid "Amount:"
+msgstr "मात्राः"
+
+#: widgets/ingredientinputwidget.cpp:83
+msgid "Unit:"
+msgstr "इकाईः"
+
+#: widgets/ingredientinputwidget.cpp:91
+msgid "Preparation Method:"
+msgstr "बनाने की विधियाँ:"
+
+#: widgets/ingredientinputwidget.cpp:239
+msgid "Please enter an ingredient"
+msgstr "कृपया कोई सामग्री भरें"
+
+#: widgets/ingredientinputwidget.cpp:286
+msgid "Amount field contains invalid input."
+msgstr "मात्रा फ़ील्ड में अवैध इनपुट है."
+
+#: widgets/ingredientinputwidget.cpp:287
+msgid "Invalid input"
+msgstr "अवैध इनपुट"
+
+#: widgets/headerlistview.cpp:55
+msgid "Header"
+msgstr "शीर्षक"
+
+#: widgets/kreruler.cpp:755
+msgid "Top margin"
+msgstr "ऊपरी हाशिया"
+
+#: widgets/kreruler.cpp:759
+msgid "Bottom margin"
+msgstr "निचला हाशिया"
+
+#: widgets/kreruler.cpp:873
+msgid "Page Layout..."
+msgstr "पृष्ठ ले-आउट..."
+
+#: widgets/kreruler.cpp:876
+msgid "Remove Tabulator"
+msgstr "टेबुलेटर मिटाएँ"
+
+#: widgets/kdateedit.cpp:368
+#, fuzzy
+#| msgid "tomorrow"
+msgctxt "the day after today"
+msgid "tomorrow"
+msgstr "कल"
+
+#: widgets/kdateedit.cpp:369
+#, fuzzy
+#| msgid "&Today"
+msgctxt "this day"
+msgid "today"
+msgstr "आज (&T)"
+
+#: widgets/kdateedit.cpp:370
+#, fuzzy
+#| msgid "yesterday"
+msgctxt "the day before today"
+msgid "yesterday"
+msgstr "कल"
+
+#: widgets/categorycombobox.cpp:36 widgets/categorycombobox.cpp:63
+msgid "All Categories"
+msgstr "सभी वर्ग"
+
+#: widgets/unitlistview.cpp:62
+#, fuzzy
+#| msgid "Unit"
+msgctxt "@title:column Unit name"
+msgid "Unit"
+msgstr "इकाई"
+
+#: widgets/unitlistview.cpp:63
+#, fuzzy
+#| msgid "Abbreviation"
+msgctxt "@title:column Unit abbreviation"
+msgid "Abbreviation"
+msgstr "संक्षिप्त"
+
+#: widgets/unitlistview.cpp:64
+#, fuzzy
+#| msgid "Plural"
+msgctxt "@title:column Unit plural"
+msgid "Plural"
+msgstr "बहुवचन"
+
+#: widgets/unitlistview.cpp:65
+#, fuzzy
+#| msgid "Abbreviation"
+msgctxt "@title:column unit plural abbreviation"
+msgid "Abbreviation"
+msgstr "संक्षिप्त"
+
+#: widgets/unitlistview.cpp:66
+#, fuzzy
+#| msgid "Type"
+msgctxt "@title:column Unit type"
+msgid "Type"
+msgstr "क़िस्म"
+
+#: widgets/dblistviewbase.cpp:33
+#, fuzzy
+#| msgid "Previous"
+msgctxt "Previous item"
+msgid "Previous"
+msgstr "पिछला"
+
+#: widgets/dblistviewbase.cpp:49
+#, fuzzy
+#| msgid "Next"
+msgctxt "Next item"
+msgid "Next"
+msgstr "अगला"
+
+#: widgets/propertylistview.cpp:130 widgets/propertylistview.cpp:164
+msgid "Property"
+msgstr "गुण"
+
+#: widgets/propertylistview.cpp:131 krecipesview.cpp:375 krecipesview.cpp:485
+#: pref.cpp:419
+msgid "Units"
+msgstr "इकाईयाँ"
+
+#: widgets/propertylistview.cpp:163
+msgid "Enabled"
+msgstr "सक्षम"
+
+#: widgets/propertylistview.cpp:165
+msgid "Min. Value"
+msgstr "न्यून. मान"
+
+#: widgets/propertylistview.cpp:166
+msgid "Max. Value"
+msgstr "अधि. मान"
+
+#: widgets/authorlistview.cpp:53 widgets/authorlistview.cpp:113
+msgid "Author"
+msgstr "लेखक"
+
+#: backends/SQLite/literecipedb.cpp:750 backends/MySQL/mysqlrecipedb.cpp:471
+#, fuzzy
+#| msgid "Overall"
+msgctxt "Overall rating"
+msgid "Overall"
+msgstr "कुल मिलाकर"
+
+#: backends/SQLite/literecipedb.cpp:751
+#: backends/PostgreSQL/psqlrecipedb.cpp:390
+#: backends/MySQL/mysqlrecipedb.cpp:472
+msgid "Taste"
+msgstr "स्वाद"
+
+#: backends/SQLite/literecipedb.cpp:752
+#: backends/PostgreSQL/psqlrecipedb.cpp:391
+#: backends/MySQL/mysqlrecipedb.cpp:473
+msgid "Appearance"
+msgstr "रूप"
+
+#: backends/SQLite/literecipedb.cpp:753
+#: backends/PostgreSQL/psqlrecipedb.cpp:392
+#: backends/MySQL/mysqlrecipedb.cpp:474
+msgid "Originality"
+msgstr "मौलिकता"
+
+#: backends/SQLite/literecipedb.cpp:754
+#: backends/PostgreSQL/psqlrecipedb.cpp:393
+#: backends/MySQL/mysqlrecipedb.cpp:475
+msgid "Ease of Preparation"
+msgstr "बनाने में आसानी"
+
+#: backends/PostgreSQL/psqlrecipedb.cpp:389
+#, fuzzy
+#| msgid "Overall"
+msgctxt "Overall Rating"
+msgid "Overall"
+msgstr "कुल मिलाकर"
+
+#: backends/recipedb.cpp:311
+msgid "Creating complete backup"
+msgstr "पूर्ण बैकअप बनाया जा रहा है"
+
+#: backends/recipedb.cpp:312 backends/recipedb.cpp:484
+msgid ""
+"Depending on the number of recipes and amount of data, this could take some "
+"time."
+msgstr ""
+
+#: backends/recipedb.cpp:333 backends/recipedb.cpp:491
+#, kde-format
+msgid ""
+"Unable to find or run the program '%1'.  Either it is not installed on your "
+"system or it is not in $PATH."
+msgstr ""
+
+#: backends/recipedb.cpp:358
+msgid "Backup failed."
+msgstr "बैकअप असफल."
+
+#: backends/recipedb.cpp:447
+msgid ""
+"This backup was created with a newer version of Krecipes and cannot be "
+"restored."
+msgstr ""
+
+#: backends/recipedb.cpp:456
+msgid "This file is not a Krecipes backup file or has become corrupt."
+msgstr ""
+
+#: backends/recipedb.cpp:461
+#, kde-format
+msgid ""
+"This backup was created using the \"%1\" backend.  It can only be restored "
+"into a database using this backend."
+msgstr ""
+
+#: backends/recipedb.cpp:483
+msgid "Restoring backup"
+msgstr "बैकअप बहाल किया जा रहा है"
+
+#: backends/recipedb.cpp:538 krecipes.cpp:722
+msgid "Restore Failed"
+msgstr "बहाली असफल"
+
+#: backends/recipedb.cpp:921
+msgid "Nutrient Import"
+msgstr "न्यूट्रिएंट आयात करें"
+
+#: backends/recipedb.cpp:921
+msgid "Importing USDA nutrient data"
+msgstr "यूएसडीए न्यूट्रिएंट डाटा आयात की जा रही है"
+
+#: backends/qsqlrecipedb.cpp:68
+msgid "QSqlRecipeDB: Opening Database..."
+msgstr "क्यूएसक्यूएल-रेसिपि-डीबी: डाटाबेस खोला जा रहा है..."
+
+#: backends/qsqlrecipedb.cpp:86
+#, kde-format
+msgid ""
+"The Qt database plug-in (%1) is not installed.  This plug-in is required for "
+"using this database backend."
+msgstr ""
+
+#: backends/qsqlrecipedb.cpp:116
+msgid "Parameters set. Calling db->open()"
+msgstr "पैरामीटर्स सेट. कालिंग db->open()"
+
+#: backends/qsqlrecipedb.cpp:122
+msgid "Failing to open database. Trying to create it"
+msgstr "डाटाबेस खोलने में असफल. इसे बनाने की कोशिश की जा रही है"
+
+#: backends/qsqlrecipedb.cpp:128 backends/qsqlrecipedb.cpp:143
+#, kde-format
+msgid "Krecipes could not open the \"%1\" database."
+msgstr ""
+
+#: backends/qsqlrecipedb.cpp:131 backends/qsqlrecipedb.cpp:146
+#, kde-format
+msgid ""
+"Krecipes could not open the database using the driver '%2' (with username: "
+"\"%1\"). You may not have the necessary permissions, or the server may be "
+"down."
+msgstr ""
+
+#: backends/qsqlrecipedb.cpp:139
+#, kde-format
+msgid "Database message: %1"
+msgstr "डाटाबेस संदेश: %1"
+
+#: backends/qsqlrecipedb.cpp:140
+msgid "Failing to open database. Exiting\n"
+msgstr "डाटाबेस खोलने में असफल. बाहर होते हैं\n"
+
+#: backends/qsqlrecipedb.cpp:155
+msgid ""
+"This database was created with a newer version of Krecipes and cannot be "
+"opened."
+msgstr ""
+
+#: backends/qsqlrecipedb.cpp:164
+#, fuzzy
+#| msgid "Porting database structure..."
+msgid "Failed to fix database structure."
+msgstr "डाटाबेस स्ट्रक्चर पोर्ट किया जा रहा है..."
+
+#: backends/qsqlrecipedb.cpp:1799
+#, kde-format
+msgid "In ingredient '%1': weight [%2/%3%4]"
+msgstr "सामग्री '%1' में: भार [%2/%3%4]"
+
+#: backends/qsqlrecipedb.cpp:1849
+#, kde-format
+msgid "In ingredient '%1': property \"%2\" [%3/%4]"
+msgstr "सामग्री '%1' में: गुण \"%2\" [%3/%4]"
+
+#: backends/qsqlrecipedb.cpp:2015
+msgctxt "@info"
+msgid ""
+"<p>The database was created with a previous version of Krecipes. Would you "
+"like Krecipes to update this database to work with this version of "
+"Krecipes?  Depending on the number of recipes and amount of data, this could "
+"take some time.</p><warning><p>After updating, this database will no longer "
+"be compatible with previous versions of Krecipes.</p><p>Cancelling this "
+"operation may result in corrupting the database.</p></warning>"
+msgstr ""
+
+#: backends/qsqlrecipedb.cpp:2025
+msgid "Porting database structure..."
+msgstr "डाटाबेस स्ट्रक्चर पोर्ट किया जा रहा है..."
+
+#: backends/qsqlrecipedb.cpp:2100
+msgid "Loading category list"
+msgstr "श्रेणी सूची लोड की जा रही है"
+
+#: krecipes.cpp:122
+msgid ""
+"Gathering recipe data from file.\n"
+"Please wait..."
+msgstr ""
+"फ़ाइल से रेसिपि डाटा प्राप्त की जा रही है.\n"
+" कृपया इंतजार करें..."
+
+#: krecipes.cpp:195
+#, fuzzy
+#| msgid "Reloa&d"
+msgctxt "@action:inmenu Reload Recipe"
+msgid "Reloa&d"
+msgstr "फिर से लोड करें (&d)"
+
+#: krecipes.cpp:202
+#, fuzzy
+#| msgid "&Edit Recipes"
+msgid "&Edit Recipe"
+msgstr "रेसिपि संपादित करें (&E)"
+
+#: krecipes.cpp:209
+msgid "&Measurement Converter"
+msgstr "मापक परिवर्तक (&M)"
+
+#: krecipes.cpp:220
+msgid "&Merge Similar Categories..."
+msgstr "एक जैसे वर्गों को मिलाएं... (&M)"
+
+#: krecipes.cpp:227
+msgid "&Merge Similar Ingredients..."
+msgstr "एक जैसी सामग्रियों को मिलाएं... (&M)"
+
+#: krecipes.cpp:235
+msgid "&New Recipe"
+msgstr "नई रेसिपि (&N)"
+
+#: krecipes.cpp:248
+msgid "Import from File..."
+msgstr "फ़ाइल से आयात करें..."
+
+#: krecipes.cpp:255
+msgid "Import from Database..."
+msgstr "डाटाबेस से आयात करें..."
+
+#: krecipes.cpp:261
+msgid "Export..."
+msgstr "निर्यात..."
+
+#: krecipes.cpp:268
+msgid "&Copy to Clipboard"
+msgstr "क्लिपबोर्ड पर नकल बनाएँ (&C)"
+
+#: krecipes.cpp:276
+msgid "Page Setup..."
+msgstr "पृष्ठ सेटअप..."
+
+#: krecipes.cpp:282
+msgid "Print Setup..."
+msgstr "छपाई सेटअप..."
+
+#: krecipes.cpp:288
+msgid "Backup..."
+msgstr "बैकअप..."
+
+#: krecipes.cpp:294
+msgid "Restore..."
+msgstr "बहाल करें..."
+
+#: krecipes.cpp:300
+#, fuzzy
+#| msgid "&Add to Shopping List"
+msgid "Add to Shopping List"
+msgstr "खरीदारी सूची में जोड़ें (&A)"
+
+#: krecipes.cpp:307
+#, fuzzy
+#| msgid "&Remove From Category"
+msgid "Remove From Category"
+msgstr "वर्ग से मिटाएँ (&R)"
+
+#: krecipes.cpp:314
+msgid "Delete"
+msgstr "मिटाएँ"
+
+#: krecipes.cpp:321
+#, fuzzy
+#| msgid "Show recipe"
+msgid "Show Recipe(s)"
+msgstr "रेसिपि दिखाएँ"
+
+#: krecipes.cpp:328
+#, fuzzy
+#| msgid "Categories"
+msgid "Categorize"
+msgstr "श्रेणियाँ"
+
+#: krecipes.cpp:335
+#, fuzzy
+#| msgid "&Expand All"
+msgid "Expand All"
+msgstr "सभी फैलाएँ (&E)"
+
+#: krecipes.cpp:341
+#, fuzzy
+#| msgid "&Collapse All"
+msgid "Collapse All"
+msgstr "सभी समेटें (&C)"
+
+#: krecipes.cpp:348
+#, fuzzy
+#| msgid "&Create"
+msgctxt "@action:button Create new data item"
+msgid "Create New"
+msgstr "बनाएँ (&C)"
+
+#: krecipes.cpp:355
+#, fuzzy
+#| msgid "&Rename"
+msgid "Rename"
+msgstr "नाम बदलें (&R)"
+
+#: krecipes.cpp:363
+#, fuzzy
+#| msgid "Cu&t"
+msgid "Cut"
+msgstr "काटें (&t)"
+
+#: krecipes.cpp:371
+#, fuzzy
+#| msgid "&Paste"
+msgid "Paste"
+msgstr "चिपकाएँ (&P)"
+
+#: krecipes.cpp:378
+msgid "Paste as Subcategory"
+msgstr "उपवर्ग जैसे चिपकाएँ"
+
+#: krecipes.cpp:508
+msgid "MasterCook Export format"
+msgstr ""
+
+#: krecipes.cpp:509
+msgid "\"Now You're Cooking\" Generic Export format"
+msgstr ""
+
+#: krecipes.cpp:514
+#, fuzzy
+#| msgid "Import from File..."
+msgid "Import from file"
+msgstr "फ़ाइल से आयात करें..."
+
+#: krecipes.cpp:539
+#, kde-format
+msgid ""
+"Filter \"%1\" not recognized.\n"
+"Please select one of the provided filters."
+msgstr ""
+"फ़िल्टर \"%1\" अज्ञात है.\n"
+"दिए गए फ़िल्टर में से एक चुनें."
+
+#: krecipes.cpp:541
+msgid "Unrecognized Filter"
+msgstr "अज्ञात फ़िल्टर"
+
+#: krecipes.cpp:573
+msgid ""
+"<p>NOTE: We recommend that all recipes generating warnings be checked to "
+"ensure that they were properly imported, and no loss of recipe data has "
+"occurred.</p>"
+msgstr ""
+
+#: krecipes.cpp:578
+#, fuzzy
+#| msgid "Import Recipes"
+msgid "Import Warnings"
+msgstr "रेसिपि आयात करें"
+
+#: krecipes.cpp:651 krecipes.cpp:670
+msgid ""
+"The recipe print and view layouts use the same file for their style, meaning "
+"changing one view's look changes them both.  If this is not the behavior you "
+"desire, load one style and save it under a different name."
+msgstr ""
+
+#: krecipes.cpp:675
+#, fuzzy
+#| msgid "Print Setup..."
+msgid "Print Setup"
+msgstr "छपाई सेटअप..."
+
+#: krecipes.cpp:689
+msgid "Save Backup As..."
+msgstr "बैकअप ऐसे सहेजें..."
+
+#: krecipes.cpp:702
+msgid "Backup Failed"
+msgstr "बैकअप असफल"
+
+#: krecipes.cpp:709
+msgid "Krecipes Backup File"
+msgstr "केरेसिपि बैकअप फ़ाइल"
+
+#: krecipes.cpp:710
+msgid "Restore Backup"
+msgstr "बैकअप बहाल करें"
+
+#: krecipes.cpp:713
+msgid ""
+"<b>Restoring this file will erase ALL data currently in the database.</"
+"b><br /><br />If you want to keep the recipes in your database, click "
+"\"Cancel\" and first export your recipes.  These can then be imported once "
+"the restore is complete.<br /><br />Are you sure you want to proceed?"
+msgstr ""
+
+#: krecipes.cpp:720
+msgid "Restore successful."
+msgstr "बहाली सफल."
+
+#: krecipes.cpp:786
+msgid ""
+"A recipe contains unsaved changes.\n"
+"Do you want to save the changes before exiting?"
+msgstr ""
+"रेसिपि में परिवर्तन हैं जो सहेजे नहीं गए हैं.\n"
+"क्या आप बाहर होने से पहले परिवर्तनों को सहेजना चाहते हैं?"
+
+#: krecipes.cpp:788
+msgid "Unsaved Changes"
+msgstr "सहेजा नहीं गया परिवर्तन"
+
+#: krepagelayout.cpp:114
+msgid "ISO A3"
+msgstr "आईएसओ ए3"
+
+#: krepagelayout.cpp:115
+msgid "ISO A4"
+msgstr "आईएसओ ए4"
+
+#: krepagelayout.cpp:116
+msgid "ISO A5"
+msgstr "आईएसओ A5"
+
+#: krepagelayout.cpp:117
+msgid "US Letter"
+msgstr "यूएस पत्र"
+
+#: krepagelayout.cpp:118
+msgid "US Legal"
+msgstr "यूएस लीगल"
+
+#: krepagelayout.cpp:119
+msgid "Screen"
+msgstr "स्क्रीन"
+
+#: krepagelayout.cpp:120
+#, fuzzy
+#| msgid "Custom"
+msgctxt "Custom paper size for printing"
+msgid "Custom"
+msgstr "मनपसंद"
+
+#: krepagelayout.cpp:122
+msgid "ISO B5"
+msgstr "आईएसओ बी5"
+
+#: krepagelayout.cpp:124
+msgid "US Executive"
+msgstr "यूएस एक्जीक्यूटिव"
+
+#: krepagelayout.cpp:125
+msgid "ISO A0"
+msgstr "आईएसओ ए0"
+
+#: krepagelayout.cpp:126
+msgid "ISO A1"
+msgstr "आईएसओ ए1"
+
+#: krepagelayout.cpp:127
+msgid "ISO A2"
+msgstr "आईएसओ ए2"
+
+#: krepagelayout.cpp:128
+msgid "ISO A6"
+msgstr "आईएसओ ए6"
+
+#: krepagelayout.cpp:129
+msgid "ISO A7"
+msgstr "आईएसओ ए7"
+
+#: krepagelayout.cpp:130
+msgid "ISO A8"
+msgstr "आईएसओ ए8"
+
+#: krepagelayout.cpp:131
+msgid "ISO A9"
+msgstr "आईएसओ ए9"
+
+#: krepagelayout.cpp:132
+msgid "ISO B0"
+msgstr "आईएसओ बी0"
+
+#: krepagelayout.cpp:133
+msgid "ISO B1"
+msgstr "आईएसओ बी1"
+
+#: krepagelayout.cpp:134
+msgid "ISO B10"
+msgstr "आईएसओ बी10"
+
+#: krepagelayout.cpp:135
+msgid "ISO B2"
+msgstr "आईएसओ बी2"
+
+#: krepagelayout.cpp:136
+msgid "ISO B3"
+msgstr "आईएसओ बी3"
+
+#: krepagelayout.cpp:137
+msgid "ISO B4"
+msgstr "आईएसओ बी4"
+
+#: krepagelayout.cpp:138
+msgid "ISO B6"
+msgstr "आईएसओ बी6"
+
+#: krepagelayout.cpp:139
+msgid "ISO C5"
+msgstr "आईएसओ सी5"
+
+#: krepagelayout.cpp:140
+msgid "US Common 10"
+msgstr "यूएस कॉमन 10"
+
+#: krepagelayout.cpp:141
+msgid "ISO DL"
+msgstr "आईएसओ डीएल"
+
+#: krepagelayout.cpp:142
+msgid "US Folio"
+msgstr "यूएस फोलियो"
+
+#: krepagelayout.cpp:143
+msgid "US Ledger"
+msgstr "यूएस लेजर"
+
+#: krepagelayout.cpp:144
+msgid "US Tabloid"
+msgstr "यूएस टेब्लॉइड"
+
+#: main.cpp:28
+msgid "Convert the current SQLite 2.x database to SQLite 3 and exit"
+msgstr ""
+
+#: main.cpp:32
+msgid "Krecipes"
+msgstr "के-रेसिपि"
+
+#: main.cpp:32
+msgid "The KDE Cookbook"
+msgstr "केडीई कुक-बुक"
+
+#: main.cpp:32
+msgid ""
+"(C) 2003 Unai Garro\n"
+"(C) 2004-2006 Jason Kivlighn"
+msgstr ""
+"(C) 2003 उनाई गारो\n"
+"(C) 2004-2006 जेसन किवलिग्न"
+
+#: main.cpp:32
+msgid ""
+"This product is RecipeML compatible.\n"
+"You can get more information about this file format in:\n"
+"http://www.formatdata.com/recipeml"
+msgstr ""
+
+#: main.cpp:33
+msgid "Unai Garro"
+msgstr "उनाई गारो"
+
+#: main.cpp:34
+msgid "Jason Kivlighn"
+msgstr "जेसन किवलिग्न"
+
+#: main.cpp:35
+msgid "Cyril Bosselut"
+msgstr "सिरिल बोसेलुत"
+
+#: main.cpp:37
+msgid "Colleen Beamer"
+msgstr "कोलीन बीमर"
+
+#: main.cpp:37
+msgid "Testing, bug reports, suggestions"
+msgstr "परीक्षण, बग रपटें तथा सुझाव"
+
+#: main.cpp:38
+msgid "Robert Wadley"
+msgstr "रॉबर्ट वाडले"
+
+#: main.cpp:38
+msgid "Icons and artwork"
+msgstr "प्रतीक तथा कलाकृति"
+
+#: main.cpp:39
+msgid "Daniel Sauvé"
+msgstr "डेनियल सावे"
+
+#: main.cpp:39 main.cpp:41
+msgid "Porting to KDE4"
+msgstr "केडीई ४ में पोर्ट"
+
+#: main.cpp:41
+#, fuzzy
+#| msgid "Last M&onth"
+msgid "Laurent Montel"
+msgstr "पिछले माह (&o)"
+
+#: main.cpp:42
+msgid "José Manuel Santamaría Lema"
+msgstr ""
+
+#: main.cpp:42
+#, fuzzy
+#| msgid "Porting to KDE4"
+msgid "Porting to KDE4, current maintainer"
+msgstr "केडीई ४ में पोर्ट"
+
+#: main.cpp:43
+msgid "Martin Engelmann"
+msgstr ""
+
+#: main.cpp:43
+#, fuzzy
+#| msgid "Porting to KDE4"
+msgid "Porting to KDE4, developer"
+msgstr "केडीई ४ में पोर्ट"
+
+#: main.cpp:45
+msgid "Patrick Spendrin"
+msgstr ""
+
+#: main.cpp:45
+msgid "Patches to make Krecipes work under Windows"
+msgstr ""
+
+#: main.cpp:46
+msgid "Mike Ferguson"
+msgstr ""
+
+#: main.cpp:46
+msgid "Help with bugs, patches"
+msgstr ""
+
+#: main.cpp:47
+msgid "Warren Severin"
+msgstr ""
+
+#: main.cpp:47
+msgid "Code to export recipes to *.mx2 files"
+msgstr ""
+
+#: main.cpp:49
+msgid "Eduardo Robles Elvira"
+msgstr ""
+
+#: main.cpp:50 main.cpp:53
+msgid "He advised using WebKit to fix printing support during Akademy-es 2010."
+msgstr ""
+
+#: main.cpp:52
+msgid "José Millán Soto"
+msgstr ""
+
+#: main.cpp:56
+msgid "INSERT YOUR NAME HERE"
+msgstr "अपना नाम यहाँ पर भरें"
+
+#: main.cpp:56
+msgid "INSERT YOUR EMAIL ADDRESS"
+msgstr "अपना ईमेल पता भरें"
+
+#: setupassistant.cpp:45
+msgid "Welcome to Krecipes"
+msgstr "के-रेसिपि में आपका स्वागत है"
+
+#: setupassistant.cpp:49
+msgid "Database Type"
+msgstr "डाटाबेस क़िस्म"
+
+#: setupassistant.cpp:53
+msgid "Database Management System Settings"
+msgstr ""
+
+#: setupassistant.cpp:57 setupassistant.cpp:61
+msgid "Database Permissions"
+msgstr "डाटाबेस अनुमतियाँ"
+
+#: setupassistant.cpp:65
+msgid "Server Settings"
+msgstr "सर्वर विन्यास"
+
+#: setupassistant.cpp:69
+msgid "Initialize Database"
+msgstr "डाटाबेस इनिशियलाइज़ करें"
+
+#: setupassistant.cpp:73
+msgid "Finish & Save Settings"
+msgstr "पूर्ण करें व विन्यास सहेजें"
+
+#: setupassistant.cpp:96
+msgid ""
+"There is currently no localized ingredient data for this locale.\n"
+"Would you like to load the English ingredients instead?"
+msgstr ""
+
+#: setupassistant.cpp:152
+msgid ""
+"<p><b><font size=\"+1\">Thank you very much for choosing Krecipes.</font></"
+"b></p><p>It looks like this is the first time you are using it. This wizard "
+"will help you with the initial setup so that you can start using it quickly."
+"</p><p>Welcome, and enjoy cooking!</p>"
+msgstr ""
+
+#: setupassistant.cpp:185
+msgid ""
+"<p>This dialog will allow you to specify a MySQL account that has the "
+"necessary permissions to access the Krecipes MySQL database.</p><p><b><font "
+"size=\"+1\">Most users that use Krecipes and MySQL for the first time can "
+"just leave the default parameters and press 'Next'.</font></b></p> <p>If you "
+"set a MySQL root password before, or you have already permissions as normal "
+"user, click on the appropriate option. Otherwise the account 'root' will be "
+"used, with no password.</p><p>[For security reasons, we strongly encourage "
+"you to setup a MySQL root password if you have not done so yet. Just type as "
+"root: mysqladmin password <i>your_password</i>]</p>"
+msgstr ""
+
+#: setupassistant.cpp:204 setupassistant.cpp:331
+msgid "I have already set the necessary permissions"
+msgstr "मैंने आवश्यक अनुमतियाँ पहले ही सेट कर दी हैं"
+
+#: setupassistant.cpp:221
+msgid "I have already set a MySQL root/admin account"
+msgstr "मैने पहले ही माइ-एसक्यूएल रूट/एडमिन खाता सेट कर लिया है"
+
+#: setupassistant.cpp:233
+msgid "MySQL Administrator Account"
+msgstr "माइ-एसक्यूएल प्रशासक खाता"
+
+#: setupassistant.cpp:238 setupassistant.cpp:366 setupassistant.cpp:471
+#: pref.cpp:143 pref.cpp:213
+#, fuzzy
+#| msgid "Username:"
+msgctxt "@label:textbox Database Username"
+msgid "Username:"
+msgstr "उपयोक्ता नाम:"
+
+#: setupassistant.cpp:242 setupassistant.cpp:370 setupassistant.cpp:478
+#: pref.cpp:147 pref.cpp:217
+msgid "Password:"
+msgstr "पासवर्ड: "
+
+#: setupassistant.cpp:312
+msgid ""
+"<p>This dialog will allow you to specify a PostgreSQL account that has the "
+"necessary permissions to access the Krecipes PostgreSQL database.  This "
+"account may either be a <b>PostgreSQL superuser</b> or have the ability to "
+"both <b>create new PostgreSQL users and databases</b>.</p><p>If no superuser "
+"or privileged account is given, the account 'postgres' will be attempted, "
+"with no password.  If this is insufficient for your PostgreSQL setup, you "
+"<b>must</b> select the appropriate option below to enter the information of "
+"a privileged PostgreSQL account.</p>"
+msgstr ""
+
+#: setupassistant.cpp:348
+msgid "I have already set a superuser or privileged account"
+msgstr "मैंने पहले ही सुपरयूज़र या प्रिविलेज्ड खाता सेट कर लिया है"
+
+#: setupassistant.cpp:361
+msgid "PostgreSQL Superuser or Privileged Account"
+msgstr "पोस्टग्रे-एसक्यूएल सुपरयूज़र या प्रिविलेज्ड खाता"
+
+#: setupassistant.cpp:441
+msgid ""
+"<p>In this dialog you can adjust the database server settings.</"
+"p><p><b>Warning: Passwords are stored in plain text and could potentially be "
+"compromised.  We recommend that you create a username and password "
+"combination solely for use by Krecipes.</b></p>"
+msgstr ""
+
+#: setupassistant.cpp:485 pref.cpp:155 pref.cpp:225
+msgid "Database name:"
+msgstr "डाटाबेस का नामः"
+
+#: setupassistant.cpp:495
+msgid "The server is remote"
+msgstr "सर्वर रिमोट है"
+
+#: setupassistant.cpp:507
+msgid "Server / Client Settings"
+msgstr "सर्वर / क्लाएंट विन्यास"
+
+#: setupassistant.cpp:515 pref.cpp:140 pref.cpp:210
+msgid "Server:"
+msgstr "सर्वरः"
+
+#: setupassistant.cpp:520
+msgid "Client:"
+msgstr "क्लाएंट:"
+
+#: setupassistant.cpp:525
+#, fuzzy
+#| msgid "Default"
+msgctxt "@label:textbox Default Port"
+msgid "Default"
+msgstr "डिफ़ॉल्ट"
+
+#: setupassistant.cpp:526 pref.cpp:152 pref.cpp:222
+msgid "Port:"
+msgstr "पोर्टः"
+
+#: setupassistant.cpp:603
+msgid "In this dialog you can adjust SQLite settings."
+msgstr "इस संवाद में आप एसक्यूलाइट विन्यास का समायोजन कर सकते हैं."
+
+#: setupassistant.cpp:617 pref.cpp:278
+msgid "Database file:"
+msgstr "डाटाबेस फ़ाइल:"
+
+#: setupassistant.cpp:625
+msgid "Open file dialog"
+msgstr "फ़ाइल खोलने का संवाद"
+
+#: setupassistant.cpp:647 pref.cpp:326
+msgid "Select SQLite database file"
+msgstr ""
+
+#: setupassistant.cpp:677
+msgid ""
+"Congratulations; all the necessary configuration setup is done. Press "
+"'Finish' to continue, and enjoy cooking!"
+msgstr ""
+
+#: setupassistant.cpp:774
+msgid ""
+"<p>Krecipes comes with some delicious default recipes and useful data.</"
+"p><p>Would you like to initialize your database with those? Note that this "
+"will erase all your previous recipes if you have any.</p>"
+msgstr ""
+
+#: setupassistant.cpp:799
+msgid "Yes please, initialize the database with the examples"
+msgstr "जी हाँ, कृपया उदाहरओं सहित डाटाबेस को इनिशियलाइज़ करें"
+
+#: setupassistant.cpp:808
+msgid ""
+"<p>Krecipes can import nutrient data from the USDA's nutrient database for "
+"over 400 foods.  A total of 43 food properties are included for each food, "
+"such as energy, fat, vitamin C, etc.</p><p>Would you like to import this "
+"data now?  Note that this operation is safe to use on an existing database, "
+"and no data loss will occur.  This operation may take several minutes.</p>"
+msgstr ""
+
+#: setupassistant.cpp:822
+msgid "Yes please, load the database with nutrient data for 400+ foods."
+msgstr ""
+
+#: setupassistant.cpp:870
+msgid ""
+"Choose the type of database that you want to use. Most users will want to "
+"choose a simple local database here. However, you can also use remote "
+"servers by means of a MySQL or PostgreSQL database."
+msgstr ""
+
+#: setupassistant.cpp:887
+msgid "Simple Local File (SQLite)"
+msgstr "सादा स्थानीय फ़ाइल (एसक्यूलाइट)"
+
+#: setupassistant.cpp:890
+msgid "Local or Remote MySQL Database"
+msgstr "स्थानीय या रिमोट माइ-एसक्यूएल डाटाबेस"
+
+#: setupassistant.cpp:893
+msgid "Local or Remote PostgreSQL Database"
+msgstr "स्थानीय या रिमोट पोस्टग्रे-एसक्यूएल डाटाबेस"
+
+#: krecipesview.cpp:99 krecipesview.cpp:371 krecipesview.cpp:438
+msgid "Find/Edit Recipes"
+msgstr "रेसिपि ढूंढें/संपादित करें"
+
+#: krecipesview.cpp:124
+msgid "Data..."
+msgstr "डाटा..."
+
+#: krecipesview.cpp:330
+msgid ""
+"\n"
+"You are using SQLite; this error is often caused by using an SQLite 2 "
+"database with Krecipes supporting SQLite 3, if this is the case you could "
+"run the SQLite converter.\n"
+"What do you want to do?"
+msgstr ""
+
+#: krecipesview.cpp:335
+msgid "Run the setup assistant"
+msgstr ""
+
+#: krecipesview.cpp:336
+msgid "Run the SQLite converter"
+msgstr ""
+
+#: krecipesview.cpp:345 krecipesview.cpp:360
+#, fuzzy
+#| msgid "Exiting"
+msgctxt "Exiting Krecipes"
+msgid "Exiting"
+msgstr "बाहर हो रहे हैं"
+
+#: krecipesview.cpp:352
+msgid ""
+"\n"
+"Would you like to run the setup wizard again? Otherwise, the application "
+"will be closed."
+msgstr ""
+
+#: krecipesview.cpp:376 krecipesview.cpp:493
+msgid "Preparation Methods"
+msgstr "बनाने की विधियाँ"
+
+#: krecipesview.cpp:379 krecipesview.cpp:452
+msgid "Diet Helper"
+msgstr "आहार के लिए मदद"
+
+#: krecipesview.cpp:380 krecipesview.cpp:460
+msgid "Ingredient Matcher"
+msgstr "संघटक मिलान करने वाला"
+
+#: krecipesview.cpp:520
+msgid "View Recipe"
+msgstr "रेसिपि देखें"
+
+#: krecipesview.cpp:766
+msgid ""
+"A recipe contains unsaved changes.\n"
+"Do you want to save changes made to this recipe before editing another "
+"recipe?"
+msgstr ""
+
+#: krecipesview.cpp:768 krecipesview.cpp:855
+msgid "Unsaved changes"
+msgstr "सहेजा नहीं गया परिवर्तन"
+
+#: krecipesview.cpp:786
+#, kde-format
+msgid "Are you sure you want to permanently remove the recipe, %1?"
+msgstr "क्या वाकई आप रेसिपि %1 को हमेशा के लिए मिटाना चाहते हैं?"
+
+#: krecipesview.cpp:787 krecipesview.cpp:835
+msgid "Confirm remove"
+msgstr "मिटाने की पुष्टि करें"
+
+#: krecipesview.cpp:834
+#, fuzzy
+#| msgid "Are you sure you want to permanently remove the recipe, %1?"
+msgid "Are you sure you want to permanently remove the selected recipes?"
+msgstr "क्या वाकई आप रेसिपि %1 को हमेशा के लिए मिटाना चाहते हैं?"
+
+#: krecipesview.cpp:853
+msgid ""
+"A recipe contains unsaved changes.\n"
+"Do you want to save changes made to this recipe before creating a new recipe?"
+msgstr ""
+
+#: krecipesview.cpp:999
+msgid "Unable to setup database"
+msgstr "डाटाबेस सेटअप करने में अक्षम"
+
+#: krecipesview.cpp:1011
+msgid "Code error. No DB support has been included. Exiting"
+msgstr "कोड त्रुटि. कोई डीबी समर्थन जोड़ा नहीं गया है. बाहर हो रहे हैं"
+
+#: krecipesview.cpp:1173 krecipesview.cpp:1199
+msgid "Code error. No DB support was built in. Exiting"
+msgstr "कोड त्रुटि. कोई डीबी समर्थन बनाया नहीं गया है. बाहर हो रहे हैं"
+
+#: krecipesview.cpp:1182
+msgid "Unable to open database"
+msgstr "डाटाबेस को खोलने में अक्षम"
+
+#: krecipesview.cpp:1204
+msgid "DB started correctly\n"
+msgstr "डीबी सही प्रकार से प्रारंभ किया गया\n"
+
+#: krecipesview.cpp:1212
+#, kde-format
+msgid "The configured database type (%1) is unsupported."
+msgstr "कॉन्फ़िगर्ड डाटाबेस क़िस्म (%1) असमर्थित है."
+
+#: krecipesview.cpp:1212
+msgid ""
+"Unsupported database type. Database must be either MySQL, SQLite, or "
+"PostgreSQL."
+msgstr ""
+
+#: mmdata.h:25
+msgid "bunch"
+msgstr ""
+
+#: mmdata.h:25
+msgid "bunches"
+msgstr ""
+
+#: mmdata.h:26
+#, fuzzy
+#| msgid "Backup"
+msgid "cup"
+msgstr "बैकअप"
+
+#: mmdata.h:26
+#, fuzzy
+#| msgid "Backup"
+msgid "cups"
+msgstr "बैकअप"
+
+#: mmdata.h:27
+msgid "cubic cm"
+msgstr ""
+
+#: mmdata.h:28
+msgid "centigram"
+msgstr ""
+
+#: mmdata.h:28
+msgid "centigrams"
+msgstr ""
+
+#: mmdata.h:29
+#, fuzzy
+#| msgid "Center"
+msgid "centiliter"
+msgstr "बीच में"
+
+#: mmdata.h:29
+msgid "centiliters"
+msgstr ""
+
+#: mmdata.h:30
+msgid "can"
+msgstr ""
+
+#: mmdata.h:30
+msgid "cans"
+msgstr ""
+
+#: mmdata.h:31
+msgid "carton"
+msgstr ""
+
+#: mmdata.h:31
+msgid "cartons"
+msgstr ""
+
+#: mmdata.h:32
+msgid "decigram"
+msgstr ""
+
+#: mmdata.h:32
+msgid "decigrams"
+msgstr ""
+
+#: mmdata.h:33
+msgid "deciliter"
+msgstr ""
+
+#: mmdata.h:33
+msgid "deciliters"
+msgstr ""
+
+#: mmdata.h:34
+msgid "drop"
+msgstr ""
+
+#: mmdata.h:34
+msgid "drops"
+msgstr ""
+
+#: mmdata.h:35
+msgid "dash"
+msgstr ""
+
+#: mmdata.h:35
+#, fuzzy
+#| msgctxt "See http://krecipes.sourceforge.net/bordertypes.png for an example"
+#| msgid "Dashed"
+msgid "dashes"
+msgstr "डेश्ड"
+
+#: mmdata.h:36
+#, fuzzy
+#| msgid "Search"
+msgid "each"
+msgstr "ढूंढें"
+
+#: mmdata.h:37
+msgid "kilogram"
+msgstr ""
+
+#: mmdata.h:37
+msgid "kilograms"
+msgstr ""
+
+#: mmdata.h:38
+msgid "fluid ounce"
+msgstr ""
+
+#: mmdata.h:38
+msgid "fluid ounces"
+msgstr ""
+
+#: mmdata.h:39
+msgid "gram"
+msgstr ""
+
+#: mmdata.h:39
+msgid "grams"
+msgstr ""
+
+#: mmdata.h:40
+msgid "gallon"
+msgstr ""
+
+#: mmdata.h:40
+msgid "gallons"
+msgstr ""
+
+#: mmdata.h:41
+#, fuzzy
+#| msgid "Criteria"
+msgid "liter"
+msgstr "मापदण्ड"
+
+#: mmdata.h:41
+msgid "liters"
+msgstr ""
+
+#: mmdata.h:42
+msgid "pound"
+msgstr ""
+
+#: mmdata.h:42
+msgid "pounds"
+msgstr ""
+
+#: mmdata.h:43
+#, fuzzy
+#| msgid "Clear"
+msgid "large"
+msgstr "साफ करें"
+
+#: mmdata.h:44
+msgid "medium"
+msgstr ""
+
+#: mmdata.h:45
+msgid "milligram"
+msgstr ""
+
+#: mmdata.h:45
+msgid "milligrams"
+msgstr ""
+
+#: mmdata.h:46
+msgid "milliliter"
+msgstr ""
+
+#: mmdata.h:46
+msgid "milliliters"
+msgstr ""
+
+#: mmdata.h:47 mmdata.h:48
+msgid "package"
+msgstr ""
+
+#: mmdata.h:47 mmdata.h:48
+msgid "packages"
+msgstr ""
+
+#: mmdata.h:49
+msgid "pinch"
+msgstr ""
+
+#: mmdata.h:49
+msgid "pinches"
+msgstr ""
+
+#: mmdata.h:50
+#, fuzzy
+#| msgid "&Print"
+msgid "pint"
+msgstr " छापें (&P)"
+
+#: mmdata.h:50
+#, fuzzy
+#| msgid "Units"
+msgid "pints"
+msgstr "इकाईयाँ"
+
+#: mmdata.h:51
+#, fuzzy
+#| msgid "None"
+msgid "ounce"
+msgstr "कुछ नहीं"
+
+#: mmdata.h:51
+#, fuzzy
+#| msgctxt "NAME OF TRANSLATORS"
+#| msgid "Your names"
+msgid "ounces"
+msgstr "रविशंकर श्रीवास्तव, जी. करूणाकर"
+
+#: mmdata.h:52
+msgid "quart"
+msgstr ""
+
+#: mmdata.h:52
+msgid "quarts"
+msgstr ""
+
+#: mmdata.h:53
+#, fuzzy
+#| msgid "Basic"
+msgid "slice"
+msgstr "मूल"
+
+#: mmdata.h:53
+msgid "slices"
+msgstr ""
+
+#: mmdata.h:54
+msgid "small"
+msgstr ""
+
+#: mmdata.h:55 mmdata.h:57
+msgid "teaspoon"
+msgstr ""
+
+#: mmdata.h:55 mmdata.h:57
+msgid "teaspoons"
+msgstr ""
+
+#: mmdata.h:56 mmdata.h:58
+msgid "tablespoon"
+msgstr ""
+
+#: mmdata.h:56 mmdata.h:58
+msgid "tablespoons"
+msgstr ""
+
+#: mmdata.h:59
+#, fuzzy
+#| msgid "serving"
+msgid "per serving"
+msgstr "सर्विंग"
+
+#: convert_sqlite3.cpp:83 convert_sqlite3.cpp:91
+#, kde-format
+msgid ""
+"Unable to find or run the program '%1'.  Either it is not installed on your "
+"system or it is not in $PATH. Do you want to configure other path for this "
+"command?"
+msgstr ""
+
+#: convert_sqlite3.cpp:100
+#, kde-format
+msgid ""
+"Conversion process failed. Probably the file %1 is not an SQLite 2 database."
+msgstr ""
+
+#: convert_sqlite3.cpp:131
+#, c-format, kde-format
+msgid ""
+"Unable to backup SQLite 2 database, aborting. A successfully converted "
+"SQLite 3 file is available at %1.new."
+msgstr ""
+
+#: convert_sqlite3.cpp:137
+#, kde-format
+msgid ""
+"Unable to copy the new SQLite 3 database to %1.You may manually move %1.new "
+"to %1"
+msgstr ""
+
+#: convert_sqlite3.cpp:141
+#, kde-format
+msgid "Conversion successful! SQLite 2 database backed up to %1"
+msgstr ""
+
+#: pref.cpp:56
+#, fuzzy
+#| msgid "Confirm remove"
+msgid "Configure"
+msgstr "मिटाने की पुष्टि करें"
+
+#: pref.cpp:65
+#, fuzzy
+#| msgid "Database Type"
+msgid "Database System"
+msgstr "डाटाबेस क़िस्म"
+
+#: pref.cpp:67
+#, fuzzy, kde-format
+#| msgid "Database Server Options (%1)"
+msgid "Database Management System Options (%1)"
+msgstr "डाटाबेस सर्वर विकल्प (%1)"
+
+#: pref.cpp:74
+msgid "Formatting"
+msgstr "फार्मेट किया जा रहा है"
+
+#: pref.cpp:76
+msgid "Customize Formatting"
+msgstr "फ़ॉर्मेटिंग मनपसंद बनाएँ"
+
+#: pref.cpp:83
+#, fuzzy
+#| msgid "Export"
+msgid "Import/Export"
+msgstr "निर्यात"
+
+#: pref.cpp:85
+msgid "Recipe Import and Export Options"
+msgstr "रेसिपि आयात और निर्यात विकल्प"
+
+#: pref.cpp:93
+#, fuzzy
+#| msgid "Performance Options"
+msgid "Performance"
+msgstr "परफ़ॉर्मेंस विकल्प"
+
+#: pref.cpp:94
+msgid "Performance Options"
+msgstr "परफ़ॉर्मेंस विकल्प"
+
+#: pref.cpp:103
+#, fuzzy
+#| msgid "Spell check complete."
+msgid "Spell checking"
+msgstr "वर्तनी की जांच पूरी हो गई."
+
+#: pref.cpp:104
+#, fuzzy
+#| msgid "Spell check complete."
+msgid "Spell checking Options"
+msgstr "वर्तनी की जांच पूरी हो गई."
+
+#: pref.cpp:151 pref.cpp:221
+#, fuzzy
+#| msgid "Default"
+msgctxt "Default Port"
+msgid "Default"
+msgstr "डिफ़ॉल्ट"
+
+#: pref.cpp:161 pref.cpp:232 pref.cpp:294
+msgid "Backup"
+msgstr "बैकअप"
+
+#: pref.cpp:165
+msgid "Select MySQL dump command"
+msgstr ""
+
+#: pref.cpp:166 pref.cpp:170 pref.cpp:236 pref.cpp:240 pref.cpp:301
+#, kde-format
+msgid "Path to '%1':"
+msgstr "पथ '%1' पर:"
+
+#: pref.cpp:169
+msgid "Select MySQL command"
+msgstr ""
+
+#: pref.cpp:184 pref.cpp:186 pref.cpp:254 pref.cpp:256 pref.cpp:329
+#: pref.cpp:331 pref.cpp:333
+#, fuzzy
+#| msgid "All Categories"
+msgid "All files"
+msgstr "सभी वर्ग"
+
+#: pref.cpp:235
+msgid "Select PostgreSQL dump command"
+msgstr ""
+
+#: pref.cpp:239
+msgid "Select PostgreSQL command"
+msgstr ""
+
+#: pref.cpp:300
+msgid "Select SQLite command"
+msgstr ""
+
+#: pref.cpp:307
+msgid "SQLite converter"
+msgstr ""
+
+#: pref.cpp:313
+msgid "Select old SQLite version command"
+msgstr ""
+
+#: pref.cpp:314
+msgid "Path to SQLite old version command:"
+msgstr ""
+
+#: pref.cpp:317
+msgid "Select new SQLite version command"
+msgstr ""
+
+#: pref.cpp:318
+msgid "Path to SQLite new version command:"
+msgstr ""
+
+#: pref.cpp:369
+msgid "Re-run wizard on next startup"
+msgstr "अगली बार प्रारंभ होने पर विज़ार्ड फिर से चलाएँ"
+
+#: pref.cpp:375
+msgid ""
+"Note: Krecipes must be restarted for most server preferences to take effect."
+msgstr ""
+
+#: pref.cpp:420
+msgid "Use abbreviations"
+msgstr "संक्षिप्त इस्तेमाल करें"
+
+#: pref.cpp:456
+msgid "Number Format"
+msgstr "संख्या फ़ॉर्मेट:"
+
+#: pref.cpp:457
+#, fuzzy
+#| msgid "Fraction"
+msgctxt "@option:radio Display fraction"
+msgid "Fraction"
+msgstr "भिन्न"
+
+#: pref.cpp:458
+#, fuzzy
+#| msgid "Decimal"
+msgctxt "@option:radio Display decimal"
+msgid "Decimal"
+msgstr "दशमलव"
+
+#: pref.cpp:478
+msgid "Import"
+msgstr "आयात"
+
+#: pref.cpp:480
+msgid "Overwrite recipes with same title"
+msgstr "इसी शीर्षक के साथ रेसिपि को मिटाकर लिखें"
+
+#: pref.cpp:485
+msgid "Ask which recipes to import"
+msgstr "जिन रेसिपि को आयात करना है उनके लिए पूछें"
+
+#: pref.cpp:497
+msgid "'Copy to Clipboard' format:"
+msgstr "'क्लिपबोर्ड में नक़ल करें' फ़ॉर्मेट:"
+
+#: pref.cpp:527
+msgid ""
+"When this is enabled, the importer will show every recipe in the file(s) and "
+"allow you to select which recipes you want imported.\n"
+" \t\t\t\t\t\t\t\t\tDisable this to always import every recipe, which allows "
+"for faster and less memory-intensive imports."
+msgstr ""
+
+#: pref.cpp:562
+msgid "Search as you type"
+msgstr "जैसे जैसे टाइप करते जाएँ- ढूंढते जाएँ"
+
+#: pref.cpp:565
+msgid ""
+"In most instances these options do not need to be changed.  However, "
+"limiting the amount of items displayed at once will <b>allow Krecipes to "
+"better perform when the database is loaded with many thousands of recipes</"
+"b>."
+msgstr ""
+
+#: pref.cpp:571
+msgid "Number of categories to display at once:"
+msgstr "श्रेणियों की संख्या जिन्हें एक साथ प्रदर्शित करना है:"
+
+#: pref.cpp:574
+#, fuzzy
+#| msgid "Unlimited"
+msgctxt "Unlimited categories"
+msgid "Unlimited"
+msgstr "असीमित"
+
+#: pref.cpp:581
+msgid "Number of elements to display at once:"
+msgstr "तत्वों की संख्या जिन्हें एक साथ प्रदर्शित करना है:"
+
+#: pref.cpp:584
+#, fuzzy
+#| msgid "Unlimited"
+msgctxt "Unlimited elements"
+msgid "Unlimited"
+msgstr "असीमित"
+
+#: rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "रविशंकर श्रीवास्तव, जी. करूणाकर"
+
+#: rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "raviratlami@aol.in"
+
+#. i18n: file: widgets/ratingdisplaywidget.ui:115
+#. i18n: ectx: property (text), widget (K3ListView, criteriaListView)
+#: rc.cpp:8
+msgid "Criteria"
+msgstr "मापदण्ड"
+
+#. i18n: file: widgets/ratingdisplaywidget.ui:126
+#. i18n: ectx: property (text), widget (K3ListView, criteriaListView)
+#: rc.cpp:11
+msgid "Stars"
+msgstr "तारे"
+
+#. i18n: file: widgets/ratingdisplaywidget.ui:146
+#. i18n: ectx: property (text), widget (QLabel, comment)
+#: rc.cpp:14
+#, fuzzy
+#| msgid "Comments:"
+msgid "Comments"
+msgstr "टिप्पणियाँ:"
+
+#. i18n: file: widgets/ratingdisplaywidget.ui:177
+#. i18n: ectx: property (text), widget (KPushButton, buttonRemove)
+#: rc.cpp:17
+msgid "Remove"
+msgstr "हटाएँ"
+
+#. i18n: file: widgets/ratingdisplaywidget.ui:187
+#. i18n: ectx: property (text), widget (KPushButton, buttonEdit)
+#: rc.cpp:20
+#, fuzzy
+#| msgid "&Edit"
+msgid "Edit..."
+msgstr "संपादन (&E)"
+
+#. i18n: file: krecipesui.rc:4
+#. i18n: ectx: Menu (file)
+#: rc.cpp:23
+msgid "&File"
+msgstr "फ़ाइल (&F)"
+
+#. i18n: file: krecipesui.rc:12
+#. i18n: ectx: Menu (edit)
+#: rc.cpp:26
+msgid "&Edit"
+msgstr "संपादन (&E)"
+
+#. i18n: file: krecipesui.rc:22
+#. i18n: ectx: Menu (tools)
+#: rc.cpp:29
+msgid "&Tools"
+msgstr "औज़ार (&T)"
+
+#, fuzzy
+#~| msgid "Print Preview"
+#~ msgctxt "@title:window"
+#~ msgid "Print Preview"
+#~ msgstr "छपाई नमूना"
+
+#, fuzzy
+#~| msgid "Print Setup..."
+#~ msgctxt "@action:button"
+#~ msgid "Print Setup"
+#~ msgstr "छपाई सेटअप..."
+
+#, fuzzy
+#~| msgid "Print Setup..."
+#~ msgctxt "@title:window"
+#~ msgid "Print Setup"
+#~ msgstr "छपाई सेटअप..."
+
+#~ msgid "Alt+L"
+#~ msgstr "ऑल्ट+L"
+
+#, fuzzy
+#~| msgid "Yield"
+#~ msgctxt "@label"
+#~ msgid "Yield"
+#~ msgstr "यील्ड"
+
+#, fuzzy
+#~| msgid "Amount"
+#~ msgctxt "@label"
+#~ msgid "Amount"
+#~ msgstr "मात्रा"
+
+#, fuzzy
+#~| msgid "Ingredient list"
+#~ msgctxt "@title"
+#~ msgid "Ingredient list"
+#~ msgstr "संघटक सूची"
+
+#, fuzzy
+#~| msgid "Header list"
+#~ msgctxt "@title"
+#~ msgid "Header list"
+#~ msgstr "शीर्षक सूची"
+
+#, fuzzy
+#~| msgid "Meal %1"
+#~ msgctxt "@title:tab"
+#~ msgid "Meal %1"
+#~ msgstr "भोजन %1"
+
+#, fuzzy
+#~| msgid "Properties"
+#~ msgctxt "@label"
+#~ msgid "Properties"
+#~ msgstr "गुण"
+
+#, fuzzy
+#~| msgid "Close"
+#~ msgctxt "@action:buton"
+#~ msgid "Close"
+#~ msgstr "बंद करें"
+
+#, fuzzy
+#~| msgid "Username:"
+#~ msgctxt "Database username"
+#~ msgid "Username:"
+#~ msgstr "उपयोक्ता नाम:"
+
+#, fuzzy
+#~| msgid "Default"
+#~ msgctxt "Default port"
+#~ msgid "Default"
+#~ msgstr "डिफ़ॉल्ट"
+
+#, fuzzy
+#~| msgid "Search:"
+#~ msgctxt "Search recipes"
+#~ msgid "Search:"
+#~ msgstr "ढूंढें:"
+
+#~ msgid "Id"
+#~ msgstr "आईडी"
+
+#~ msgid "<<"
+#~ msgstr "<<"
+
+#~ msgid ">>"
+#~ msgstr ">>"
+
+#~ msgid "Modification Date:"
+#~ msgstr "परिवर्धन की तारीख़:"
+
+#~ msgid "Size:"
+#~ msgstr "आकारः"
+
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#, fuzzy
+#~| msgid "Show recipe"
+#~ msgid "Sh&ow recipe(s)"
+#~ msgstr "रेसिपि दिखाएँ"
+
+#~ msgid "E&xport"
+#~ msgstr "निर्यात (&x)"
+
+#~ msgid "&Remove From Category"
+#~ msgstr "वर्ग से मिटाएँ (&R)"
+
+#~ msgid "&Add to Shopping List"
+#~ msgstr "खरीदारी सूची में जोड़ें (&A)"
+
+#~ msgid "Ca&tegorize..."
+#~ msgstr "वर्ग... (&t)"
+
+#~ msgid "&Expand All"
+#~ msgstr "सभी फैलाएँ (&E)"
+
+#~ msgid "&Collapse All"
+#~ msgstr "सभी समेटें (&C)"
+
+#~ msgid "&Create"
+#~ msgstr "बनाएँ (&C)"
+
+#~ msgid "&Rename"
+#~ msgstr "नाम बदलें (&R)"
+
+#~ msgid "Open Recipe(s)"
+#~ msgstr "रेसिपि खोलें"
+
+#~ msgid "&Open"
+#~ msgstr "खोलें (&O)"
+
+#~ msgid "calendar-today"
+#~ msgstr "आज कैलेण्डर"
+
+#~ msgid "&Yesterday"
+#~ msgstr "कल (&Y)"
+
+#~ msgid "Krecipes Preferences"
+#~ msgstr "के-रेसिपि प्राथमिकताएँ"
+
+#~ msgid "+"
+#~ msgstr "+"
+
+#~ msgid "Clear search"
+#~ msgstr "खोज साफ करें"
+
+#~ msgid "- %1 weeks -"
+#~ msgstr "- %1 सप्ताह -"
+
+#~ msgid "Check spelling"
+#~ msgstr "वर्तनी जांचें"

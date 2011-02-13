@@ -1,0 +1,450 @@
+Changes from 2.0-beta1 to 2.0-beta2:
+  * Replaced shorcut for export action. It was ctrl+P, now it is ctrl+O.
+  * Use .setPlainText() and .toPlainText() rather than .setText() and .text()
+    when dealing with the recipe instructions KTextEdit because the latter
+    couple of methods guess if the text is in plain format or HTML and I found
+    that sometimes (after spellchecking the instructions, but I don't know how
+    to reproduce the problem) the guess is wrong and, for example, the database
+    might store the instructions in HTML which is not what we want.
+  * Due to a bug which affects only 2.0-beta1, conversion tables were not being
+    displayed properly, fixed.
+  * Pass "--inserts" intead of "-d" to pg_dump command, so the backup works
+    with PostgreSQL 8.x series.
+  * Revert a wrong bug fix done in previous release, now the message which
+    warns that you are using the same layout for printing and viewing recipes
+    is displayed when it should.
+  * Escape backslashes when storing strings in the database.
+  * Update some sections of the user manual, note that it's still not finished.
+  * Don't crash in SelectPropertyDialog when the "Per units:" combo box starts
+    being empty, you type something in the combo box and you accept the dialog.
+  * When you edit property information for an ingredient, you don't select any
+    property but you type a new unit in the "Per Units:" combo box and you
+    accept the dialog, don't add that unit to the unit list of the ingredient.
+  * Bug fixes/improvements regarding spell checking:
+    + Use our own local configuration (in krecipesrc), as configured by the
+      settings dialog. If we don't have a local configuration yet, it would try
+      to fall back to the user's global configuration (stored in sonnetrc).
+    + Don't disable the spell checking automatically.
+    + Reload background spell checker if the configuration changes, thusly you
+      can, for instance, change the language for spell checking and use it
+      inmediatly without restarting the program.
+    + Respect the "Automatic spell checking enabled by default" option.
+
+Changes from 2.0-alpha6 to 2.0-beta1:
+  * Various changes to make the windows able to be smaller than 800x600.
+  * The setup assistant, preferences dialog and advanced search dialog follow
+    the HIG about form label alignment, we are using QFormLayout. Thank you to
+    Mike Ferguson for doing the advanced search dialog.
+  * Added an exporter for MasterCook *.mx2 files. Thank you to Warren Severin
+    for writing it.
+  * Porting of datablock classes to Qt4.
+  * Renamed internal library libkrecipescommon to avoid double lib in filename
+  * Execute tests via CTest. To run them use "make test".
+  * Made data of some datablock classes private, added get/set methods and unit
+    tests.
+  * Don't ask x times to delete x recipes.
+  * Switch to bugs.kde.org to manage bug reports.
+  * Some strings calling SQLite "server" replaced with more appropiate ones.
+    Fixes sourceforge #2943981.
+  * Provide a copy of KRatingPainter and KRatingWidget to not link against
+    Nepomuk, this would prevent the need of rebuilding other packages just to
+    install Krecipes for gentoo users with semantic-desktop disabled. Thanks to
+    Samuli Suominen for noticing the problem.
+  * Using a QSplitter on the ingredient matcher dialog.
+  * Fixes for bugs:
+    + Right pane header, diet helper title and list titles follow theme colour
+      settings rather than set absolute colours. Thanks to Mike Ferguson for the
+      patches.
+    + When you click on a recipe in the advanced search dialog results, the
+      recipe actions (i.e. edit, export...) are updated properly.
+    + You can rename the properties (in data -> properties).
+    + Use WebKit instead of KHTML for printing recipes, fixes sourceforge
+      #2990118 and #2960140.
+    + Convert preparation times to QString before reading them from the
+      database. Fixes sourceforge #2960133, note that I think that this bug is
+      not reproducible.
+    + Don't show the help button in the setup assistant dialog, it's not useful
+      at the moment.
+    + When configuring the page or print layout the program warns that you are
+      using the same layout for printing and viewing only when you're really
+      using the same layout, in previous releases the warning was shown always
+      (unless you check "Do not show this message again").
+    + When you edit the amount for a property of an ingredient (click data ->
+      ingredients in the left panel, select an ingredient, click "Property
+      Information") you can type more than 2 decimal numbers.
+    + When you edit amounts for a weight of an ingredient, if you type a wrong
+      number/fraction the program will reject the change.
+    + When you edit the "Per Amount"  field for a weight of an ingredient, the
+      combobox in the dialog asking for the new data shows always
+      "-No Preparation-" (as it should be), however, in previous releases
+      sometimes the combobox was showing an empty string.
+    + In earlier releases when you edit a recipe, move an ingredient up or down
+      changing the ingredient group (aka "header") of the ingredient and you
+      delete it, the application will crash.
+    + Shopping list addition now works properly even if you have the same
+      ingredient in different ingredient groups. Fixes sourceforge #1880424.
+    + In earlier versions, when you choose import USDA data in the
+      corresponding assistant page, if you click back and next again and there
+      are no translations of the USDA data for your current locale you will be
+      asked if you want to import the data in English.
+
+Changes from 2.0-alpha5 to 2.0-alpha6:
+  * Removed unnecesary build dependencies, so you don't need to link against:
+    + MySQL development libraries.
+    + PostgreSQL develpment libraries.
+  * Fix FTBFS with GCC 4.5, thanks to Pino Toscano for fixing it.
+  * Fixes for bugs:
+    + When you rename an unit (typing ctrl+r or right click -> rename) you can
+      change the type of the unit in the shown dialog, however previous releases
+      ignore what type you select, keeping the same type for the modified unit.
+    + Clear rlist properly in QSqlRecipeDB::loadRecipes(rlist,..) which might
+      fix sourceforge #2934428.
+    + Don't double categories when amending recipe categories having nested
+      categories. Fixes sourceforge #2933497.
+    + Don't crash when removing a recipe from a category. Fixes sourceforge
+      #2934312.
+    + When you remove a recipe from a category, the recipe is properly placed
+      in "Uncategorized", even when you're limiting the number of categories to
+      display in the GUI list. You can reproduce the (now fixed) bug thusly:
+      create a recipe included in 3 categories; a, z1 and z2, limit the number
+      of categories to display, make sure that this z1 and z2 categories are not
+      displayed in the first page, remove the recipe from the a category and the
+      recipe will be added to "Uncategorized" which is wrong.
+
+Changes from 2.0-alpha4 to 2.0-alpha5:
+  * Fixed issues in i18n strings, most of them reported by Krazy. Thanks to Mike
+    Ferguson who did most of this work.
+  * Created static library libkrecipescommon. This makes the project to compile
+    very much faster when compiling the test programs.
+  * Added KUIT and context stuff to a huge number of i18n strings. Thanks to
+    Mike Ferguson who did most of this work.
+  * When you try to load USDA property information in the EditPropertiesDialog
+    the program warns you if you didn't select one ingredient in the USDA
+    ingredient list.
+  * Updated Unai Garro e-mail; replaced <ugarro@users.sourceforge.net> with
+    <ugarro@gmail.com>.
+  * Fixes for bugs:
+    + Don't crash when closing the "Page Setup" and "Print Setup" dialogs.
+    + Uncategorized recipes are displayed when using MySQL 4, this fixes
+      sourceforge #2878934. Thanks to Mike Ferguson for his help and feedback
+      about this bug.
+    + When removing a category a recipe is moved to the "Uncategorized" folder
+      (we're talking only about the UI) only if the recipe is not included in
+      other categories.
+    + Correct imprecision when typing float numbers for ingredient amounts in
+      the recipe editor. The problem was that the program was converting numbers
+      from float to mixed and from mixed to float again and again. For instance,
+      if you type 2/3 in a previous release you will get it converted to 0.75
+      instead of the expected 0.666666... or so. Also the changes for fixing
+      this bug cause that you will not see fractions in the ingredients tab, no
+      matter what you choosed in "Settings -> Configure -> Formatting -> Number
+      format", however, this is not a problem; if you want to see the numbers as
+      fractions just choose "Fraction" as number format, select your recipe and
+      click on "Show recipe".
+    + In the ingredients tab from the recipe editor you are able to amend
+      amounts. In previous releases when you type an invalid number/interval
+      you get a blank field in the list. Now, when you type some invalid thing
+      as ingredient amount like "3/" the program will keep the old value.
+    + In 1.0 series the program was displaying in a tooltip the date when a
+      recipe was created, modified and last accessed; however this doesn't work
+      for the previous 2.0 releases. In this release, when you select a single
+      recipe you can see the dates mentioned above in the status bar.
+    + The dialog to edit the weights and properties for a given ingredient
+      loads also the property information from USDA database when clicking on
+      "Load" button, not just the weights. Fixes sourceforge #2897458.
+    + Advanced search is performed properly; when you search by some field(s)
+      providing its value(s) you will not get the recipes whose field(s)
+      contains the given value(s) as a substring, you will get the recipes whose
+      fields match exactly with the given value(s). Note that if you want to
+      search a substring in a field, you can do it passing *mysubstring* because
+      wildcards are supported.
+    + Refreshed KDateEdit and KDatePickerPopup, taken from 4.3 branch; this
+      allows you to type dates.
+    + The search by preparation time works.
+    + The clear button in the ingredient matcher clears the lists used to
+      perform the search; in previous releases if you push the clear button the
+      ingredients in the list placed on the right side would count for future
+      searches.
+    + If you set in Settings -> Configure Krecipes -> Performance something
+      different to "Unlimited", you may see the special items "Next" and
+      "Previous" in lists. Due to some wrong connect(...) calls in previous
+      releases if you push some of this special buttons and you create a new
+      element in the list, you will see the new element repeated various times.
+    + Make the drag & drop for recipe photos work again.
+    + The dropdown list for the combo box to edit headers (ingredient groups)
+      will be updated if you add or remove headers.
+    + In previous versions, when you delete a header used in an existing recipe
+      the program will say that you are about to delete recipes from your
+      database; this message is not true because what the program will do is
+      deleting the header in the recipe, i.e. recipes will be modified but not
+      deleted.
+    + The save button is always enabled when you create a new recipe.
+    + The uncategorized recipes are inserted in the user interface by order.
+    + The functionality to resize a recipe works even if you have a non blank
+      yield type.
+    + When editing a recipe if you change the yield type and you click "resize
+      recipe" the shown dialog will be aware of the change.
+    + "Search as you type" option is now suposed to be applied with all lists in
+      the user interface, not just the recipe list in the "find/edit recipes"
+      component.
+
+Changes from 2.0-alpha3 to 2.0-alpha4:
+  * Fixed issues reported by Sanitizer in the user manual. Note that the user
+    manual is a work in progress and it's not finished yet.
+  * Keep the export action enabled when we are at select recipe dialog or
+    ingredient matcher dialog even while we have no recipes selected.
+  * Restored the button to remove criteria in the advanced search dialog.
+  * Fixes for bugs:
+    + In the Ingredient Matcher from previous versions when selecting various
+      ingredients and clicking on the right arrow, some ingredients might be
+      missing in the list of the right side of the window.
+    + No more crashes when dragging categories. Fixes sourceforge #2853112.
+    + Ingredient list is cleared properly when clearing the contents for a recipe.
+      Fixes sourceforge #2878946. Also, it seems that as side effect, various
+      test programs are not segfaulting anymore.
+    + Various lists are cleared properly in the mmfimporter; now the mmftest
+      exits with success and the mmf importer appears to work.
+    + Fixed various bugs in the rezkonv importer and exporter as well as in
+      rezkonvtest; now rezkonvtest exits succesfully.
+    + Added tests for mxp and mx2 importers, fixed several bugs in these
+      importers.
+    + The button in the left panel for unsaved recipes is suposed to be hidden
+      when necessary. In previous releases I have been seeing it raised when it
+      should be hidden, for instance after saving or deleting a recipe.
+
+Changes from 2.0-alpha2 to 2.0-alpha3:
+  * krecipes --convert-sqlite3 now gives messages to the user about the success
+    or failure of the operation.
+  * If the program fails to fix the db structure with SQLite, you can execute
+    the sqlite converter clicking a button; you don't need to type commands in
+    the shell.
+  * You can configure the path for the commands executed by the sqlite
+    converter.
+  * Using KRatingWidget and KRatingPanter from nepomuk; as side effects we are
+    avoiding some crashes when clicking on the old RatingWidget and we have
+    refreshed artwork.
+  * Updated most screenshots in the user manual, note that the manual is not
+    finished yet.
+  * Fixes for bugs:
+    + The program can be built on Windows, thanks to Patrick Spendrin
+      (SaroEngels).
+    + The preferences dialog saves paths instead of KUrl's. You can reproduce
+      the bug in previous versions, among other ways, using sqlite backend and
+      choosing a different sqlite database file, if you check what prefereces
+      dialog saved in krecipesrc, you will find something like
+      file://path/to/file instead of /path/to/file and if you execute the
+      program again, you will get an error message noticing that the database
+      cannot be opened.
+    + The program doesn't crash if you select a wrong database (i.e. that will 
+      fail on connect) in the setup assistant.
+    + In the preferences dialog, the checkbox titled "Re-run wizard on next
+      startup" now reads the value stored in configuration file. Not doing this
+      was a problem because, for instance, you could choose to re-run the
+      assistant, and if you changed your mind, you couldn't amend this setting.
+    + The setup assistant now stores the value that you choose for remote
+      databases' port.
+    + The PostgreSQL backend now displays properly the uncategorized recipes.
+
+Changes from 2.0-alpha1 to 2.0-alpha2:
+  * The import/export tests are able to build again.
+  * The setup assistant allows selecting the port for remote servers.
+  * Added button to save recipes' photos as JPEG files.
+  * Added a close button in "View Recipe" dialog.
+  * Refreshed some icons and artwork. (TODO: stars for rating widget)
+  * Updated icons in handbook. Note that the user manual is currently a work in
+    progress.
+  * Using a QSplitter on the advanced search tab.
+  * Fixes for issues reported by krazy:
+    + Stop using TRUE and FALSE macros.
+  * Fixes for bugs:
+    + SQLite backend stores the recipes' photos.
+    + Importer for *.kreml and .kre files reads properly the recipes'
+      preparation time.
+    + Reading float numbers when importing recipeml files is not locale aware.
+    + The ratings tab in the recipe editor is not corruptly displayed anymore.
+    + The shortcuts work.
+    + When you select the PostgreSQL backend and you choose to include the
+      sample data, categories_id_seq is updated properly. Closes the
+      sourceforge bug number 2364987.
+    + When you create a new recipe, a new entry is raised in the left panel
+      containing a "save icon" and the title for the recipe, however in
+      2.0-alpha1 if you close the recipe whitout saving, a dialog asks you if
+      you want to save the changes or not and if you select "no" the entry with
+      the title of the recipe located in the left panel will not be hidden.
+      This bug is fixed in this version.
+
+Changes from 1.1 to 2.0-alpha1:
+  * General port to kde4/qt4, several dialogs and left panel.
+  * Use sonnet.
+  * Port of backup/restore functions to kde4/qt4.
+  * Port of setup assistant to kde4/qt4.
+  * Port of preferences dialog to kde4/qt4.
+  * Port of sqlite migration code to kde4/qt4.
+  * Mimetypes are installed using the Shared Mime-info Database.
+  * Updated splash screen with the proper version number.
+  * Workaround for a Qt bug in the PostgreSQL driver when getting the database
+    version number.
+  * Refreshed KDateEdit and KDatePickerPopup (using source from KDE 4.2.4).
+  * Using QPointers when showing modal dialogs (it fixes issues reported by
+    krazy).
+  * Refreshed RatingWidget, which now is licensed under GPL2 + GPL3 + e.v.
+    exception, thanks to Robby Stephenson.
+  * Stop using some Qt classes that should not be used (it fixes issues
+    reported by krazy).
+
+Changes from 1.0-beta2 to 1.1 (1.1 was never released, however the KDE 4 port
+is based on 1.1):
+  * New recipe layouts, thanks to a new XSL-based template system.
+  * New icons and splash screen (courtesy of Robert Wadley).
+
+Changes from 1.0-beta1 to 1.0-beta2:
+  * Fix crash with sqlite backend.
+  * Fix FTBFS with GCC 4.3.
+  * Add categories to desktop file.
+
+Changes from 0.9 to 1.0-beta1:
+  * Handbook integration: Removed context help and replaced with links to the
+    Handbook. Also "Help" buttons have been added to some dialogs that also
+    take users to the Handbook for more info.
+  * Nutrient status indicator; while editing a recipe, lets you know whether or
+    not nutrient information is complete for a recipe.
+  * Measurement Converter tool.
+  * Ingredient weights, used for accurate Volume->Mass unit conversions based
+    on the ingredient.
+  * Improved unit conversions; there's a separate table for mass and volume
+    conversions and this setup avoids non-sensical conversions (i.e. 1 loaf =
+    ? cups).
+  * Optimized for quick loading and faster startup times.
+  * Ingredient substitutes (i.e. butter or margarine).
+  * Completely re-done recipe view, based on HTML templates. This solves many
+    layout problems and should allow creating layouts for printing to 3x5 or
+    4x6 cards. Generated HTML is much cleaner and compatible.
+  * "Web Book" exporter - exports a collection of recipes into a series of web
+    pages, organized by category.
+  * Ingredients and properties can be split into a variable number of columns
+    in the Page Setup.
+  * Select which properties to show in the recipe view.
+  [ Notable bugs fixed ]
+  * Make dialog windows more KDE standards compliant.
+  * Fix displaying photos when special characters are in the title of the
+    recipe.
+  * Fix database backup for a non-local host.
+
+Changes from 0.8 to 0.9:
+  * Rating support: multiple people can rate a single recipe, each rating can
+    rate a recipe on multiple criteria (taste, ease of preparation, etc.).
+  * New yield property for recipes: rather than storing the number of servings,
+    it now stores a yield amount and type. The amount may also be a range.
+  * Backup/restore of entire database. This is much faster than exporting/
+    importing an database in the Krecipes Format and also includes nutrient
+    info and unit ratios.
+  * Ingredient amounts can be ranges.
+  * Recipe lists now allow selecting multiple recipes. For example, this is
+    handy for exporting, viewing, or printing multiple recipes at once.
+  * Dialog to paste ingredients into, which Krecipes then automatically parses
+    and adds to a recipes.
+  * Allows multiple preparation methods.
+  * PostgreSQL backend now stable.
+  * Now keeps tracks of when recipes are created, modified, and last accessed.
+  * 'Copy to Clipboard' feature, which allows easily copying a recipe(s)
+    directly to the clipboard in a format that can be configured. There is a
+    new export format, Plain Text, that is used by default.
+  * Rezkonv file format export.
+
+Changes from 0.7 to 0.8:
+  * Redesigned advanced search: search on the "and", "or", and "not"
+    conditions of each search term. Can now search on nearly any item possible.
+  * Reduce memory requirements for large databases. Very large databases
+    should now be possible, though work continues to be put into this. It is
+    being tested on a database with 37,000 recipes and counting.
+  * Improve recipe import speeds, keeping a fairly constant speed no matter
+    what the size of the database.
+
+Changes from 0.6 to 0.7:
+  * BETA support for PostgreSQL database backend.
+  * Database to database transfer (Remote or local).
+  * Support for grouping ingredients. Also imports group information from
+    import formats, such as Meal-Master.
+  * There's a new intermediate interface between displaying the shopping
+    list and selecting recipes for it. Here you can add, remove, or modify
+    ingredients used in those selected recipes.
+  * Load sample recipes based on locale. If we don't currently have your
+    locale, please submit some recipes to us!
+  * Border options added to recipe display.
+  * Autocomplete ingredients typed in the instructions text edit.
+  * Updated USDA data from SR16-1 to SR17 (released September, 2004).
+  * 'Configure' options to disable particular backends.
+  * Support for drag and drop in the shopping list dialog.
+  * Behind the scenes, the internal structure of Krecipes has improved,
+    quickly bringing it closer toward our 1.0 release.
+  * Overall, more stability, interface, and useability enhancements.
+
+Changes from 0.5 to 0.6:
+  * Support for subcategories.
+  * Preparation time field for recipes.
+  * Rezkonv import filter.
+  * Eliminated the dependence on mysql.h (mysql-devel).
+  * Advanced search which can search by ingredients, categories, authors,
+    servings, and preparation time.
+  * Significant speed increases while navigating Krecipes due to the fact
+    that reloading all data when switching dialogs is no longer necessary.
+  * en renaming an element to something that already exists, merge the two
+    into one.
+  * Provide popup menus to many listviews for easy access to common functions.
+  * Fix display of characters in certain locales (In particular, this fixes
+    the problem many people had displaying umlauts).
+  * Actually hide items in the Page Setup that aren't going to be shown in
+    the recipe view.
+  * Allow renaming of unit and prep method once it is entered in the recipe
+    input (from the list view).
+  * Allow an empty or zero amount and an empty unit for ingredients.
+  * Set the cursor to change to the wait cursor for operations that could
+    take more than a few seconds -- this makes the app seem more responsive.
+  * Fix some escape/encoding issues in the generated HTML.
+  * Support for SQLite 3.
+  * Add a Reload and Edit action to the menu.
+  * Accessibility improvements.
+
+Most important changes from 0.4 to 0.5:
+  * Ingredient matcher - select what ingredients you have, and find out what
+    you can make with them.
+  * A new field for ingredients: preparation method.
+  * Easier and faster imports.
+  * Load nutrient data from the USDA's nutrient database.
+  * Layouts can now be saved and loaded from files in the Krecipes layout
+    format.
+  * Improved locale support.
+  * Category and author names can now be up to 40 and 50 characters
+  respectively
+    (previously 20).
+  * Complete keyboard navigation now possible.
+
+Most important new features from 0.3 to 0.4:
+  * New Krecipes file format for recipe exchange! (.kre compressed, and .kreml
+    plain XML).
+  * Import Filters for other programs: MasterCook Export (mx2), MasterCook
+    Export (mxp) and MealMaster.
+  * SQLite support as database. Much easier to setup for users.
+  * Configureable layouting of the recipe display.
+  * A Diet Wizard that helps creating a menu for a chosen period.
+  * New Tips function.
+  * New recipe search method.
+  * Much Improved GUI.
+  * Lots, tons, of bugfixes, improvements, speed-up, database structure
+    improvements...
+
+Most important changes from 0.2 to 0.3:
+  * Recipes can be classified in categories.
+  * Number of servings per recipe.
+  * Authors support.
+  * New MySQL database autosetup to make setup easier.
+  * "In-place" creation of new ingredients and units.
+  * Renaming of units and ingredients.
+  * Resizing of photos.
+  * Improved shopping list presentation.
+  * New smaller and smarter layout for editing recipes.
+  * i18n: Language support: English, Spanish, French and Euskara.
+  * UTF support.
+  * Thousands of other touches and bugfixes.
+  * New recipe samples.
+
