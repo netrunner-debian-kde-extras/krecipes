@@ -9,8 +9,8 @@ Build-Depends: cdbs, debhelper (>= 7), cmake, pkg-kde-tools,
  shared-desktop-ontologies, shared-mime-info
 Standards-Version: 3.9.1
 Homepage: http://krecipes.sourceforge.net/
-Vcs-Browser: http://svn.debian.org/viewsvn/pkg-kde/kde-extras/krecipes/trunk/
-Vcs-Svn: svn://svn.debian.org/svn/pkg-kde/kde-extras/krecipes/trunk
+Vcs-Browser: http://git.debian.org/?p=pkg-kde/kde-extras/krecipes.git
+Vcs-Git: git://git.debian.org/pkg-kde/kde-extras/krecipes.git
 
 Package: krecipes
 Architecture: any
