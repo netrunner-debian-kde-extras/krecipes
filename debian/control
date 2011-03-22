@@ -6,7 +6,7 @@ Uploaders: Matthias Julius <mdeb@julius-net.net>,
  José Manuel Santamaría Lema <panfaust@gmail.com>
 Build-Depends: cdbs, debhelper (>= 7), cmake, pkg-kde-tools,
  kdelibs5-dev, libsqlite3-dev, libqimageblitz-dev, libxml2-dev, libxslt1-dev,
- shared-desktop-ontologies, shared-mime-info
+ libqtwebkit-dev, shared-desktop-ontologies, shared-mime-info
 Standards-Version: 3.9.1
 Homepage: http://krecipes.sourceforge.net/
 Vcs-Browser: http://git.debian.org/?p=pkg-kde/kde-extras/krecipes.git
