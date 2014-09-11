@@ -1,3 +1,8 @@
+krecipes (2.0~beta2-4) UNRELEASED; urgency=medium
+
+
+ -- Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>  Thu, 11 Sep 2014 10:28:36 +0200
+
 krecipes (2.0~beta2-3) unstable; urgency=low
 
   * Add libqtwebkit-dev to Build-Depends (Closes: #618245)
