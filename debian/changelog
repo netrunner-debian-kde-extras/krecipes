@@ -4,6 +4,7 @@ krecipes (2.0~beta2-4) UNRELEASED; urgency=medium
   * Bump the debhelper compatibility to 9:
     - bump the debhelper build dependency to 9
     - bump compat to 9
+  * Sort the .install files, and strip the debian/tmp prefix.
 
  -- Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>  Thu, 11 Sep 2014 10:28:36 +0200
 
