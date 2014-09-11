@@ -10,6 +10,7 @@ krecipes (2.0~beta2-4) UNRELEASED; urgency=medium
     - use the dh sequencer in rules, using the kde addon, with parallel build,
       and in as-needed mode
     - drop the cdbs build dependency
+  * Update the Vcs-* headers.
 
  -- Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>  Thu, 11 Sep 2014 10:28:36 +0200
 
