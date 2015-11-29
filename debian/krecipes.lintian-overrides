@@ -1,4 +1,0 @@
-# Don't warn about missing icon file as this is in the -data package
-krecipes binary: menu-icon-missing /usr/share/pixmaps/krecipes.xpm
-# Don't warn about missing man page as this is in the -data package
-krecipes binary: binary-without-manpage usr/bin/krecipes
