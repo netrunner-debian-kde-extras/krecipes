@@ -1,13 +1,9 @@
-include(FindLibXml2)
-include(FindLibXslt)
-include(FindQImageBlitz)
-
-find_package(Sqlite2)
-find_package(Sqlite)
-find_package(QImageBlitz)
+find_package(LibXml2 REQUIRED)
+find_package(LibXslt REQUIRED)
 include_directories( ${KDE4_INCLUDES} ${KDE4_INCLUDE_DIR} ${QT_INCLUDES}
-   ${LIBXML2_INCLUDE_DIR} ${LIBXSLT_INCLUDE_DIR} ${QIMAGEBLITZ_INCLUDES}
+   ${LIBXML2_INCLUDE_DIR} ${LIBXSLT_INCLUDE_DIR}
    ${CMAKE_CURRENT_SOURCE_DIR}/backends/
+   ${CMAKE_CURRENT_SOURCE_DIR}/threadedqueries
    ${CMAKE_CURRENT_SOURCE_DIR}/importers
    ${CMAKE_CURRENT_SOURCE_DIR}/exporters
    ${CMAKE_CURRENT_SOURCE_DIR}/actionshandlers
@@ -20,18 +16,7 @@ add_definitions (-DQT3_SUPPORT -DQT3_SUPPORT_WARNINGS)
 
 ############# backends ###############
 
-
-include(ConfigureChecks.cmake)
-configure_file(config-krecipes.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-krecipes.h )
-
-# In case of having both sqlite 2.x and 3.x series we want to compile against 3.x
-if ( SQLITE_FOUND )
-   include_directories(${SQLITE_INCLUDE_DIR})
-   set(sqlite_SRCS  backends/SQLite/libqsqlite/krecqsqlitedb.cpp backends/SQLite/libqsqlite/krecqsqliteresult.cpp backends/SQLite/literecipedb.cpp  backends/SQLite/qsql_sqlite.cpp)
-elseif ( SQLITE2_FOUND )
-   include_directories(${SQLITE2_INCLUDE_DIR})
-   set(sqlite_SRCS  backends/SQLite/libqsqlite/krecqsqlitedb.cpp backends/SQLite/libqsqlite/krecqsqliteresult.cpp backends/SQLite/literecipedb.cpp  backends/SQLite/qsql_sqlite.cpp)
-endif ( SQLITE_FOUND )   
+set(sqlite_SRCS backends/SQLite/literecipedb.cpp)
 
 set(mysql_SRCS backends/MySQL/mysqlrecipedb.cpp)
 
@@ -61,18 +46,28 @@ set(krecipesimporters_SRCS
    importers/rezkonvimporter.cpp
    importers/kredbimporter.cpp)
 
+##### Threaded database queries  #####
+
+set(krecipesthreadedqueries_SRCS
+   threadedqueries/loadingauthorsthread.cpp
+)
+
 ######### Actions Handlers ###########
 
 set(krecipesactionshandlers_SRCS
    actionshandlers/recipeactionshandler.cpp
-   actionshandlers/actionshandlerbase.cpp
+   actionshandlers/kregenericactionshandler.cpp
    actionshandlers/ingredientactionshandler.cpp
    actionshandlers/headeractionshandler.cpp
    actionshandlers/propertyactionshandler.cpp
    actionshandlers/unitactionshandler.cpp
    actionshandlers/prepmethodactionshandler.cpp
+   actionshandlers/krecategoryactionshandler.cpp
+   actionshandlers/kreauthoractionshandler.cpp
+
+   #FIXME: The classes below are deprecated and must be removed sooner or later.
+   actionshandlers/actionshandlerbase.cpp
    actionshandlers/categoryactionshandler.cpp
-   actionshandlers/authoractionshandler.cpp
 )
 
 ############### widgets ##############
@@ -86,13 +81,13 @@ set(krecipeswidgets_SRCS
    widgets/unitlistview.cpp
    widgets/propertylistview.cpp
    widgets/prepmethodlistview.cpp
-   widgets/categorylistview.cpp
-   widgets/authorlistview.cpp
+   widgets/krecategorieslistwidget.cpp
+   widgets/kreauthorlistwidget.cpp
    widgets/recipelistview.cpp
    widgets/categorycombobox.cpp
    widgets/kretextedit.cpp
-   widgets/dblistviewbase.cpp
-   widgets/conversiontable.cpp
+   widgets/kregenericlistwidget.cpp
+   widgets/kreconversiontable.cpp
    widgets/fractioninput.cpp
    widgets/ingredientcombobox.cpp
    widgets/headercombobox.cpp
@@ -108,8 +103,14 @@ set(krecipeswidgets_SRCS
    widgets/amountunitinput.cpp
    widgets/weightinput.cpp
    widgets/thumbbar.cpp
-   widgets/kratingwidget.cpp
-   widgets/kratingpainter.cpp)
+
+   #FIXME: The classes below are deprecated and must be removed sooner or later.
+   widgets/authorlistview.cpp #replaced by kreauthorlistwidget.cpp
+   widgets/dblistviewbase.cpp #replaced by kregenericlistwidget.cpp
+   widgets/categorylistview.cpp #replaced by krecategorieslistwidget.cpp
+   widgets/conversiontable.cpp #replaced by kreconversiontable.cpp
+
+)
 
 
 ############## dialogs ###############
@@ -155,10 +156,14 @@ set(krecipesdialogs_SRCS
    dialogs/editpropertiesdialog.cpp
    dialogs/createunitconversiondialog.cpp)
 
+kde4_add_ui_files(krecipesdialogs_SRCS
+   dialogs/resizerecipedialog.ui
+   )
+
 
 ############# exporters ##############
 
-set (krecipesexporters_SRCS 
+set (krecipesexporters_SRCS
    exporters/kreexporter.cpp
    exporters/baseexporter.cpp
    exporters/cookmlexporter.cpp
@@ -197,20 +202,30 @@ set(datablocks_SRCS
    datablocks/yield.cpp
    )
 
+
+############ validators ##############
+
+set(validators_SRCS
+   validators/mixednumbervalidator.cpp
+   )
+
+
 ############### common library ################
 # The reason to have this static library is to compile some files
 # once for *all* executables in this project.
 # (i.e. I want to save CPU time when compiling with test programs)
 
 kde4_add_library(krecipescommon STATIC
-   ${mysql_SRCS} ${postgresql_SRCS} ${sqlite_SRCS} ${krecipesdbs_SRCS} 
+   ${mysql_SRCS} ${postgresql_SRCS} ${sqlite_SRCS} ${krecipesdbs_SRCS}
    ${krecipesimporters_SRCS} ${krecipesexporters_SRCS}
-   ${datablocks_SRCS} klomanager.cpp propertycalculator.cpp widgets/kratingpainter.cpp)
+   ${datablocks_SRCS} ${krecipesthreadedqueries_SRCS}
+   ${validators_SRCS}
+   klomanager.cpp propertycalculator.cpp)
 
 target_link_libraries(krecipescommon
    ${KDE4_KDECORE_LIBS} ${KDE4_KDE3SUPPORT_LIBS}
-   ${QT_QTSQL_LIBRARY} 
-   ${LIBXSLT_LIBRARIES} ${LIBXML2_LIBRARIES}) 
+   ${QT_QTSQL_LIBRARY}
+   ${LIBXSLT_LIBRARIES} ${LIBXML2_LIBRARIES})
 
 ############### tests ################
 
@@ -219,70 +234,104 @@ set(IMPORT_EXPORT_TESTS
     kretest mmftest mx2test mxptest nyctest recipemltest rezkonvtest
     )
 
-set(UNIT_TESTS
-    test_rating
-    test_ratingcriteria
-    test_yield
-    test_unit
-    test_unitratio
-    test_unitratiolist
-    test_weight
+set(DATABLOCKS_TESTS
+    rating
+    ratingcriteria
+    yield
+    unit
+    unitratio
+    unitratiolist
+    weight
+    mixednumber
+    )
+
+set(DATABASE_TESTS
+    authors
+    encoding
     )
 
 macro(add_import_export_test _TEST)
     if(KDE4_BUILD_TESTS)
-        kde4_add_executable(krecipes-${_TEST} tests/${_TEST}.cpp)
-        target_link_libraries(krecipes-${_TEST} ${UNIT_TEST_LIBRARIES})
+        kde4_add_executable(krecipes-import-export-${_TEST} tests/import-export/${_TEST}.cpp)
+        target_link_libraries(krecipes-import-export-${_TEST} ${UNIT_TEST_LIBRARIES})
 
         set(_TEST_DATA
-            ${CMAKE_CURRENT_SOURCE_DIR}/tests/${_TEST}.txt
-            ${CMAKE_CURRENT_SOURCE_DIR}/tests/test_photo.jpg)
+            ${CMAKE_CURRENT_SOURCE_DIR}/tests/import-export/${_TEST}.txt
+            ${CMAKE_CURRENT_SOURCE_DIR}/tests/import-export/test_photo.jpg)
 
-        add_test(NAME krecipes-${_TEST} COMMAND $<TARGET_FILE:krecipes-${_TEST}> ${_TEST_DATA})
+        add_test(NAME krecipes-import-export-${_TEST}
+            COMMAND $<TARGET_FILE:krecipes-import-export-${_TEST}> ${_TEST_DATA})
     endif(KDE4_BUILD_TESTS)
 endmacro(add_import_export_test)
 
-macro(add_unit_test _TEST)
-    kde4_add_unit_test(krecipes-${_TEST} tests/${_TEST}.cpp)
-    target_link_libraries(krecipes-${_TEST} ${UNIT_TEST_LIBRARIES})
-endmacro(add_unit_test)
+macro(add_datablocks_test _TEST)
+    kde4_add_unit_test(krecipes-datablocks-${_TEST} tests/datablocks/${_TEST}.cpp)
+    target_link_libraries(krecipes-datablocks-${_TEST} ${UNIT_TEST_LIBRARIES})
+endmacro(add_datablocks_test)
+
+macro(add_database_test _TEST)
+    kde4_add_unit_test(krecipes-database-${_TEST} tests/database/${_TEST}.cpp)
+    target_link_libraries(krecipes-database-${_TEST} ${UNIT_TEST_LIBRARIES})
+endmacro(add_database_test)
 
 set(UNIT_TEST_LIBRARIES krecipescommon
     ${KDE4_KDECORE_LIBS} ${KDE4_KDE3SUPPORT_LIBS}
     ${QT_QTSQL_LIBRARY}  ${QT_QTTEST_LIBRARY}
     ${LIBXSLT_LIBRARIES} ${LIBXML2_LIBRARIES}
     )
-if ( SQLITE_FOUND )
-   list(APPEND UNIT_TEST_LIBRARIES ${SQLITE_LIBRARIES})
-elseif ( SQLITE2_FOUND )
-   list(APPEND UNIT_TEST_LIBRARIES ${SQLITE2_LIBRARIES})
-endif ( SQLITE_FOUND )
 
 foreach(_TEST ${IMPORT_EXPORT_TESTS})
     add_import_export_test(${_TEST})
 endforeach(_TEST)
-foreach(_TEST ${UNIT_TESTS})
-    add_unit_test(${_TEST})
+foreach(_TEST ${DATABLOCKS_TESTS})
+    add_datablocks_test(${_TEST})
 endforeach(_TEST)
+foreach(_TEST ${DATABASE_TESTS})
+    add_database_test(${_TEST})
+endforeach(_TEST)
+
+
+############# NukeDB #################
+
+if(BUILD_NUKEDB)
+   set(nukedb_SRCS
+      nukedb/main.cpp
+      nukedb/mainwindow.cpp
+      nukedb/nukeconfigwidget.cpp
+   )
+
+   kde4_add_ui_files(nukedb_SRCS
+      nukedb/nukeconfigwidget.ui
+   )
+
+   kde4_add_executable(nukedb ${nukedb_SRCS})
+   target_link_libraries(nukedb krecipescommon ${KDE4_KDEUI_LIBS})
+
+   install(TARGETS nukedb ${INSTALL_TARGETS_DEFAULT_ARGS})
+endif(BUILD_NUKEDB)
+
 
 ############# Main  #################
 
-set(krecipes_SRCS 
-   main.cpp 
-   krecipes.cpp 
-   krecipesview.cpp 
-   pref.cpp 
-   #propertycalculator.cpp 
-   setupassistant.cpp 
-   shoppingcalculator.cpp 
-   kstartuplogo.cpp 
-   recipefilter.cpp 
-   convert_sqlite3.cpp 
+set(krecipes_SRCS
+   main.cpp
+   krecipes.cpp
+   krecipesview.cpp
+   pref.cpp
+   #propertycalculator.cpp
+   setupassistant.cpp
+   shoppingcalculator.cpp
+   kstartuplogo.cpp
+   recipefilter.cpp
+   convert_sqlite3.cpp
    #klomanager.cpp
 )
 
 
-kde4_add_ui_files(krecipes_SRCS widgets/ratingdisplaywidget.ui)
+kde4_add_ui_files(krecipes_SRCS
+   widgets/ratingdisplaywidget.ui
+   widgets/kregenericlistwidget.ui
+)
 
 qt4_add_dbus_adaptor(krecipes_SRCS org.kde.krecipes.xml krecipesview.h KrecipesView)
 
@@ -293,13 +342,7 @@ kde4_add_executable(krecipes
    ${krecipesdialogs_SRCS}
    ${krecipesactionshandlers_SRCS})
 
-target_link_libraries(krecipes krecipescommon ${KDE4_KHTML_LIBS} ${KDE4_KDEUI_LIBS} ${KDE4_KDE3SUPPORT_LIBS} ${QT_QTSQL_LIBRARY} ${LIBXSLT_LIBRARIES} ${LIBXML2_LIBRARIES} ${QIMAGEBLITZ_LIBRARIES} ${QT_QTWEBKIT_LIBRARY} ${KDE4_KDEWEBKIT_LIBS})
-
-if ( SQLITE_FOUND )
-   target_link_libraries(krecipes ${SQLITE_LIBRARIES})
-elseif ( SQLITE2_FOUND )
-   target_link_libraries(krecipes ${SQLITE2_LIBRARIES})
-endif ( SQLITE_FOUND )
+target_link_libraries(krecipes krecipescommon ${KDE4_KHTML_LIBS} ${KDE4_KDEUI_LIBS} ${KDE4_KDE3SUPPORT_LIBS} ${QT_QTSQL_LIBRARY} ${LIBXSLT_LIBRARIES} ${LIBXML2_LIBRARIES} ${QT_QTWEBKIT_LIBRARY} ${KDE4_KDEWEBKIT_LIBS})
 
 
 install(TARGETS krecipes ${INSTALL_TARGETS_DEFAULT_ARGS})

@@ -164,7 +164,9 @@ void IngredientMatcherDialog::itemRenamed( Q3ListViewItem* item, const QPoint &,
 		AmountUnitInput *amountEdit = new AmountUnitInput( box, database );
 		// Set the values from the item
 		if ( !item->text(1).isEmpty() ) {
-			amountEdit->setAmount( MixedNumber::fromString(item->text(2)) );
+			MixedNumber number;
+			MixedNumber::fromString( item->text(2), number, true );
+			amountEdit->setAmount( number );
 			Unit u;
 			u.setId(item->text(3).toInt());
 			amountEdit->setUnit( u );
@@ -225,8 +227,8 @@ void IngredientMatcherDialog::addIngredient()
 				ingListView->listView() ->ensureItemVisible( new_item );
 				allIngListView->listView() ->setSelected( items[i], false );
 
-				m_ingredientList.append( Ingredient( items[i]->text( 0 ), 0, Unit(), -1, items[i]->text( 1 ).toInt() ) );
-				m_item_ing_map.insert( new_item, m_ingredientList.end()-- );
+				IngredientList::iterator it = m_ingredientList.append( Ingredient( items[i]->text( 0 ), 0, Unit(), -1, items[i]->text( 1 ).toInt() ) );
+				m_item_ing_map.insert( new_item, it );
 			}
 		}
 	}

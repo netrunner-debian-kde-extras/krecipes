@@ -1,5 +1,4 @@
 Krecipes is a Recipe Book for KDE. It requires KDE 4.4 or greater (and Qt 4).
-Developed and tested on Debian GNU/Linux sid (KDE 4.4.5 and Qt 4.6.3).
 
 
 ** Dependencies
@@ -11,7 +10,7 @@ to use the Krecipes backup feature. If you want to use "krecipes
 
 ** Build Dependencies
 
- If you're using a Debian-like GNU/Linux distribution you may want to install
+ If you're using an APT based GNU/Linux distribution you may want to install
  the following packages: 
   - kdelibs5-dev
   - libqimageblitz-dev 
@@ -19,50 +18,60 @@ to use the Krecipes backup feature. If you want to use "krecipes
   - libxml2-dev
   - libxslt1-dev
  
-** Building The Latest (2.0-beta2) Release
+** Building The Latest Release
  
  Just untar the package first:
  
- tar -zxf krecipes-2.0-beta2.tar.gz
+ tar -zxf krecipes-2.x.x.tar.gz (replace x with the corresponding version number)
  
  And compile:
  
- cd krecipes-2.0-beta2
+ cd krecipes-2.x.x (replace x with the corresponding version number)
  mkdir build && cd build
  cmake ..
  make
  make install
  
  
-** Downloading And Compiling Through Subversion
+** Downloading, Building And Installing The Latest Development Version With Git
  
- The project is now being developed under extragear/utils in KDE's servers. 
+ The project is being developed under extragear/utils in KDE's servers. 
 
- Please notice that this application is alpha, note that the more our users
- tells us about bugs, the faster we can find them and fix them.
-
- To download the package, do:
+ To download the source code, do:
  
- svn co svn://anonsvn.kde.org/home/kde/trunk/extragear/utils/krecipes
+ git clone git://anongit.kde.org/krecipes
 
- To update the package, do:
+ To update the source code, do:
 
  cd krecipes
- svn update
+ git pull
 
- To compile it:
+ To build and install it in the default prefix (usually /usr/local):
 
  mkdir build && cd build
  cmake ..
  make
-
- To install it:
-
  make install
+
+ To build and install it in other prefix, for instance ~/.kde/:
+
+ mkdir build && cd build
+ cmake .. -DCMAKE_INSTALL_PREFIX=~/.kde/ 
+ make
+ make install
+
+ Also if you install it in ~/.kde/ you may want to set the following variables
+ in your .bashrc (or wherever it's appropiate for you):
+
+ export PATH=~/.kde/bin:${PATH}
+ export MANPATH=~/.kde/man:$(manpath)
+ export KDEDIRS=~/.kde:/usr
+ export XDG_DATA_DIRS=~/.kde/share:${XDG_DATA_DIRS}
+ export LD_LIBRARY_PATH=~/.kde/lib
 
  To uninstall it:
 
- make uninstall
+ cd build && make uninstall
 
 
 ** Test programs
@@ -71,7 +80,11 @@ to use the Krecipes backup feature. If you want to use "krecipes
  importers and exporters. You can build it adding "-DKDE4_BUILD_TESTS=ON" when
  you execute cmake.
 
- You can execute the tests just typing 'make test'.
+ You can execute all the tests just typing 'make test'. If any of them fails
+ and you need to see more details about what failed, you should execute the
+ failing test individually; you can do this just typing the name of the test in
+ the command line, they are installed in the same place than the 'krecipes'
+ executable.
 
 
 ** Hidden features
@@ -87,4 +100,10 @@ to use the Krecipes backup feature. If you want to use "krecipes
  You can see the features ("Merge Similar Categories..." and "Merge Similar
  Ingredients...") in the "Tools" menu.
 
+
+** The NukeDB tool
+
+ nukedb is a development tool to fill the Krecipes database with huge amounts
+ of data. You can build it along with Krecipes adding "-DBUILD_NUKEDB=ON" when
+ you execute cmake. To use it just type "nukedb" in the console.
 

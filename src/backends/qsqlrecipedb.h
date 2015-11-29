@@ -20,6 +20,7 @@
 #include <QString>
 #include <QPixmap>
 #include <QSqlQuery>
+#include <QSqlDriver>
 
 #include "datablocks/recipe.h"
 #include "datablocks/elementlist.h"
@@ -36,8 +37,18 @@ class QSqlRecipeDB : public RecipeDB
 
 protected:
 	virtual QString qsqlDriverPlugin() const { return QString(); }
+	
+	//If this function returns 0, it means we are using a builtin driver.
 	virtual QSqlDriver *qsqlDriver() const { return 0; }
+
+	//Unlike qsqlDriver() this function does NOT return 0 if we are using a
+	// builtin driver, it always retuns the current driver used by the
+	// database.
+	virtual QSqlDriver *currentDriver() const { return database->driver(); }
+
 	virtual void createDB( void ) = 0;
+
+	virtual void initializeData( void );
 
 	virtual void storePhoto( int recipeID, const QByteArray &data );
 	virtual void loadPhoto( int recipeID, QPixmap &photo );
@@ -70,22 +81,25 @@ public:
 
 	RecipeDB::Error connect( bool create_db, bool create_tables );
 
+	virtual void transaction();
+	virtual void commit();
+
 	void addIngredientWeight( const Weight & );
-	void addProperty( const QString &name, const QString &units );
+	RecipeDB::IdType addProperty( const QString &name, const QString &units );
 	void addPropertyToIngredient( int ingredientID, int propertyID, double amount, int perUnitsID );
 	void addUnitToIngredient( int ingredientID, int unitID );
 
 	void categorizeRecipe( int recipeID, const ElementList &categoryList );
 	void changePropertyAmountToIngredient( int ingredientID, int propertyID, double amount, int per_units );
 
-	void createNewAuthor( const QString &authorName );
-	void createNewCategory( const QString &categoryName, int parent_id = -1 );
-	void createNewIngGroup( const QString &name );
-	void createNewIngredient( const QString &ingredientName );
-	void createNewPrepMethod( const QString &prepMethodName );
-	void createNewRating( const QString &name );
-	void createNewUnit( const Unit &unit );
-	void createNewYieldType( const QString &type );
+	RecipeDB::IdType createNewAuthor( const QString &authorName );
+	RecipeDB::IdType createNewCategory( const QString &categoryName, int parent_id = -1 );
+	RecipeDB::IdType createNewIngGroup( const QString &name );
+	RecipeDB::IdType createNewIngredient( const QString &ingredientName );
+	RecipeDB::IdType createNewPrepMethod( const QString &prepMethodName );
+	RecipeDB::IdType createNewRating( const QString &name );
+	RecipeDB::IdType createNewUnit( const Unit &unit );
+	RecipeDB::IdType createNewYieldType( const QString &type );
 
 	void emptyData( void );
 	void empty( void );
@@ -110,10 +124,12 @@ public:
 
 	QString getUniqueRecipeTitle( const QString &recipe_title );
 
+	virtual void importUSDADatabase();
+
 	bool ingredientContainsProperty( int ingredientID, int propertyID, int perUnitsID );
 	bool ingredientContainsUnit( int ingredientID, int unitID );
 
-	void loadAuthors( ElementList *list, int limit = -1, int offset = 0 );
+	int loadAuthors( ElementList *list, int limit = -1, int offset = 0 );
 	void loadCategories( CategoryTree *list, int limit = -1, int offset = 0, int parent_id = -1, bool recurse = true );
 	void loadCategories( ElementList *list, int limit = -1, int offset = 0 );
 	void loadIngredientGroups( ElementList *list );
@@ -197,12 +213,15 @@ public:
 
 	bool checkIntegrity( void );
 
+	virtual void wipeDatabase();
+
 	void splitCommands( QString& s, QStringList& sl );
 
 	virtual float databaseVersion( void );
 
 protected:
 	void execSQL( const QString &command );
+	virtual RecipeDB::IdType lastInsertId( const QSqlQuery &query );
 
 private:
 	void loadElementList( ElementList *elList, QSqlQuery *query );

@@ -32,9 +32,19 @@ public:
 	explicit MySQLRecipeDB( const QString &host, const QString &user = QString(), const QString &pass = QString(), const QString &DBName = DEFAULT_DB_NAME, int port = 0 );
 	~MySQLRecipeDB( void );
 
-	int lastInsertID();
-
 	void createTable( const QString &tableName );
+
+	virtual int maxAuthorNameLength() const;
+	virtual int maxCategoryNameLength() const;
+	virtual int maxIngredientNameLength() const;
+	virtual int maxIngGroupNameLength() const;
+	virtual int maxRecipeTitleLength() const;
+	virtual int maxUnitNameLength() const;
+	virtual int maxPrepMethodNameLength() const;
+	virtual int maxPropertyNameLength() const;
+	virtual int maxYieldTypeLength() const;
+
+
 	void givePermissions( const QString &dbName, const QString &username, const QString &password = QString(), const QString &clientHost = "localhost" );
 
 protected:

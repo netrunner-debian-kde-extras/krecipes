@@ -70,6 +70,9 @@ RecipeActionsHandler::RecipeActionsHandler( K3ListView *_parentListView, RecipeD
 	);
 	connect( parentListView,
 		SIGNAL( selectionChanged() ), SLOT( selectionChangedSlot() ) );
+
+	connect( this, SIGNAL( printDone() ), 
+		this, SLOT( printDoneSlot() ), Qt::QueuedConnection );
 }
 
 void RecipeActionsHandler::addRecipeAction( KAction * action )
@@ -429,11 +432,11 @@ void RecipeActionsHandler::exportRecipes( const QList<int> &ids, const QString &
 
 			int overwrite = -1;
 			if ( QFile::exists( exporter->fileName() ) ) {
-				overwrite = KMessageBox::warningYesNo( 0, i18n( "File \"%1\" exists.  Are you sure you want to overwrite it?" , exporter->fileName()), i18n( "Saving recipe" ) );
+				overwrite = KMessageBox::warningYesNo( 0, i18n( "File \"%1\" exists.  Are you sure you want to overwrite it?" , exporter->fileName()), i18nc( "@title:window", "Saving recipe" ) );
 			}
 
 			if ( overwrite == KMessageBox::Yes || overwrite == -1 ) {
-				KProgressDialog progress_dialog( 0, QString(), i18n( "Saving recipes..." ) );
+				KProgressDialog progress_dialog( 0, QString(), i18nc( "@info:progress", "Saving recipes..." ) );
 				progress_dialog.setObjectName("export_progress_dialog");
 				exporter->exporter( ids, database, &progress_dialog );
 			}
@@ -478,6 +481,11 @@ void RecipeActionsHandler::print(bool ok)
 	//Remove the temporary directory which stores the HTML and free memory.
 	m_tempdir->unlink();
 	delete m_tempdir;
+	emit( printDone() );
+}
+
+void RecipeActionsHandler::printDoneSlot()
+{
 	delete m_printPage;
 }
 

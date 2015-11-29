@@ -1,13 +1,14 @@
-/***************************************************************************
-*   Copyright © 2003-2004 Unai Garro <ugarro@gmail.com>                   *
-*   Copyright © 2003-2004 Cyril Bosselut <bosselut@b1project.com>         *
-*   Copyright © 2003-2004 Jason Kivlighn <jkivlighn@gmail.com>            *
-*                                                                         *
-*   This program is free software; you can redistribute it and/or modify  *
-*   it under the terms of the GNU General Public License as published by  *
-*   the Free Software Foundation; either version 2 of the License, or     *
-*   (at your option) any later version.                                   *
-***************************************************************************/
+/*****************************************************************************
+*   Copyright © 2003-2004 Unai Garro <ugarro@gmail.com>                      *
+*   Copyright © 2003-2004 Cyril Bosselut <bosselut@b1project.com>            *
+*   Copyright © 2003-2004 Jason Kivlighn <jkivlighn@gmail.com>               *
+*   Copyright © 2009-2012 José Manuel Santamaría Lema <panfaust@gmail.com>   *
+*                                                                            *
+*   This program is free software; you can redistribute it and/or modify     *
+*   it under the terms of the GNU General Public License as published by     *
+*   the Free Software Foundation; either version 2 of the License, or        *
+*   (at your option) any later version.                                      *
+******************************************************************************/
 
 #include "krecipesview.h"
 
@@ -23,9 +24,10 @@
 #include <kvbox.h>
 #include <QFrame>
 
+#include "actionshandlers/kreauthoractionshandler.h"
 #include "actionshandlers/recipeactionshandler.h"
 #include "actionshandlers/unitactionshandler.h"
-#include "actionshandlers/categoryactionshandler.h"
+#include "actionshandlers/krecategoryactionshandler.h"
 #include "setupassistant.h"
 #include "convert_sqlite3.h"
 #include "kstartuplogo.h"
@@ -96,7 +98,7 @@ KrecipesView::KrecipesView( QWidget *parent )
 	leftPanelFrameLayout->setMargin( 0 );
 	leftPanelFrame->setFrameStyle( QFrame::StyledPanel | QFrame::Raised );
 	leftPanelFrame->setFrameRect( QRect( 0, 0, 0, 0 ) );
-	rightPanel = new PanelDeco( splitter, "rightPanel", i18n( "Find/Edit Recipes" ), "system-search" );
+	rightPanel = new PanelDeco( splitter, i18n( "Find/Edit Recipes" ), "system-search" );
 
 	// Design Left Panel
 
@@ -342,7 +344,7 @@ bool KrecipesView::questionRerunWizard( const QString &message, const QString &e
 			ConvertSQLite3 converter;
 			converter.convert();
 		} else {
-			kError() << errormsg << ". " << i18nc("Exiting Krecipes", "Exiting" ) ;
+			kError() << errormsg << ". Exiting" ;
 			kapp->exit( 1 ); exit ( 1 ); //FIXME: why doesn't kapp->exit(1) do anything?
 			return false;
 		}
@@ -357,7 +359,7 @@ bool KrecipesView::questionRerunWizard( const QString &message, const QString &e
 		if ( answer == KMessageBox::Yes )
 			wizard( true );
 		else {
-			kError() << errormsg << ". " << i18nc("Exiting Krecipes", "Exiting" ) ;
+			kError() << errormsg << ". Exiting" ;
 			kapp->exit( 1 ); exit ( 1 ); //FIXME: why doesn't kapp->exit(1) do anything?
 			return false;
 		}
@@ -895,13 +897,13 @@ void KrecipesView::wizard( bool force )
 			// Setup user if necessary
 			if ( ( dbType == "MySQL" || dbType == "PostgreSQL" ) && setupUser )  // Don't setup user if checkbox of existing user... was set
 			{
-				kDebug() << "Setting up user\n";
+				kDebug() << "Setting up user";
 				setupAssistant->getAdminInfo( adminEnabled, adminUser, adminPass, dbType );
 				setupAssistant->getServerInfo( isRemote, host, client, dbName, user, pass, port );
 
 				if ( !adminEnabled )  // Use root without password
 				{
-					kDebug() << "Using default admin\n";
+					kDebug() << "Using default admin";
 					if ( dbType == "MySQL" )
 						adminUser = "root";
 					else if ( dbType == "PostgreSQL" )
@@ -910,7 +912,7 @@ void KrecipesView::wizard( bool force )
 				}
 				if ( !isRemote )  // Use localhost
 				{
-					kDebug() << "Using localhost\n";
+					kDebug() << "Using localhost";
 					host = "localhost";
 					client = "localhost";
 				}
@@ -985,10 +987,10 @@ void KrecipesView::setupUserPermissions( const QString &host, const QString &cli
 		else if ( dbType == "MySQL" )
 			user = "root";
 
-		kDebug() << "Open db as " << user << ", with no password\n";
+		kDebug() << "Open db as " << user << ", with no password";
 	}
 	else
-		kDebug() << "Open db as:" << user << ",*** with password ****\n";
+		kDebug() << "Open db as:" << user << ",*** with password ****";
 
 	RecipeDB *db = RecipeDB::createDatabase( dbType, host, user, pass, dbName, port, dbName );
 	if ( db ) {
@@ -1008,7 +1010,7 @@ void KrecipesView::initializeData( const QString &host, const QString &dbName, c
 	kDebug();
 	RecipeDB * db = RecipeDB::createDatabase( dbType, host, user, pass, dbName, port, dbName );
 	if ( !db ) {
-		kError() << i18n( "Code error. No DB support has been included. Exiting" ) ;
+		kError() << "Code error. No DB support has been included. Exiting" ;
 		kapp->exit( 1 );
 	}
 	kDebug()<<" connect it";
@@ -1170,7 +1172,7 @@ void KrecipesView::initDatabase()
 	if ( !database ) {
 		// No DB type has been enabled(should not happen at all, but just in case)
 
-		kError() << i18n( "Code error. No DB support was built in. Exiting" ) ;
+		kError() << "Code error. No DB support was built in. Exiting" ;
 		kapp->exit( 1 );
 	}
 
@@ -1196,12 +1198,12 @@ void KrecipesView::initDatabase()
 		else {
 			// No DB type has been enabled (should not happen at all, but just in case)
 
-			kError() << i18n( "Code error. No DB support was built in. Exiting" ) ;
+			kError() << "Code error. No DB support was built in. Exiting" ;
 			kapp->exit( 1 );
 			break;
 		}
 	}
-	kDebug() << i18n( "DB started correctly\n" ).toLatin1();
+	kDebug() << "DB started correctly" ;
 }
 
 QString KrecipesView::checkCorrectDBType( KConfigGroup &config )

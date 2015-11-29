@@ -15,8 +15,7 @@
 #include <QStackedWidget>
 
 
-#include <q3groupbox.h>
-#include <q3buttongroup.h>
+#include <QButtonGroup>
 #include <QRadioButton>
 #include <QCheckBox>
 #include <QList>
@@ -44,16 +43,16 @@ IngredientInput::IngredientInput( RecipeDB *db, QWidget *parent, bool allowHeade
 	KVBox *typeHBox = new KVBox( ingredientVBox );
 
 	if ( allowHeader ) {
-		typeButtonGrp = new Q3ButtonGroup();
+		typeButtonGrp = new QButtonGroup();
 		QRadioButton *ingredientRadioButton = new QRadioButton( i18n( "Ingredient:" ), typeHBox );
-		typeButtonGrp->insert( ingredientRadioButton, 0 );
+		typeButtonGrp->addButton( ingredientRadioButton, 0 );
 
 		//KDE4 i18n => i18nc
 		QRadioButton *headerRadioButton = new QRadioButton( i18nc( "Ingredient grouping name", "Header:" ), typeHBox );
-		typeButtonGrp->insert( headerRadioButton, 1 );
+		typeButtonGrp->addButton( headerRadioButton, 1 );
 
-		typeButtonGrp->setButton( 0 );
-		connect( typeButtonGrp, SIGNAL( clicked( int ) ), SLOT( typeButtonClicked( int ) ) );
+		ingredientRadioButton->setChecked( true );
+		connect( typeButtonGrp, SIGNAL( buttonClicked( int ) ), SLOT( typeButtonClicked( int ) ) );
 	}
 	else {
 		(void) new QLabel( i18n( "Ingredient:" ), typeHBox );
@@ -130,7 +129,7 @@ void IngredientInput::clear()
 	unitComboList->clear();
 
 	orButton->setChecked(false);
-	typeButtonGrp->setButton( 0 ); //put back to ingredient input
+	typeButtonGrp->button( 0 )->setChecked( true ); //put back to ingredient input
 	typeButtonClicked( 0 );
 
 	amountEdit->clear();
@@ -212,10 +211,10 @@ void IngredientInput::typeButtonClicked( int button_id )
 void IngredientInput::enableHeader( bool enable )
 {
 	if ( !enable ) {
-		typeButtonGrp->setButton( 0 ); //put back to ingredient input
+		typeButtonGrp->button( 0 )->setChecked( true ); //put back to ingredient input
 		typeButtonClicked( 0 );
 	}
-	typeButtonGrp->find(1)->setEnabled(enable);
+	typeButtonGrp->button( 1 )->setEnabled( enable );
 }
 
 void IngredientInput::signalIngredient()
@@ -330,7 +329,7 @@ void IngredientInput::loadUnitListCombo()
 
 bool IngredientInput::isHeader() const
 {
-	return typeButtonGrp && (typeButtonGrp->id( typeButtonGrp->selected() ) == 1);
+	return typeButtonGrp && (typeButtonGrp->checkedId() == 1);
 }
 
 Ingredient IngredientInput::ingredient() const
@@ -473,8 +472,7 @@ int IngredientInputWidget::createNewIngredientIfNecessary( const QString &ing, R
 
 	id = database->findExistingIngredientByName( ing );
 	if (  id == -1 ) {
-		database->createNewIngredient( ing );
-		id = database->lastInsertID();
+		id = database->createNewIngredient( ing );
 	}
 	return id;
 }
@@ -488,9 +486,7 @@ int IngredientInputWidget::createNewUnitIfNecessary( const QString &unit, bool p
 			new CreateUnitDialog( 0, ( plural ) ? QString() : unit, ( !plural ) ? QString() : unit );
 		if ( getUnit->exec() == QDialog::Accepted ) {
 			new_unit = getUnit->newUnit();
-			database->createNewUnit( new_unit );
-
-			id = database->lastInsertID();
+			id = database->createNewUnit( new_unit );
 		}
 		delete getUnit;
 	}
@@ -522,8 +518,7 @@ QList<int> IngredientInputWidget::createNewPrepIfNecessary( const ElementList &p
 			int id = database->findExistingPrepByName( (*it).name.trimmed() );
 			if ( id == -1 )
 			{
-				database->createNewPrepMethod( (*it).name.trimmed() );
-				id = database->lastInsertID();
+				id = database->createNewPrepMethod( (*it).name.trimmed() );
 			}
 			ids << id;
 		}
@@ -541,8 +536,7 @@ int IngredientInputWidget::createNewGroupIfNecessary( const QString &group, Reci
 		int id = database->findExistingIngredientGroupByName( group );
 		if ( id == -1 ) //creating new
 		{
-			database->createNewIngGroup( group );
-			id = database->lastInsertID();
+			id = database->createNewIngGroup( group );
 		}
 
 		return id;

@@ -51,7 +51,7 @@ SelectPropertyDialog::SelectPropertyDialog( QWidget* parent, int ingID, RecipeDB
 
 	KConfigGroup config( KGlobal::config(),  "Advanced" );
 	bool show_id = config.readEntry( "ShowID", false );
-	propertyChooseView->addColumn( "Id" , show_id ? -1 : 0 );
+	propertyChooseView->addColumn( i18nc( "@title:column", "Id" ), show_id ? -1 : 0 );
 
 	propertyChooseView->addColumn( i18nc( "@title:column", "Property" ) );
 	propertyChooseView->setSorting(1);
@@ -119,9 +119,7 @@ int SelectPropertyDialog::perUnitsID()
 		QPointer<CreateUnitDialog> getUnit = new CreateUnitDialog( this, unit, QString() );
 		if ( getUnit->exec() == QDialog::Accepted ) {
 			Unit new_unit = getUnit->newUnit();
-			db->createNewUnit( new_unit );
-
-			id = db->lastInsertID();
+			id = db->createNewUnit( new_unit );
 		}
 		delete getUnit;
 	}

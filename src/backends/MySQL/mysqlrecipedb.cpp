@@ -128,7 +128,11 @@ void MySQLRecipeDB::createTable( const QString &tableName )
 		commands << "CREATE TABLE ingredient_info (ingredient_id INTEGER, property_id INTEGER, amount FLOAT, per_units INTEGER);";
 
 	else if ( tableName == "ingredient_properties" )
-		commands << "CREATE TABLE ingredient_properties (id INTEGER NOT NULL AUTO_INCREMENT,name VARCHAR(20), units VARCHAR(20), PRIMARY KEY (id));";
+		commands << QString( "CREATE TABLE ingredient_properties "
+			"(id INTEGER NOT NULL AUTO_INCREMENT, "
+			"name VARCHAR(%1), units VARCHAR(%2), "
+			"PRIMARY KEY (id));" 
+			).arg( maxPropertyNameLength() ).arg( maxUnitNameLength() ) ;
 
 	else if ( tableName == "ingredient_weights" )
 		commands << "CREATE TABLE ingredient_weights (id INTEGER NOT NULL AUTO_INCREMENT, ingredient_id INTEGER NOT NULL, amount FLOAT, unit_id INTEGER, weight FLOAT, weight_unit_id INTEGER, prep_method_id INTEGER, PRIMARY KEY (id), INDEX(ingredient_id), INDEX(unit_id), INDEX(weight_unit_id), INDEX(prep_method_id) );";
@@ -156,7 +160,10 @@ void MySQLRecipeDB::createTable( const QString &tableName )
 		commands << QString( "CREATE TABLE `ingredient_groups` (`id` int(11) NOT NULL auto_increment, `name` varchar(%1), PRIMARY KEY (`id`));" ).arg( maxIngGroupNameLength() );
 	}
 	else if ( tableName == "yield_types" ) {
-		commands << QString( "CREATE TABLE `yield_types` (`id` int(11) NOT NULL auto_increment, `name` varchar(%1), PRIMARY KEY (`id`));" ).arg( 20 );
+		commands << QString( "CREATE TABLE 'yield_types' "
+			"('id' int(11) NOT NULL auto_increment, "
+			"'name' VARCHAR(%1), "
+			"PRIMARY KEY ('id'));" ).arg( maxYieldTypeLength() );
 	}
 
 	else if ( tableName == "ratings" )
@@ -171,6 +178,9 @@ void MySQLRecipeDB::createTable( const QString &tableName )
 	else
 		return ;
 
+	commands << QString( "ALTER TABLE %1 DEFAULT CHARSET UTF8" ).arg( tableName ) ;
+	commands << QString( "ALTER TABLE %1 CONVERT TO CHARACTER SET UTF8" ).arg( tableName );
+
 	QSqlQuery databaseToCreate( QString(), *database );
 
 	// execute the queries
@@ -178,9 +188,54 @@ void MySQLRecipeDB::createTable( const QString &tableName )
 		databaseToCreate.exec( ( *it ) );
 }
 
+int MySQLRecipeDB::maxAuthorNameLength() const
+{
+	return 50;
+}
+
+int MySQLRecipeDB::maxCategoryNameLength() const
+{
+	return 40;
+}
+
+int MySQLRecipeDB::maxIngredientNameLength() const
+{
+	return 50;
+}
+
+int MySQLRecipeDB::maxIngGroupNameLength() const
+{
+	return 50;
+}
+
+int MySQLRecipeDB::maxRecipeTitleLength() const
+{
+	return 200;
+}
+
+int MySQLRecipeDB::maxUnitNameLength() const
+{
+	return 20;
+}
+
+int MySQLRecipeDB::maxPrepMethodNameLength() const
+{
+	return 20;
+}
+
+int MySQLRecipeDB::maxPropertyNameLength() const
+{
+	return 20;
+}
+
+int MySQLRecipeDB::maxYieldTypeLength() const 
+{
+	return 20;
+}
+
 void MySQLRecipeDB::portOldDatabases( float version )
 {
-	kDebug() << "Current database version is..." << version << "\n";
+	kDebug() << "Current database version is..." << version;
 	QString command;
 
 	// Note that version no. means the version in which this DB structure
@@ -383,7 +438,7 @@ void MySQLRecipeDB::portOldDatabases( float version )
 				int prep_method_id = copyQuery.value( 5 ).toInt();
 				if ( prep_method_id != -1 ) {
 					query.prepare( "INSERT INTO prep_method_list VALUES (?, ?, ?);" );
-					query.addBindValue( lastInsertID() );
+					query.addBindValue( lastInsertId(query) );
 					query.addBindValue( prep_method_id );
 					query.addBindValue( 1 );
 					query.exec();
@@ -527,17 +582,25 @@ void MySQLRecipeDB::portOldDatabases( float version )
 		fixUSDAPropertyUnits();
 		database->exec( "UPDATE db_info SET ver='0.96',generated_by='Krecipes SVN (20060903)'" );
 	}
-}
 
-int MySQLRecipeDB::lastInsertID()
-{
-	QSqlQuery lastInsertID( "SELECT LAST_INSERT_ID();", *database );
-
-	int id = -1;
-	if ( lastInsertID.isActive() && lastInsertID.next() )
-		id = lastInsertID.value( 0 ).toInt();
-
-	return id;
+	if ( qRound(version*100) < 97 ) {
+		QStringList tables;
+		tables << "author_list" << "authors" << "categories" 
+			<< "category_list" << "db_info" << "ingredient_groups"
+			<< "ingredient_info" << "ingredient_list" << "ingredient_properties"
+			<< "ingredient_weights" << "ingredients" << "prep_method_list"
+			<< "prep_methods" << "rating_criteria" << "rating_criterion_list"
+			<< "ratings" << "recipes" << "unit_list" << "units"
+			<< "units_conversion" << "yield_types";
+		QStringList::const_iterator it;
+		for ( it = tables.constBegin(); it != tables.constEnd(); it++ ) {
+			QString command = QString( "ALTER TABLE %1 DEFAULT CHARSET UTF8" ).arg( *it );
+			database->exec( command );
+			command = QString( "ALTER TABLE %1 CONVERT TO CHARACTER SET UTF8" ).arg( *it );
+			database->exec( command );
+		}
+		database->exec( "UPDATE db_info SET ver='0.97',generated_by='Krecipes 2.0.0'" );
+	}
 }
 
 void MySQLRecipeDB::givePermissions( const QString &dbName, const QString &username, const QString &password, const QString &clientHost )
@@ -549,7 +612,7 @@ void MySQLRecipeDB::givePermissions( const QString &dbName, const QString &usern
 	else
 		command = QString( "GRANT ALL ON %1.* TO '%2'@'%3';" ).arg( dbName ).arg( username ).arg( clientHost );
 
-	kDebug() << "I'm doing the query to setup permissions\n";
+	kDebug() << "I'm doing the query to setup permissions";
 
 	QSqlQuery permissionsToSet( command, *database );
 }

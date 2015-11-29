@@ -11,12 +11,9 @@
 
 #include "pref.h"
 
-#include <config-krecipes.h>
-
 #include <QLabel>
 
 
-#include <q3buttongroup.h>
 #include <QGroupBox>
 #include <QCheckBox>
 #include <QRadioButton>
@@ -158,7 +155,7 @@ MySQLServerPrefs::MySQLServerPrefs( QWidget *parent ) : QWidget( parent )
 
 	// Backup options
 	QGroupBox *backupGBox = new QGroupBox( this );
-	backupGBox->setTitle( i18n( "Backup" ) );
+	backupGBox->setTitle( i18nc( "@title:group Backup options", "Backup" ) );
 	QFormLayout *backupGBoxLayout = new QFormLayout;
 
 	dumpPathRequester = new KUrlRequester;
@@ -229,7 +226,7 @@ PostgreSQLServerPrefs::PostgreSQLServerPrefs( QWidget *parent ) : QWidget( paren
 	// Backup options
 	QGroupBox *backupGBox = new QGroupBox( this );
 	QFormLayout *backupGBoxLayout = new QFormLayout;
-	backupGBox->setTitle( i18n( "Backup" ) );
+	backupGBox->setTitle( i18nc( "@title:group Backup options", "Backup" ) );
 
 	dumpPathRequester = new KUrlRequester;
 	dumpPathRequester->fileDialog()->setCaption( i18n( "Select PostgreSQL dump command" ) );
@@ -282,16 +279,11 @@ SQLiteServerPrefs::SQLiteServerPrefs( QWidget *parent ) : QWidget( parent )
 	QSpacerItem* spacerRow5 = new QSpacerItem( 10, 10, QSizePolicy::Minimum, QSizePolicy::MinimumExpanding );
 	Form1Layout->addItem( spacerRow5 );
 
-	QString sqliteBinary;
-	#if HAVE_SQLITE3
-	sqliteBinary = "sqlite3";
- 	#elif HAVE_SQLITE
-	sqliteBinary = "sqlite";
-	#endif
+	QString sqliteBinary = "sqlite3";
 
 	// Backup options
 	QGroupBox *backupGBox = new QGroupBox( this );
-	backupGBox->setTitle( i18n( "Backup" ) );
+	backupGBox->setTitle( i18nc( "@title:group Backup options", "Backup" ) );
 	
 	QFormLayout *backupGBoxLayout = new QFormLayout;
 	backupGBox->setLayout( backupGBoxLayout );

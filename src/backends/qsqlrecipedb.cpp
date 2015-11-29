@@ -24,6 +24,8 @@
 #include <QBuffer>
 #include <QTextCodec>
 
+#include <QThread>
+
 #include <kdebug.h>
 #include <kstandarddirs.h>
 #include <klocale.h>
@@ -33,7 +35,7 @@
 int QSqlRecipeDB::m_refCount = 0;
 
 QSqlRecipeDB::QSqlRecipeDB( const QString &host, const QString &user, const QString &pass, const QString &name, int port ) : RecipeDB(),
-	connectionName("connection" + QString::number( m_refCount+1 ))
+	connectionName( QString("krecipes %1 c%2").arg((size_t)QThread::currentThreadId()).arg(m_refCount) )
 {
 	kDebug();
 	DBuser = user;
@@ -65,7 +67,7 @@ QSqlRecipeDB::~QSqlRecipeDB()
 
 RecipeDB::Error QSqlRecipeDB::connect( bool create_db, bool create_tables )
 {
-	kDebug() << i18n( "QSqlRecipeDB: Opening Database..." ) ;
+	kDebug() << "QSqlRecipeDB: Opening Database..." ;
 	kDebug() << "Parameters: \n\thost: " << DBhost << "\n\tuser: " << DBuser << "\n\ttable: " << DBname ;
 
 	bool driver_found = false;
@@ -83,7 +85,7 @@ RecipeDB::Error QSqlRecipeDB::connect( bool create_db, bool create_tables )
 	}
 
 	if ( !driver_found ) {
-		dbErr = i18n( "The Qt database plug-in (%1) is not installed.  This plug-in is required for using this database backend." , qsqlDriverPlugin() );
+		dbErr = i18n( "The Qt database plugin (%1) is not installed.  This plugin is required for using this database backend." , qsqlDriverPlugin() );
 		return NoDriverFound;
 	}
 
@@ -113,13 +115,13 @@ RecipeDB::Error QSqlRecipeDB::connect( bool create_db, bool create_tables )
 	if ( DBport > 0 )
 		database->setPort(DBport);
 
-	kDebug() << i18n( "Parameters set. Calling db->open()" ) ;
+	kDebug() << "Parameters set. Calling db->open()" ;
 
 	if ( !database->open() ) {
 		kDebug()<<" database.open false : create_db ? :"<<create_db;
 		//Try to create the database
 		if ( create_db ) {
-			kDebug() << i18n( "Failing to open database. Trying to create it" ) ;
+			kDebug() << "Failing to open database. Trying to create it" ;
 			createDB();
 		}
 		else {
@@ -137,7 +139,7 @@ RecipeDB::Error QSqlRecipeDB::connect( bool create_db, bool create_tables )
 		//Now Reopen the Database and signal & exit if it fails
 		if ( !database->open() ) {
 			QString error = i18n( "Database message: %1" , database->lastError().databaseText() );
-			kDebug() << i18n( "Failing to open database. Exiting\n" ).toLatin1();
+			kDebug() << "Failing to open database. Exiting" ;
 			// Handle the error (passively)
 			if ( DBuser.isEmpty() ) {
 				dbErr = i18n( "Krecipes could not open the \"%1\" database.", DBname );
@@ -170,6 +172,23 @@ RecipeDB::Error QSqlRecipeDB::connect( bool create_db, bool create_tables )
 	m_query->setForwardOnly(true);
 	dbOK = true;
 	return NoError;
+}
+
+void QSqlRecipeDB::transaction()
+{
+	database->transaction();
+}
+
+void QSqlRecipeDB::commit()
+{
+	database->commit();
+}
+
+void QSqlRecipeDB::initializeData( void )
+{
+	database->transaction();
+	RecipeDB::initializeData();
+	database->commit();
 }
 
 void QSqlRecipeDB::execSQL( const QString &command )
@@ -485,7 +504,7 @@ void QSqlRecipeDB::loadYieldTypes( ElementList *list, int limit, int offset )
 	}
 }
 
-void QSqlRecipeDB::createNewPrepMethod( const QString &prepMethodName )
+RecipeDB::IdType QSqlRecipeDB::createNewPrepMethod( const QString &prepMethodName )
 {
 	QString command;
 	QString real_name = prepMethodName.left( maxPrepMethodNameLength() );
@@ -493,7 +512,9 @@ void QSqlRecipeDB::createNewPrepMethod( const QString &prepMethodName )
 	command = QString( "INSERT INTO prep_methods VALUES(%2,'%1');" ).arg( escapeAndEncode( real_name ) ).arg( getNextInsertIDStr( "prep_methods", "id" ) );
 	QSqlQuery prepMethodToCreate( command, *database);
 
-	emit prepMethodCreated( Element( real_name, lastInsertID() ) );
+	RecipeDB::IdType last_insert_id = lastInsertId( prepMethodToCreate );
+	emit prepMethodCreated( Element( real_name, last_insert_id ) );
+	return last_insert_id;
 }
 
 void QSqlRecipeDB::modPrepMethod( int prepMethodID, const QString &newLabel )
@@ -653,7 +674,7 @@ void QSqlRecipeDB::saveRecipe( Recipe *recipe )
 	// If it's a new recipe, identify the ID that was given to the recipe and store in the Recipe itself
 	int recipeID;
 	if ( newRecipe ) {
-		recipeID = lastInsertID();
+		recipeID = lastInsertId( recipeToSave );
 		recipe->recipeID = recipeID;
 	}
 	recipeID = recipe->recipeID;
@@ -703,7 +724,7 @@ void QSqlRecipeDB::saveRecipe( Recipe *recipe )
 		          .arg( ( *ing_it ).groupID );
 		recipeToSave.exec( command );
 
-		int ing_list_id = lastInsertID();
+		RecipeDB::IdType ing_list_id = lastInsertId( recipeToSave );
 		int prep_order_index = 0;
 		for ( ElementList::const_iterator prep_it = (*ing_it).prepMethodList.constBegin(); prep_it != (*ing_it).prepMethodList.constEnd(); ++prep_it ) {
 			prep_order_index++;
@@ -729,7 +750,7 @@ void QSqlRecipeDB::saveRecipe( Recipe *recipe )
 				.arg( (*ing_it).ingredientID );
 			recipeToSave.exec( command );
 
-			int ing_list_id = lastInsertID();
+			RecipeDB::IdType ing_list_id = lastInsertId( recipeToSave );
 			int prep_order_index = 0;
 			for ( ElementList::const_iterator prep_it = (*sub_it).prepMethodList.constBegin(); prep_it != (*sub_it).prepMethodList.constEnd(); ++prep_it ) {
 				prep_order_index++;
@@ -809,7 +830,7 @@ void QSqlRecipeDB::saveRecipe( Recipe *recipe )
 		recipeToSave.exec( command );
 
 		if ( (*rating_it).id() == -1 )
-			(*rating_it).setId(lastInsertID());
+			(*rating_it).setId(lastInsertId(recipeToSave));
 
 		foreach(RatingCriteria rc, (*rating_it).ratingCriterias()) {
 			command = QString( "INSERT INTO rating_criterion_list VALUES("+QString::number((*rating_it).id())+','+QString::number(rc.id())+','+QString::number(rc.stars())+')' );
@@ -820,9 +841,11 @@ void QSqlRecipeDB::saveRecipe( Recipe *recipe )
 	}
 
 	// only delete those ratings that don't exist anymore
-	command = QString( "DELETE FROM ratings WHERE recipe_id=%1 AND id NOT IN( %2 )" )
-	          .arg( recipeID ).arg( ids.join(",") );
-	recipeToSave.exec( command );
+	if ( !ids.isEmpty() ) {
+		command = QString( "DELETE FROM ratings WHERE recipe_id=%1 AND id NOT IN( %2 )" )
+			  .arg( recipeID ).arg( ids.join(",") );
+		recipeToSave.exec( command );
+	}
 
 	if ( newRecipe )
 		emit recipeCreated( Element( recipe->title.left( maxRecipeTitleLength() ), recipeID ), recipe->categoryList );
@@ -950,7 +973,7 @@ void QSqlRecipeDB::categorizeRecipe( int recipeID, const ElementList &categoryLi
 	emit recipeModified( Element(recipeTitle(recipeID),recipeID), categoryList );
 }
 
-void QSqlRecipeDB::createNewIngGroup( const QString &name )
+RecipeDB::IdType QSqlRecipeDB::createNewIngGroup( const QString &name )
 {
 	QString command;
 	QString real_name = name.left( maxIngGroupNameLength() );
@@ -958,10 +981,12 @@ void QSqlRecipeDB::createNewIngGroup( const QString &name )
 	command = QString( "INSERT INTO ingredient_groups VALUES(%2,'%1');" ).arg( escapeAndEncode( real_name ) ).arg( getNextInsertIDStr( "ingredient_groups", "id" ) );
 	QSqlQuery query( command, *database);
 
-	emit ingGroupCreated( Element( real_name, lastInsertID() ) );
+	RecipeDB::IdType last_insert_id = lastInsertId( query );
+	emit ingGroupCreated( Element( real_name, last_insert_id ) );
+	return last_insert_id;
 }
 
-void QSqlRecipeDB::createNewIngredient( const QString &ingredientName )
+RecipeDB::IdType QSqlRecipeDB::createNewIngredient( const QString &ingredientName )
 {
 	QString command;
 	QString real_name = ingredientName.left( maxIngredientNameLength() );
@@ -969,10 +994,12 @@ void QSqlRecipeDB::createNewIngredient( const QString &ingredientName )
 	command = QString( "INSERT INTO ingredients VALUES(%2,'%1');" ).arg( escapeAndEncode( real_name ) ).arg( getNextInsertIDStr( "ingredients", "id" ) );
 	QSqlQuery ingredientToCreate( command, *database);
 
-	emit ingredientCreated( Element( real_name, lastInsertID() ) );
+	RecipeDB::IdType last_insert_id = lastInsertId( ingredientToCreate );
+	emit ingredientCreated( Element( real_name, last_insert_id ) );
+	return last_insert_id;
 }
 
-void QSqlRecipeDB::createNewRating( const QString &rating )
+RecipeDB::IdType QSqlRecipeDB::createNewRating( const QString &rating )
 {
 	QString command;
 	QString real_name = rating/*.left( maxIngredientNameLength() )*/;
@@ -980,18 +1007,22 @@ void QSqlRecipeDB::createNewRating( const QString &rating )
 	command = QString( "INSERT INTO rating_criteria VALUES(%2,'%1');" ).arg( escapeAndEncode( real_name ) ).arg( getNextInsertIDStr( "rating_criteria", "id" ) );
 	QSqlQuery toCreate( command, *database);
 
-	emit ratingCriteriaCreated( Element( real_name, lastInsertID() ) );
+	RecipeDB::IdType last_insert_id = lastInsertId( toCreate );
+	emit ratingCriteriaCreated( Element( real_name, last_insert_id ) );
+	return last_insert_id;
 }
 
-void QSqlRecipeDB::createNewYieldType( const QString &name )
+RecipeDB::IdType QSqlRecipeDB::createNewYieldType( const QString &name )
 {
 	QString command;
 	QString real_name = name.left( maxYieldTypeLength() );
 
 	command = QString( "INSERT INTO yield_types VALUES(%2,'%1');" ).arg( escapeAndEncode( real_name ) ).arg( getNextInsertIDStr( "yield_types", "id" ) );
-	database->exec(command);
+	QSqlQuery query( command, *database );
 
-	//emit yieldTypeCreated( Element( real_name, lastInsertID() ) );
+	RecipeDB::IdType last_insert_id = lastInsertId( query );
+	//emit yieldTypeCreated( Element( real_name, last_insert_id ) );
+	return last_insert_id;
 }
 
 void QSqlRecipeDB::modIngredientGroup( int groupID, const QString &newLabel )
@@ -1233,7 +1264,7 @@ void QSqlRecipeDB::addIngredientWeight( const Weight &w )
 	QSqlQuery query( command, *database);
 }
 
-void QSqlRecipeDB::addProperty( const QString &name, const QString &units )
+RecipeDB::IdType QSqlRecipeDB::addProperty( const QString &name, const QString &units )
 {
 	QString command;
 	QString real_name = name.left( maxPropertyNameLength() );
@@ -1244,7 +1275,9 @@ void QSqlRecipeDB::addProperty( const QString &name, const QString &units )
 	          .arg( getNextInsertIDStr( "ingredient_properties", "id" ) );
 	QSqlQuery propertyToAdd( command, *database);
 
-	emit propertyCreated( IngredientProperty( real_name, units, lastInsertID() ) );
+	RecipeDB::IdType last_insert_id = lastInsertId( propertyToAdd );
+	emit propertyCreated( IngredientProperty( real_name, units, last_insert_id ) );
+	return last_insert_id;
 }
 
 void QSqlRecipeDB::loadProperties( IngredientPropertyList *list, int ingredientID )
@@ -1466,7 +1499,7 @@ void QSqlRecipeDB::removePrepMethod( int prepMethodID )
 }
 
 
-void QSqlRecipeDB::createNewUnit( const Unit &unit )
+RecipeDB::IdType QSqlRecipeDB::createNewUnit( const Unit &unit )
 {
 	QString real_name = unit.name().left( maxUnitNameLength() ).trimmed();
 	QString real_plural = unit.plural().left( maxUnitNameLength() ).trimmed();
@@ -1503,8 +1536,10 @@ void QSqlRecipeDB::createNewUnit( const Unit &unit )
 
 	QSqlQuery unitToCreate( command, *database);
 
-	new_unit.setId(lastInsertID());
+	RecipeDB::IdType last_insert_id = lastInsertId( unitToCreate );
+	new_unit.setId(last_insert_id);
 	emit unitCreated( new_unit );
+	return last_insert_id;
 }
 
 
@@ -1630,9 +1665,8 @@ void QSqlRecipeDB::saveUnitRatio( const UnitRatio *ratio )
 	command = QString( "SELECT * FROM units_conversion WHERE unit1_id=%1 AND unit2_id=%2" ).arg( ratio->unitId1() ).arg( ratio->unitId2() ); // Find ratio between units
 
 	QSqlQuery ratioFound( command, *database); // Find the entries
-	bool newRatio = ( ratioFound.size() == 0 );
 
-	if ( newRatio )
+	if ( !ratioFound.first() ) //If the ratio doesn't exist, create it, otherwise update it.
 		command = QString( "INSERT INTO units_conversion VALUES(%1,%2,%3);" ).arg( ratio->unitId1() ).arg( ratio->unitId2() ).arg( ratio->ratio() );
 	else
 		command = QString( "UPDATE units_conversion SET ratio=%3 WHERE unit1_id=%1 AND unit2_id=%2" ).arg( ratio->unitId1() ).arg( ratio->unitId2() ).arg( ratio->ratio() );
@@ -1660,6 +1694,14 @@ double QSqlRecipeDB::unitRatio( int unitID1, int unitID2 )
 	else
 		return ( -1 );
 }
+
+void QSqlRecipeDB::importUSDADatabase()
+{
+	database->transaction();
+	RecipeDB::importUSDADatabase();
+	database->commit();
+}
+
 
 double QSqlRecipeDB::ingredientWeight( const Ingredient &ing, bool *wasApproximated )
 {
@@ -1871,24 +1913,31 @@ QString QSqlRecipeDB::unescapeAndDecode( const QByteArray &s ) const
 	return QString::fromUtf8( s ).replace( "\";@", ";" ); // Use unicode encoding
 }
 
+static bool query_has_result( const QString & q, QSqlDatabase &db )
+{
+	QSqlQuery command( q, db );
+	if ( command.isActive() ) {
+		// Not all backends support size()
+		if ( command.size() > 0 ) {
+			return true;
+		}
+		while (command.next()) {
+			return true; // If there are any results, it's OK
+		}
+	}
+	return false;
+}
+
 bool QSqlRecipeDB::ingredientContainsUnit( int ingredientID, int unitID )
 {
 	QString command = QString( "SELECT *  FROM unit_list WHERE ingredient_id= %1 AND unit_id=%2;" ).arg( ingredientID ).arg( unitID );
-	QSqlQuery recipeToLoad( command, *database);
-	if ( recipeToLoad.isActive() ) {
-		return ( recipeToLoad.size() > 0 );
-	}
-	return false;
+	return query_has_result( command, *database );
 }
 
 bool QSqlRecipeDB::ingredientContainsProperty( int ingredientID, int propertyID, int perUnitsID )
 {
 	QString command = QString( "SELECT *  FROM ingredient_info WHERE ingredient_id=%1 AND property_id=%2 AND per_units=%3;" ).arg( ingredientID ).arg( propertyID ).arg( perUnitsID );
-	QSqlQuery recipeToLoad( command, *database);
-	if ( recipeToLoad.isActive() ) {
-		return ( recipeToLoad.size() > 0 );
-	}
-	return false;
+	return query_has_result( command, *database );
 }
 
 QString QSqlRecipeDB::categoryName( int ID )
@@ -1994,7 +2043,7 @@ bool QSqlRecipeDB::checkIntegrity( void )
 		}
 
 		if ( !found ) {
-			kDebug() << "Recreating missing table: " << *it << "\n";
+			kDebug() << "Recreating missing table: " << *it;
 			createTable( *it );
 		}
 	}
@@ -2006,9 +2055,9 @@ bool QSqlRecipeDB::checkIntegrity( void )
 
 	// Check for older versions, and port
 
-	kDebug() << "Checking database version...\n";
+	kDebug() << "Checking database version...";
 	float version = databaseVersion();
-	kDebug() << "version found... " << version << " \n";
+	kDebug() << "version found... " << version;
 	kDebug() << "latest version... " << latestDBVersion() ;
 	if ( int( qRound( databaseVersion() * 1e5 ) ) < int( qRound( latestDBVersion() * 1e5 ) ) ) { //correct for float's imprecision
 		switch ( KMessageBox::questionYesNo( 0,
@@ -2032,6 +2081,18 @@ bool QSqlRecipeDB::checkIntegrity( void )
 	}
 
 	return true;
+}
+
+void QSqlRecipeDB::wipeDatabase()
+{
+	QStringList tables = database->tables();
+	for ( QStringList::Iterator it = tables.begin(); it != tables.end(); ++it ) {
+		if (*it == "db_info")
+			continue;
+		QString command;
+		command  = QString("DELETE FROM %1").arg( *it );
+		database->exec( command );
+	}
 }
 
 void QSqlRecipeDB::splitCommands( QString& s, QStringList& sl )
@@ -2097,7 +2158,7 @@ void QSqlRecipeDB::loadCategories( CategoryTree *list, int limit, int offset, in
 {
 	QString limit_str;
 	if ( parent_id == -1 ) {
-		emit progressBegin(0,QString(),i18n("Loading category list"));
+		emit progressBegin(0,QString(),i18nc("@info:progress", "Loading category list"));
 		list->clear();
 
 		//only limit the number of top-level categories
@@ -2133,7 +2194,7 @@ void QSqlRecipeDB::loadCategories( CategoryTree *list, int limit, int offset, in
 		emit progressDone();
 }
 
-void QSqlRecipeDB::createNewCategory( const QString &categoryName, int parent_id )
+RecipeDB::IdType QSqlRecipeDB::createNewCategory( const QString &categoryName, int parent_id )
 {
 	QString command;
 	QString real_name = categoryName.left( maxCategoryNameLength() );
@@ -2144,7 +2205,9 @@ void QSqlRecipeDB::createNewCategory( const QString &categoryName, int parent_id
 	          .arg( getNextInsertIDStr( "categories", "id" ) );
 	QSqlQuery categoryToCreate( command, *database);
 
-	emit categoryCreated( Element( real_name, lastInsertID() ), parent_id );
+	RecipeDB::IdType last_insert_id = lastInsertId( categoryToCreate );
+	emit categoryCreated( Element( real_name, last_insert_id), parent_id );
+	return last_insert_id;
 }
 
 void QSqlRecipeDB::modCategory( int categoryID, const QString &newLabel )
@@ -2187,8 +2250,9 @@ void QSqlRecipeDB::removeCategory( int categoryID )
 }
 
 
-void QSqlRecipeDB::loadAuthors( ElementList *list, int limit, int offset )
+int QSqlRecipeDB::loadAuthors( ElementList *list, int limit, int offset )
 {
+	int authorsNumber = 0;
 	list->clear();
 	QString command = "SELECT id,name FROM authors ORDER BY name"
 	  +((limit==-1)?"":" LIMIT "+QString::number(limit)+" OFFSET "+QString::number(offset));
@@ -2199,11 +2263,13 @@ void QSqlRecipeDB::loadAuthors( ElementList *list, int limit, int offset )
 			el.id = authorToLoad.value( 0 ).toInt();
 			el.name = unescapeAndDecode( authorToLoad.value( 1 ).toByteArray() );
 			list->append( el );
+			++authorsNumber;
 		}
 	}
+	return authorsNumber;
 }
 
-void QSqlRecipeDB::createNewAuthor( const QString &authorName )
+RecipeDB::IdType QSqlRecipeDB::createNewAuthor( const QString &authorName )
 {
 	QString command;
 	QString real_name = authorName.left( maxAuthorNameLength() );
@@ -2211,7 +2277,9 @@ void QSqlRecipeDB::createNewAuthor( const QString &authorName )
 	command = QString( "INSERT INTO authors VALUES(%2,'%1');" ).arg( escapeAndEncode( real_name ) ).arg( getNextInsertIDStr( "authors", "id" ) );
 	QSqlQuery authorToCreate( command, *database);
 
-	emit authorCreated( Element( real_name, lastInsertID() ) );
+	RecipeDB::IdType last_insert_id = lastInsertId( authorToCreate );
+	emit authorCreated( Element( real_name, last_insert_id ) );
+	return last_insert_id;
 }
 
 void QSqlRecipeDB::modAuthor( int authorID, const QString &newLabel )
@@ -2816,6 +2884,11 @@ QString QSqlRecipeDB::getNextInsertIDStr( const QString &table, const QString &c
 		id_str = QString::number( next_id );
 
 	return id_str;
+}
+
+RecipeDB::IdType QSqlRecipeDB::lastInsertId( const QSqlQuery &query )
+{
+	return query.lastInsertId().toInt();
 }
 
 void QSqlRecipeDB::search( RecipeList *list, int items, const RecipeSearchParameters &parameters )

@@ -43,8 +43,6 @@
 
 #include <QPointer>
 
-#include <q3dragobject.h>
-#include <q3paintdevicemetrics.h>
 #include <QLabel>
 #include <QFrame>
 #include <QDragEnterEvent>
@@ -421,6 +419,7 @@ void Krecipes::setupActions()
 
 void Krecipes::saveProperties( KConfigGroup& group )
 {
+          Q_UNUSED(group);
 	// the 'config' object points to the session managed
 	// config file.  anything you write here will be available
 	// later when this app is restored
@@ -431,6 +430,7 @@ void Krecipes::saveProperties( KConfigGroup& group )
 
 void Krecipes::readProperties( const KConfigGroup& group )
 {
+          Q_UNUSED(group);
 	// the 'config' object points to the session managed
 	// config file.  this function is automatically called whenever
 	// the app is being restored.  read in here whatever you wrote
@@ -685,7 +685,7 @@ void Krecipes::conversionToolSlot()
 void Krecipes::backupSlot()
 {
 	QString fileName = KFileDialog::getSaveFileName(KUrl(),
-		QString("*.krecbk|%1 (*.krecbk)").arg("Krecipes Backup File"),
+		QString("*.krecbk|%1 (*.krecbk)").arg(i18n("Krecipes Backup File")),
 		this, i18n("Save Backup As..."));
 
 	int overwrite = KMessageBox::Yes;
@@ -741,8 +741,7 @@ void Krecipes::mergeSimilarCategories()
 
 		int id = m_view->database->findExistingCategoryByName(name);
 		if ( id == -1 ) {
-			m_view->database->createNewCategory(name);
-			id = m_view->database->lastInsertID();
+			id = m_view->database->createNewCategory(name);
 		}
 
 		for ( QList<int>::const_iterator it = ids.constBegin(); it != ids.constEnd(); ++it ) {
@@ -766,8 +765,7 @@ void Krecipes::mergeSimilarIngredients()
 
 		int id = m_view->database->findExistingIngredientByName(name);
 		if ( id == -1 ) {
-			m_view->database->createNewIngredient(name);
-			id = m_view->database->lastInsertID();
+			id = m_view->database->createNewIngredient(name);
 		}
 
 		for ( QList<int>::const_iterator it = ids.constBegin(); it != ids.constEnd(); ++it ) {

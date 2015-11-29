@@ -171,6 +171,52 @@ void PSqlRecipeDB::createTable( const QString &tableName )
 		databaseToCreate.exec( *it );
 }
 
+int PSqlRecipeDB::maxAuthorNameLength() const
+{
+	return RecipeDB::UnlimitedLength;
+}
+
+int PSqlRecipeDB::maxCategoryNameLength() const
+{
+	return RecipeDB::UnlimitedLength;
+}
+
+int PSqlRecipeDB::maxIngredientNameLength() const
+{
+	return RecipeDB::UnlimitedLength;
+}
+
+int PSqlRecipeDB::maxIngGroupNameLength() const
+{
+	return RecipeDB::UnlimitedLength;
+}
+
+int PSqlRecipeDB::maxRecipeTitleLength() const
+{
+	return RecipeDB::UnlimitedLength;
+}
+
+int PSqlRecipeDB::maxUnitNameLength() const
+{
+	return RecipeDB::UnlimitedLength;
+}
+
+int PSqlRecipeDB::maxPrepMethodNameLength() const
+{
+	return RecipeDB::UnlimitedLength;
+}
+
+int PSqlRecipeDB::maxPropertyNameLength() const
+{
+	return RecipeDB::UnlimitedLength;
+}
+
+int PSqlRecipeDB::maxYieldTypeLength() const 
+{
+	return RecipeDB::UnlimitedLength;
+}
+
+
 void PSqlRecipeDB::initializeData()
 {
 	QSqlRecipeDB::initializeData();
@@ -203,7 +249,7 @@ float PSqlRecipeDB::databaseVersion( void )
 
 void PSqlRecipeDB::portOldDatabases( float version )
 {
-	kDebug() << "Current database version is..." << version << "\n";
+	kDebug() << "Current database version is..." << version;
 	QString command;
 
 	if ( qRound(version*10) < 7 ) {
@@ -473,6 +519,11 @@ void PSqlRecipeDB::portOldDatabases( float version )
 		fixUSDAPropertyUnits();
 		database->exec( "UPDATE db_info SET ver='0.96',generated_by='Krecipes SVN (20060903)'" );
 	}
+
+	if ( qRound(version*100) < 97 ) {
+		database->exec( "UPDATE db_info SET ver='0.97',generated_by='Krecipes 2.0.0'" );
+	}
+
 }
 
 void PSqlRecipeDB::addColumn( const QString &new_table_sql, const QString &new_col_info, const QString &default_value, const QString &table_name, int col_index )
@@ -526,8 +577,9 @@ void PSqlRecipeDB::addColumn( const QString &new_table_sql, const QString &new_c
 	query.exec( "DROP TABLE "+table_name+"_copy;" );
 }
 
-int PSqlRecipeDB::lastInsertID()
-{
+RecipeDB::IdType PSqlRecipeDB::lastInsertId(const QSqlQuery &query)
+{	
+	Q_UNUSED( query )
 	return last_insert_id;
 }
 
@@ -562,7 +614,7 @@ void PSqlRecipeDB::givePermissions( const QString & /*dbName*/, const QString &u
 	command.append( ";" );
 	QSqlQuery permissionsToSet( command, *database );
 
-	kDebug() << "I'm doing the query to setup permissions\n";
+	kDebug() << "I'm doing the query to setup permissions";
 	command = QString( "GRANT ALL ON %1 TO %2;" ).arg( tables.join( "," ) ).arg( username );
 	permissionsToSet.exec( command );
 }

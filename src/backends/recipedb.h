@@ -12,9 +12,10 @@
 #ifndef RECIPEDB_H
 #define RECIPEDB_H
 
+#include <limits.h> /* needed for INT_MAX */
+
 #include <QObject>
 #include <QString>
-#include <q3valuelist.h>
 #include <QList>
 
 class QEventLoop;
@@ -41,12 +42,6 @@ class RecipeSearchParameters;
 class Weight;
 typedef QList<Weight> WeightList;
 
-typedef struct
-{
-	Q3ValueList <int> recipeIdList;
-	IngredientList ilist;
-}
-RecipeIngredientList;
 
 class RecipeDB: public QObject
 {
@@ -69,6 +64,9 @@ public:
 	// Error handling (passive)
 	bool dbOK;
 	QString dbErr;
+
+	typedef int IdType;
+	static const IdType InvalidId = -1;
 
 	enum RecipeItems {
 		None = 0,
@@ -154,23 +152,28 @@ public:
 
 	/** Convenience method.  Calls the above with arguments from KConfig. */
 	static RecipeDB* createDatabase( const QString &dbType, const QString &file = QString() );
+	/** Convenience method.  Calls the above with arguments from KConfig. */
+	static RecipeDB* createDatabase();
+
+	virtual void transaction() = 0;
+	virtual void commit() = 0;
 
 	virtual void addIngredientWeight( const Weight & ) = 0;
-	virtual void addProperty( const QString &name, const QString &units ) = 0;
+	virtual RecipeDB::IdType addProperty( const QString &name, const QString &units ) = 0;
 	virtual void addPropertyToIngredient( int ingredientID, int propertyID, double amount, int perUnitsID ) = 0;
 	virtual void addUnitToIngredient( int ingredientID, int unitID ) = 0;
 
 	virtual void categorizeRecipe( int recipeID, const ElementList &categoryList ) = 0;
 	virtual void changePropertyAmountToIngredient( int ingredientID, int propertyID, double amount, int per_units ) = 0;
 
-	virtual void createNewAuthor( const QString &authorName ) = 0;
-	virtual void createNewCategory( const QString &categoryName, int parent_id = -1 ) = 0;
-	virtual void createNewIngGroup( const QString &name ) = 0;
-	virtual void createNewIngredient( const QString &ingredientName ) = 0;
-	virtual void createNewPrepMethod( const QString &prepMethodName ) = 0;
-	virtual void createNewRating( const QString &name ) = 0;
-	virtual void createNewUnit( const Unit &unit ) = 0;
-	virtual void createNewYieldType( const QString &type ) = 0;
+	virtual RecipeDB::IdType createNewAuthor( const QString &authorName ) = 0;
+	virtual RecipeDB::IdType createNewCategory( const QString &categoryName, int parent_id = -1 ) = 0;
+	virtual RecipeDB::IdType createNewIngGroup( const QString &name ) = 0;
+	virtual RecipeDB::IdType createNewIngredient( const QString &ingredientName ) = 0;
+	virtual RecipeDB::IdType createNewPrepMethod( const QString &prepMethodName ) = 0;
+	virtual RecipeDB::IdType createNewRating( const QString &name ) = 0;
+	virtual RecipeDB::IdType createNewUnit( const Unit &unit ) = 0;
+	virtual RecipeDB::IdType createNewYieldType( const QString &type ) = 0;
 
 	virtual void emptyData( void ) = 0;
 	virtual void empty( void ) = 0;
@@ -197,16 +200,14 @@ public:
 	virtual QString getUniqueRecipeTitle( const QString &recipe_title ) = 0;
 	virtual void givePermissions( const QString &dbName, const QString &username, const QString &password = QString(), const QString &clientHost = "localhost" ) = 0;
 
-	void importUSDADatabase();
+	virtual void importUSDADatabase();
 
 	virtual bool ingredientContainsProperty( int ingredientID, int propertyID, int perUnitsID ) = 0;
 	virtual bool ingredientContainsUnit( int ingredientID, int unitID ) = 0;
 
 	virtual void initializeData( void );
 
-	virtual int lastInsertID() = 0;
-
-	virtual void loadAuthors( ElementList *list, int limit = -1, int offset = 0 ) = 0;
+	virtual int loadAuthors( ElementList *list, int limit = -1, int offset = 0 ) = 0;
 	virtual void loadCategories( CategoryTree *list, int limit = -1, int offset = 0, int parent_id = -1, bool recurse = true ) = 0;
 	void loadCachedCategories( CategoryTree **list, int limit, int offset, int parent_id, bool recurse );
 	virtual void loadCategories( ElementList *list, int limit = -1, int offset = 0 ) = 0;
@@ -316,47 +317,26 @@ public:
 
 	virtual bool checkIntegrity( void ) = 0;
 
+	virtual void wipeDatabase() = 0;
+
 	virtual void createTable( const QString &tableName ) = 0;
 	virtual void splitCommands( QString& s, QStringList& sl ) = 0;
 
 	virtual float databaseVersion( void ) = 0;
 
-	int maxAuthorNameLength() const
-	{
-		return 50;
-	}
-	int maxCategoryNameLength() const
-	{
-		return 40;
-	}
-	int maxIngredientNameLength() const
-	{
-		return 50;
-	}
-	int maxIngGroupNameLength() const
-	{
-		return 50;
-	}
-	int maxRecipeTitleLength() const
-	{
-		return 200;
-	}
-	int maxUnitNameLength() const
-	{
-		return 20;
-	}
-	int maxPrepMethodNameLength() const
-	{
-		return 20;
-	}
-	int maxPropertyNameLength() const
-	{
-		return 20;
-	}
-	int maxYieldTypeLength() const
-	{
-		return 20;
-	}
+	// Functions to retrieve the maximum length of string fields,
+	// these functions must be reimplemented in RecipeDB subclasses,
+        // return the UnlimitedLength const if the field is unlimited.
+	static const int UnlimitedLength = INT_MAX;
+	virtual int maxAuthorNameLength() const = 0;
+	virtual int maxCategoryNameLength() const = 0;
+	virtual int maxIngredientNameLength() const = 0;
+	virtual int maxIngGroupNameLength() const = 0;
+	virtual int maxRecipeTitleLength() const = 0;
+	virtual int maxUnitNameLength() const = 0;
+	virtual int maxPrepMethodNameLength() const = 0;
+	virtual int maxPropertyNameLength() const = 0;
+	virtual int maxYieldTypeLength() const = 0;
 
 	virtual bool ok()
 	{
