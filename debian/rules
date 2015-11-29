@@ -12,5 +12,3 @@ get-orig-source:
 	@@dh_testdir
 	@@[ -d ../tarballs/. ]
 	@@dpatch-get-origtargz ../tarballs
-
-override_dh_auto_test:
