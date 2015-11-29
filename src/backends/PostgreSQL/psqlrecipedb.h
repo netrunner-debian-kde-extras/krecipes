@@ -32,10 +32,20 @@ public:
 	explicit PSqlRecipeDB( const QString& host, const QString& user = QString(), const QString& pass = QString(), const QString& DBName = DEFAULT_DB_NAME, int port = 0 );
 	~PSqlRecipeDB( void );
 
-	int lastInsertID();
 	void initializeData();
 
 	void createTable( const QString &tableName );
+
+	virtual int maxAuthorNameLength() const;
+	virtual int maxCategoryNameLength() const;
+	virtual int maxIngredientNameLength() const;
+	virtual int maxIngGroupNameLength() const;
+	virtual int maxRecipeTitleLength() const;
+	virtual int maxUnitNameLength() const;
+	virtual int maxPrepMethodNameLength() const;
+	virtual int maxPropertyNameLength() const;
+	virtual int maxYieldTypeLength() const;
+
 	void givePermissions( const QString &dbName, const QString &username, const QString &password, const QString &clientHost );
 	
 	float databaseVersion( void );	
@@ -46,6 +56,7 @@ protected:
 		return PSQL_DRIVER;
 	}
 	virtual int getNextInsertID( const QString &table, const QString &column );
+	virtual RecipeDB::IdType lastInsertId( const QSqlQuery &query );
 
 	virtual void empty( void );
 

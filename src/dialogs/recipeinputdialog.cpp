@@ -68,8 +68,6 @@
 
 #include "profiling.h"
 
-typedef enum ColorStatus { GreenStatus, RedStatus, YellowStatus };
-
 ClickableLed::ClickableLed( QWidget *parent ) : KLed(parent)
 {
 }
@@ -515,8 +513,6 @@ RecipeInputDialog::RecipeInputDialog( QWidget* parent, RecipeDB *db ) : KVBox( p
 
 	connect ( database, SIGNAL( recipeRemoved(int) ), this, SLOT( recipeRemoved(int) ) );
 
-	//FIXME: We've got some sort of build issue... we get undefined references to CreateUnitDialog without this dummy code here
-	CreateUnitDialog d( this, "" );
 }
 
 
@@ -972,8 +968,7 @@ int RecipeInputDialog::createNewYieldIfNecessary( const QString &yield )
 		int id = database->findExistingYieldTypeByName( yield );
 		if ( id == -1 ) //creating new
 		{
-			database->createNewYieldType( yield );
-			id = database->lastInsertID();
+			id = database->createNewYieldType( yield );
 		}
 
 		return id;
@@ -1405,8 +1400,7 @@ void RecipeInputDialog::slotAddRating()
 		foreach( RatingCriteria rc, r.ratingCriterias() ) {
 			int criteria_id = database->findExistingRatingByName(rc.name());
 			if ( criteria_id == -1 ) {
-				database->createNewRating(rc.name());
-				criteria_id = database->lastInsertID();
+				criteria_id = database->createNewRating(rc.name());
 			}
 			r.setIdOfRatingCriteria(rc.name(), criteria_id);
 		}
@@ -1461,8 +1455,7 @@ void RecipeInputDialog::slotEditRating()
 		foreach ( RatingCriteria rc, r.ratingCriterias() ) {
 			int criteria_id = database->findExistingRatingByName(rc.name());
 			if ( criteria_id == -1 ) {
-				database->createNewRating(rc.name());
-				criteria_id = database->lastInsertID();
+				criteria_id = database->createNewRating(rc.name());
 			}
 			r.setIdOfRatingCriteria(rc.name(), criteria_id);
 		}
@@ -1478,7 +1471,7 @@ void RecipeInputDialog::slotEditRating()
 void RecipeInputDialog::slotRemoveRating()
 {
 	RatingDisplayWidget *sender = (RatingDisplayWidget*)(QObject::sender()->parent());
-	loadedRecipe->ratingList.remove(sender->rating_it);
+	loadedRecipe->ratingList.erase(sender->rating_it);
 
 	//FIXME: sender is removed but never deleted (sender->deleteLater() doesn't work)
 	ratingListDisplayWidget->removeItem(sender);

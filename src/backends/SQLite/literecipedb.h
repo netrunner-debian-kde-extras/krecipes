@@ -16,9 +16,8 @@
 
 #include <QString>
 #include <KDebug>
-#include "qsql_sqlite.h"
 
-#define SQLITE_DRIVER "KRESQLITE"
+#define SQLITE_DRIVER "QSQLITE"
 
 class LiteRecipeDB : public QSqlRecipeDB
 {
@@ -32,19 +31,29 @@ public:
 	LiteRecipeDB( const QString &DBName = DEFAULT_DB_NAME );
 	~LiteRecipeDB( void );
 
-	virtual int lastInsertID();
-
 	virtual void createTable( const QString &tableName );
+
+	virtual int maxAuthorNameLength() const;
+	virtual int maxCategoryNameLength() const;
+	virtual int maxIngredientNameLength() const;
+	virtual int maxIngGroupNameLength() const;
+	virtual int maxRecipeTitleLength() const;
+	virtual int maxUnitNameLength() const;
+	virtual int maxPrepMethodNameLength() const;
+	virtual int maxPropertyNameLength() const;
+	virtual int maxYieldTypeLength() const;
+
+
 	virtual void givePermissions(const QString&, const QString&, const QString&, const QString&){} //no permissions in this backend
 
 protected:
-	virtual QSqlDriver *qsqlDriver() const
-	{
-		kDebug();
-		return new KreSQLiteDriver();
-	}
+        QString qsqlDriverPlugin() const
+        {
+                return SQLITE_DRIVER;
+        }
 
 	virtual QString escapeAndEncode( const QString &s ) const;
+	virtual QString unescapeAndDecode( const QByteArray &s ) const;
 
 	virtual void storePhoto( int recipeID, const QByteArray &data );
 
@@ -54,6 +63,8 @@ private:
 	virtual QStringList restoreCommand() const;
 
 	void addColumn( const QString &new_table_sql, const QString &new_col_info, const QString &default_value, const QString &table_name, int col_index );
+
+	QString escape( const QString &s ) const;
 };
 
 

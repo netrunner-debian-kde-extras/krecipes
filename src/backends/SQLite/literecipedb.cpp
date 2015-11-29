@@ -14,25 +14,19 @@
 #include <QBuffer>
 //Added by qt3to4:
 #include <QSqlQuery>
+#include <QSqlField>
 
 #include <kdebug.h>
 #include <kconfig.h>
 #include <kglobal.h>
 #include <klocale.h>
 #include <KConfigGroup>
-#include <config-krecipes.h>
 #include <QImageWriter>
 #include <KCodecs>
 
-#ifdef HAVE_SQLITE3
-#include <sqlite3.h>
-#elif HAVE_SQLITE
-#include <sqlite.h>
-#endif
 
-//keep these two around for porting old databases
+//keep this around for porting old databases
 int sqlite_decode_binary( const unsigned char *in, unsigned char *out );
-QString escape( const QString &s );
 
 LiteRecipeDB::LiteRecipeDB( const QString &_dbFile ) : QSqlRecipeDB( QString(), QString(), QString(), _dbFile )
 {
@@ -49,29 +43,10 @@ LiteRecipeDB::~LiteRecipeDB()
 {
 }
 
-int LiteRecipeDB::lastInsertID()
-{
-	kDebug();
-	int lastID = -1;
-	QSqlQuery query( "SELECT lastInsertID()", *database );
-	if ( query.isActive() && query.first() )
-		lastID = query.value(0).toInt();
-
-	//kDebug()<<"lastInsertID(): "<<lastID;
-
-	return lastID;
-}
-
 QStringList LiteRecipeDB::backupCommand() const
 {
-#ifdef HAVE_SQLITE
-	QString binary = "sqlite";
-#elif HAVE_SQLITE3
-	QString binary = "sqlite3";
-#endif
-
 	KConfigGroup config( KGlobal::config(), "Server" );
-	binary = config.readEntry( "SQLitePath", binary );
+	QString binary = config.readEntry( "SQLitePath", "sqlite3" );
 
 	QStringList command;
 	command<<binary<<database->databaseName()<<".dump";
@@ -80,14 +55,8 @@ QStringList LiteRecipeDB::backupCommand() const
 
 QStringList LiteRecipeDB::restoreCommand() const
 {
-#ifdef HAVE_SQLITE
-	QString binary = "sqlite";
-#elif HAVE_SQLITE3
-	QString binary = "sqlite3";
-#endif
-	kDebug()<<" binary: "<<binary;
 	KConfigGroup config( KGlobal::config(), "Server" );
-	binary = config.readEntry( "SQLitePath", binary );
+	QString binary = config.readEntry( "SQLitePath", "sqlite3" );
 
 	QStringList command;
 	command<<binary<<database->databaseName();
@@ -137,7 +106,10 @@ void LiteRecipeDB::createTable( const QString &tableName )
 		commands << "CREATE TABLE ingredient_info (ingredient_id INTEGER, property_id INTEGER, amount FLOAT, per_units INTEGER);";
 
 	else if ( tableName == "ingredient_properties" )
-		commands << "CREATE TABLE ingredient_properties (id INTEGER NOT NULL,name VARCHAR(20), units VARCHAR(20), PRIMARY KEY (id));";
+		commands << QString ( "CREATE TABLE ingredient_properties "
+			"(id INTEGER NOT NULL, name VARCHAR(%1), units VARCHAR(%2), "
+			"PRIMARY KEY (id));"
+			).arg( maxPrepMethodNameLength() ).arg( maxUnitNameLength() );
 
 	else if ( tableName == "ingredient_weights" ) {
 		commands << "CREATE TABLE ingredient_weights (id INTEGER NOT NULL, ingredient_id INTEGER NOT NULL, amount FLOAT, unit_id INTEGER, weight FLOAT, weight_unit_id INTEGER, prep_method_id INTEGER, PRIMARY KEY (id) );"
@@ -194,6 +166,51 @@ void LiteRecipeDB::createTable( const QString &tableName )
 	for ( QStringList::const_iterator it = commands.constBegin(); it != commands.constEnd(); ++it )
 		database->exec( *it );
 
+}
+
+int LiteRecipeDB::maxAuthorNameLength() const
+{
+	return 50;
+}
+
+int LiteRecipeDB::maxCategoryNameLength() const
+{
+	return 40;
+}
+
+int LiteRecipeDB::maxIngredientNameLength() const
+{
+	return 50;
+}
+
+int LiteRecipeDB::maxIngGroupNameLength() const
+{
+	return 50;
+}
+
+int LiteRecipeDB::maxRecipeTitleLength() const
+{
+	return 200;
+}
+
+int LiteRecipeDB::maxUnitNameLength() const
+{
+	return 20;
+}
+
+int LiteRecipeDB::maxPrepMethodNameLength() const
+{
+	return 20;
+}
+
+int LiteRecipeDB::maxPropertyNameLength() const
+{
+	return 20;
+}
+
+int LiteRecipeDB::maxYieldTypeLength() const 
+{
+	return 20;
 }
 
 void LiteRecipeDB::portOldDatabases( float version )
@@ -596,12 +613,12 @@ void LiteRecipeDB::portOldDatabases( float version )
 				          + "','" + escape( copyQuery.value( 6 ).toString() )
 				          + "','" + escape( copyQuery.value( 7 ).toString() )
 				          + "')";
-				database->exec( command );
+				QSqlQuery query = database->exec( command );
 
 				int prep_method_id = copyQuery.value( 5 ).toInt();
 				if ( prep_method_id != -1 ) {
 					command = "INSERT INTO prep_method_list VALUES('"
-							+ QString::number(lastInsertID())
+							+ QString::number(lastInsertId(query))
 						+ "','" + QString::number(prep_method_id)
 						+ "','1" //order_index
 						+ "')";
@@ -907,6 +924,10 @@ void LiteRecipeDB::portOldDatabases( float version )
 		fixUSDAPropertyUnits();
 		database->exec( "UPDATE db_info SET ver='0.96',generated_by='Krecipes SVN (20060903)'" );
 	}
+
+	if ( qRound(version*100) < 97 ) {
+		database->exec( "UPDATE db_info SET ver='0.97',generated_by='Krecipes 2.0.0'" );
+	}
 }
 
 void LiteRecipeDB::addColumn( const QString &new_table_sql, const QString &new_col_info, const QString &default_value, const QString &table_name, int col_index )
@@ -967,13 +988,12 @@ void LiteRecipeDB::addColumn( const QString &new_table_sql, const QString &new_c
 
 QString LiteRecipeDB::escapeAndEncode( const QString &s ) const
 {
-	QString s_escaped;
+	return escape( s );
+}
 
-	// Escape
-	s_escaped = escape( QString::fromLatin1(s.toUtf8()) );
-
-	// Return encoded
-	return s_escaped.toLatin1(); // Note that the text has already been converted before escaping.
+QString LiteRecipeDB::unescapeAndDecode( const QByteArray &s ) const
+{
+	return QString::fromLatin1( s );
 }
 
 /*
@@ -1012,26 +1032,14 @@ int sqlite_decode_binary( const unsigned char *in, unsigned char *out )
 	return i;
 }
 
-QString escape( const QString &s )
+QString LiteRecipeDB::escape( const QString &s ) const
 {
-	QString s_escaped = s;
-
-	if ( !s_escaped.isEmpty() ) { //###: sqlite_mprintf() seems to fill an empty string with garbage
-		// Escape using SQLite's function
-#ifdef HAVE_SQLITE
-		char * escaped = sqlite_mprintf( "%q", s.toLatin1().data() ); // Escape the string(allocates memory)
-#elif HAVE_SQLITE3
-		char * escaped = sqlite3_mprintf( "%q", s.toLatin1().data() ); // Escape the string(allocates memory)
-#endif
-		s_escaped = escaped;
-#ifdef HAVE_SQLITE
-		sqlite_freemem( escaped ); // free allocated memory
-#elif HAVE_SQLITE3
-		sqlite3_free( escaped ); // free allocated memory
-#endif
-	}
-
-	return ( s_escaped );
+	QSqlField field( "dummyfield", QVariant::String );
+	field.setValue( QVariant(s) );
+	QString result = this->currentDriver()->formatValue( field );
+	result.remove(0,1);
+	result.chop(1);
+	return result;
 }
 
 void LiteRecipeDB::storePhoto( int recipeID, const QByteArray &data )

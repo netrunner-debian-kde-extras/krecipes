@@ -11,7 +11,6 @@
 
 #include "kreexporter.h"
 
-#include <q3ptrdict.h>
 #include <QImage>
 #include <QFileInfo>
 #include <QDir>
@@ -27,7 +26,6 @@
 #include <kprogressdialog.h>
 #include <kstandarddirs.h>
 #include <kurl.h>
-#include <kiconloader.h>
 
 #include <libxml/parser.h>
 #include <libxml/tree.h>
@@ -41,7 +39,6 @@
 #include "backends/recipedb.h"
 #include "dialogs/setupdisplay.h"
 #include "image.h"
-#include "krepagelayout.h"
 
 const char* i18n_strings[] = {
   "I18N_INSTRUCTIONS", I18N_NOOP("Instructions"),
@@ -233,7 +230,7 @@ QString XSLTExporter::createContent( const RecipeList &recipes )
 	QByteArray filename = m_templateFilename.toUtf8();
 	xsltStylesheetPtr xslt = xsltParseStylesheetFile((const xmlChar*)filename.constData());
 	if ( !xslt ) {
-		return i18n("<html><b>Error:</b> Bad template: %1.  Use \"Edit->Page Setup...\" to select a new template.</html>",QString( filename ));
+		return i18n("<html><b>Error:</b> Bad template: %1.  Use \"Settings->Page Setup...\" to select a new template.</html>",QString( filename ));
 	}
 
 	QFileInfo imgDirInfo(m_templateFilename);

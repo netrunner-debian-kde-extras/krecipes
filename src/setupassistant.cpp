@@ -9,8 +9,6 @@
 ***************************************************************************/
 #include "setupassistant.h"
 
-#include <config-krecipes.h>
-
 #include <unistd.h>
 #include <pwd.h>
 
@@ -75,11 +73,7 @@ SetupAssistant::SetupAssistant( QWidget *parent, Qt::WFlags f ) : KAssistantDial
 
 	setSizePolicy( QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding );
 
-	#if (! (defined(HAVE_SQLITE) || defined(HAVE_SQLITE3)))
-		showPages( MySQL );
-	#else
-		showPages( SQLite );
-	#endif
+	showPages( SQLite );
 
 	connect( dbTypeSetupPage, SIGNAL( showPages( DBType ) ), this, SLOT( showPages( DBType ) ) );
 }
@@ -896,13 +890,7 @@ DBTypeSetupPage::DBTypeSetupPage( QWidget *parent ) : QWidget( parent )
 	
 	bg->setLayout(vbox);
 
-	mysqlCheckBox->click();
-
-#if (! (defined(HAVE_SQLITE) || defined(HAVE_SQLITE3)))
-	liteCheckBox->setEnabled( false );
-#else
 	liteCheckBox->click();
-#endif
 
 
 	QSpacerItem *spacer_bottom = new QSpacerItem( 10, 10, QSizePolicy::Fixed, QSizePolicy::MinimumExpanding );

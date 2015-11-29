@@ -12,8 +12,6 @@
 
 #include "backends/recipedb.h"
 
-#include <config-krecipes.h>
-
 #include <kapplication.h>
 #include <kconfiggroup.h>
 #include <kdebug.h>
@@ -29,6 +27,7 @@
 #include <kmessagebox.h>
 
 #include <QFile>
+#include <QList>
 #include <QStringList>
 #include <KStandardDirs>
 //Added by qt3to4:
@@ -43,9 +42,7 @@
 
 #include "MySQL/mysqlrecipedb.h"
 
-#if HAVE_SQLITE || HAVE_SQLITE3
 #include "SQLite/literecipedb.h"
-#endif
 
 #include "datablocks/categorytree.h"
 #include "datablocks/ingredientpropertylist.h"
@@ -83,7 +80,7 @@ RecipeDB::~RecipeDB()
 
 double RecipeDB::latestDBVersion() const
 {
-	return 0.96;
+	return 0.97;
 }
 
 QString RecipeDB::krecipes_version() const
@@ -101,6 +98,13 @@ void RecipeDB::cancelOperation()
 	haltOperation = true;
 	if (process != NULL)
 		process->kill();
+}
+
+RecipeDB* RecipeDB::createDatabase()
+{
+	KConfigGroup config = KGlobal::config()->group( "DBType" );
+	QString dbType = config.readEntry( "Type", "" );
+	return createDatabase( dbType );
 }
 
 RecipeDB* RecipeDB::createDatabase( const QString &dbType, const QString &file )
@@ -125,14 +129,9 @@ RecipeDB* RecipeDB::createDatabase( const QString &dbType, const QString &host, 
 	kDebug();
 	RecipeDB * database = 0;
 
-	if ( 0 )
-		; //we need some condition here
-#if HAVE_SQLITE || HAVE_SQLITE3
-
-	else if ( dbType == "SQLite" ) {
+	if ( dbType == "SQLite" ) {
 		database = new LiteRecipeDB( file );
 	}
-#endif //HAVE_SQLITE || HAVE_SQLITE3
 	else if ( dbType == "MySQL" ) {
 		database = new MySQLRecipeDB( host, user, pass, dbname, port );
 	}
@@ -199,7 +198,6 @@ RecipeDB::ConversionStatus RecipeDB::convertIngredientUnits( const Ingredient &f
 
 		double fromToWeightRatio, weightToToRatio;
 		int unitID = -1;
-		int prepID = -2;
 
 		WeightList idList = ingredientWeightUnits( from.ingredientID );
 
@@ -217,7 +215,6 @@ RecipeDB::ConversionStatus RecipeDB::convertIngredientUnits( const Ingredient &f
 				unitID = first;
 
 				if ( from.prepMethodList.containsId( (*it).prepMethodId() ) ) {
-					prepID = (*it).prepMethodId();
 					break;
 				}
 			}
@@ -308,7 +305,7 @@ bool RecipeDB::backup( const QString &backup_file, QString *errMsg )
 
 	emit progressBegin(0,QString(),
 		QString("<center><b>%1</b></center>%2")
-			.arg(i18n("Creating complete backup"))
+			.arg(i18nc("@info:progress", "Creating complete backup"))
 			.arg(i18n("Depending on the number of recipes and amount of data, this could take some time.")),50);
 
 	m_localEventLoop = new QEventLoop;
@@ -355,7 +352,7 @@ bool RecipeDB::backup( const QString &backup_file, QString *errMsg )
 		else
 			kDebug()<<"Unable to open file to get error output.";
 
-		if ( errMsg ) *errMsg = QString("%1\n%2").arg(i18n("Backup failed.")).arg(appOutput);
+		if ( errMsg ) *errMsg = i18n("Backup failed.\n%1", appOutput);
 		QFile::remove(backup_file);
 		delete process;
 		process = NULL;
@@ -480,7 +477,7 @@ bool RecipeDB::restore( const QString &file, QString *errMsg )
 
 		emit progressBegin(0,QString(),
 			QString("<center><b>%1</b></center>%2")
-				.arg(i18n("Restoring backup"))
+				.arg(i18nc("@info:progress", "Restoring backup"))
 				.arg(i18n("Depending on the number of recipes and amount of data, this could take some time.")),50);
 
 		process->start();
@@ -821,10 +818,10 @@ QString RecipeDB::buildSearchQuery( const RecipeSearchParameters &p ) const
 }
 
 //These are helper functions solely for use by the USDA data importer
-void getIngredientNameAndID( std::multimap<int, QString> * );
-int createUnit( const QString &name, Unit::Type, RecipeDB* );
-int createIngredient( const QString &name, RecipeDB*, bool do_checks );
-void create_properties( RecipeDB*, Q3ValueList<USDA::PropertyData> & );
+static void getIngredientNameAndID( std::multimap<int, QString> * );
+static int createUnit( const QString &name, Unit::Type, RecipeDB* );
+static int createIngredient( const QString &name, RecipeDB*, bool do_checks );
+static void create_properties( RecipeDB*, QList<USDA::PropertyData> & );
 
 void RecipeDB::importUSDADatabase()
 {
@@ -842,7 +839,7 @@ void RecipeDB::importUSDADatabase()
 		return ;
 	}
 
-	Q3ValueList<USDA::PropertyData> property_data_list = USDA::loadProperties();
+	QList<USDA::PropertyData> property_data_list = USDA::loadProperties();
 	USDA::PrepDataList prep_data_list =  USDA::loadPrepMethods();
 	USDA::UnitDataList unit_data_list =  USDA::loadUnits();
 
@@ -974,8 +971,7 @@ void RecipeDB::importUSDADatabase()
 			if ( !w.prepMethod().isEmpty() ) {
 				int prepID = findExistingPrepByName( w.prepMethod() );
 				if ( prepID == -1 ) {
-					createNewPrepMethod( w.prepMethod() );
-					prepID = lastInsertID();
+					prepID = createNewPrepMethod( w.prepMethod() );
 				}
 				w.setPrepMethodId(prepID);
 			}
@@ -1001,7 +997,7 @@ void RecipeDB::importUSDADatabase()
 	emit progressDone();
 }
 
-void getIngredientNameAndID( std::multimap<int, QString> *data )
+static void getIngredientNameAndID( std::multimap<int, QString> *data )
 {
 	Q3ValueList<USDA::IngredientData> ingredient_data_list = USDA::loadIngredients();
 
@@ -1009,23 +1005,20 @@ void getIngredientNameAndID( std::multimap<int, QString> *data )
 		data->insert( std::make_pair( (*it).usda_id, (*it).name ) );
 }
 
-int createIngredient( const QString &name, RecipeDB *database, bool do_checks )
+static int createIngredient( const QString &name, RecipeDB *database, bool do_checks )
 {
-	bool ingredientExisted = true;
 	int assigned_id = -1;
 	if ( do_checks )
 		assigned_id = database->findExistingIngredientByName( name );
 
 	if ( assigned_id == -1 ) {
-		ingredientExisted = false;
-		database->createNewIngredient( name );
-		assigned_id = database->lastInsertID();
+		assigned_id = database->createNewIngredient( name );
 	}
 
 	return assigned_id;
 }
 
-int createUnit( const QString &name, Unit::Type type, RecipeDB *database )
+static int createUnit( const QString &name, Unit::Type type, RecipeDB *database )
 {
 	int assigned_id = database->findExistingUnitByName( name );
 
@@ -1033,8 +1026,7 @@ int createUnit( const QString &name, Unit::Type type, RecipeDB *database )
 	{
 		Unit unit(name, name);
 		unit.setType(type);
-		database->createNewUnit( unit );
-		assigned_id = database->lastInsertID();
+		assigned_id = database->createNewUnit( unit );
 	}
 	//keep what the user specified if the type here is Other
 	else if ( type != Unit::Other ) {
@@ -1048,17 +1040,16 @@ int createUnit( const QString &name, Unit::Type type, RecipeDB *database )
 	return assigned_id;
 }
 
-void create_properties( RecipeDB *database, Q3ValueList<USDA::PropertyData> &property_data_list )
+static void create_properties( RecipeDB *database, QList<USDA::PropertyData> &property_data_list )
 {
 	IngredientPropertyList property_list;
 	database->loadProperties( &property_list );
 
-	for ( Q3ValueList<USDA::PropertyData>::iterator it = property_data_list.begin(); it != property_data_list.end(); ++it ) {
+	for ( QList<USDA::PropertyData>::iterator it = property_data_list.begin(); it != property_data_list.end(); ++it ) {
 		(*it).id = property_list.findByName( (*it).name );
 		if ( (*it).id == -1 ) //doesn't exist, so insert it and set property_data_list[i].id
 		{
-			database->addProperty( (*it).name, (*it).unit );
-			(*it).id = database->lastInsertID();
+			it->id = database->addProperty( (*it).name, (*it).unit );
 		}
 	}
 }
@@ -1070,9 +1061,9 @@ void RecipeDB::fixUSDAPropertyUnits()
 	IngredientPropertyList property_list;
 	loadProperties( &property_list );
 
-	Q3ValueList<USDA::PropertyData> property_data_list = USDA::loadProperties();
+	QList<USDA::PropertyData> property_data_list = USDA::loadProperties();
 
-	for ( Q3ValueList<USDA::PropertyData>::const_iterator it = property_data_list.begin(); it != property_data_list.end(); ++it ) {
+	for ( QList<USDA::PropertyData>::const_iterator it = property_data_list.begin(); it != property_data_list.end(); ++it ) {
 		int id = property_list.findByName( (*it).name );
 		if ( id != -1 )
 		{
