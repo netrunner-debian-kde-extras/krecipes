@@ -6,7 +6,8 @@ Uploaders: Matthias Julius <mdeb@julius-net.net>,
  José Manuel Santamaría Lema <panfaust@gmail.com>
 Build-Depends: debhelper (>= 9), cmake, pkg-kde-tools, pkg-config,
  kdelibs5-dev, libxml2-dev, libxslt1-dev,
- libqtwebkit-dev, shared-mime-info
+ libqtwebkit-dev, shared-mime-info,
+ xvfb, xauth,
 Standards-Version: 3.9.6
 Homepage: http://krecipes.sourceforge.net/
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/krecipes.git

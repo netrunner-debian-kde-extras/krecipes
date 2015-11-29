@@ -8,6 +8,9 @@ export DEB_LDFLAGS_MAINT_APPEND := -Wl,--as-needed
 override_dh_strip:
 	dh_strip --dbg-package=krecipes-dbg
 
+override_dh_auto_test:
+	xvfb-run dh_auto_test
+
 get-orig-source:
 	@@dh_testdir
 	@@[ -d ../tarballs/. ]

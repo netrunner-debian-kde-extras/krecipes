@@ -10,6 +10,8 @@ krecipes (2.1.0-0r1) UNRELEASED; urgency=medium
     - use the dh sequencer in rules, using the kde addon, with parallel build,
       and in as-needed mode
     - drop the cdbs build dependency
+    - run the tests under xvfb-run: add the xvfb and xauth build dependencies
+      for this
   * Update the Vcs-* headers.
   * Bump Standards-Version to 3.9.6, no changes required.
   * Update watch file to look also on download.kde.org.
