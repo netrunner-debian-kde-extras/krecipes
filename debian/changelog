@@ -12,7 +12,7 @@ krecipes (2.1.0-0r1) UNRELEASED; urgency=medium
     - drop the cdbs build dependency
     - do not run the tests for now, some of them fail
   * Update the Vcs-* headers.
-  * Bump Standards-Version to 3.9.5, no changes required.
+  * Bump Standards-Version to 3.9.6, no changes required.
   * Update watch file to look also on download.kde.org.
   * Add the pkg-config build dependency.
   * Remove unused lintian overrides.
