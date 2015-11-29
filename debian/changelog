@@ -1,6 +1,7 @@
-krecipes (2.0~beta2-4) UNRELEASED; urgency=medium
+krecipes (2.1.0-0r1) UNRELEASED; urgency=medium
 
   [ Pino Toscano ]
+  * New upstream release. (Closes: #776377)
   * Bump the debhelper compatibility to 9:
     - bump the debhelper build dependency to 9
     - bump compat to 9
