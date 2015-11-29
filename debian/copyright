@@ -1,7 +1,6 @@
-Format-Specification: http://svn.debian.org/wsvn/dep/web/deps/?rev=48&sc=1
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: Krecipes
-Upstream-Maintainer: José Manuel Santamaría Lema <panfaust@gmail.com>
-Upstream-Source: http://krecipes.sourceforge.net/
+Source: https://projects.kde.org/projects/extragear/utils/krecipes
 
 Files: *
 Copyright: © 2003-2005 Unai Garro <ugarro@gmail.com> 
@@ -15,7 +14,7 @@ Copyright: © 2003-2005 Unai Garro <ugarro@gmail.com>
            © 2005 Petri Damstén <petri.damsten@iki.fi>
            © 2005-2006 Tom Albers <tomalbers@kde.nl>
            © 2008 Montel Laurent <montel@kde.org>
-           © 2009-2010 José Manuel Santamaría Lema <panfaust@gmail.com>
+           © 2009-2012 José Manuel Santamaría Lema <panfaust@gmail.com>
            © 2010 Martin Engelmann <murphi.oss@googlemail.com>
 License: GPL-2+
 
@@ -36,52 +35,28 @@ Files: src/widgets/kdatepickerpopup.*
 Copyright: © 2004 Bram Schoenmakers <bramschoenmakers@kde.nl>
 License: LGPL-2+
 
-Files: src/widgets/kratingpainter.*
-Copyright: © 2007-2008 Sebastian Trueg <trueg@kde.org>
-License: LGPL-2+
-
-Files: src/widgets/kratingwidget.*
-Copyright: © 2006-2007 Sebastian Trueg <trueg@kde.org>
-License: LGPL-2+
-
-Files: src/widgets/kreruler.*
-Copyright: © 1998-1999 Reginald Stadlbauer <reggie@kde.org>
-           © 2005 Jason Kivlighn <jkivlighn@gmail.com>
-License: LGPL-2+
-
-Files: src/krepagelayout.*
-Copyright: © 1998-1999 Torben Weis <weis@kde.org>
-           © 2002-2003 David Faure <faure@kde.org>
-           © 2003 Nicolas GOUTTE <goutte@kde.org>
-           © 2005 Jason Kivlighn <jkivlighn@gmail.com>
-License: LGPL-2+
-
-Files: cmake/FindSqlite2.cmake
-Copyright: © 2008 Gilles Caulier <caulier.gilles@gmail.com>
-           © 2009 José Manuel Santamaría Lema <panfaust@gmail.com>
-License: BSD
-
 Files: debian/*
 Copyright: © 2006 Julien Louis <ptitlouis@sysif.net>
            © 2009 Matthias Julius <mdeb@julius-net.net>
            © 2009 José Manuel Santamaría Lema <panfaust@gmail.com>
+           © 2014-2015 Pino Toscano <pino@debian.org>
 License: GPL-2+
- 
+
 License: GPL-2+
  This package is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
  the Free Software Foundation; either version 2 of the License, or
  (at your option) any later version.
-
+ .
  This package is distributed in the hope that it will be useful,
  but WITHOUT ANY WARRANTY; without even the implied warranty of
  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  GNU General Public License for more details.
-
+ .
  You should have received a copy of the GNU General Public License
  along with this package; if not, write to the Free Software
  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
-	
+ .
  On Debian systems, the complete text of the GNU General
  Public License version 2 can be found in `/usr/share/common-licenses/GPL-2'.
 
@@ -90,17 +65,17 @@ License: LGPL-2+
  modify it under the terms of the GNU Library General Public
  License as published by the Free Software Foundation; either
  version 2 of the License, or (at your option) any later version.
- 
+ .
  This library is distributed in the hope that it will be useful,
  but WITHOUT ANY WARRANTY; without even the implied warranty of
  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  Library General Public License for more details.
-
+ .
  You should have received a copy of the GNU Library General Public License
  along with this library; see the file COPYING.LIB.  If not, write to
  the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston,
  MA 02110-1301, USA.
-
+ .
  On Debian GNU/Linux systems, the complete text of the GNU Library General
  Public License version 2 can be found in `/usr/share/common-licenses/LGPL-2'.
 
@@ -109,11 +84,6 @@ License: GFDL-1.2+-NIV
  the terms of the GNU Free Documentation License, Version 1.2 or any later
  version published by the Free Software Foundation; with no Invariant Sections,
  with no Front-Cover Texts, and with no Back-Cover Text.
-
+ .
  On Debian GNU/Linux systems, the complete text of the GNU Library General
  Public License version 2 can be found in `/usr/share/common-licenses/LGPL-2'.
-
-License: BSD
- Redistribution and use is allowed according to the terms of the BSD license.
- For details see the accompanying COPYING-CMAKE-SCRIPTS file.
-

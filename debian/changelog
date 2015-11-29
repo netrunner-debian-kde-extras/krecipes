@@ -17,6 +17,7 @@ krecipes (2.1.0-0r1) UNRELEASED; urgency=medium
   * Update watch file to look also on download.kde.org.
   * Add the pkg-config build dependency.
   * Remove unused lintian overrides.
+  * Migrate copyright to copyright-format v1.0, and update it.
 
  -- Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>  Thu, 11 Sep 2014 10:28:36 +0200
 
