@@ -2,3 +2,5 @@ version=3
 
 opts="uversionmangle=s/-/~/" \
   http://sf.net/krecipes/krecipes-(.+)\.tar\.gz
+
+http://download.kde.org/stable/krecipes/([\d.]+)/src/krecipes-([\d.]+)\.tar\.xz
