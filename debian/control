@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
 Uploaders: Matthias Julius <mdeb@julius-net.net>,
  José Manuel Santamaría Lema <panfaust@gmail.com>
-Build-Depends: debhelper (>= 9), cmake, pkg-kde-tools,
+Build-Depends: debhelper (>= 9), cmake, pkg-kde-tools, pkg-config,
  kdelibs5-dev, libsqlite3-dev, libqimageblitz-dev, libxml2-dev, libxslt1-dev,
  libqtwebkit-dev, shared-desktop-ontologies, shared-mime-info
 Standards-Version: 3.9.5

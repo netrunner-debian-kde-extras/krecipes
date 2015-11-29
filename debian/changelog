@@ -15,6 +15,7 @@ krecipes (2.1.0-0r1) UNRELEASED; urgency=medium
   * Update the Vcs-* headers.
   * Bump Standards-Version to 3.9.5, no changes required.
   * Update watch file to look also on download.kde.org.
+  * Add the pkg-config build dependency.
 
  -- Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>  Thu, 11 Sep 2014 10:28:36 +0200
 
