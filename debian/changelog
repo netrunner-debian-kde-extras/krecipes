@@ -3,6 +3,9 @@ krecipes (2.1.0-2) UNRELEASED; urgency=medium
   [ Pino Toscano ]
   * Update Vcs-* fields.
   * Bump Standards-Version to 3.9.7, no changes required.
+  * Backport upstream commit f6d4f709ec57835b3fa4a660239a07321c9d02ff to fix
+    build with GCC 6; patch upstream_Fix-flags-for-KFontDialog-getFont.patch.
+    (Closes: #811853)
 
  -- Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>  Sun, 14 Feb 2016 09:02:23 +0100
 
